@@ -1,10 +1,11 @@
 'use client';
 
+import { Suspense } from 'react';
 import { QuizShell } from '@/modules/quiz';
 import { useRouter, useSearchParams } from 'next/navigation';
-import quizData from '../../../../content/chapters/part-02/31.quiz.json';
+import { quiz31 as quizData } from '@/lib/content';
 
-export default function QuizPage() {
+function QuizPageInner() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const fromGame = searchParams.get('from') === 'game';
@@ -29,5 +30,13 @@ export default function QuizPage() {
         <QuizShell challenges={quizData.challenges} onComplete={handleComplete} />
       </section>
     </main>
+  );
+}
+
+export default function QuizPage() {
+  return (
+    <Suspense fallback={null}>
+      <QuizPageInner />
+    </Suspense>
   );
 }

@@ -1,5 +1,5 @@
 import { ChapterVisual, AudioPlayer, StoryView } from '@/modules/story';
-import chapterData from '../../../../content/chapters/part-02/31.json';
+import { chapter31 as chapterData } from '@/lib/content';
 import Link from 'next/link';
 
 export default function ChapterPage() {
@@ -9,7 +9,9 @@ export default function ChapterPage() {
         <Link href="/map" className="text-sm text-[var(--color-text)]">
           ← Map
         </Link>
-        <span className="ml-auto text-xs text-[var(--color-text-dim)]">Chapter {chapterData.id}</span>
+        <span className="ml-auto text-xs text-[var(--color-text-dim)]">
+          Chapter {chapterData.id}
+        </span>
       </nav>
 
       <section className="mt-6">

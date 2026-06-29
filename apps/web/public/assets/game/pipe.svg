@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="64" viewBox="0 0 32 64" shape-rendering="crispEdges">
+  <!-- Pipe body -->
+  <rect x="6" y="14" width="20" height="50" fill="#2E8B57" stroke="#1A1A1A" stroke-width="2"/>
+  <rect x="10" y="14" width="5" height="50" fill="#1B5E3B"/>
+  <!-- Pipe rim (wider top) -->
+  <rect x="0" y="0" width="32" height="16" fill="#2E8B57" stroke="#1A1A1A" stroke-width="2"/>
+  <rect x="4" y="2" width="6" height="12" fill="#1B5E3B"/>
+</svg>

@@ -1,10 +1,11 @@
 'use client';
 
+import { Suspense } from 'react';
 import { PrincipleReveal, ReflectionPrompt, ResultCTA } from '@/modules/result';
 import { useRouter, useSearchParams } from 'next/navigation';
-import quizData from '../../../../content/chapters/part-02/31.quiz.json';
+import { quiz31 as quizData } from '@/lib/content';
 
-export default function ResultPage() {
+function ResultPageInner() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const fromGame = searchParams.get('from') === 'game';
@@ -23,5 +24,13 @@ export default function ResultPage() {
       <ReflectionPrompt question={quizData.reflection} />
       <ResultCTA onContinue={handleContinue} fromGame={fromGame} />
     </main>
+  );
+}
+
+export default function ResultPage() {
+  return (
+    <Suspense fallback={null}>
+      <ResultPageInner />
+    </Suspense>
   );
 }
