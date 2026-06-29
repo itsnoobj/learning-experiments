@@ -88,7 +88,7 @@ export function CardFlip({ front, back, onCorrect }: CardFlipProps) {
                 borderRadius: 'var(--radius)',
                 border: 'none',
                 background: 'var(--color-gold)',
-                color: 'var(--color-bg)',
+                color: '#1A1A1A',
                 fontWeight: 600,
                 cursor: 'pointer',
               }}

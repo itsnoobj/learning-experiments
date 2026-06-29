@@ -8,32 +8,15 @@ import type { MapNodeStatus } from '../components/MapNode';
 export type NodeStatusMap = Record<number, MapNodeStatus>;
 
 /**
- * Hardcoded fallback progression used until the progress store is populated:
- * first three chapters done, node 4 current, the rest locked.
- */
-const FALLBACK_STATUS: NodeStatusMap = {
-  1: 'done',
-  2: 'done',
-  3: 'done',
-  4: 'current',
-  5: 'locked',
-  6: 'locked',
-  7: 'locked',
-};
-
-/**
  * Derives each node's status from the progress store.
  *
  * Completed chapters render as `done`. The first non-completed node in map
- * order becomes `current`; everything after it is `locked`. When the store is
- * empty we fall back to a sensible demo progression (see {@link FALLBACK_STATUS}).
+ * order becomes `current`; everything after it is `locked`. With an empty
+ * store this naturally makes the very first node `current` and the rest
+ * `locked`, so progression always reflects real completion state.
  */
 export function useMapProgress(): NodeStatusMap {
   const completedChapters = useProgressStore((state) => state.completedChapters);
-
-  if (completedChapters.length === 0) {
-    return FALLBACK_STATUS;
-  }
 
   const statuses: NodeStatusMap = {};
   let currentAssigned = false;

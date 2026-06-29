@@ -1,14 +1,25 @@
 'use client';
 
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import { PrincipleReveal, ReflectionPrompt, ResultCTA } from '@/modules/result';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { quiz31 as quizData } from '@/lib/content';
+import { useProgressStore } from '@/store/progressStore';
+
+/** The chapter this result screen completes. */
+const CURRENT_CHAPTER_ID = '31';
 
 function ResultPageInner() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const fromGame = searchParams.get('from') === 'game';
+  const completeChapter = useProgressStore((state) => state.completeChapter);
+
+  // Reaching the result screen means the quiz is complete: mark the chapter
+  // done so the world map updates the node to 'done' on return.
+  useEffect(() => {
+    completeChapter(CURRENT_CHAPTER_ID);
+  }, [completeChapter]);
 
   const handleContinue = () => {
     if (fromGame) {

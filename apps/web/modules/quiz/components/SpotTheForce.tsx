@@ -116,7 +116,7 @@ export function SpotTheForce({ situation, question, options, onCorrect }: SpotTh
             borderRadius: 'var(--radius)',
             border: 'none',
             background: 'var(--color-gold)',
-            color: 'var(--color-bg)',
+            color: '#1A1A1A',
             fontWeight: 600,
             cursor: 'pointer',
           }}

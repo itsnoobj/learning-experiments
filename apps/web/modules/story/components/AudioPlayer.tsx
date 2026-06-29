@@ -17,6 +17,12 @@ const btnStyle: React.CSSProperties = {
   border: 'none',
   cursor: 'pointer',
   color: 'var(--color-text)',
+  minHeight: '44px',
+  minWidth: '44px',
+  padding: '0 var(--spacing-sm)',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
 };
 
 function formatTime(seconds: number): string {

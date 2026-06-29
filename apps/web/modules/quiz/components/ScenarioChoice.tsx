@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import type { ChallengeOption } from '@field-guide/shared-types';
 import { QuizFeedback } from './QuizFeedback';
 
@@ -14,38 +14,23 @@ export interface ScenarioChoiceProps {
   onCorrect: () => void;
 }
 
-const RETRY_DELAY_MS = 1500;
-
 /**
  * "Pick the best response" challenge.
- * Wrong answers briefly lock, reveal feedback, then re-enable for a retry.
- * The correct answer reveals a Next button that advances the quiz.
+ * A wrong answer reveals feedback that stays visible until the learner picks
+ * again, so there is time to read it. The correct answer reveals a Next button
+ * that advances the quiz.
  */
 export function ScenarioChoice({ situation, options, onCorrect }: ScenarioChoiceProps) {
   const [selected, setSelected] = useState<number | null>(null);
   const [solved, setSolved] = useState(false);
-  const [locked, setLocked] = useState(false);
-  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  useEffect(() => {
-    return () => {
-      if (timer.current) clearTimeout(timer.current);
-    };
-  }, []);
 
   const handleSelect = (index: number) => {
-    if (locked || solved) return;
+    if (solved) return;
     const option = options[index];
     setSelected(index);
 
     if (option.correct) {
       setSolved(true);
-    } else {
-      setLocked(true);
-      timer.current = setTimeout(() => {
-        setSelected(null);
-        setLocked(false);
-      }, RETRY_DELAY_MS);
     }
   };
 
@@ -72,7 +57,7 @@ export function ScenarioChoice({ situation, options, onCorrect }: ScenarioChoice
             key={index}
             type="button"
             onClick={() => handleSelect(index)}
-            disabled={locked || solved}
+            disabled={solved}
             style={{
               textAlign: 'left',
               padding: 'var(--spacing-md)',
@@ -80,7 +65,7 @@ export function ScenarioChoice({ situation, options, onCorrect }: ScenarioChoice
               border: `2px solid ${borderColor(index)}`,
               background: 'var(--color-surface)',
               color: 'var(--color-text)',
-              cursor: locked || solved ? 'default' : 'pointer',
+              cursor: solved ? 'default' : 'pointer',
               transition: 'border-color 0.2s ease',
             }}
           >
@@ -103,7 +88,7 @@ export function ScenarioChoice({ situation, options, onCorrect }: ScenarioChoice
             borderRadius: 'var(--radius)',
             border: 'none',
             background: 'var(--color-gold)',
-            color: 'var(--color-bg)',
+            color: '#1A1A1A',
             fontWeight: 600,
             cursor: 'pointer',
           }}

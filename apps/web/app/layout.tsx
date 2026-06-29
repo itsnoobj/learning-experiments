@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { IBM_Plex_Sans } from 'next/font/google';
 import { ThemeProvider } from './theme-provider';
+import { ThemeToggle } from '@/shared/components/ThemeToggle';
 import './globals.css';
 
 const ibmPlexSans = IBM_Plex_Sans({
@@ -18,9 +19,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-theme="light" className={ibmPlexSans.variable}>
+    <html lang="en" data-theme="dark" className={ibmPlexSans.variable}>
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <ThemeToggle />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
