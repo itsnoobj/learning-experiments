@@ -101,32 +101,6 @@ export default function LandingPage() {
           Lincoln, Mandela — then test yourself with interactive challenges.
         </p>
 
-        {/* What you get — quick visual proof */}
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            gap: '2rem',
-            marginTop: '2.5rem',
-            flexWrap: 'wrap',
-          }}
-        >
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '1.5rem', color: 'var(--color-gold)' }}>10</div>
-            <div style={{ fontSize: '0.75rem', color: 'var(--color-text-dim)' }}>Worlds</div>
-          </div>
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '1.5rem', color: 'var(--color-gold)' }}>110</div>
-            <div style={{ fontSize: '0.75rem', color: 'var(--color-text-dim)' }}>Missions</div>
-          </div>
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '1.5rem', color: 'var(--color-gold)' }}>5</div>
-            <div style={{ fontSize: '0.75rem', color: 'var(--color-text-dim)' }}>
-              Challenge Types
-            </div>
-          </div>
-        </div>
-
         {/* CTAs */}
         <div
           style={{
@@ -141,6 +115,7 @@ export default function LandingPage() {
         >
           <Link
             href="/worlds"
+            className="cta-primary"
             style={{
               display: 'block',
               padding: '0.9rem 1.5rem',
@@ -151,12 +126,14 @@ export default function LandingPage() {
               fontSize: '1rem',
               textAlign: 'center',
               borderRadius: 'var(--radius)',
+              transition: 'transform 0.2s ease, box-shadow 0.2s ease',
             }}
           >
-            Explore the Map →
+            Begin Your Journey →
           </Link>
           <Link
             href="/game"
+            className="cta-secondary"
             style={{
               display: 'block',
               padding: '0.9rem 1.5rem',
@@ -168,24 +145,24 @@ export default function LandingPage() {
               border: '1px solid var(--color-border)',
               textAlign: 'center',
               borderRadius: 'var(--radius)',
+              transition: 'border-color 0.2s ease, color 0.2s ease',
             }}
           >
-            Play the Game →
+            Jump Straight In →
           </Link>
         </div>
-
-        {/* Bottom note */}
-        <p
-          style={{
-            marginTop: '3rem',
-            fontSize: '0.8rem',
-            color: 'var(--color-text-dim)',
-            opacity: 0.6,
-          }}
-        >
-          No signup. No paywall. Just start.
-        </p>
       </div>
+
+      <style>{`
+        .cta-primary:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 22px rgba(212, 175, 55, 0.35);
+        }
+        .cta-secondary:hover {
+          border-color: var(--color-gold);
+          color: var(--color-gold);
+        }
+      `}</style>
     </main>
   );
 }
