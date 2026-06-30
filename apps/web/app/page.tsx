@@ -193,10 +193,12 @@ export default function LandingPage() {
               </text>
             </svg>
             <div style={{ padding: '0.7rem 1rem', borderTop: 'none' }}>
-              <div style={{ fontSize: '0.9rem', fontWeight: 600, color: '#E8E8E8' }}>
+              <div style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--color-text)' }}>
                 Explore the Map
               </div>
-              <div style={{ fontSize: '0.7rem', color: '#888', marginTop: '0.2rem' }}>
+              <div
+                style={{ fontSize: '0.7rem', color: 'var(--color-text-dim)', marginTop: '0.2rem' }}
+              >
                 Pick your problem. Read the story. Solve the challenge.
               </div>
             </div>
@@ -299,10 +301,12 @@ export default function LandingPage() {
               </text>
             </svg>
             <div style={{ padding: '0.7rem 1rem', borderTop: 'none' }}>
-              <div style={{ fontSize: '0.9rem', fontWeight: 600, color: '#E8E8E8' }}>
+              <div style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--color-text)' }}>
                 Play the Game
               </div>
-              <div style={{ fontSize: '0.7rem', color: '#888', marginTop: '0.2rem' }}>
+              <div
+                style={{ fontSize: '0.7rem', color: 'var(--color-text-dim)', marginTop: '0.2rem' }}
+              >
                 Run. Hit obstacles. Lessons find you.
               </div>
             </div>
@@ -316,14 +320,18 @@ export default function LandingPage() {
             padding: '0.6rem 1.2rem',
             border: 'none',
             fontSize: '0.85rem',
-            color: '#E8E8E8',
+            color: 'var(--color-text)',
             fontStyle: 'italic',
             background: 'rgba(0,0,0,0.4)',
             backdropFilter: 'blur(4px)',
             display: 'inline-block',
           }}
         >
-          <span style={{ color: '#888', fontStyle: 'normal', marginRight: '0.5rem' }}>e.g.</span>
+          <span
+            style={{ color: 'var(--color-text-dim)', fontStyle: 'normal', marginRight: '0.5rem' }}
+          >
+            e.g.
+          </span>
           &ldquo;{SAMPLE_MISSIONS[sampleIndex]}&rdquo;
         </div>
       </div>
@@ -335,12 +343,12 @@ export default function LandingPage() {
           right: 0;
           bottom: 0;
           height: 50%;
-          background-color: var(--color-bg);
+          background-color: #FFFFFF;
           background-image: url('/assets/bg/landing-light.png');
           background-size: contain;
           background-position: bottom center;
           background-repeat: no-repeat;
-          opacity: 0.7;
+          opacity: 1;
           pointer-events: none;
         }
         [data-theme="dark"] .landing-bg {
@@ -351,6 +359,9 @@ export default function LandingPage() {
         }
         [data-theme="dark"] main {
           background: #000000 !important;
+        }
+        :root main {
+          background: #FFFFFF !important;
         }
         .glimpse-card {
           transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
