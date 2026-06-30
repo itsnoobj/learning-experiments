@@ -354,13 +354,12 @@ export default function LandingPage() {
         [data-theme="dark"] .landing-bg {
           background-color: #000000;
           background-image: url('/assets/bg/landing-dark.png');
-          opacity: 1;
-          height: 50%;
         }
         [data-theme="dark"] main {
           background: #000000 !important;
         }
-        :root main {
+        [data-theme="light"] main,
+        :root:not([data-theme="dark"]) main {
           background: #FFFFFF !important;
         }
         .glimpse-card {
