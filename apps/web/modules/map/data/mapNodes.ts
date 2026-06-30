@@ -6,6 +6,7 @@
 // no code changes. Covered by generateMapLayout.test.ts, including the
 // "generates more nodes when more missions are added" case.
 import type { MapNodeStatus } from '../components/MapNode';
+import { getMissionTitle } from './missionTitles';
 
 /** A region as consumed by the map layout (subset of the hierarchy Region). */
 export interface LayoutRegion {
@@ -126,7 +127,7 @@ function generateSerpentineLayout(
       x: MARGIN_X + col * SPACING_X,
       y: TOP_PADDING + row * BAND_HEIGHT + NODE_OFFSET_Y,
       label: Number.parseInt(missionId, 10) || index + 1,
-      title: `Mission ${missionId}`,
+      title: getMissionTitle(missionId),
       regionId: region.id,
       status: statusFor(missionId),
     };
@@ -207,7 +208,7 @@ export function generateMapLayout(regions: LayoutRegion[], completedMissions: st
         x: MARGIN_X + missionIndex * SPACING_X,
         y: nodeY,
         label: Number.parseInt(missionId, 10) || missionIndex + 1,
-        title: `Mission ${missionId}`,
+        title: getMissionTitle(missionId),
         regionId: region.id,
         status: statusFor(missionId),
       };
