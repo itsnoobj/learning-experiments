@@ -1,0 +1,42 @@
+{
+  "chapterId": "4",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "Your boss called your deck 'brilliant' in front of the team. Now you notice yourself drifting toward flashy, visible work and away from the quiet work that actually matters.",
+      "options": [
+        { "text": "Keep chasing the visible wins — the recognition proves you're on the right track.", "correct": false, "feedback": "You've let the applause become the scorecard. Steering by 'what gets noticed' instead of 'what's true' hands the controls to whoever grants the praise." },
+        { "text": "Write down what success looks like by your own standard, then check praise against it instead of letting it become the standard.", "correct": true, "feedback": "Defining 'good' before you're judged keeps your worth and direction anchored inside. Now praise informs you without governing you." },
+        { "text": "Decide praise is hollow and start refusing all of it as a point of pride.", "correct": false, "feedback": "Total imperviousness is just a different deafness. Praise carries real signal about what's landing — refuse it entirely and you lose genuine information." }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "The work is never quite enough on its own. You finish something good but feel anxious and hungry, eyes scanning the room for a reaction that may or may not come.",
+      "question": "Which force is driving this?",
+      "options": [
+        { "text": "Healthy pride in good work", "correct": false, "feedback": "Healthy satisfaction is quiet and self-contained — 'I did good work, I know it.' The anxious scanning for a reaction is the opposite of that." },
+        { "text": "A need for external validation running your identity", "correct": true, "feedback": "When the doing isn't enough without the seeing, the hook is in. If worth was never secured from the inside, praise isn't a bonus — it's oxygen, and you'll do almost anything to get it." },
+        { "text": "Ordinary curiosity about feedback", "correct": false, "feedback": "Curiosity can wait and take it or leave it. The hungry, anxious quality here is craving, not curiosity." }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "Why is praise that comes only sometimes more addictive than praise that comes every time?",
+      "back": "It's called intermittent reinforcement. Reliable rewards lose their power; unpredictable ones make the brain keep pulling the lever hoping this time is the hit. It's the same pattern that makes slot machines and social feeds compulsive — randomness, not generosity, is what builds the addiction."
+    },
+    {
+      "type": "before-after",
+      "context": "A monkey is lured onto a crocodile's back by a feast thrown 'in his honor,' then told mid-river the real plan is to eat his heart.",
+      "scenarioA": { "label": "Flattered by the praise", "text": "Glows at the honor, climbs aboard without question, and ends up helpless in deep water." },
+      "scenarioB": { "label": "Awake to what the praise is for", "text": "Snaps alert mid-river, sees the flattery as bait, and talks his way back to the safety of the tree." },
+      "correctScenario": "B",
+      "explanation": "What saved the monkey wasn't avoiding praise — it was waking up to what the praise was actually for. As Epictetus warned, the moment your peace depends on others' approval, you've handed them the controls; anyone who can grant applause can also withhold it."
+    }
+  ],
+  "principle": {
+    "text": "Praise is a fine reward and a terrible master.",
+    "subtext": "When approval becomes the fuel your identity runs on, you stop steering by 'what's true' and start steering by 'what gets applause' — and whoever controls the applause now controls you."
+  },
+  "reflection": "Make a quick list of whose approval you find yourself working for. Now ask of your current work: would I still be proud of this if no one ever noticed it?"
+}

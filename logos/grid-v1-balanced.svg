@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#FAF7F2"/>
+  
+  <!-- 3x3 Grid - Balanced emerging pattern -->
+  <!-- Gap: 8px between cells, cell size: 52px -->
+  <!-- Grid starts at x:137, y:100 to center it -->
+  
+  <!-- Row 1 -->
+  <rect x="137" y="100" width="52" height="52" rx="6" fill="#2C2C2C"/>
+  <rect x="197" y="100" width="52" height="52" rx="6" fill="#B8860B" opacity="0.35"/>
+  <rect x="257" y="100" width="52" height="52" rx="6" fill="#B8860B"/>
+  
+  <!-- Row 2 -->
+  <rect x="137" y="160" width="52" height="52" rx="6" fill="#B8860B" opacity="0.6"/>
+  <rect x="197" y="160" width="52" height="52" rx="6" fill="#2C2C2C"/>
+  <rect x="257" y="160" width="52" height="52" rx="6" fill="#2C2C2C" opacity="0.25"/>
+  
+  <!-- Row 3 -->
+  <rect x="137" y="220" width="52" height="52" rx="6" fill="#2C2C2C" opacity="0.2"/>
+  <rect x="197" y="220" width="52" height="52" rx="6" fill="#B8860B"/>
+  <rect x="257" y="220" width="52" height="52" rx="6" fill="#2C2C2C"/>
+  
+  <!-- Wordmark -->
+  <text x="200" y="320" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#2C2C2C">human<tspan fill="#B8860B">dynamics</tspan></text>
+  <text x="200" y="346" text-anchor="middle" font-family="Georgia, serif" font-size="13" letter-spacing="2" fill="#999">.guide</text>
+</svg>

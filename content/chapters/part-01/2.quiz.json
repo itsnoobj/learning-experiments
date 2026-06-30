@@ -1,0 +1,45 @@
+{
+  "chapterId": "2",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "You shipped the bug that took down checkout for an hour. In the postmortem, all eyes turn to you.",
+      "options": [
+        { "text": "'My mistake — I missed it in review. Here's what I'm putting in place so it can't recur.'", "correct": true, "feedback": "Ownership first, repair second. This converts the error from a stain into evidence you can be trusted with hard things — which is what actually rebuilds standing." },
+        { "text": "'Well, the brief was unclear and QA had a thin week, so a few things slipped.'", "correct": false, "feedback": "Every word may be true, but it's a wall, not an apology. The instant the explanation comes before ownership, the room hears deflection." },
+        { "text": "'This is all my fault, I'm terrible at this, I'm so sorry, I always do this.'", "correct": false, "feedback": "Theatrical over-owning is ego in a humble costume — it makes the moment about you and fishes for reassurance instead of fixing anything." }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "Caught in an error, your brain instantly hands you a pre-written story: the success was your skill, this failure was just bad circumstances.",
+      "question": "Which force is driving this?",
+      "options": [
+        { "text": "Honest, careful recollection", "correct": false, "feedback": "It feels honest, but that's the trap. The story arrives pre-written and biased before you've actually examined the facts." },
+        { "text": "Self-serving bias defending the ego", "correct": true, "feedback": "We instinctively credit wins to skill and failures to circumstance. You don't decide to do it — the ego, your immune system for the self, hands you the deflection as if it were truth." },
+        { "text": "Rational risk assessment", "correct": false, "feedback": "There's no weighing of evidence here — just an automatic flinch away from the feeling of having been wrong. That's protection, not reasoning." }
+      ]
+    },
+    {
+      "type": "drag-match",
+      "instruction": "Put Lincoln's 'hot letter' method in the right order:",
+      "items": [
+        { "id": "a", "text": "Feel the fury rising and pour every blaming, justifying thought onto the page" },
+        { "id": "b", "text": "Let the writing drain the venom in private" },
+        { "id": "c", "text": "Fold the letter and never send it — preserve the relationship" },
+        { "id": "d", "text": "Show up generous in public, without needing the other person to lose" }
+      ],
+      "correctOrder": ["a", "b", "c", "d"]
+    },
+    {
+      "type": "card-flip",
+      "front": "Owning a mistake will damage my reputation — better to protect it by deflecting.",
+      "back": "The people we trust most are the ones who admit errors easily; it signals they're secure enough not to need the lie. Ego protects your reputation by doing the one thing that quietly destroys it. Like kintsugi gold filling a crack, the admission is what makes you whole — not what leaks out."
+    }
+  ],
+  "principle": {
+    "text": "Ego doesn't protect you from the mistake — it protects you from the feeling of having made one.",
+    "subtext": "The pain isn't the error. It's the gap between 'I am competent' and 'I just proved I'm not' — and the defending, explaining, and deflecting are all attempts to close that gap without having to feel it."
+  },
+  "reflection": "Recall the last time you said 'my mistake' cleanly, with no 'but.' What did the room actually do — pounce, or relax? What does that tell you about the flinch you're protecting?"
+}

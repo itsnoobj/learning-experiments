@@ -47,3 +47,27 @@ export function getWorld(id: string | number): World | undefined {
 export function worldMissionIds(world: World): string[] {
   return world.regions.flatMap((region) => region.missions);
 }
+
+/** Where a mission/chapter lives in the hierarchy. */
+export interface ChapterLocation {
+  /** Numeric world id (route param for `/worlds/[id]`). */
+  worldId: number;
+  /** Region id within the world (route param for `.../region/[regionId]`). */
+  regionId: string;
+}
+
+/**
+ * Find the world/region a chapter (mission) belongs to by scanning every
+ * world's regions for the given mission id. Returns `null` when no region
+ * lists the id, so callers can fall back to the worlds map.
+ */
+export function findChapterLocation(chapterId: string): ChapterLocation | null {
+  for (const world of worlds) {
+    for (const region of world.regions) {
+      if (region.missions.includes(chapterId)) {
+        return { worldId: world.id, regionId: region.id };
+      }
+    }
+  }
+  return null;
+}

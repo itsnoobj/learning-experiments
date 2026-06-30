@@ -564,8 +564,8 @@ export function HitInterstitial({ title, situation, onContinue, chapterId }: Hit
     if (proceed === false) return;
 
     const params = new URLSearchParams({ from: 'game' });
-    if (chapterId) params.set('chapter', chapterId);
-    router.push(`/chapter?${params.toString()}`);
+    const target = chapterId ? `/chapter/${chapterId}` : '/chapter';
+    router.push(`${target}?${params.toString()}`);
   };
 
   return (

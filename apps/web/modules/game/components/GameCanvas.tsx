@@ -218,7 +218,8 @@ export function GameCanvas() {
     playerRef.current = new Player({ groundY });
     obstaclesRef.current = [];
     distanceRef.current = 0;
-    spawnCountRef.current = 0;
+    // NOTE: spawnCountRef is NOT reset — it persists across runs so each
+    // new run cycles to the next chapter instead of repeating the same one.
     nextSpawnAtRef.current = nextSpacing(0);
   }, []);
 
@@ -508,7 +509,9 @@ export function GameCanvas() {
   }, [handleJump, handleStart]);
 
   const activeChapter =
-    gameChapters[game.currentChapterIndex % gameChapters.length] ?? gameChapters[0];
+    gameChapters.find((c) => c.id === game.hitChapterId) ??
+    gameChapters[game.currentChapterIndex % gameChapters.length] ??
+    gameChapters[0];
 
   // The chapter the player just solved before resuming — the one *before* the
   // current index. Clamped so a fresh resume (index 0) surfaces the first

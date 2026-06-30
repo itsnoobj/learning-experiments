@@ -81,13 +81,14 @@ export function WorldMap({
   const recommendedNode = nodes.find((node) => node.status === 'recommended');
   const accentColor = accent || GOLD;
 
-  // Clicking a mission opens its chapter. When we know the world/region we
-  // carry them through so the result screen can route back to this map.
+  // Clicking a mission opens its chapter at `/chapter/{missionId}`. When we
+  // know the world/region we carry them through so the result screen can route
+  // back to this map.
   const targetRegionId = regionId ?? region?.id;
-  const missionHref =
+  const missionHref = (missionId: string) =>
     worldId != null && targetRegionId != null
-      ? `/chapter?from=map&world=${worldId}&region=${targetRegionId}`
-      : '/chapter';
+      ? `/chapter/${missionId}?from=map&world=${worldId}&region=${targetRegionId}`
+      : `/chapter/${missionId}`;
 
   const backdrop = generateBackdrop(width, height);
   const terrain = regionAreas.flatMap((area) =>
@@ -178,7 +179,7 @@ export function WorldMap({
               title={node.title}
               status={node.status}
               accent={accentColor}
-              onClick={() => router.push(missionHref)}
+              onClick={() => router.push(missionHref(node.id))}
             />
           ))}
 

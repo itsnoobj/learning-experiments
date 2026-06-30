@@ -54,6 +54,7 @@ export function AudioPlayer({ src }: { src: string }) {
   const [playing, setPlaying] = useState(false);
   const [current, setCurrent] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [error, setError] = useState(false);
   const label = playing ? 'Pause' : 'Play';
 
   function toggle() {
@@ -70,6 +71,9 @@ export function AudioPlayer({ src }: { src: string }) {
     audio.currentTime = Number(event.target.value);
     setCurrent(audio.currentTime);
   }
+
+  // Don't render if the audio file doesn't exist
+  if (error) return null;
 
   return (
     <div style={wrapStyle}>
@@ -105,6 +109,7 @@ export function AudioPlayer({ src }: { src: string }) {
         onLoadedMetadata={(e) => setDuration(e.currentTarget.duration)}
         onTimeUpdate={(e) => setCurrent(e.currentTarget.currentTime)}
         onEnded={() => setPlaying(false)}
+        onError={() => setError(true)}
       />
     </div>
   );

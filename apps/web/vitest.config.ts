@@ -12,6 +12,9 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, '.'),
+      // `server-only` throws when evaluated outside an RSC bundle; stub it so
+      // server modules (e.g. lib/content.ts) can be imported under vitest.
+      'server-only': path.resolve(__dirname, 'test/stubs/server-only.ts'),
     },
   },
 });

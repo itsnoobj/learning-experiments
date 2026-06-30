@@ -5,6 +5,7 @@ dist/
 .env
 .env.*
 *.mp3
+*.tsbuildinfo
 
 # misc
 .DS_Store

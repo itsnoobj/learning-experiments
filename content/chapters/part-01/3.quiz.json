@@ -1,0 +1,42 @@
+{
+  "chapterId": "3",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "Monday's raise thrilled you. By Friday you've learned what a colleague got, and the same number now feels like an insult.",
+      "options": [
+        { "text": "Push to renegotiate immediately so you're not behind your colleague.", "correct": false, "feedback": "You're chasing rank, not value. Even if you win, the wiring just finds the next person ahead — it's a race with no finish line." },
+        { "text": "Name what happened: 'My situation didn't change — I just found a comparison,' then ask whether you actually wanted their life.", "correct": true, "feedback": "Catching the swap in real time breaks its grip. The facts of your life are unchanged; only the measuring stick moved. Usually you don't want their life — you just don't want to feel behind." },
+        { "text": "Decide the raise was meaningless and feel quietly bitter about the whole thing.", "correct": false, "feedback": "That's letting comparison set your worth — the Duryodhana path. You lost nothing real, yet you've surrendered the joy of something you genuinely won." }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "A prince who owns wealth, an army, and a waiting crown cannot eat or sleep — purely because his cousins' new palace is finer than his.",
+      "question": "Which force is driving this?",
+      "options": [
+        { "text": "Legitimate material loss", "correct": false, "feedback": "He hasn't lost a single thing. His life is exactly as rich as the day before. Nothing real was taken." },
+        { "text": "Status hunger and envy", "correct": true, "feedback": "His worth was tied to being ahead. The cousins' success costs him nothing real, yet it costs him everything — because his satisfaction depends on ranking, not on what he has." },
+        { "text": "Reasonable ambition to improve", "correct": false, "feedback": "Ambition builds; this only burns. The tell is that someone else's gain diminishes his joy even though he lost nothing — that's defending a rank, not pursuing a life." }
+      ]
+    },
+    {
+      "type": "before-after",
+      "context": "Two people feel the sting of watching a peer pull ahead.",
+      "scenarioA": { "label": "Comparison as verdict", "text": "'They're ahead, so I'm worthless.' The sting sets their self-esteem and sours everything they have." },
+      "scenarioB": { "label": "Comparison as information", "text": "'How did they do that?' The sting becomes a question that reveals a path and lights a fire." },
+      "correctScenario": "B",
+      "explanation": "The same act produces opposite results. Noticing others isn't the danger — letting the noticing set your worth is. Used as information, comparison is fuel; used as a verdict, it's poison."
+    },
+    {
+      "type": "card-flip",
+      "front": "If I just achieve a bit more, I'll finally feel ahead and the comparison ache will stop.",
+      "back": "There is always someone ahead, and hedonic adaptation means every gain becomes the new baseline within days. Comparison isn't measurement — it's a status hunt that never ends. The only comparison you can win is to past-you, where you control both data points and the finish line is yours."
+    }
+  ],
+  "principle": {
+    "text": "Comparison is not measurement — it's a status hunt, and the hunt never ends.",
+    "subtext": "There is always someone ahead. So when your satisfaction depends on ranking, you've signed up for a race with no finish line, where every win just reveals the next person to lose to."
+  },
+  "reflection": "Name three things you have right now that a younger version of you would have been thrilled to reach. When did you last actually feel their value — and what comparison stole it?"
+}

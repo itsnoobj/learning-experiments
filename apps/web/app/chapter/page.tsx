@@ -1,68 +1,37 @@
-'use client';
+import { redirect } from 'next/navigation';
 
-import { Suspense } from 'react';
-import { ChapterVisual, AudioPlayer, StoryView } from '@/modules/story';
-import { chapter31 as chapterData } from '@/lib/content';
-import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
+/** Default chapter for the legacy `/chapter` route. */
+const DEFAULT_CHAPTER_ID = '31';
 
-function ChapterPageInner() {
-  const searchParams = useSearchParams();
-  const fromGame = searchParams.get('from') === 'game';
-  const world = searchParams.get('world');
-  const region = searchParams.get('region');
-
-  const quizHref = fromGame ? '/quiz?from=game' : '/quiz';
-  const backHref = fromGame
-    ? '/game?resume=1'
-    : world && region
-      ? `/worlds/${world}/region/${region}`
-      : '/map';
-  const backLabel = fromGame ? '← Game' : '← Map';
-
-  return (
-    <main className="max-w-[620px] mx-auto px-4 pb-12">
-      <nav className="sticky top-0 z-10 flex items-center py-3 border-b border-[var(--color-border)] bg-[var(--color-bg)]">
-        <Link href={backHref} className="text-sm text-[var(--color-text)]">
-          {backLabel}
-        </Link>
-        <span className="ml-auto text-xs text-[var(--color-text-dim)]">
-          Chapter {chapterData.id}
-        </span>
-      </nav>
-
-      <section className="mt-6">
-        <ChapterVisual src={`/content/${chapterData.visual}`} alt="Chapter illustration" />
-      </section>
-
-      <section className="mt-4">
-        <AudioPlayer src={`/content/${chapterData.audio}`} />
-      </section>
-
-      <section className="mt-6">
-        <StoryView title={chapterData.title} sections={chapterData.sections} />
-      </section>
-
-      <Link
-        href={quizHref}
-        className="block w-full mt-8 py-3 text-center font-bold uppercase tracking-wider"
-        style={{
-          color: 'var(--color-bg)',
-          backgroundColor: 'var(--color-gold)',
-          fontSize: '0.95rem',
-          letterSpacing: '0.06em',
-        }}
-      >
-        Test Your Understanding →
-      </Link>
-    </main>
-  );
+interface LegacyChapterPageProps {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 }
 
-export default function ChapterPage() {
-  return (
-    <Suspense fallback={null}>
-      <ChapterPageInner />
-    </Suspense>
-  );
+/**
+ * Legacy `/chapter` route, kept for backwards compatibility.
+ *
+ * The chapter page is now dynamic at `/chapter/{id}`. This route redirects to a
+ * concrete id: the `chapter` query param when present (older links such as the
+ * in-game interstitial used `?chapter={id}`), otherwise the default chapter.
+ * Any remaining query params (e.g. `from`, `world`, `region`) are preserved so
+ * the back/quiz navigation continues to work.
+ */
+export default async function LegacyChapterPage({ searchParams }: LegacyChapterPageProps) {
+  const params = await searchParams;
+
+  const rawId = params.chapter;
+  const id = (Array.isArray(rawId) ? rawId[0] : rawId) || DEFAULT_CHAPTER_ID;
+
+  const query = new URLSearchParams();
+  for (const [key, value] of Object.entries(params)) {
+    if (key === 'chapter' || value == null) continue;
+    if (Array.isArray(value)) {
+      value.forEach((v) => query.append(key, v));
+    } else {
+      query.set(key, value);
+    }
+  }
+
+  const qs = query.toString();
+  redirect(qs ? `/chapter/${id}?${qs}` : `/chapter/${id}`);
 }

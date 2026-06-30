@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#FAF7F2"/>
+  
+  <!-- 3x3 Grid - Diagonal pattern (strong on diagonal, fading off) -->
+  <!-- Cell size: 56px, gap: 6px -->
+  
+  <!-- Row 1 -->
+  <rect x="134" y="96" width="56" height="56" rx="6" fill="#2C2C2C"/>
+  <rect x="196" y="96" width="56" height="56" rx="6" fill="#2C2C2C" opacity="0.15"/>
+  <rect x="258" y="96" width="56" height="56" rx="6" fill="#B8860B" opacity="0.2"/>
+  
+  <!-- Row 2 -->
+  <rect x="134" y="158" width="56" height="56" rx="6" fill="#B8860B" opacity="0.3"/>
+  <rect x="196" y="158" width="56" height="56" rx="6" fill="#B8860B"/>
+  <rect x="258" y="158" width="56" height="56" rx="6" fill="#2C2C2C" opacity="0.3"/>
+  
+  <!-- Row 3 -->
+  <rect x="134" y="220" width="56" height="56" rx="6" fill="#2C2C2C" opacity="0.15"/>
+  <rect x="196" y="220" width="56" height="56" rx="6" fill="#B8860B" opacity="0.4"/>
+  <rect x="258" y="220" width="56" height="56" rx="6" fill="#2C2C2C"/>
+  
+  <!-- Wordmark -->
+  <text x="224" y="325" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" letter-spacing="1.5" fill="#2C2C2C">HUMAN<tspan fill="#B8860B">DYNAMICS</tspan></text>
+  <text x="224" y="350" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" letter-spacing="3" fill="#999">.GUIDE</text>
+</svg>

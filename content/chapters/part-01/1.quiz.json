@@ -1,0 +1,42 @@
+{
+  "chapterId": "1",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "You picked a vendor three months ago. The cracks are showing and a teammate gently suggests reconsidering. You feel the heat rising to defend it.",
+      "options": [
+        { "text": "List every reason the choice was justified at the time, until they back off.", "correct": false, "feedback": "That's defending the self who chose, not the decision. Winning the argument keeps a sinking choice afloat and trains people to stop telling you the truth." },
+        { "text": "Say 'I made a reasonable call with what I knew — new information changed the picture. Let's reassess.'", "correct": true, "feedback": "This separates the decider from the decision. Past-you isn't on trial; present-you is just steering. Updating becomes cheap once your identity isn't riding on it." },
+        { "text": "Abandon the vendor immediately and apologize for ever choosing them.", "correct": false, "feedback": "Collapsing the instant you're questioned is identity collapse with better branding. People stop trusting your judgment because you visibly don't either." }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "A highly intelligent engineer generates ten airtight-sounding reasons why the failing architecture they designed is actually fine.",
+      "question": "Which force is driving this?",
+      "options": [
+        { "text": "Genuine technical conviction", "correct": false, "feedback": "If it were conviction, new evidence would move it. The tell is the heat and the bottomless supply of justifications — that's defense, not analysis." },
+        { "text": "Identity fused to the decision", "correct": true, "feedback": "Once 'I chose this' becomes 'this is who I am,' questioning the design feels like an attack on the self. Intelligence makes it worse — competence becomes the lawyer for insecurity." },
+        { "text": "Simple laziness about redoing the work", "correct": false, "feedback": "The energy spent generating elaborate defenses is the opposite of laziness. The effort is real; it's just pointed at protecting the ego, not the project." }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "Admitting a decision was wrong makes you look like a weak, unreliable decision-maker.",
+      "back": "The reverse is true. Defending a sinking choice is what looks weak. People trust you more — not less — when you say 'I was wrong, here's what I'm doing instead.' The capable thing isn't never being wrong; it's updating cleanly when evidence turns."
+    },
+    {
+      "type": "before-after",
+      "context": "Marcus Aurelius, the most powerful man alive, faced the same trap: the higher your status, the more your identity fuses to your decisions.",
+      "scenarioA": { "label": "The Fused Leader", "text": "Treats every correction as a defeat to be resisted, because being wrong feels like erasing himself." },
+      "scenarioB": { "label": "Marcus Aurelius", "text": "Privately reminds himself: 'If anyone can prove I am wrong, I will gladly change. I seek the truth, which never harmed anyone.'" },
+      "correctScenario": "B",
+      "explanation": "Marcus practiced separating the choice from the self on purpose. By treating correction as a gift rather than a threat, he kept his judgment open even at the height of power — exactly when ego pressure is strongest."
+    }
+  ],
+  "principle": {
+    "text": "You don't defend the decision — you defend the self that made it.",
+    "subtext": "The moment a choice becomes part of your identity, changing your mind feels like erasing yourself. Separate the two, and the decision becomes just a decision again — something you can update without dying."
+  },
+  "reflection": "Think of a decision you're quietly over-defending right now. Finish this sentence honestly: 'If I admit this was wrong, I'm afraid people will think I'm ___.' What does seeing that word do to its grip on you?"
+}

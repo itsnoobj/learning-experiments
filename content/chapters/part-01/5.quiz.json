@@ -1,0 +1,42 @@
+{
+  "chapterId": "5",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "You have a real question in the meeting — the kind that would actually help. Your heart races. Asking it might reveal you don't already know.",
+      "options": [
+        { "text": "Stay quiet and look it up later, so no one sees the gap.", "correct": false, "feedback": "That's the fear disguised as prudence, keeping you safe and small. The catastrophe you're avoiding almost never arrives — and the question stays unsolved." },
+        { "text": "Ask it anyway, and watch what actually happens.", "correct": true, "feedback": "Usually three other people were wondering the same thing, and the room feels relief. Each time the catastrophe doesn't come, the fear shrinks. Action comes first; the confident feeling follows." },
+        { "text": "Pretend you already understand and nod along confidently.", "correct": false, "feedback": "This is the overcorrection — reckless confidence that ignores a real gap. It protects the image while the actual not-knowing quietly compounds." }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "A simple question in a meeting makes your heart pound as if something genuinely dangerous is about to happen.",
+      "question": "Which force is driving this reaction?",
+      "options": [
+        { "text": "A rational read that the question is actually risky", "correct": false, "feedback": "Objectively, asking a question is safe. The bodily alarm is wildly out of proportion to the real stakes — that's a clue it isn't rational assessment." },
+        { "text": "An ancient survival fear of exile wearing a modern suit", "correct": true, "feedback": "For our ancestors, looking like the useless tribe member could mean exile, and exile meant death. The nervous system still can't tell 'might look dumb' from 'might get cast out.'" },
+        { "text": "Genuine lack of preparation", "correct": false, "feedback": "Even the well-prepared feel it — Maya Angelou felt it after eleven books. The fear shows up regardless of readiness, so it isn't reporting on your actual competence." }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "Feeling like a fraud who's about to be 'found out' means I'm probably not actually good enough.",
+      "back": "Often the reverse. The genuinely skilled doubt themselves because they see how much they don't know, while the least competent are the most confident — they lack the skill to see their own gaps. The fear of looking incompetent is frequently a marker of real competence, not its absence."
+    },
+    {
+      "type": "before-after",
+      "context": "Maya Angelou, after eleven acclaimed books, still felt sure each new one would expose her as a fraud.",
+      "scenarioA": { "label": "Waiting to feel ready", "text": "Treats the 'they'll find me out' feeling as a verdict and holds back until the fear lifts." },
+      "scenarioB": { "label": "Maya Angelou", "text": "Feels the fear, stops treating it as information, and sits down to write the twelfth and thirteenth books anyway." },
+      "correctScenario": "B",
+      "explanation": "If a master at the height of her powers never escaped the feeling, then waiting to feel competent before acting is waiting for a train that never comes. The feeling is weather, not a verdict — and you can work in the rain."
+    }
+  ],
+  "principle": {
+    "text": "The fear of being exposed as incompetent is not evidence that you are.",
+    "subtext": "It's the tax that thoughtful people pay for caring about doing well — and waiting for it to lift before you act means staying small forever, because it never lifts."
+  },
+  "reflection": "Where are you currently 'preparing a bit more' when you're actually just afraid? What would acting before you feel ready look like this week?"
+}

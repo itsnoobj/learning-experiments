@@ -15,6 +15,7 @@
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 2rem;
+  --spacing-xl: 2.5rem;
 
   --radius: 0px;
 }
@@ -39,4 +40,34 @@ body {
 
 * {
   border-color: var(--color-border);
+}
+
+/* Shared keyframe animations (moved out of inline component <style> blocks) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes quiz-page-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes quiz-title-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

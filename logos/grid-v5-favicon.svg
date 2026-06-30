@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Favicon version - grid only, no text -->
+  <!-- Cell size: 16px, gap: 4px -->
+  
+  <!-- Row 1 -->
+  <rect x="4" y="4" width="16" height="16" rx="3" fill="#2C2C2C"/>
+  <rect x="24" y="4" width="16" height="16" rx="3" fill="#B8860B" opacity="0.35"/>
+  <rect x="44" y="4" width="16" height="16" rx="3" fill="#B8860B"/>
+  
+  <!-- Row 2 -->
+  <rect x="4" y="24" width="16" height="16" rx="3" fill="#B8860B" opacity="0.6"/>
+  <rect x="24" y="24" width="16" height="16" rx="3" fill="#2C2C2C"/>
+  <rect x="44" y="24" width="16" height="16" rx="3" fill="#2C2C2C" opacity="0.25"/>
+  
+  <!-- Row 3 -->
+  <rect x="4" y="44" width="16" height="16" rx="3" fill="#2C2C2C" opacity="0.2"/>
+  <rect x="24" y="44" width="16" height="16" rx="3" fill="#B8860B"/>
+  <rect x="44" y="44" width="16" height="16" rx="3" fill="#2C2C2C"/>
+</svg>
