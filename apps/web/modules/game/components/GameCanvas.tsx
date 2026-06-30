@@ -244,10 +244,31 @@ export function GameCanvas() {
     ctx.fillStyle = sky;
     ctx.fillRect(0, 0, width, height * 0.45);
 
+    // Distant hills/mountains: low-opacity triangles in the deep background,
+    // scrolling at HILL_PARALLAX (slower than clouds) to convey depth. Drawn
+    // before the clouds so clouds float in front of the ridgeline.
+    {
+      ctx.save();
+      ctx.fillStyle = isLight ? 'rgba(60, 60, 60, 0.08)' : 'rgba(255, 255, 255, 0.06)';
+      for (const hill of HILLS) {
+        const span = width + hill.w * 2;
+        const peakX = ((((hill.baseX - distance * HILL_PARALLAX) % span) + span) % span) - hill.w;
+        const baseY = groundY;
+        ctx.beginPath();
+        ctx.moveTo(peakX, baseY - hill.h); // peak
+        ctx.lineTo(peakX + hill.w, baseY); // right foot
+        ctx.lineTo(peakX - hill.w, baseY); // left foot
+        ctx.closePath();
+        ctx.fill();
+      }
+      ctx.restore();
+    }
+
     // Parallax clouds: drift slower than the foreground and wrap across a field
-    // wider than the viewport so they recycle seamlessly. In light mode the
-    // white cloud sprite is darkened (~#E0E0E0) and softened so it reads
-    // against the pale sky instead of vanishing.
+    // wider than the viewport so they recycle seamlessly. Three size tiers
+    // (small/medium/large) via each cloud's `scale`. In light mode the white
+    // cloud sprite is darkened (~#E0E0E0) and softened so it reads against the
+    // pale sky instead of vanishing.
     const cloudImg = images.cloud;
     if (isReady(cloudImg)) {
       const baseW = cloudImg.naturalWidth || 64;
@@ -263,6 +284,28 @@ export function GameCanvas() {
         const span = width + w * 2;
         const x = ((((cloud.baseX - distance * CLOUD_PARALLAX) % span) + span) % span) - w;
         ctx.drawImage(cloudImg, x, cloud.y, w, h);
+      }
+      ctx.restore();
+    }
+
+    // Birds: simple "V" shapes drifting slowly across the top of the sky. Drawn
+    // after the clouds so they read as the nearest sky element. Each bird wraps
+    // across a field wider than the viewport at BIRD_PARALLAX.
+    {
+      ctx.save();
+      ctx.strokeStyle = isLight ? 'rgba(40, 40, 40, 0.45)' : 'rgba(255, 255, 255, 0.5)';
+      ctx.lineWidth = 1.5;
+      ctx.lineCap = 'round';
+      for (const bird of BIRDS) {
+        const span = width + bird.s * 4;
+        const x = ((((bird.baseX - distance * BIRD_PARALLAX) % span) + span) % span) - bird.s * 2;
+        // A gentle vertical bob keyed off the wrapped x so wings "flap" subtly.
+        const dip = Math.sin(x * 0.05) * 2;
+        ctx.beginPath();
+        ctx.moveTo(x - bird.s, bird.y);
+        ctx.lineTo(x, bird.y + bird.s * 0.5 + dip);
+        ctx.lineTo(x + bird.s, bird.y);
+        ctx.stroke();
       }
       ctx.restore();
     }
@@ -287,17 +330,26 @@ export function GameCanvas() {
       ctx.stroke();
     }
 
-    // Obstacles: pipes and blocks rendered from their sprites, sitting on top of
-    // the ground. The collision hitbox (x/y/width/height) is unchanged. In
-    // light mode we trace a darker outline around each sprite so the hazards
-    // stay legible against the pale background.
-    const pipeImg = images.pipe;
-    const blockImg = images.block;
+    // Obstacles: each type renders from its own sprite when available
+    // (pipe/block/crate/spike), sitting on top of the ground. `gap` has no
+    // sprite and falls back to the canvas-drawn marker. The collision hitbox
+    // (x/y/width/height) is unchanged. In light mode we trace a darker outline
+    // around each sprite so the hazards stay legible against the pale
+    // background — except spikes, whose triangular silhouette would be misread
+    // as a box, so they keep their shaped fallback outline.
+    const spriteByType: Partial<
+      Record<(typeof obstaclesRef.current)[number]['type'], HTMLImageElement | undefined>
+    > = {
+      pipe: images.pipe,
+      block: images.block,
+      crate: images.crate,
+      spike: images.spike,
+    };
     for (const obstacle of obstaclesRef.current) {
-      const sprite = obstacle.type === 'pipe' ? pipeImg : blockImg;
+      const sprite = spriteByType[obstacle.type];
       if (isReady(sprite)) {
         ctx.drawImage(sprite, obstacle.x, obstacle.y, obstacle.width, obstacle.height);
-        if (isLight) {
+        if (isLight && obstacle.type !== 'spike') {
           ctx.save();
           ctx.strokeStyle = colors.obstacleStroke;
           ctx.lineWidth = 2;
@@ -354,7 +406,32 @@ export function GameCanvas() {
           );
           spawnCountRef.current += 1;
           obstaclesRef.current.push(obstacle);
-          nextSpawnAtRef.current = distanceRef.current + nextSpacing(difficulty);
+
+          // Occasionally spawn a tight second obstacle right behind the first
+          // for a "combo" challenge: two hazards close enough that the player
+          // must commit to a single, well-timed jump. After a combo we always
+          // give a full-width gap before the next spawn so it stays fair.
+          let comboSpawned = false;
+          if (Math.random() < COMBO_CHANCE) {
+            const tightGap = 60 + Math.random() * 30;
+            const second = spawnObstacle(
+              {
+                groundY: groundYRef.current,
+                spawnX: obstacle.x + obstacle.width + tightGap,
+                difficulty,
+              },
+              gameChapterIds,
+              spawnCountRef.current,
+            );
+            spawnCountRef.current += 1;
+            obstaclesRef.current.push(second);
+            comboSpawned = true;
+          }
+
+          // Widen the gap after a combo so back-to-back combos never wall off
+          // the player.
+          nextSpawnAtRef.current =
+            distanceRef.current + nextSpacing(difficulty) + (comboSpawned ? 160 : 0);
         }
 
         // Collision → hit phase.

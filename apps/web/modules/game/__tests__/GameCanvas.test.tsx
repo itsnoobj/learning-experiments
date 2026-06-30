@@ -24,6 +24,7 @@ function mockContext(): CanvasRenderingContext2D {
     beginPath: vi.fn(),
     moveTo: vi.fn(),
     lineTo: vi.fn(),
+    closePath: vi.fn(),
     stroke: vi.fn(),
     fill: vi.fn(),
     save: vi.fn(),
