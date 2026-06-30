@@ -211,6 +211,17 @@ function WorldZone({
       >
         {world.worldName}
       </text>
+      <text
+        x={x}
+        y={y + 54}
+        textAnchor="middle"
+        fontSize={9}
+        fontWeight={400}
+        fill={hovered ? world.accent : '#888'}
+        opacity={0.9}
+      >
+        {world.title}
+      </text>
     </g>
   );
 }
