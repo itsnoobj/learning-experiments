@@ -129,7 +129,7 @@ export default function LandingPage() {
             style={{
               textDecoration: 'none',
               flex: '1',
-              minWidth: '260px',
+              minWidth: '200px',
               border: 'none',
               overflow: 'visible',
               cursor: 'pointer',
@@ -212,7 +212,7 @@ export default function LandingPage() {
             style={{
               textDecoration: 'none',
               flex: '1',
-              minWidth: '260px',
+              minWidth: '200px',
               border: 'none',
               overflow: 'visible',
               cursor: 'pointer',
@@ -356,7 +356,7 @@ export default function LandingPage() {
           transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
           display: block;
         }
-        .glimpse-card:hover {
+        @media (max-width: 600px) { .glimpse-card { min-width: auto !important; } } .glimpse-card:hover {
           border-color: rgba(218, 165, 32, 0.4) !important;
           transform: translateY(-3px);
           box-shadow: 0 8px 24px rgba(218, 165, 32, 0.1);
