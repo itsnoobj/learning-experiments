@@ -38,7 +38,7 @@ const THEME_COLORS = {
 } as const;
 
 const GROUND_FRACTION = 0.82; // ground line as a fraction of canvas height
-const GRAVITY = 0.8; // px/frame^2
+const GRAVITY = 0.6; // px/frame^2 — tuned with jumpVelocity=-13 for reliable clears
 const BASE_SPEED = 6; // px/frame at difficulty 0
 const TARGET_FRAME_MS = 1000 / 60; // physics tuned for 60fps; delta-scaled below
 const TILE = 32; // ground tile size in px (matches ground-tile.svg)
