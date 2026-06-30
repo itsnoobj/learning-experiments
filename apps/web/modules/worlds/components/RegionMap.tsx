@@ -39,8 +39,8 @@ export interface RegionMapProps {
 }
 
 const WHITE = '#FFFFFF';
-const VIEW_W = 800;
-const VIEW_H = 500;
+const VIEW_W = 500;
+const VIEW_H = 800;
 
 /* ------------------------------------------------------------------ helpers */
 
@@ -68,31 +68,31 @@ function truncate(text: string, max = 22): string {
 function regionPositions(count: number): ReadonlyArray<{ x: number; y: number }> {
   switch (count) {
     case 1:
-      return [{ x: 400, y: 250 }];
+      return [{ x: 250, y: 400 }];
     case 2:
       return [
-        { x: 240, y: 280 },
-        { x: 560, y: 230 },
+        { x: 150, y: 250 },
+        { x: 350, y: 550 },
       ];
     case 3:
       return [
-        { x: 160, y: 300 },
-        { x: 400, y: 170 },
-        { x: 640, y: 300 },
+        { x: 150, y: 150 },
+        { x: 350, y: 400 },
+        { x: 150, y: 650 },
       ];
     case 4:
       return [
-        { x: 160, y: 150 }, // top-left
-        { x: 330, y: 360 }, // bottom-center-left
-        { x: 530, y: 150 }, // top-center-right
-        { x: 680, y: 360 }, // bottom-right
+        { x: 150, y: 120 },
+        { x: 350, y: 320 },
+        { x: 150, y: 520 },
+        { x: 350, y: 720 },
       ];
     default: {
-      // Generic serpentine fallback for >4 regions.
+      // Generic serpentine fallback for >4 regions (vertical).
       const pts: { x: number; y: number }[] = [];
       for (let i = 0; i < count; i += 1) {
-        const x = 120 + (i * 560) / Math.max(1, count - 1);
-        const y = i % 2 === 0 ? 170 : 340;
+        const x = i % 2 === 0 ? 150 : 350;
+        const y = 120 + (i * 560) / Math.max(1, count - 1);
         pts.push({ x, y });
       }
       return pts;
@@ -435,7 +435,6 @@ export function RegionMap({
           viewBox={`0 0 ${VIEW_W} ${VIEW_H}`}
           preserveAspectRatio="xMidYMid meet"
           style={{
-            minWidth: `${VIEW_W}px`,
             width: '100%',
             height: 'auto',
             display: 'block',
