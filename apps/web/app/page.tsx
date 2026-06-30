@@ -322,9 +322,11 @@ export default function LandingPage() {
             fontSize: '0.85rem',
             color: 'var(--color-text)',
             fontStyle: 'italic',
-            background: 'rgba(0,0,0,0.4)',
-            backdropFilter: 'blur(4px)',
+            background: 'none',
+
             display: 'inline-block',
+            marginLeft: 'auto',
+            textAlign: 'right',
           }}
         >
           <span
