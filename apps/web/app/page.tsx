@@ -375,23 +375,22 @@ export default function LandingPage() {
           </Link>
         </div>
 
-        {/* Sample mission — positioned in the empty space above the mountain */}
+        {/* Sample mission — below cards */}
         <div
           className="sample-mission"
           style={{
-            position: 'absolute',
-            bottom: '28%',
-            left: '50%',
-            transform: 'translateX(-50%)',
+            marginTop: '5rem',
             padding: '0.6rem 0',
             border: 'none',
             fontSize: '0.85rem',
-            color: 'var(--color-text-dim)',
+            color: 'var(--color-text)',
             fontStyle: 'italic',
             background: 'none',
+            display: 'block',
             textAlign: 'center',
             maxWidth: '25ch',
-            zIndex: 1,
+            marginLeft: 'auto',
+            marginRight: 'auto',
           }}
         >
           <span
