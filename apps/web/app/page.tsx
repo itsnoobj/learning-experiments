@@ -139,8 +139,21 @@ export default function LandingPage() {
           >
             {/* Click indicator — dot-matrix pointer hand */}
             <img
-              className="click-hand"
+              className="click-hand click-hand-dark"
               src="/assets/icons/click-hand.png"
+              alt=""
+              style={{
+                position: 'absolute',
+                top: '-10px',
+                right: '-10px',
+                width: '24px',
+                height: '24px',
+                pointerEvents: 'none',
+              }}
+            />
+            <img
+              className="click-hand click-hand-light"
+              src="/assets/icons/click-hand-light.png"
               alt=""
               style={{
                 position: 'absolute',
@@ -222,8 +235,21 @@ export default function LandingPage() {
           >
             {/* Click indicator — dot-matrix pointer hand */}
             <img
-              className="click-hand"
+              className="click-hand click-hand-dark"
               src="/assets/icons/click-hand.png"
+              alt=""
+              style={{
+                position: 'absolute',
+                top: '-10px',
+                right: '-10px',
+                width: '24px',
+                height: '24px',
+                pointerEvents: 'none',
+              }}
+            />
+            <img
+              className="click-hand click-hand-light"
+              src="/assets/icons/click-hand-light.png"
               alt=""
               style={{
                 position: 'absolute',
@@ -356,7 +382,12 @@ export default function LandingPage() {
           transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
           display: block;
         }
-        @media (max-width: 600px) { .glimpse-card { min-width: 100% !important; } .glimpse-card svg { max-height: 55px !important; } .glimpse-card > div { padding: 0.4rem 0.6rem !important; } .click-hand { width: 18px !important; height: 18px !important; top: -8px !important; right: -8px !important; mix-blend-mode: screen; } } .glimpse-card:hover {
+        @media (max-width: 600px) { .glimpse-card { min-width: 100% !important; } .glimpse-card svg { max-height: 55px !important; } .glimpse-card > div { padding: 0.4rem 0.6rem !important; } .click-hand { width: 18px !important; height: 18px !important; top: -8px !important; right: -8px !important; }
+        .click-hand-light { display: none; }
+        [data-theme="dark"] .click-hand-light { display: none; }
+        [data-theme="dark"] .click-hand-dark { display: block; mix-blend-mode: screen; }
+        :root:not([data-theme="dark"]) .click-hand-dark { display: none; }
+        :root:not([data-theme="dark"]) .click-hand-light { display: block; } } .glimpse-card:hover {
           border-color: rgba(218, 165, 32, 0.4) !important;
           transform: translateY(-3px);
           box-shadow: 0 8px 24px rgba(218, 165, 32, 0.1);
