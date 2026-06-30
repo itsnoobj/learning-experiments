@@ -53,7 +53,7 @@ export function GameHUD({ score, distance = 0, showDistance = true }: GameHUDPro
             position: 'absolute',
             top: '1rem',
             right: '1.25rem',
-            color: '#FFFFFF',
+            color: 'var(--color-text)',
             fontSize: '0.95rem',
             fontWeight: 500,
             opacity: 0.7,

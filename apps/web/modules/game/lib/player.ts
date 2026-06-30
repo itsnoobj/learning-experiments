@@ -39,7 +39,10 @@ export class Player {
     this.vy = 0;
     this.jumping = false;
     this.grounded = true;
-    this.jumpVelocity = options.jumpVelocity ?? -15;
+    // Tuned so the arc clears a pipe/block (~1x the player's height) without
+    // launching the figure off-screen. Gravity is unchanged, so the arc stays
+    // natural — just shorter than the old -15 impulse.
+    this.jumpVelocity = options.jumpVelocity ?? -10;
   }
 
   /** Recompute the ground line (e.g. after a resize) and reseat if grounded. */
@@ -76,16 +79,17 @@ export class Player {
   }
 
   /**
-   * Draw the player as a white stick figure.
+   * Draw the player as a stick figure in the given stroke color.
    *
    * Head is a stroked circle, the body a vertical line, arms a slight V, and the
    * legs alternate their splay based on `distance` to fake a running gait. While
    * airborne the legs tuck together.
    *
-   * @param ctx   the 2D rendering context.
-   * @param distance world distance travelled, used to phase the run cycle.
+   * @param ctx         the 2D rendering context.
+   * @param distance    world distance travelled, used to phase the run cycle.
+   * @param strokeColor figure stroke color (theme-aware; white on dark, near-black on light).
    */
-  draw(ctx: CanvasRenderingContext2D, distance = 0): void {
+  draw(ctx: CanvasRenderingContext2D, distance = 0, strokeColor = '#FFFFFF'): void {
     const cx = this.x + this.width / 2;
     const top = this.y;
     const headRadius = this.width / 2;
@@ -104,7 +108,7 @@ export class Player {
     ctx.scale(visualScale, visualScale);
     ctx.translate(-feetX, -feetY);
 
-    ctx.strokeStyle = '#FFFFFF';
+    ctx.strokeStyle = strokeColor;
     ctx.lineWidth = 3;
     ctx.lineCap = 'round';
     ctx.lineJoin = 'round';

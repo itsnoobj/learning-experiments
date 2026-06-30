@@ -16,7 +16,7 @@ export interface HitInterstitialProps {
   chapterId?: string;
 }
 
-const GOLD = '#DAA520';
+const GOLD = 'var(--color-gold)';
 
 /**
  * Full-screen overlay shown when the runner enters the `hit` phase.
@@ -49,7 +49,7 @@ export function HitInterstitial({ title, situation, onContinue, chapterId }: Hit
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        background: 'rgba(13, 13, 13, 0.88)',
+        background: 'rgba(0, 0, 0, 0.55)',
         backdropFilter: 'blur(2px)',
         zIndex: 20,
         fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
@@ -60,12 +60,12 @@ export function HitInterstitial({ title, situation, onContinue, chapterId }: Hit
         style={{
           width: '100%',
           maxWidth: '420px',
-          background: '#161616',
-          border: '1px solid #2a2a2a',
+          background: 'var(--color-surface)',
+          border: '1px solid var(--color-border)',
           borderRadius: '0.75rem',
           padding: '2rem 1.75rem',
           textAlign: 'center',
-          boxShadow: '0 20px 60px rgba(0, 0, 0, 0.5)',
+          boxShadow: '0 20px 60px rgba(0, 0, 0, 0.35)',
         }}
       >
         <div
@@ -84,7 +84,7 @@ export function HitInterstitial({ title, situation, onContinue, chapterId }: Hit
             id="hit-title"
             style={{
               margin: 0,
-              color: '#FFFFFF',
+              color: 'var(--color-text)',
               fontSize: '1.35rem',
               fontWeight: 700,
               letterSpacing: '-0.01em',
@@ -97,7 +97,7 @@ export function HitInterstitial({ title, situation, onContinue, chapterId }: Hit
         <p
           style={{
             margin: '0 0 1.75rem',
-            color: '#cfcfcf',
+            color: 'var(--color-text-dim)',
             fontSize: '1rem',
             lineHeight: 1.55,
           }}

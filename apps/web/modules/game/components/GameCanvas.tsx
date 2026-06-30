@@ -7,11 +7,35 @@ import { checkCollision } from '../lib/collision';
 import { gameChapters, gameChapterIds } from '../lib/chapters';
 import { useGameLoop } from '../hooks/useGameLoop';
 import { useGameState } from '../hooks/useGameState';
+import { useThemeStore } from '@/store/themeStore';
 import { GameHUD } from './GameHUD';
 import { HitInterstitial } from './HitInterstitial';
 import { StartScreen } from './StartScreen';
 
-const BG = '#0D0D0D';
+/**
+ * Per-theme canvas palette. The DOM overlays (start screen, HUD, interstitial)
+ * use CSS variables; the imperative canvas can't, so it reads from here based
+ * on the live theme.
+ */
+const THEME_COLORS = {
+  dark: {
+    bg: '#0D0D0D',
+    groundStroke: '#333333',
+    hudText: '#E8E8E8',
+    playerStroke: '#FFFFFF',
+    obstacleStroke: '#FFFFFF',
+    skyTop: 'rgba(0, 0, 0, 0.85)',
+  },
+  light: {
+    bg: '#FAFAFA',
+    groundStroke: '#DDDDDD',
+    hudText: '#1A1A1A',
+    playerStroke: '#1A1A1A',
+    obstacleStroke: '#1A1A1A',
+    skyTop: 'rgba(0, 0, 0, 0.04)',
+  },
+} as const;
+
 const GROUND_FRACTION = 0.82; // ground line as a fraction of canvas height
 const GRAVITY = 0.8; // px/frame^2
 const BASE_SPEED = 6; // px/frame at difficulty 0
@@ -69,6 +93,14 @@ export function GameCanvas() {
   useEffect(() => {
     phaseRef.current = game.phase;
   }, [game.phase]);
+
+  // Live theme. Mirrored into a ref so the imperative draw loop always reads
+  // the current palette without being re-created on every theme change.
+  const theme = useThemeStore((state) => state.theme);
+  const themeRef = useRef(theme);
+  useEffect(() => {
+    themeRef.current = theme;
+  }, [theme]);
 
   const [, forceTick] = useState(0);
 
@@ -146,24 +178,33 @@ export function GameCanvas() {
     const groundY = groundYRef.current;
     const distance = distanceRef.current;
     const images = imagesRef.current;
+    const colors = THEME_COLORS[themeRef.current];
+    const isLight = themeRef.current === 'light';
 
     // Base background fill.
-    ctx.fillStyle = BG;
+    ctx.fillStyle = colors.bg;
     ctx.fillRect(0, 0, width, height);
 
-    // Subtle sky-depth darkening at the very top, fading into the base bg.
+    // Subtle sky-depth shading at the very top, fading into the base bg.
     const sky = ctx.createLinearGradient(0, 0, 0, Math.max(1, height * 0.45));
-    sky.addColorStop(0, 'rgba(0, 0, 0, 0.85)');
+    sky.addColorStop(0, colors.skyTop);
     sky.addColorStop(1, 'rgba(0, 0, 0, 0)');
     ctx.fillStyle = sky;
     ctx.fillRect(0, 0, width, height * 0.45);
 
     // Parallax clouds: drift slower than the foreground and wrap across a field
-    // wider than the viewport so they recycle seamlessly.
+    // wider than the viewport so they recycle seamlessly. In light mode the
+    // white cloud sprite is darkened (~#E0E0E0) and softened so it reads
+    // against the pale sky instead of vanishing.
     const cloudImg = images.cloud;
     if (isReady(cloudImg)) {
       const baseW = cloudImg.naturalWidth || 64;
       const baseH = cloudImg.naturalHeight || 32;
+      ctx.save();
+      if (isLight) {
+        ctx.globalAlpha = 0.3;
+        ctx.filter = 'brightness(0.88)';
+      }
       for (const cloud of CLOUDS) {
         const w = baseW * cloud.scale;
         const h = baseH * cloud.scale;
@@ -171,6 +212,7 @@ export function GameCanvas() {
         const x = ((((cloud.baseX - distance * CLOUD_PARALLAX) % span) + span) % span) - w;
         ctx.drawImage(cloudImg, x, cloud.y, w, h);
       }
+      ctx.restore();
     }
 
     // Repeating ground: a continuous strip of 32x32 tiles from the ground line
@@ -185,7 +227,7 @@ export function GameCanvas() {
       }
     } else {
       // Fallback ground line if the sprite is unavailable.
-      ctx.strokeStyle = '#3a3a3a';
+      ctx.strokeStyle = colors.groundStroke;
       ctx.lineWidth = 2;
       ctx.beginPath();
       ctx.moveTo(0, groundY);
@@ -194,20 +236,29 @@ export function GameCanvas() {
     }
 
     // Obstacles: pipes and blocks rendered from their sprites, sitting on top of
-    // the ground. The collision hitbox (x/y/width/height) is unchanged.
+    // the ground. The collision hitbox (x/y/width/height) is unchanged. In
+    // light mode we trace a darker outline around each sprite so the hazards
+    // stay legible against the pale background.
     const pipeImg = images.pipe;
     const blockImg = images.block;
     for (const obstacle of obstaclesRef.current) {
       const sprite = obstacle.type === 'pipe' ? pipeImg : blockImg;
       if (isReady(sprite)) {
         ctx.drawImage(sprite, obstacle.x, obstacle.y, obstacle.width, obstacle.height);
+        if (isLight) {
+          ctx.save();
+          ctx.strokeStyle = colors.obstacleStroke;
+          ctx.lineWidth = 2;
+          ctx.strokeRect(obstacle.x, obstacle.y, obstacle.width, obstacle.height);
+          ctx.restore();
+        }
       } else {
-        obstacle.draw(ctx);
+        obstacle.draw(ctx, colors.obstacleStroke);
       }
     }
 
     // Player (brand stick figure) on top of everything.
-    playerRef.current?.draw(ctx, distanceRef.current);
+    playerRef.current?.draw(ctx, distanceRef.current, colors.playerStroke);
   }, []);
 
   const onFrame = useCallback(
@@ -280,6 +331,12 @@ export function GameCanvas() {
     }
   }, [game.phase, loop, draw]);
 
+  // Repaint when the theme changes so a frozen frame (idle/paused/hit) adopts
+  // the new palette immediately rather than waiting for the next run.
+  useEffect(() => {
+    draw();
+  }, [theme, draw]);
+
   const handleStart = useCallback(() => {
     resize();
     initWorld();
@@ -315,7 +372,7 @@ export function GameCanvas() {
         width: '100vw',
         height: '100dvh',
         overflow: 'hidden',
-        background: BG,
+        background: 'var(--color-bg)',
         touchAction: 'manipulation',
       }}
       onPointerDown={handleJump}
@@ -333,8 +390,8 @@ export function GameCanvas() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            background: BG,
-            color: '#a8a8a8',
+            background: 'var(--color-bg)',
+            color: 'var(--color-text-dim)',
             fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
             fontSize: '1.1rem',
             letterSpacing: '0.05em',

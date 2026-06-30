@@ -45,19 +45,23 @@ export class Obstacle implements ObstacleData {
 
   /**
    * Draw the obstacle as an outlined rectangle with an internal X.
-   * The outline is white; the X is grey, giving a minimalist hazard marker.
+   * The outline color is theme-aware; the X is a muted grey, giving a
+   * minimalist hazard marker that stays visible in both light and dark modes.
+   *
+   * @param ctx         the 2D rendering context.
+   * @param strokeColor outline color (white on dark, near-black on light).
    */
-  draw(ctx: CanvasRenderingContext2D): void {
+  draw(ctx: CanvasRenderingContext2D, strokeColor = '#FFFFFF'): void {
     ctx.save();
     ctx.lineWidth = 2;
     ctx.lineJoin = 'miter';
 
     // Outline
-    ctx.strokeStyle = '#FFFFFF';
+    ctx.strokeStyle = strokeColor;
     ctx.strokeRect(this.x, this.y, this.width, this.height);
 
     // Internal X pattern
-    ctx.strokeStyle = '#666666';
+    ctx.strokeStyle = '#888888';
     ctx.beginPath();
     ctx.moveTo(this.x, this.y);
     ctx.lineTo(this.x + this.width, this.y + this.height);

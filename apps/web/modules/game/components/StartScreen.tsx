@@ -5,28 +5,34 @@ import Link from 'next/link';
 export interface StartScreenProps {
   /** Big title. */
   title?: string;
-  /** Supporting line under the title. */
-  subtitle?: string;
-  /** Invoked when the player taps to start. */
+  /** Emotional hook shown under the title (italic, medium). */
+  hook?: string;
+  /** Plain-language description of the experience (smaller, muted). */
+  description?: string;
+  /** Invoked when the player taps / presses space to start. */
   onStart: () => void;
 }
 
-const GOLD = '#DAA520';
-
 /**
- * The idle-phase landing overlay. Tapping anywhere starts the run; a secondary
- * link routes to the chapter map for players who'd rather browse.
+ * The idle-phase landing overlay. Tapping anywhere — or pressing space/enter —
+ * starts the run; a secondary link routes to the chapter map for players who'd
+ * rather browse.
+ *
+ * Colors are theme-aware via CSS variables so the screen reads well in both
+ * light and dark modes. Typography follows a clear hierarchy: a large title,
+ * a medium italic hook, a smaller muted description, then a gold pulsing CTA.
  */
 export function StartScreen({
-  title = 'The Run',
-  subtitle = 'Jump the obstacles. Each one is a problem worth solving.',
+  title = 'A Field Guide to Being Human',
+  hook = 'Every obstacle is a lesson. Every lesson makes you wiser.',
+  description = 'Run through real workplace dilemmas. Learn through stories.',
   onStart,
 }: StartScreenProps) {
   return (
     <div
       role="button"
       tabIndex={0}
-      aria-label="Tap to start the game"
+      aria-label="Tap or press space to begin"
       onClick={onStart}
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
@@ -41,8 +47,8 @@ export function StartScreen({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        background: '#0D0D0D',
-        color: '#FFFFFF',
+        background: 'var(--color-bg)',
+        color: 'var(--color-text)',
         fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
         textAlign: 'center',
         cursor: 'pointer',
@@ -53,9 +59,12 @@ export function StartScreen({
       <h1
         style={{
           margin: 0,
-          fontSize: '2.5rem',
+          maxWidth: '640px',
+          fontSize: 'clamp(2rem, 6vw, 3rem)',
           fontWeight: 700,
+          lineHeight: 1.1,
           letterSpacing: '-0.02em',
+          color: 'var(--color-text)',
         }}
       >
         {title}
@@ -63,26 +72,40 @@ export function StartScreen({
 
       <p
         style={{
-          margin: '0.75rem 0 2.5rem',
+          margin: '1.25rem 0 0',
+          maxWidth: '480px',
+          fontSize: '1.25rem',
+          fontStyle: 'italic',
+          fontWeight: 500,
+          lineHeight: 1.45,
+          color: 'var(--color-text)',
+        }}
+      >
+        {hook}
+      </p>
+
+      <p
+        style={{
+          margin: '0.75rem 0 2.75rem',
           maxWidth: '420px',
-          color: '#a8a8a8',
-          fontSize: '1.05rem',
+          color: 'var(--color-text-dim)',
+          fontSize: '1rem',
           lineHeight: 1.5,
         }}
       >
-        {subtitle}
+        {description}
       </p>
 
       <span
         className="fg-game-pulse"
         style={{
-          color: GOLD,
+          color: 'var(--color-gold)',
           fontSize: '1.25rem',
           fontWeight: 600,
           letterSpacing: '0.05em',
         }}
       >
-        Tap to Start
+        Tap or Press Space to Begin
       </span>
 
       <Link
@@ -90,12 +113,12 @@ export function StartScreen({
         onClick={(e) => e.stopPropagation()}
         style={{
           marginTop: '1.5rem',
-          color: '#8c8c8c',
+          color: 'var(--color-text-dim)',
           fontSize: '0.95rem',
           textDecoration: 'none',
         }}
       >
-        or Go to Map →
+        or explore the Map →
       </Link>
 
       <style>{`
