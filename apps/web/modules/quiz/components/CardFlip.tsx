@@ -36,8 +36,6 @@ const KEYFRAMES = `
 `;
 
 const FACE_STYLE: React.CSSProperties = {
-  position: 'absolute',
-  inset: 0,
   backfaceVisibility: 'hidden',
   WebkitBackfaceVisibility: 'hidden',
   display: 'flex',
@@ -51,6 +49,7 @@ const FACE_STYLE: React.CSSProperties = {
   background: 'var(--color-surface)',
   color: 'var(--color-text)',
   textAlign: 'center',
+  minHeight: '18rem',
 };
 
 /**
@@ -86,7 +85,7 @@ export function CardFlip({ front, back, onCorrect }: CardFlipProps) {
         style={{
           position: 'relative',
           width: '100%',
-          minHeight: '18rem',
+          display: 'grid',
           transformStyle: 'preserve-3d',
           transition: 'transform 0.7s cubic-bezier(0.4, 0, 0.2, 1)',
           transform: flipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
@@ -97,6 +96,7 @@ export function CardFlip({ front, back, onCorrect }: CardFlipProps) {
         <div
           style={{
             ...FACE_STYLE,
+            gridArea: '1 / 1',
             boxShadow:
               hover && !flipped
                 ? '0 12px 40px rgba(0,0,0,0.12), 0 0 0 1px rgba(224, 185, 74, 0.3)'
@@ -140,6 +140,7 @@ export function CardFlip({ front, back, onCorrect }: CardFlipProps) {
         <div
           style={{
             ...FACE_STYLE,
+            gridArea: '1 / 1',
             transform: 'rotateY(180deg)',
             borderColor: 'var(--color-gold)',
             animation: flipped ? 'card-glow 3s ease-in-out infinite' : 'none',
