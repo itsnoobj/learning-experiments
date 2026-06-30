@@ -29,9 +29,17 @@ function ResultPageInner() {
     }
   };
 
+  const totalCount = quizData.challenges.length;
+
   return (
     <main className="max-w-[480px] mx-auto px-6 py-16 text-center">
-      <PrincipleReveal text={quizData.principle.text} subtext={quizData.principle.subtext} />
+      <PrincipleReveal
+        text={quizData.principle.text}
+        subtext={quizData.principle.subtext}
+        correctCount={totalCount}
+        totalCount={totalCount}
+        readTime="~5 min read"
+      />
       <ReflectionPrompt question={quizData.reflection} />
       <ResultCTA onContinue={handleContinue} fromGame={fromGame} />
     </main>

@@ -7,15 +7,54 @@ export interface PrincipleRevealProps {
   text: string;
   /** Supporting explanation shown beneath the principle. */
   subtext: string;
+  /** Number of challenges answered correctly (drives the "n/n correct" badge). */
+  correctCount?: number;
+  /** Total number of challenges in the chapter. */
+  totalCount?: number;
+  /** Static, human-friendly read-time label shown as a stat pill. */
+  readTime?: string;
 }
 
 /**
- * Reveals a chapter's principle with a gold star that scales in on mount.
- *
- * The star animates from scale(0) to scale(1) using a CSS transition keyed off
- * a `mounted` state flag, so the animation runs once when the component appears.
+ * A small pill-shaped stat badge used in the achievement stats row.
  */
-export function PrincipleReveal({ text, subtext }: PrincipleRevealProps) {
+function StatBadge({ children }: { children: React.ReactNode }) {
+  return (
+    <span
+      style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: '0.35em',
+        padding: '0.35rem 0.75rem',
+        borderRadius: '999px',
+        border: '1px solid var(--color-border)',
+        backgroundColor: 'var(--color-surface)',
+        fontSize: '0.8rem',
+        fontWeight: 600,
+        color: 'var(--color-text-dim)',
+        whiteSpace: 'nowrap',
+      }}
+    >
+      {children}
+    </span>
+  );
+}
+
+/**
+ * Reveals a chapter's principle as a certificate-style achievement card.
+ *
+ * The card frames a glowing gold star that scales in on mount, an "PRINCIPLE
+ * UNLOCKED" label, the principle itself, and supporting subtext. A diamond
+ * divider separates the reveal from a stats row that celebrates what the
+ * learner accomplished.
+ */
+export function PrincipleReveal({
+  text,
+  subtext,
+  correctCount,
+  totalCount,
+  readTime = '~5 min read',
+}: PrincipleRevealProps) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -25,6 +64,9 @@ export function PrincipleReveal({ text, subtext }: PrincipleRevealProps) {
     return () => cancelAnimationFrame(id);
   }, []);
 
+  const hasScore =
+    typeof correctCount === 'number' && typeof totalCount === 'number' && totalCount > 0;
+
   return (
     <div
       style={{
@@ -32,45 +74,111 @@ export function PrincipleReveal({ text, subtext }: PrincipleRevealProps) {
         flexDirection: 'column',
         alignItems: 'center',
         textAlign: 'center',
-        gap: 'var(--spacing-md)',
+        gap: 'var(--spacing-lg)',
       }}
     >
-      <span
-        role="img"
-        aria-label="gold star"
+      {/* Achievement badge card */}
+      <div
         style={{
-          fontSize: '3.5rem',
-          lineHeight: 1,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: 'var(--spacing-md)',
+          width: '100%',
+          padding: 'var(--spacing-lg)',
+          border: '1px solid var(--color-gold)',
+          borderRadius: 'var(--radius)',
+          backgroundColor: 'var(--color-surface)',
+        }}
+      >
+        <span
+          role="img"
+          aria-label="gold star"
+          style={{
+            fontSize: '3.5rem',
+            lineHeight: 1,
+            color: 'var(--color-gold)',
+            display: 'inline-block',
+            textShadow: '0 0 20px rgba(218,165,32,0.3)',
+            transform: mounted ? 'scale(1)' : 'scale(0)',
+            transition: 'transform 400ms cubic-bezier(0.34, 1.56, 0.64, 1)',
+          }}
+        >
+          ★
+        </span>
+
+        <span
+          style={{
+            textTransform: 'uppercase',
+            letterSpacing: '0.18em',
+            fontSize: '0.65rem',
+            fontWeight: 700,
+            color: 'var(--color-gold)',
+          }}
+        >
+          Principle Unlocked
+        </span>
+
+        <p
+          style={{
+            fontSize: '1.4rem',
+            fontWeight: 600,
+            lineHeight: 1.3,
+            margin: 0,
+            maxWidth: '24ch',
+            color: 'var(--color-text)',
+          }}
+        >
+          {text}
+        </p>
+
+        <p
+          style={{
+            fontSize: '0.9rem',
+            lineHeight: 1.5,
+            margin: 0,
+            color: 'var(--color-text-dim)',
+            maxWidth: '40ch',
+          }}
+        >
+          {subtext}
+        </p>
+      </div>
+
+      {/* Diamond divider */}
+      <div
+        aria-hidden="true"
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: 'var(--spacing-md)',
+          width: '100%',
           color: 'var(--color-gold)',
-          display: 'inline-block',
-          transform: mounted ? 'scale(1)' : 'scale(0)',
-          transition: 'transform 400ms cubic-bezier(0.34, 1.56, 0.64, 1)',
         }}
       >
-        ⭐
-      </span>
+        <span style={{ flex: 1, height: '1px', backgroundColor: 'var(--color-border)' }} />
+        <span style={{ fontSize: '0.7rem', lineHeight: 1 }}>◆</span>
+        <span style={{ flex: 1, height: '1px', backgroundColor: 'var(--color-border)' }} />
+      </div>
 
-      <p
+      {/* Stats row */}
+      <div
         style={{
-          fontSize: '1.3rem',
-          fontWeight: 500,
-          margin: 0,
-          color: 'var(--color-text)',
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          gap: 'var(--spacing-sm)',
         }}
       >
-        {text}
-      </p>
-
-      <p
-        style={{
-          fontSize: '0.95rem',
-          margin: 0,
-          color: 'var(--color-text-dim)',
-          maxWidth: '40ch',
-        }}
-      >
-        {subtext}
-      </p>
+        <StatBadge>
+          <span style={{ color: 'var(--color-correct)' }}>✓</span>
+          {hasScore ? `${correctCount}/${totalCount} correct` : 'Chapter Complete'}
+        </StatBadge>
+        <StatBadge>
+          <span aria-hidden="true">◷</span>
+          {readTime}
+        </StatBadge>
+      </div>
     </div>
   );
 }
