@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#FAF7F2"/>
+  
+  <!-- 3x3 Grid - "The Pattern Reveals Itself" -->
+  <!-- Diagonal = gold (the insight, what you learn to see) -->
+  <!-- Off-diagonal = faint charcoal (the hidden forces, always present) -->
+  <!-- Cell size: 54px, gap: 8px -->
+  
+  <!-- Row 1 -->
+  <rect x="135" y="96" width="54" height="54" rx="6" fill="#B8860B"/>           <!-- DIAGONAL - visible -->
+  <rect x="197" y="96" width="54" height="54" rx="6" fill="#2C2C2C" opacity="0.1"/>  <!-- hidden -->
+  <rect x="259" y="96" width="54" height="54" rx="6" fill="#2C2C2C" opacity="0.18"/> <!-- hidden -->
+  
+  <!-- Row 2 -->
+  <rect x="135" y="158" width="54" height="54" rx="6" fill="#2C2C2C" opacity="0.15"/> <!-- hidden -->
+  <rect x="197" y="158" width="54" height="54" rx="6" fill="#B8860B"/>           <!-- DIAGONAL - visible -->
+  <rect x="259" y="158" width="54" height="54" rx="6" fill="#2C2C2C" opacity="0.12"/> <!-- hidden -->
+  
+  <!-- Row 3 -->
+  <rect x="135" y="220" width="54" height="54" rx="6" fill="#2C2C2C" opacity="0.18"/> <!-- hidden -->
+  <rect x="197" y="220" width="54" height="54" rx="6" fill="#2C2C2C" opacity="0.1"/>  <!-- hidden -->
+  <rect x="259" y="220" width="54" height="54" rx="6" fill="#B8860B"/>           <!-- DIAGONAL - visible -->
+  
+  <!-- Wordmark -->
+  <text x="224" y="325" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#2C2C2C">human<tspan fill="#B8860B">dynamics</tspan></text>
+  <text x="224" y="350" text-anchor="middle" font-family="Georgia, serif" font-size="12" letter-spacing="2" fill="#999">.guide</text>
+</svg>
