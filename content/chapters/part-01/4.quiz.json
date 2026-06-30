@@ -5,9 +5,21 @@
       "type": "scenario-choice",
       "situation": "Ever since your boss called your launch deck 'brilliant' in front of leadership, you find yourself volunteering for visible, demo-able work and quietly dropping the unglamorous maintenance no one watches.",
       "options": [
-        { "text": "Lean into the visible work — the recognition confirms it's where you add the most value.", "correct": false, "feedback": "You've let applause become the scorecard. Steering by 'what gets noticed' instead of 'what matters' hands the wheel to whoever grants the praise." },
-        { "text": "Decide praise is hollow, stop seeking it, and ignore feedback on principle.", "correct": false, "feedback": "Total imperviousness is just a different deafness. Praise carries real signal about what's landing — refusing all of it throws out useful information." },
-        { "text": "Write down what 'good work' means by your own standard, and weigh tasks against that, not the applause.", "correct": true, "feedback": "Defining good before you're judged keeps your direction anchored inside. Praise can then inform you without governing what you choose to do." }
+        {
+          "text": "Decide praise is hollow, stop seeking it, and ignore feedback on principle.",
+          "correct": false,
+          "feedback": "Total imperviousness is just a different deafness. Praise carries real signal about what's landing — refusing all of it throws out useful information."
+        },
+        {
+          "text": "Write down what 'good work' means by your own standard, and weigh tasks against that, not the applause.",
+          "correct": true,
+          "feedback": "Defining good before you're judged keeps your direction anchored inside. Praise can then inform you without governing what you choose to do."
+        },
+        {
+          "text": "Lean into the visible work — the recognition confirms it's where you add the most value.",
+          "correct": false,
+          "feedback": "You've let applause become the scorecard. Steering by 'what gets noticed' instead of 'what matters' hands the wheel to whoever grants the praise."
+        }
       ]
     },
     {
@@ -15,9 +27,21 @@
       "situation": "A strong engineer ships a solid fix, then keeps refreshing the channel, visibly deflating when the thread stays quiet, unable to move on to the next task.",
       "question": "What's behind the inability to let it go?",
       "options": [
-        { "text": "Reasonable interest in whether the fix worked.", "correct": false, "feedback": "Interest in the outcome could be checked once and dropped. The refreshing and deflating is about a reaction, not the result." },
-        { "text": "External validation propping up his sense of worth.", "correct": true, "feedback": "When the doing isn't enough without the seeing, the hook is in. If worth wasn't secured from inside, praise isn't a bonus — it's oxygen." },
-        { "text": "Healthy pride in solid work.", "correct": false, "feedback": "Healthy pride is quiet and self-contained — 'I did this well, I know it.' The anxious scanning for a reaction is its opposite." }
+        {
+          "text": "External validation propping up his sense of worth.",
+          "correct": true,
+          "feedback": "When the doing isn't enough without the seeing, the hook is in. If worth wasn't secured from inside, praise isn't a bonus — it's oxygen."
+        },
+        {
+          "text": "Healthy pride in solid work.",
+          "correct": false,
+          "feedback": "Healthy pride is quiet and self-contained — 'I did this well, I know it.' The anxious scanning for a reaction is its opposite."
+        },
+        {
+          "text": "Reasonable interest in whether the fix worked.",
+          "correct": false,
+          "feedback": "Interest in the outcome could be checked once and dropped. The refreshing and deflating is about a reaction, not the result."
+        }
       ]
     },
     {
@@ -28,8 +52,14 @@
     {
       "type": "before-after",
       "context": "A monkey is lured onto a crocodile's back by a feast thrown 'in his honor,' then told mid-river the real plan is to eat his heart.",
-      "scenarioA": { "label": "Flattered", "text": "Glows at the honor, climbs aboard without a question, ends up helpless in deep water." },
-      "scenarioB": { "label": "Awake to the bait", "text": "Snaps alert mid-river, sees the flattery for what it is, and talks his way back to the tree." },
+      "scenarioA": {
+        "label": "Flattered",
+        "text": "Glows at the honor, climbs aboard without a question, ends up helpless in deep water."
+      },
+      "scenarioB": {
+        "label": "Awake to the bait",
+        "text": "Snaps alert mid-river, sees the flattery for what it is, and talks his way back to the tree."
+      },
       "correctScenario": "B",
       "explanation": "What saved the monkey wasn't refusing praise — it was waking up to what the praise was for. As Epictetus warned, when your peace depends on approval, you've handed over the controls."
     }

@@ -5,9 +5,21 @@
       "type": "scenario-choice",
       "situation": "You were thrilled with your promotion until a peer mentioned, casually, that they got the same title six months earlier. The title suddenly feels cheap.",
       "options": [
-        { "text": "Ask your manager to backdate or 'correct' your level so you're not behind the peer.", "correct": false, "feedback": "You're chasing rank, not value. Even if it works, the wiring just locates the next person ahead — a race with no finish line." },
-        { "text": "Notice nothing about your job changed, only the comparison, and ask if you'd actually trade lives.", "correct": true, "feedback": "Catching the swap as it happens strips its power. The facts didn't move; the measuring stick did. Usually you don't want their life — just to not feel behind." },
-        { "text": "Conclude the promotion was meaningless and let it quietly sour.", "correct": false, "feedback": "That's letting comparison set your worth — the Duryodhana path. You lost nothing real, yet you've surrendered the joy of something you genuinely earned." }
+        {
+          "text": "Notice nothing about your job changed, only the comparison, and ask if you'd actually trade lives.",
+          "correct": true,
+          "feedback": "Catching the swap as it happens strips its power. The facts didn't move; the measuring stick did. Usually you don't want their life — just to not feel behind."
+        },
+        {
+          "text": "Ask your manager to backdate or 'correct' your level so you're not behind the peer.",
+          "correct": false,
+          "feedback": "You're chasing rank, not value. Even if it works, the wiring just locates the next person ahead — a race with no finish line."
+        },
+        {
+          "text": "Conclude the promotion was meaningless and let it quietly sour.",
+          "correct": false,
+          "feedback": "That's letting comparison set your worth — the Duryodhana path. You lost nothing real, yet you've surrendered the joy of something you genuinely earned."
+        }
       ]
     },
     {
@@ -15,16 +27,34 @@
       "situation": "A teammate who loves his job suddenly wants to leave — not for more money, but because a former classmate just made director and 'he can't stop thinking about it.'",
       "question": "What's really pulling him toward the door?",
       "options": [
-        { "text": "A rational career decision based on his own goals.", "correct": false, "feedback": "Nothing about his own work or pay changed. The trigger was entirely someone else's title — that's not a goals-based decision." },
-        { "text": "Status comparison — the classmate's rank, not his own life, is the wound.", "correct": true, "feedback": "He's content until a peer pulls ahead, then it's unbearable. The other person's gain costs him nothing real, yet it costs him everything — the signature of a status hunt." },
-        { "text": "Healthy ambition finally waking up.", "correct": false, "feedback": "Ambition builds toward something he wants; this only burns over what someone else got. The tell is that a peer's win, not his own desire, set it off." }
+        {
+          "text": "A rational career decision based on his own goals.",
+          "correct": false,
+          "feedback": "Nothing about his own work or pay changed. The trigger was entirely someone else's title — that's not a goals-based decision."
+        },
+        {
+          "text": "Status comparison — the classmate's rank, not his own life, is the wound.",
+          "correct": true,
+          "feedback": "He's content until a peer pulls ahead, then it's unbearable. The other person's gain costs him nothing real, yet it costs him everything — the signature of a status hunt."
+        },
+        {
+          "text": "Healthy ambition finally waking up.",
+          "correct": false,
+          "feedback": "Ambition builds toward something he wants; this only burns over what someone else got. The tell is that a peer's win, not his own desire, set it off."
+        }
       ]
     },
     {
       "type": "before-after",
       "context": "Two people feel the same sting watching a peer pull ahead.",
-      "scenarioA": { "label": "Comparison as verdict", "text": "'They're ahead, so I'm behind, so I'm less.' The sting sets their self-worth." },
-      "scenarioB": { "label": "Comparison as information", "text": "'How did they pull that off?' The sting becomes a question that reveals a path." },
+      "scenarioA": {
+        "label": "Comparison as verdict",
+        "text": "'They're ahead, so I'm behind, so I'm less.' The sting sets their self-worth."
+      },
+      "scenarioB": {
+        "label": "Comparison as information",
+        "text": "'How did they pull that off?' The sting becomes a question that reveals a path."
+      },
       "correctScenario": "B",
       "explanation": "Same trigger, opposite results. Noticing others isn't the danger — letting the noticing decide your worth is. As information it's fuel; as a verdict it's poison."
     },

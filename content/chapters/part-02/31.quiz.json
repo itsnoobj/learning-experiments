@@ -28,9 +28,9 @@
       "question": "Which force primarily drove the resistance?",
       "options": [
         {
-          "text": "Fear",
+          "text": "Incentives",
           "correct": false,
-          "feedback": "Fear played a role, but the deeper issue was that everyone — executives to factory workers — had built their identity around film."
+          "feedback": "The incentives actually pointed toward digital — that's where the market was going. But identity overrode rational incentives."
         },
         {
           "text": "Identity",
@@ -38,9 +38,9 @@
           "feedback": "Exactly. Digital wasn't just a product — it was a threat to who they were. Their expertise, routines, and sense of self were all built on film."
         },
         {
-          "text": "Incentives",
+          "text": "Fear",
           "correct": false,
-          "feedback": "The incentives actually pointed toward digital — that's where the market was going. But identity overrode rational incentives."
+          "feedback": "Fear played a role, but the deeper issue was that everyone — executives to factory workers — had built their identity around film."
         }
       ]
     },

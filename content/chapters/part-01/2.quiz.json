@@ -5,9 +5,21 @@
       "type": "scenario-choice",
       "situation": "A config you pushed took down checkout for an hour during peak traffic. The incident review starts and the room looks at you.",
       "options": [
-        { "text": "'My mistake — I skipped the staging check. I'm adding a required gate so this can't ship again.'", "correct": true, "feedback": "Ownership first, repair second, no 'but.' This turns the error into proof you can be handed hard things — which is what rebuilds standing." },
-        { "text": "'The rollout window was tight and staging was flaky, so the check got skipped.'", "correct": false, "feedback": "Possibly all true — and still a wall. Explanation before ownership reads as deflection no matter how accurate it is." },
-        { "text": "'Honestly this is on me, I keep messing up, I don't know why you trust me with prod.'", "correct": false, "feedback": "Theatrical self-blame makes the moment about your feelings and fishes for reassurance. It's ego in a humble costume, and it fixes nothing." }
+        {
+          "text": "'The rollout window was tight and staging was flaky, so the check got skipped.'",
+          "correct": false,
+          "feedback": "Possibly all true — and still a wall. Explanation before ownership reads as deflection no matter how accurate it is."
+        },
+        {
+          "text": "'Honestly this is on me, I keep messing up, I don't know why you trust me with prod.'",
+          "correct": false,
+          "feedback": "Theatrical self-blame makes the moment about your feelings and fishes for reassurance. It's ego in a humble costume, and it fixes nothing."
+        },
+        {
+          "text": "'My mistake — I skipped the staging check. I'm adding a required gate so this can't ship again.'",
+          "correct": true,
+          "feedback": "Ownership first, repair second, no 'but.' This turns the error into proof you can be handed hard things — which is what rebuilds standing."
+        }
       ]
     },
     {
@@ -15,21 +27,50 @@
       "situation": "Minutes after a project slips, you've already got a clean narrative: the wins this quarter were your doing, this miss was the dependencies and the reorg.",
       "question": "What produced that tidy story so fast?",
       "options": [
-        { "text": "Self-serving bias — credit to skill, blame to circumstance, written before you examined anything.", "correct": true, "feedback": "It arrives automatically and feels like honest recall. That speed and that flattering split are the signature of the bias defending the ego." },
-        { "text": "An accurate post-mortem of what genuinely went wrong.", "correct": false, "feedback": "A real post-mortem weighs evidence and finds your own contribution too. This story exonerates you before any weighing happened." },
-        { "text": "Healthy confidence in your track record.", "correct": false, "feedback": "Confidence doesn't need to offload every failure onto outside forces. The reflex to deflect blame is protection, not confidence." }
+        {
+          "text": "An accurate post-mortem of what genuinely went wrong.",
+          "correct": false,
+          "feedback": "A real post-mortem weighs evidence and finds your own contribution too. This story exonerates you before any weighing happened."
+        },
+        {
+          "text": "Healthy confidence in your track record.",
+          "correct": false,
+          "feedback": "Confidence doesn't need to offload every failure onto outside forces. The reflex to deflect blame is protection, not confidence."
+        },
+        {
+          "text": "Self-serving bias — credit to skill, blame to circumstance, written before you examined anything.",
+          "correct": true,
+          "feedback": "It arrives automatically and feels like honest recall. That speed and that flattering split are the signature of the bias defending the ego."
+        }
       ]
     },
     {
       "type": "drag-match",
       "instruction": "Put Lincoln's 'hot letter' method in order:",
       "items": [
-        { "id": "a", "text": "Feel the fury and pour every blaming, justifying line onto the page" },
-        { "id": "b", "text": "Let the writing drain the venom in private" },
-        { "id": "c", "text": "Fold it and never send it — spare the relationship" },
-        { "id": "d", "text": "Show up generous in public, not needing the other person to lose" }
+        {
+          "id": "a",
+          "text": "Feel the fury and pour every blaming, justifying line onto the page"
+        },
+        {
+          "id": "b",
+          "text": "Let the writing drain the venom in private"
+        },
+        {
+          "id": "c",
+          "text": "Fold it and never send it — spare the relationship"
+        },
+        {
+          "id": "d",
+          "text": "Show up generous in public, not needing the other person to lose"
+        }
       ],
-      "correctOrder": ["a", "b", "c", "d"]
+      "correctOrder": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
     },
     {
       "type": "card-flip",
