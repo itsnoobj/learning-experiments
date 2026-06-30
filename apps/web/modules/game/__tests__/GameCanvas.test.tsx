@@ -1,6 +1,7 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent, act } from '@testing-library/react';
 import { GameCanvas } from '../components/GameCanvas';
+import { HitInterstitial } from '../components/HitInterstitial';
 
 // StartScreen pulls in next/link; render it as a plain anchor so no App Router
 // context is required in jsdom.
@@ -29,6 +30,10 @@ function mockContext(): CanvasRenderingContext2D {
     fill: vi.fn(),
     save: vi.fn(),
     restore: vi.fn(),
+    translate: vi.fn(),
+    scale: vi.fn(),
+    rotate: vi.fn(),
+    arc: vi.fn(),
     createLinearGradient: vi.fn(() => ({ addColorStop: vi.fn() })),
   } as unknown as CanvasRenderingContext2D;
 }
@@ -77,5 +82,41 @@ describe('GameCanvas', () => {
     // Images resolve on the next tick, flipping assetsReady and revealing the
     // start overlay.
     expect(await screen.findByText('Tap to Run')).toBeInTheDocument();
+  });
+
+  it('starts the game when space key is pressed in idle phase', async () => {
+    render(<GameCanvas />);
+    // Wait for assets to load and StartScreen to appear
+    expect(await screen.findByText('Tap to Run')).toBeInTheDocument();
+
+    // Press space to start
+    act(() => {
+      fireEvent.keyDown(window, { code: 'Space', key: ' ' });
+    });
+
+    // StartScreen should disappear after starting
+    expect(screen.queryByText('Tap to Run')).not.toBeInTheDocument();
+  });
+});
+
+describe('HitInterstitial', () => {
+  it('renders as a transparent modal overlay (not opaque)', () => {
+    const { container } = render(<HitInterstitial title="Test Title" situation="Test situation" />);
+    const dialog = container.querySelector('[role="dialog"]') as HTMLElement;
+    expect(dialog).toBeInTheDocument();
+    // Should have semi-transparent backdrop, not opaque
+    expect(dialog.style.background).toContain('rgba');
+    expect(dialog.style.background).not.toBe('rgba(0, 0, 0, 0.9)');
+  });
+
+  it('renders the chapter title and situation', () => {
+    render(<HitInterstitial title="The Ego Trap" situation="You realize you are wrong." />);
+    expect(screen.getByText('The Ego Trap')).toBeInTheDocument();
+    expect(screen.getByText('You realize you are wrong.')).toBeInTheDocument();
+  });
+
+  it('renders the accept challenge button', () => {
+    render(<HitInterstitial title="Test" situation="Test" />);
+    expect(screen.getByRole('button', { name: /accept the challenge/i })).toBeInTheDocument();
   });
 });

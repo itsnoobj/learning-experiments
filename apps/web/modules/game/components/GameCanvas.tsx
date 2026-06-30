@@ -460,6 +460,17 @@ export function GameCanvas() {
     }
   }, [game.phase, loop, draw]);
 
+  // Once assets are loaded and canvas is sized, initialise the world and draw
+  // a single frame so the game scene (ground, clouds, hills, player) is visible
+  // behind the transparent "TAP TO RUN" overlay.
+  useEffect(() => {
+    if (assetsReady && game.phase === 'idle' && !playerRef.current) {
+      resize();
+      initWorld();
+      draw();
+    }
+  }, [assetsReady, game.phase, resize, initWorld, draw]);
+
   // Repaint when the theme changes so a frozen frame (idle/paused/hit) adopts
   // the new palette immediately rather than waiting for the next run.
   useEffect(() => {
@@ -474,6 +485,7 @@ export function GameCanvas() {
   }, [game, initWorld, resize]);
 
   // Jump input: space / tap / click. Active only while running.
+  // Also starts the game when idle.
   const handleJump = useCallback(() => {
     if (phaseRef.current === 'running') {
       playerRef.current?.jump();
@@ -484,12 +496,16 @@ export function GameCanvas() {
     const onKey = (e: KeyboardEvent) => {
       if (e.code === 'Space' || e.key === ' ' || e.key === 'ArrowUp') {
         e.preventDefault();
-        handleJump();
+        if (phaseRef.current === 'idle') {
+          handleStart();
+        } else {
+          handleJump();
+        }
       }
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [handleJump]);
+  }, [handleJump, handleStart]);
 
   const activeChapter =
     gameChapters[game.currentChapterIndex % gameChapters.length] ?? gameChapters[0];
@@ -522,27 +538,6 @@ export function GameCanvas() {
       <canvas ref={canvasRef} style={{ display: 'block', width: '100%', height: '100%' }} />
 
       {game.phase === 'running' && <GameHUD score={game.score} distance={game.distance} />}
-
-      {game.phase === 'idle' && !assetsReady && (
-        <div
-          aria-live="polite"
-          style={{
-            position: 'absolute',
-            inset: 0,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            background: 'var(--color-bg)',
-            color: 'var(--color-text-dim)',
-            fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
-            fontSize: '1.1rem',
-            letterSpacing: '0.05em',
-            zIndex: 10,
-          }}
-        >
-          Loading…
-        </div>
-      )}
 
       {game.phase === 'idle' && assetsReady && !showCleared && (
         <StartScreen onStart={handleStart} />
