@@ -378,17 +378,18 @@ export default function LandingPage() {
         {/* Sample mission — below cards */}
         <div
           style={{
-            marginTop: '2.5rem',
+            marginTop: '4rem',
             padding: '0.6rem 1.2rem',
             border: 'none',
             fontSize: '0.85rem',
             color: 'var(--color-text)',
             fontStyle: 'italic',
             background: 'none',
-
             display: 'inline-block',
             marginLeft: 'auto',
             textAlign: 'right',
+            alignSelf: 'flex-end',
+            paddingRight: '0',
           }}
         >
           <span
