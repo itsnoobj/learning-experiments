@@ -26,12 +26,35 @@ export interface BeforeAfterProps {
   onCorrect: () => void;
 }
 
+const KEYFRAMES = `
+@keyframes card-enter {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes correct-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(224, 185, 74, 0.5); }
+  70%  { box-shadow: 0 0 0 10px rgba(224, 185, 74, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(224, 185, 74, 0); }
+}
+@keyframes badge-pop {
+  0%   { transform: scale(0); opacity: 0; }
+  60%  { transform: scale(1.2); }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes explanation-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes next-btn-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+`;
+
 /**
  * "Which one got it right?" challenge.
- * Shows a shared context, then two scenario cards. Picking the correct one
- * marks it with a gold border and a "Correct" badge, reveals the explanation,
- * and shows a Next button. Picking the wrong one flags it red with "Not quite"
- * and reveals the explanation so the learner can retry.
+ * Cards have hover lift, correct one gets gold pulse and badge animation,
+ * explanation slides in, styled Next button.
  */
 export function BeforeAfter({
   context,
@@ -42,6 +65,7 @@ export function BeforeAfter({
   onCorrect,
 }: BeforeAfterProps) {
   const [selected, setSelected] = useState<'A' | 'B' | null>(null);
+  const [hoveredCard, setHoveredCard] = useState<'A' | 'B' | null>(null);
 
   const solved = selected !== null && selected === correctScenario;
 
@@ -50,20 +74,26 @@ export function BeforeAfter({
     setSelected(choice);
   };
 
-  const cardBorder = (choice: 'A' | 'B'): string => {
-    if (selected !== choice) return 'var(--color-border)';
-    return choice === correctScenario ? 'var(--color-gold)' : 'var(--color-wrong)';
-  };
-
-  const renderCard = (choice: 'A' | 'B', scenario: BeforeAfterScenario) => {
+  const renderCard = (choice: 'A' | 'B', scenario: BeforeAfterScenario, delay: string) => {
     const isSelected = selected === choice;
     const isCorrectPick = isSelected && choice === correctScenario;
     const isWrongPick = isSelected && choice !== correctScenario;
+    const isHovered = hoveredCard === choice && !solved;
+
+    const borderColor = isCorrectPick
+      ? 'var(--color-gold)'
+      : isWrongPick
+        ? 'var(--color-wrong)'
+        : isHovered
+          ? 'var(--color-gold)'
+          : 'var(--color-border)';
 
     return (
       <button
         type="button"
         onClick={() => handleSelect(choice)}
+        onMouseEnter={() => setHoveredCard(choice)}
+        onMouseLeave={() => setHoveredCard(null)}
         disabled={solved}
         style={{
           flex: 1,
@@ -72,23 +102,33 @@ export function BeforeAfter({
           display: 'flex',
           flexDirection: 'column',
           gap: 'var(--spacing-sm)',
-          padding: 'var(--spacing-md)',
+          padding: 'var(--spacing-md) calc(var(--spacing-md) + 0.25rem)',
           borderRadius: 'var(--radius)',
-          border: `2px solid ${cardBorder(choice)}`,
-          background: 'var(--color-surface)',
+          border: `2px solid ${borderColor}`,
+          background: isCorrectPick ? 'rgba(224, 185, 74, 0.06)' : 'var(--color-surface)',
           color: 'var(--color-text)',
           cursor: solved ? 'default' : 'pointer',
-          transition: 'border-color 0.2s ease',
+          transition:
+            'border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease',
+          transform: isHovered ? 'translateY(-3px)' : 'translateY(0)',
+          boxShadow: isHovered
+            ? '0 6px 20px rgba(0,0,0,0.08)'
+            : isCorrectPick
+              ? '0 0 0 0 transparent'
+              : 'none',
+          animation: isCorrectPick
+            ? 'correct-pulse 0.6s ease-out'
+            : `card-enter 0.35s ease-out ${delay} both`,
         }}
       >
-        <span className="flex items-center gap-2">
+        <span className="flex items-center gap-2" style={{ flexWrap: 'wrap' }}>
           <span
             style={{
               fontWeight: 700,
               color: 'var(--color-gold)',
               textTransform: 'uppercase',
-              letterSpacing: '0.05em',
-              fontSize: '0.875rem',
+              letterSpacing: '0.08em',
+              fontSize: '0.8rem',
             }}
           >
             {scenario.label}
@@ -96,52 +136,61 @@ export function BeforeAfter({
           {isCorrectPick && (
             <span
               style={{
-                fontSize: '0.75rem',
+                fontSize: '0.7rem',
                 fontWeight: 700,
                 color: '#1A1A1A',
                 background: 'var(--color-gold)',
-                borderRadius: 'var(--radius)',
-                padding: '0.125rem 0.5rem',
+                borderRadius: '2px',
+                padding: '0.15rem 0.5rem',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                animation: 'badge-pop 0.35s cubic-bezier(0.4, 0, 0.2, 1)',
               }}
             >
-              Correct
+              ✓ Correct
             </span>
           )}
           {isWrongPick && (
             <span
               style={{
-                fontSize: '0.75rem',
+                fontSize: '0.7rem',
                 fontWeight: 700,
                 color: 'var(--color-wrong)',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
               }}
             >
               Not quite
             </span>
           )}
         </span>
-        <span style={{ lineHeight: 1.6 }}>{scenario.text}</span>
+        <span style={{ lineHeight: 1.7 }}>{scenario.text}</span>
       </button>
     );
   };
 
   return (
     <div className="flex flex-col gap-4" style={{ color: 'var(--color-text)' }}>
-      <p style={{ fontSize: '1.125rem', lineHeight: 1.6 }}>{context}</p>
+      <style>{KEYFRAMES}</style>
+
+      <p style={{ fontSize: '1.125rem', lineHeight: 1.7 }}>{context}</p>
 
       <div className="flex gap-3" style={{ flexWrap: 'wrap' }}>
-        {renderCard('A', scenarioA)}
-        {renderCard('B', scenarioB)}
+        {renderCard('A', scenarioA, '0s')}
+        {renderCard('B', scenarioB, '0.08s')}
       </div>
 
       {selected !== null && (
         <div
           role="status"
           style={{
-            borderLeft: `4px solid ${solved ? 'var(--color-correct)' : 'var(--color-wrong)'}`,
+            borderLeft: `4px solid ${solved ? 'var(--color-gold)' : 'var(--color-wrong)'}`,
             background: 'var(--color-surface)',
             color: 'var(--color-text)',
             borderRadius: 'var(--radius)',
             padding: 'var(--spacing-md)',
+            animation: 'explanation-in 0.3s ease-out',
+            lineHeight: 1.6,
           }}
         >
           {explanation}
@@ -154,13 +203,26 @@ export function BeforeAfter({
           onClick={onCorrect}
           style={{
             alignSelf: 'flex-end',
-            padding: 'var(--spacing-sm) var(--spacing-lg)',
+            padding: '0.7rem 1.5rem',
             borderRadius: 'var(--radius)',
-            border: 'none',
+            border: '2px solid var(--color-gold)',
             background: 'var(--color-gold)',
             color: '#1A1A1A',
-            fontWeight: 600,
+            fontWeight: 700,
+            fontSize: '0.85rem',
+            textTransform: 'uppercase',
+            letterSpacing: '0.08em',
             cursor: 'pointer',
+            transition: 'transform 0.15s ease, box-shadow 0.2s ease',
+            animation: 'next-btn-in 0.3s ease-out',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-2px)';
+            e.currentTarget.style.boxShadow = '0 4px 16px rgba(224, 185, 74, 0.3)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = 'none';
           }}
         >
           Next →

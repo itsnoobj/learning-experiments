@@ -57,7 +57,11 @@ function ResultPageInner() {
   const totalCount = quizData.challenges.length;
 
   return (
-    <main className="max-w-[480px] mx-auto px-6 py-16 text-center">
+    <main
+      className="max-w-[480px] mx-auto px-6 py-16 text-center"
+      style={{ animation: 'fadeIn 0.3s ease-out' }}
+    >
+      <style>{`@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }`}</style>
       <PrincipleReveal
         text={quizData.principle.text}
         subtext={quizData.principle.subtext}

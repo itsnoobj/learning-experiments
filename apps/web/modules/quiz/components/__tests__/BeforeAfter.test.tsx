@@ -51,7 +51,7 @@ describe('BeforeAfter', () => {
     fireEvent.click(screen.getByText(SCENARIO_B.text));
 
     expect(screen.getByText(EXPLANATION)).toBeInTheDocument();
-    expect(screen.getByText('Correct')).toBeInTheDocument();
+    expect(screen.getByText(/Correct/)).toBeInTheDocument();
 
     const nextButton = screen.getByRole('button', { name: 'Next →' });
     fireEvent.click(nextButton);

@@ -105,7 +105,7 @@ describe('DragMatch', () => {
 
     fireEvent.click(screen.getByRole('button', { name: 'Check Order' }));
 
-    expect(screen.getByText('Correct!')).toBeInTheDocument();
+    expect(screen.getByText(/Correct!/)).toBeInTheDocument();
     const nextButton = screen.getByRole('button', { name: 'Next →' });
     fireEvent.click(nextButton);
     expect(onCorrect).toHaveBeenCalledTimes(1);
@@ -115,7 +115,7 @@ describe('DragMatch', () => {
     setup();
     // Starting order is shuffled (reversed), so checking immediately is wrong.
     fireEvent.click(screen.getByRole('button', { name: 'Check Order' }));
-    expect(screen.getByText('Try again')).toBeInTheDocument();
+    expect(screen.getByText(/try again/i)).toBeInTheDocument();
     expect(screen.queryByRole('button', { name: 'Next →' })).not.toBeInTheDocument();
   });
 });

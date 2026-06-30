@@ -50,7 +50,7 @@ describe('SpotTheForce', () => {
     expect(screen.getAllByRole('button')).toHaveLength(3);
   });
 
-  it('shows green feedback for the correct answer', () => {
+  it('shows gold feedback for the correct answer', () => {
     render(
       <SpotTheForce
         situation={situation}
@@ -63,8 +63,8 @@ describe('SpotTheForce', () => {
 
     const feedback = screen.getByRole('status');
     expect(feedback).toHaveTextContent('Correct — control through scarcity of information.');
-    // Correct feedback uses the "correct" (green) accent on its left border.
-    expect(feedback.getAttribute('style')).toContain('var(--color-correct)');
+    // Correct feedback uses the gold accent on its left border.
+    expect(feedback.getAttribute('style')).toContain('var(--color-gold)');
   });
 
   it('shows red feedback for a wrong answer', () => {

@@ -33,12 +33,12 @@ describe('ScenarioChoice', () => {
     });
   });
 
-  it('shows green border and feedback when the correct option is chosen', () => {
+  it('shows gold border and feedback when the correct option is chosen', () => {
     setup();
     const correctButton = screen.getByRole('button', { name: OPTIONS[1].text });
     fireEvent.click(correctButton);
 
-    expect(correctButton).toHaveStyle({ border: '2px solid var(--color-correct)' });
+    expect(correctButton).toHaveStyle({ border: '2px solid var(--color-gold)' });
     expect(screen.getByText(OPTIONS[1].feedback)).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Next →' })).toBeInTheDocument();
   });
