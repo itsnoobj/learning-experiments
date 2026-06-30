@@ -59,9 +59,100 @@ export default function LandingPage() {
         background: 'var(--color-bg)',
         fontFamily: 'var(--font-primary)',
         textAlign: 'center',
+        position: 'relative',
+        overflow: 'hidden',
       }}
     >
-      <div style={{ maxWidth: '700px' }}>
+      {/* Background line drawing — subtle, decorative */}
+      <svg
+        style={{
+          position: 'absolute',
+          inset: 0,
+          width: '100%',
+          height: '100%',
+          opacity: 0.07,
+          pointerEvents: 'none',
+        }}
+        viewBox="0 0 1000 700"
+        preserveAspectRatio="xMidYMid slice"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      >
+        {/* Winding path across the page */}
+        <path
+          d="M-20 600 Q100 500 200 550 Q350 620 450 480 Q550 350 650 400 Q780 460 850 350 Q920 260 1020 300"
+          strokeDasharray="4 12"
+        />
+        <path
+          d="M-20 200 Q80 280 180 220 Q300 150 400 250 Q500 330 600 260 Q720 180 820 230 Q900 270 1020 200"
+          strokeDasharray="4 12"
+        />
+
+        {/* Nodes along paths */}
+        <circle cx="200" cy="550" r="8" />
+        <circle cx="450" cy="480" r="8" />
+        <circle cx="650" cy="400" r="8" />
+        <circle cx="850" cy="350" r="10" strokeWidth="2" />
+        <circle cx="180" cy="220" r="8" />
+        <circle cx="400" cy="250" r="8" />
+        <circle cx="600" cy="260" r="8" />
+        <circle cx="820" cy="230" r="8" />
+
+        {/* Mountains */}
+        <path d="M50 650 L90 580 L130 650" />
+        <path d="M70 650 L90 600 L110 650" />
+        <path d="M850 650 L900 570 L950 650" />
+        <path d="M870 650 L900 590 L930 650" />
+
+        {/* Trees */}
+        <path d="M300 620 L300 640" />
+        <path d="M300 620 L290 630 M300 620 L310 630" />
+        <path d="M300 615 L293 623 M300 615 L307 623" />
+
+        <path d="M700 600 L700 620" />
+        <path d="M700 600 L690 610 M700 600 L710 610" />
+        <path d="M700 595 L693 603 M700 595 L707 603" />
+
+        <path d="M150 120 L150 140" />
+        <path d="M150 120 L143 128 M150 120 L157 128" />
+
+        <path d="M900 130 L900 150" />
+        <path d="M900 130 L893 138 M900 130 L907 138" />
+
+        {/* Clouds */}
+        <ellipse cx="160" cy="80" rx="30" ry="12" />
+        <ellipse cx="145" cy="80" rx="18" ry="9" />
+        <ellipse cx="500" cy="50" rx="25" ry="10" />
+        <ellipse cx="780" cy="70" rx="22" ry="9" />
+        <ellipse cx="770" cy="68" rx="15" ry="7" />
+
+        {/* Bridge */}
+        <path d="M550 580 Q580 550 610 580" />
+        <line x1="550" y1="580" x2="550" y2="595" />
+        <line x1="610" y1="580" x2="610" y2="595" />
+
+        {/* Lake */}
+        <ellipse cx="400" cy="650" rx="40" ry="15" strokeDasharray="3 5" />
+
+        {/* Birds */}
+        <path d="M250 100 Q255 95 260 100" />
+        <path d="M265 97 Q270 92 275 97" />
+        <path d="M680 110 Q685 105 690 110" />
+        <path d="M693 107 Q698 102 703 107" />
+
+        {/* Stars/sparkles */}
+        <path d="M120 400 l2 -5 2 5 -5 -2 5 0 -5 2" />
+        <path d="M880 450 l2 -5 2 5 -5 -2 5 0 -5 2" />
+        <path d="M500 150 l2 -5 2 5 -5 -2 5 0 -5 2" />
+
+        {/* Rocks */}
+        <path d="M750 640 Q755 633 762 636 Q768 633 773 640" />
+        <path d="M320 680 Q324 674 330 676 Q335 674 338 680" />
+      </svg>
+
+      <div style={{ maxWidth: '700px', position: 'relative', zIndex: 1 }}>
         {/* Hero — rotating text IS the headline */}
         <h1
           style={{
