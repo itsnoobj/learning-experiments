@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "predev": "bash ../../tools/sync-assets.sh",
+    "predev": "bash ../../scripts/sync-assets.sh",
     "dev": "next dev",
-    "prebuild": "bash ../../tools/sync-assets.sh",
+    "prebuild": "bash ../../scripts/sync-assets.sh",
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --ext .ts,.tsx",

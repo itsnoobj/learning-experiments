@@ -24,7 +24,7 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - run: bash tools/sync-assets.sh
+      - run: bash scripts/sync-assets.sh
       - run: cd apps/web && npx next build
       - uses: actions/upload-pages-artifact@v3
         with:
