@@ -138,28 +138,19 @@ export default function LandingPage() {
             }}
           >
             {/* Click indicator — dot-matrix pointer hand */}
-            <svg
+            <img
               className="click-hand"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#FFFFFF"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+              src="/assets/icons/click-hand.png"
+              alt=""
               style={{
                 position: 'absolute',
-                top: '-12px',
-                right: '-12px',
-                width: '28px',
-                height: '28px',
+                top: '-10px',
+                right: '-10px',
+                width: '32px',
+                height: '32px',
+                pointerEvents: 'none',
               }}
-            >
-              <path d="M8 13V4.5a1.5 1.5 0 0 1 3 0V12" />
-              <path d="M11 11.5a1.5 1.5 0 0 1 3 0V12" />
-              <path d="M14 10.5a1.5 1.5 0 0 1 3 0V12" />
-              <path d="M17 11.5a1.5 1.5 0 0 1 3 0V16a6 6 0 0 1-6 6H12a6 6 0 0 1-6-6v-1.5" />
-              <path d="M5 14.5a1.5 1.5 0 0 1 3 0" />
-            </svg>
+            />
             <svg viewBox="0 0 300 110" style={{ width: '100%', display: 'block' }}>
               <path
                 d="M25 85 Q65 40 135 58 Q195 78 245 38 Q275 22 290 30"
@@ -230,28 +221,19 @@ export default function LandingPage() {
             }}
           >
             {/* Click indicator — dot-matrix pointer hand */}
-            <svg
+            <img
               className="click-hand"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#FFFFFF"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+              src="/assets/icons/click-hand.png"
+              alt=""
               style={{
                 position: 'absolute',
-                top: '-12px',
-                right: '-12px',
-                width: '28px',
-                height: '28px',
+                top: '-10px',
+                right: '-10px',
+                width: '32px',
+                height: '32px',
+                pointerEvents: 'none',
               }}
-            >
-              <path d="M8 13V4.5a1.5 1.5 0 0 1 3 0V12" />
-              <path d="M11 11.5a1.5 1.5 0 0 1 3 0V12" />
-              <path d="M14 10.5a1.5 1.5 0 0 1 3 0V12" />
-              <path d="M17 11.5a1.5 1.5 0 0 1 3 0V16a6 6 0 0 1-6 6H12a6 6 0 0 1-6-6v-1.5" />
-              <path d="M5 14.5a1.5 1.5 0 0 1 3 0" />
-            </svg>
+            />
             <svg viewBox="0 0 300 110" style={{ width: '100%', display: 'block' }}>
               <line x1="0" y1="95" x2="300" y2="95" stroke="var(--color-border)" strokeWidth="1" />
               {/* Stick figure with bobbing */}
