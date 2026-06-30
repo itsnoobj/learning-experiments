@@ -16,3 +16,4 @@ content/chapters/part-*/[0-9]*.md
 *.log
 coverage/
 .playwright-mcp
+test-results/
