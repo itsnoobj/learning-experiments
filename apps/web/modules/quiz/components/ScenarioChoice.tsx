@@ -1,8 +1,18 @@
 'use client';
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import type { ChallengeOption } from '@field-guide/shared-types';
 import { QuizFeedback } from './QuizFeedback';
+
+/** Fisher-Yates shuffle, returns a new array. */
+function shuffleOptions<T>(arr: T[]): T[] {
+  const copy = [...arr];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
 
 /** Props for {@link ScenarioChoice}. */
 export interface ScenarioChoiceProps {
@@ -41,13 +51,14 @@ const KEYFRAMES = `
  * wrong answer shows red border. Feedback panel stays visible.
  */
 export function ScenarioChoice({ situation, options, onCorrect }: ScenarioChoiceProps) {
+  const shuffled = useMemo(() => shuffleOptions(options), [options]);
   const [selected, setSelected] = useState<number | null>(null);
   const [solved, setSolved] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const handleSelect = (index: number) => {
     if (solved) return;
-    const option = options[index];
+    const option = shuffled[index];
     setSelected(index);
 
     if (option.correct) {
@@ -57,9 +68,9 @@ export function ScenarioChoice({ situation, options, onCorrect }: ScenarioChoice
 
   const borderColor = (index: number): string => {
     if (selected === index) {
-      return options[index].correct ? 'var(--color-gold)' : 'var(--color-wrong)';
+      return shuffled[index].correct ? 'var(--color-gold)' : 'var(--color-wrong)';
     }
-    if (selected !== null && options[index].correct) {
+    if (selected !== null && shuffled[index].correct) {
       return 'var(--color-gold)';
     }
     if (hoveredIndex === index && !solved) {
@@ -68,7 +79,7 @@ export function ScenarioChoice({ situation, options, onCorrect }: ScenarioChoice
     return 'var(--color-border)';
   };
 
-  const selectedOption = selected !== null ? options[selected] : null;
+  const selectedOption = selected !== null ? shuffled[selected] : null;
 
   return (
     <div className="flex flex-col gap-4" style={{ color: 'var(--color-text)' }}>
@@ -77,7 +88,7 @@ export function ScenarioChoice({ situation, options, onCorrect }: ScenarioChoice
       <p style={{ fontSize: '1.125rem', lineHeight: 1.7, fontWeight: 400 }}>{situation}</p>
 
       <div className="flex flex-col gap-3">
-        {options.map((option, index) => {
+        {shuffled.map((option, index) => {
           const isCorrectSelected = selected === index && option.correct;
           return (
             <button

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import type { ChallengeOption } from '@field-guide/shared-types';
 import { QuizFeedback } from './QuizFeedback';
 
@@ -45,6 +45,14 @@ const KEYFRAMES = `
  * checkmark animation, styled Next button.
  */
 export function SpotTheForce({ situation, question, options, onCorrect }: SpotTheForceProps) {
+  const shuffled = useMemo(() => {
+    const copy = [...options];
+    for (let i = copy.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+    return copy;
+  }, [options]);
   const [selected, setSelected] = useState<number | null>(null);
   const [solved, setSolved] = useState(false);
   const [locked, setLocked] = useState(false);
@@ -59,7 +67,7 @@ export function SpotTheForce({ situation, question, options, onCorrect }: SpotTh
 
   const handleSelect = (index: number) => {
     if (locked || solved) return;
-    const option = options[index];
+    const option = shuffled[index];
     setSelected(index);
 
     if (option.correct) {
@@ -75,9 +83,9 @@ export function SpotTheForce({ situation, question, options, onCorrect }: SpotTh
 
   const borderColor = (index: number): string => {
     if (selected === index) {
-      return options[index].correct ? 'var(--color-gold)' : 'var(--color-wrong)';
+      return shuffled[index].correct ? 'var(--color-gold)' : 'var(--color-wrong)';
     }
-    if (selected !== null && options[index].correct) {
+    if (selected !== null && shuffled[index].correct) {
       return 'var(--color-gold)';
     }
     if (hoveredIndex === index && !solved && !locked) {
@@ -86,7 +94,7 @@ export function SpotTheForce({ situation, question, options, onCorrect }: SpotTh
     return 'var(--color-border)';
   };
 
-  const selectedOption = selected !== null ? options[selected] : null;
+  const selectedOption = selected !== null ? shuffled[selected] : null;
 
   return (
     <div className="flex flex-col gap-4" style={{ color: 'var(--color-text)' }}>
@@ -111,7 +119,7 @@ export function SpotTheForce({ situation, question, options, onCorrect }: SpotTh
       </p>
 
       <div className="flex flex-col gap-3">
-        {options.map((option, index) => {
+        {shuffled.map((option, index) => {
           const isCorrectSelected = selected === index && option.correct;
           return (
             <button
