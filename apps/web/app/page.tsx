@@ -252,28 +252,24 @@ export default function LandingPage() {
             </div>
           </Link>
         </div>
-      </div>
 
-      {/* Sample mission — floating over background image */}
-      <div
-        style={{
-          position: 'absolute',
-          bottom: '12%',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          zIndex: 1,
-          padding: '0.6rem 1.2rem',
-          border: '1px solid rgba(255,255,255,0.12)',
-          fontSize: '0.85rem',
-          color: '#E8E8E8',
-          fontStyle: 'italic',
-          background: 'rgba(0,0,0,0.6)',
-          backdropFilter: 'blur(4px)',
-          whiteSpace: 'nowrap',
-        }}
-      >
-        <span style={{ color: '#888', fontStyle: 'normal', marginRight: '0.5rem' }}>e.g.</span>
-        &ldquo;{SAMPLE_MISSIONS[sampleIndex]}&rdquo;
+        {/* Sample mission — below cards */}
+        <div
+          style={{
+            marginTop: '1.5rem',
+            padding: '0.6rem 1.2rem',
+            border: '1px solid rgba(255,255,255,0.12)',
+            fontSize: '0.85rem',
+            color: '#E8E8E8',
+            fontStyle: 'italic',
+            background: 'rgba(0,0,0,0.4)',
+            backdropFilter: 'blur(4px)',
+            display: 'inline-block',
+          }}
+        >
+          <span style={{ color: '#888', fontStyle: 'normal', marginRight: '0.5rem' }}>e.g.</span>
+          &ldquo;{SAMPLE_MISSIONS[sampleIndex]}&rdquo;
+        </div>
       </div>
 
       <style>{`
