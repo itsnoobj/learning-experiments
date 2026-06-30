@@ -6,6 +6,8 @@ import { useQuizState } from '../hooks/useQuizState';
 import { ScenarioChoice } from './ScenarioChoice';
 import { SpotTheForce } from './SpotTheForce';
 import { CardFlip } from './CardFlip';
+import { DragMatch } from './DragMatch';
+import { BeforeAfter } from './BeforeAfter';
 
 /** Props for {@link QuizShell}. */
 export interface QuizShellProps {
@@ -63,6 +65,26 @@ export function QuizShell({ challenges, onComplete }: QuizShellProps) {
         );
       case 'card-flip':
         return <CardFlip front={challenge.front} back={challenge.back} onCorrect={handleCorrect} />;
+      case 'drag-match':
+        return (
+          <DragMatch
+            instruction={challenge.instruction}
+            items={challenge.items}
+            correctOrder={challenge.correctOrder}
+            onCorrect={handleCorrect}
+          />
+        );
+      case 'before-after':
+        return (
+          <BeforeAfter
+            context={challenge.context}
+            scenarioA={challenge.scenarioA}
+            scenarioB={challenge.scenarioB}
+            correctScenario={challenge.correctScenario}
+            explanation={challenge.explanation}
+            onCorrect={handleCorrect}
+          />
+        );
       default:
         return null;
     }

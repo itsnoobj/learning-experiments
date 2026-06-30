@@ -117,4 +117,27 @@ describe('generateMapLayout — single region (serpentine)', () => {
     expect(statusById['28']).toBe('recommended');
     expect(statusById['29']).toBe('available');
   });
+
+  it('generates more nodes when more missions are added', () => {
+    // Adding missions to a region (as you would in hierarchy.json) must extend
+    // the map automatically: one node per mission, no hard-coded cap.
+    const missions = Array.from({ length: 10 }, (_, i) => String(100 + i));
+    const region: LayoutRegion = {
+      id: 'A',
+      title: 'Big Region',
+      emoji: '🗺️',
+      terrain: 'plains',
+      missions,
+    };
+
+    const { nodes } = generateMapLayout([region], []);
+    expect(nodes).toHaveLength(10);
+    expect(nodes.map((n) => n.id)).toEqual(missions);
+
+    // And growing the region produces strictly more nodes than a smaller one,
+    // proving the layout scales with the data rather than a fixed shape.
+    const smaller = generateMapLayout([{ ...region, missions: missions.slice(0, 3) }], []);
+    expect(smaller.nodes).toHaveLength(3);
+    expect(nodes.length).toBeGreaterThan(smaller.nodes.length);
+  });
 });

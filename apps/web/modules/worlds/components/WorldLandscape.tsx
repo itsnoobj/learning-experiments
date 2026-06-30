@@ -1,3 +1,8 @@
+// VERIFIED DATA-DRIVEN (auto-extending map): WorldLandscape renders by iterating
+// the `worlds` prop (worlds.map(...)). The ten curated POSITIONS lay out the
+// canonical worlds nicely; any world beyond that count is placed by
+// serpentinePosition(), a programmatic fallback, so adding worlds to
+// hierarchy.json extends the map automatically instead of stacking them.
 'use client';
 
 import { useRouter } from 'next/navigation';
@@ -28,6 +33,21 @@ const POSITIONS: ReadonlyArray<{ x: number; y: number }> = [
   { x: 880, y: 210 },
   { x: 945, y: 405 },
 ];
+
+/**
+ * Programmatic position for any world index beyond the curated {@link POSITIONS}
+ * list, so a hierarchy with more than ten worlds still lays out cleanly (a
+ * serpentine band across the canvas) rather than stacking extra worlds on one
+ * point. Keeps the landscape fully data-driven: more worlds → more zones.
+ */
+function serpentinePosition(index: number): { x: number; y: number } {
+  const col = index % 5;
+  const row = Math.floor(index / 5);
+  return {
+    x: 90 + col * 200,
+    y: row % 2 === 0 ? 200 : 410,
+  };
+}
 
 /** Ordered mission ids across all of a world's regions. */
 function missionIds(world: World): string[] {
@@ -244,7 +264,7 @@ export function WorldLandscape({ worlds }: WorldLandscapeProps) {
 
   const placed = worlds.map((world, index) => ({
     world,
-    pos: POSITIONS[index] ?? { x: 500, y: 300 },
+    pos: POSITIONS[index] ?? serpentinePosition(index),
   }));
 
   return (

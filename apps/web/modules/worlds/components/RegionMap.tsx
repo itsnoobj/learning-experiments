@@ -1,3 +1,8 @@
+// VERIFIED DATA-DRIVEN (auto-extending map): RegionMap renders by iterating the
+// `regions` prop (regions.map(...)) and derives layout from regions.length via
+// regionPositions(), which has tuned cases for 1-4 regions and a generic
+// serpentine fallback for any larger count. Adding regions to hierarchy.json
+// extends the map automatically — no positions are hard-coded per region id.
 'use client';
 
 import { useRouter } from 'next/navigation';

@@ -31,11 +31,47 @@ export const cardFlipSchema = z.object({
   back: z.string().min(1),
 });
 
+/** A single orderable item in a drag-match challenge. */
+export const dragMatchItemSchema = z.object({
+  id: z.string().min(1),
+  text: z.string().min(1),
+});
+
+export type DragMatchItem = z.infer<typeof dragMatchItemSchema>;
+
+/** Put items in the correct sequence/order. */
+export const dragMatchSchema = z.object({
+  type: z.literal('drag-match'),
+  instruction: z.string().min(1),
+  items: z.array(dragMatchItemSchema).min(2),
+  correctOrder: z.array(z.string().min(1)).min(2),
+});
+
+/** One of the two scenarios in a before-after challenge. */
+export const beforeAfterScenarioSchema = z.object({
+  label: z.string().min(1),
+  text: z.string().min(1),
+});
+
+export type BeforeAfterScenario = z.infer<typeof beforeAfterScenarioSchema>;
+
+/** Choose which of two scenarios applied the principle correctly. */
+export const beforeAfterSchema = z.object({
+  type: z.literal('before-after'),
+  context: z.string().min(1),
+  scenarioA: beforeAfterScenarioSchema,
+  scenarioB: beforeAfterScenarioSchema,
+  correctScenario: z.enum(['A', 'B']),
+  explanation: z.string().min(1),
+});
+
 /** Discriminated union over the supported challenge templates. */
 export const quizChallengeSchema = z.discriminatedUnion('type', [
   scenarioChoiceSchema,
   spotTheForceSchema,
   cardFlipSchema,
+  dragMatchSchema,
+  beforeAfterSchema,
 ]);
 
 export type QuizChallenge = z.infer<typeof quizChallengeSchema>;

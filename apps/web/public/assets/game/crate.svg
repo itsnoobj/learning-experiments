@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="35" viewBox="0 0 45 35" shape-rendering="crispEdges">
+  <!-- Shipping crate: shorter and wider, grey outline with an X of slats. -->
+  <rect x="2" y="2" width="41" height="31" fill="#6B5B43" stroke="#888888" stroke-width="2"/>
+  <rect x="5" y="5" width="35" height="25" fill="#7A6A50"/>
+  <!-- Diagonal slats forming an X. -->
+  <line x1="2" y1="2" x2="43" y2="33" stroke="#888888" stroke-width="2"/>
+  <line x1="43" y1="2" x2="2" y2="33" stroke="#888888" stroke-width="2"/>
+  <!-- Frame edges for a boxed look. -->
+  <line x1="2" y1="2" x2="43" y2="2" stroke="#888888" stroke-width="2"/>
+  <line x1="2" y1="33" x2="43" y2="33" stroke="#888888" stroke-width="2"/>
+</svg>

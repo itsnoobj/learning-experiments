@@ -1,5 +1,5 @@
-/** The three obstacle silhouettes the runner can throw at the player. */
-export type ObstacleType = 'pipe' | 'block' | 'gap';
+/** The obstacle silhouettes the runner can throw at the player. */
+export type ObstacleType = 'pipe' | 'block' | 'gap' | 'crate' | 'spike';
 
 /** A rectangular hazard tied to a chapter the player unlocks on collision. */
 export interface ObstacleData {
@@ -44,9 +44,16 @@ export class Obstacle implements ObstacleData {
   }
 
   /**
-   * Draw the obstacle as an outlined rectangle with an internal X.
-   * The outline color is theme-aware; the X is a muted grey, giving a
-   * minimalist hazard marker that stays visible in both light and dark modes.
+   * Draw the obstacle with a silhouette that matches its type. Sprites are the
+   * primary visual in {@link GameCanvas}; this canvas-drawn fallback renders
+   * when a sprite hasn't loaded and must still read as the right hazard:
+   *
+   * - `spike`: an upward-pointing triangle (sharp, dangerous looking).
+   * - `crate` / others: an outlined rectangle with an internal X (a packing
+   *   crate / generic hazard marker).
+   *
+   * The outline color is theme-aware; interior strokes are a muted grey so the
+   * marker stays visible in both light and dark modes.
    *
    * @param ctx         the 2D rendering context.
    * @param strokeColor outline color (white on dark, near-black on light).
@@ -56,11 +63,24 @@ export class Obstacle implements ObstacleData {
     ctx.lineWidth = 2;
     ctx.lineJoin = 'miter';
 
-    // Outline
+    if (this.type === 'spike') {
+      // Upward-pointing triangle filling the obstacle's bounding box.
+      ctx.strokeStyle = strokeColor;
+      ctx.beginPath();
+      ctx.moveTo(this.x + this.width / 2, this.y); // apex
+      ctx.lineTo(this.x + this.width, this.y + this.height); // bottom-right
+      ctx.lineTo(this.x, this.y + this.height); // bottom-left
+      ctx.closePath();
+      ctx.stroke();
+      ctx.restore();
+      return;
+    }
+
+    // Outline (rectangle).
     ctx.strokeStyle = strokeColor;
     ctx.strokeRect(this.x, this.y, this.width, this.height);
 
-    // Internal X pattern
+    // Internal X pattern (crate slats / generic hazard marker).
     ctx.strokeStyle = '#888888';
     ctx.beginPath();
     ctx.moveTo(this.x, this.y);
@@ -73,17 +93,36 @@ export class Obstacle implements ObstacleData {
   }
 }
 
-/** Per-type silhouette dimensions relative to the configured base height. */
-const TYPE_DIMENSIONS: Record<ObstacleType, { widthFactor: number; heightFactor: number }> = {
+/**
+ * Per-type silhouette dimensions. `pipe`/`block`/`gap` scale from the
+ * configured base height via factors; `crate`/`spike` use fixed absolute
+ * dimensions so they keep their distinctive shape regardless of base height.
+ */
+interface TypeDimension {
+  /** Width as a multiple of baseHeight (used when `width` is absent). */
+  widthFactor?: number;
+  /** Height as a multiple of baseHeight (used when `height` is absent). */
+  heightFactor?: number;
+  /** Absolute width in px; overrides `widthFactor`. */
+  width?: number;
+  /** Absolute height in px; overrides `heightFactor`. */
+  height?: number;
+}
+
+const TYPE_DIMENSIONS: Record<ObstacleType, TypeDimension> = {
   // Tall and narrow.
   pipe: { widthFactor: 0.7, heightFactor: 1.2 },
   // Squat and square.
   block: { widthFactor: 1, heightFactor: 0.7 },
   // Wide and short — a "gap" rendered as a low bar.
   gap: { widthFactor: 1.6, heightFactor: 0.5 },
+  // Shorter and wider — a shipping crate.
+  crate: { width: 45, height: 35 },
+  // Narrow and tall — a dangerous spike.
+  spike: { width: 15, height: 60 },
 };
 
-const OBSTACLE_TYPES: ObstacleType[] = ['pipe', 'block', 'gap'];
+const OBSTACLE_TYPES: ObstacleType[] = ['pipe', 'block', 'gap', 'crate', 'spike'];
 
 export interface SpawnConfig {
   /** Ground line the obstacle sits on. */
@@ -119,8 +158,8 @@ export function spawnObstacle(
   const type = OBSTACLE_TYPES[Math.floor(rng() * OBSTACLE_TYPES.length)];
   const dims = TYPE_DIMENSIONS[type];
 
-  const height = baseHeight * dims.heightFactor;
-  const width = baseHeight * dims.widthFactor;
+  const height = dims.height ?? baseHeight * (dims.heightFactor ?? 1);
+  const width = dims.width ?? baseHeight * (dims.widthFactor ?? 1);
   const chapterId = chapterIds.length
     ? chapterIds[spawnCount % chapterIds.length]
     : String(spawnCount);

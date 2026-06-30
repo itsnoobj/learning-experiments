@@ -43,6 +43,9 @@ const BASE_SPEED = 6; // px/frame at difficulty 0
 const TARGET_FRAME_MS = 1000 / 60; // physics tuned for 60fps; delta-scaled below
 const TILE = 32; // ground tile size in px (matches ground-tile.svg)
 const CLOUD_PARALLAX = 0.25; // clouds drift at a fraction of the ground speed
+const HILL_PARALLAX = 0.1; // distant hills drift slower than clouds (deep background)
+const BIRD_PARALLAX = 0.15; // birds drift slowly across the top of the sky
+const COMBO_CHANCE = 0.25; // probability a spawn becomes a tight 2-obstacle combo
 
 /** SVG sprite sources, served from /public/assets/game. */
 const ASSET_SOURCES = {
@@ -50,16 +53,50 @@ const ASSET_SOURCES = {
   pipe: '/assets/game/pipe.svg',
   block: '/assets/game/block.svg',
   cloud: '/assets/game/cloud.svg',
+  crate: '/assets/game/crate.svg',
+  spike: '/assets/game/spike.svg',
 } as const;
 
 type AssetKey = keyof typeof ASSET_SOURCES;
 
-/** Background cloud layout (base positions in a scrolling, wrapping field). */
-const CLOUDS: { baseX: number; y: number; scale: number }[] = [
-  { baseX: 120, y: 70, scale: 1.6 },
-  { baseX: 520, y: 130, scale: 1.1 },
-  { baseX: 900, y: 50, scale: 2.0 },
-  { baseX: 1300, y: 110, scale: 1.35 },
+/**
+ * Background cloud field with three size tiers (small / medium / large). Base
+ * positions live in a scrolling, wrapping field wider than the viewport so the
+ * clouds recycle seamlessly. `scale` multiplies the cloud sprite's native size.
+ */
+const CLOUDS: { baseX: number; y: number; scale: number; size: 'small' | 'medium' | 'large' }[] = [
+  { baseX: 120, y: 70, scale: 2.0, size: 'large' },
+  { baseX: 360, y: 140, scale: 0.8, size: 'small' },
+  { baseX: 560, y: 60, scale: 1.3, size: 'medium' },
+  { baseX: 820, y: 120, scale: 0.7, size: 'small' },
+  { baseX: 1040, y: 50, scale: 2.2, size: 'large' },
+  { baseX: 1320, y: 110, scale: 1.2, size: 'medium' },
+  { baseX: 1560, y: 80, scale: 0.75, size: 'small' },
+];
+
+/**
+ * Distant hills/mountains drawn as low-opacity triangles in the deep
+ * background. They scroll at {@link HILL_PARALLAX} (much slower than clouds and
+ * the foreground) to sell depth. `baseX` is the peak x in a wrapping field;
+ * `w`/`h` are the triangle's half-width and height in px.
+ */
+const HILLS: { baseX: number; w: number; h: number }[] = [
+  { baseX: 80, w: 220, h: 180 },
+  { baseX: 420, w: 300, h: 240 },
+  { baseX: 820, w: 180, h: 150 },
+  { baseX: 1140, w: 280, h: 210 },
+  { baseX: 1520, w: 240, h: 190 },
+];
+
+/**
+ * Birds rendered as simple "V" shapes drifting slowly across the top of the
+ * sky. `baseX` lives in a wrapping field; `y` is the flight height; `s` is the
+ * wingspan in px.
+ */
+const BIRDS: { baseX: number; y: number; s: number }[] = [
+  { baseX: 200, y: 60, s: 14 },
+  { baseX: 700, y: 100, s: 10 },
+  { baseX: 1150, y: 45, s: 16 },
 ];
 
 /** True once an image has finished decoding and is safe to draw. */

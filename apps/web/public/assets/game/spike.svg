@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="64" viewBox="0 0 16 64">
+  <!-- Upward-pointing spike: dangerous, narrow and tall, gold outline. -->
+  <polygon points="8,2 15,62 1,62" fill="#3A2E0B" fill-opacity="0.35" stroke="#DAA520" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Centre highlight line. -->
+  <line x1="8" y1="10" x2="8" y2="58" stroke="#DAA520" stroke-width="1" stroke-opacity="0.6"/>
+</svg>

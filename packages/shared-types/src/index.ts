@@ -92,8 +92,48 @@ export interface CardFlipChallenge {
   back: string;
 }
 
+/** A single orderable item in a drag-match challenge. */
+export interface DragMatchItem {
+  /** Stable id used to check against the correct order. */
+  id: string;
+  /** Display text. */
+  text: string;
+}
+
+/** Put items in the correct sequence/order. */
+export interface DragMatchChallenge {
+  type: 'drag-match';
+  instruction: string;
+  items: DragMatchItem[];
+  /** Ids in their correct sequence. */
+  correctOrder: string[];
+}
+
+/** One of the two scenarios in a before-after challenge. */
+export interface BeforeAfterScenario {
+  /** Short label shown above the text (e.g. "Manager A"). */
+  label: string;
+  /** The scenario description. */
+  text: string;
+}
+
+/** Choose which of two scenarios applied the principle correctly. */
+export interface BeforeAfterChallenge {
+  type: 'before-after';
+  context: string;
+  scenarioA: BeforeAfterScenario;
+  scenarioB: BeforeAfterScenario;
+  correctScenario: 'A' | 'B';
+  explanation: string;
+}
+
 /** Discriminated union of all supported quiz challenge templates. */
-export type QuizChallenge = ScenarioChoiceChallenge | SpotTheForceChallenge | CardFlipChallenge;
+export type QuizChallenge =
+  | ScenarioChoiceChallenge
+  | SpotTheForceChallenge
+  | CardFlipChallenge
+  | DragMatchChallenge
+  | BeforeAfterChallenge;
 
 /** The principle a chapter's quiz reinforces. */
 export interface Principle {

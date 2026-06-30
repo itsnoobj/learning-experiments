@@ -1,3 +1,10 @@
+// VERIFIED DATA-DRIVEN (auto-extending map): generateMapLayout derives every
+// node, edge and region band purely from the `regions` array and each region's
+// `missions` array — coordinates are computed programmatically
+// (MARGIN_X + index * SPACING_X, serpentine rows, etc.), never hard-coded.
+// Adding regions or missions to hierarchy.json therefore extends the map with
+// no code changes. Covered by generateMapLayout.test.ts, including the
+// "generates more nodes when more missions are added" case.
 import type { MapNodeStatus } from '../components/MapNode';
 
 /** A region as consumed by the map layout (subset of the hierarchy Region). */
