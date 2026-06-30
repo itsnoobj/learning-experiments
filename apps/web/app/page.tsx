@@ -381,6 +381,23 @@ export default function LandingPage() {
           transform: translateY(-3px);
           box-shadow: 0 8px 24px rgba(218, 165, 32, 0.1);
         }
+        .glimpse-card {
+          position: relative;
+        }
+        .glimpse-card::before {
+          content: '';
+          position: absolute;
+          inset: -4px;
+          border: 2px dashed var(--color-text-dim);
+          opacity: 0.4;
+          border-radius: 2px 8px 4px 6px;
+          transform: rotate(-0.3deg);
+          pointer-events: none;
+        }
+        .glimpse-card:hover::before {
+          border-color: var(--color-gold);
+          opacity: 0.7;
+        }
         .click-hand {
           animation: clickShake 1.5s ease-in-out infinite;
         }
