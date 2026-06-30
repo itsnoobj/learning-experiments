@@ -16,16 +16,21 @@ describe('PrincipleReveal', () => {
     expect(screen.getByText(subtext)).toBeInTheDocument();
   });
 
-  it('renders the gold star', () => {
+  it('renders the open book icon', () => {
     render(<PrincipleReveal text={principle} subtext={subtext} />);
-    const star = screen.getByRole('img', { name: /gold star/i });
-    expect(star).toBeInTheDocument();
-    expect(star).toHaveTextContent('★');
+    const book = screen.getByRole('img', { name: /open book/i });
+    expect(book).toBeInTheDocument();
+    expect(book.querySelector('svg')).toBeInTheDocument();
   });
 
-  it('renders the "Principle Unlocked" label', () => {
+  it('renders the "Obstacle Cleared" label', () => {
     render(<PrincipleReveal text={principle} subtext={subtext} />);
-    expect(screen.getByText(/principle unlocked/i)).toBeInTheDocument();
+    expect(screen.getByText(/obstacle cleared/i)).toBeInTheDocument();
+  });
+
+  it('renders the motivational line', () => {
+    render(<PrincipleReveal text={principle} subtext={subtext} />);
+    expect(screen.getByText(/one step closer\. keep moving\./i)).toBeInTheDocument();
   });
 
   it('renders the score badge when counts are provided', () => {

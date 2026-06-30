@@ -13,7 +13,7 @@ export interface PrincipleRevealProps {
   totalCount?: number;
   /** Static, human-friendly read-time label shown as a stat pill. */
   readTime?: string;
-  /** Chapter number, shown as muted context beneath the star (e.g. "Chapter 31"). */
+  /** Chapter number, shown as muted context beneath the book icon (e.g. "Chapter 31"). */
   chapterNumber?: string | number;
   /** Chapter title, used as an accessible/context label for the achievement. */
   chapterTitle?: string;
@@ -47,10 +47,10 @@ function StatBadge({ children }: { children: React.ReactNode }) {
 /**
  * Reveals a chapter's principle as a certificate-style achievement card.
  *
- * The card frames a glowing gold star that scales in on mount, an "PRINCIPLE
- * UNLOCKED" label, the principle itself, and supporting subtext. A diamond
- * divider separates the reveal from a stats row that celebrates what the
- * learner accomplished.
+ * The card frames a glowing gold open-book icon that scales in on mount, an
+ * "OBSTACLE CLEARED" label, the principle itself, and supporting subtext. A
+ * diamond divider separates the reveal from a stats row that celebrates what
+ * the learner accomplished.
  */
 export function PrincipleReveal({
   text,
@@ -99,19 +99,37 @@ export function PrincipleReveal({
       >
         <span
           role="img"
-          aria-label={chapterTitle ? `gold star — ${chapterTitle}` : 'gold star'}
+          aria-label={chapterTitle ? `open book — ${chapterTitle}` : 'open book'}
           style={{
-            fontSize: '4rem',
-            lineHeight: 1,
-            color: 'var(--color-gold)',
             display: 'inline-block',
-            textShadow: '0 0 28px rgba(218,165,32,0.45)',
+            lineHeight: 0,
+            filter: 'drop-shadow(0 0 28px rgba(218,165,32,0.45))',
             transform: mounted ? 'scale(1) rotate(0deg)' : 'scale(0.5) rotate(-25deg)',
             opacity: mounted ? 1 : 0,
             transition: 'transform 500ms cubic-bezier(0.34, 1.56, 0.64, 1), opacity 300ms ease-out',
           }}
         >
-          ★
+          <svg
+            width="64"
+            height="64"
+            viewBox="0 0 64 64"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M32 12V52" stroke="#DAA520" strokeWidth="2" />
+            <path
+              d="M32 12C32 12 26 8 16 8C10 8 6 10 6 10V50C6 50 10 48 16 48C26 48 32 52 32 52"
+              stroke="#DAA520"
+              strokeWidth="2.5"
+              fill="none"
+            />
+            <path
+              d="M32 12C32 12 38 8 48 8C54 8 58 10 58 10V50C58 50 54 48 48 48C38 48 32 52 32 52"
+              stroke="#DAA520"
+              strokeWidth="2.5"
+              fill="none"
+            />
+          </svg>
         </span>
 
         {chapterNumber != null && (
@@ -137,7 +155,7 @@ export function PrincipleReveal({
             color: 'var(--color-gold)',
           }}
         >
-          Principle Unlocked
+          Obstacle Cleared
         </span>
 
         <p
@@ -163,6 +181,18 @@ export function PrincipleReveal({
           }}
         >
           {subtext}
+        </p>
+
+        <p
+          style={{
+            fontSize: '0.8rem',
+            fontStyle: 'italic',
+            lineHeight: 1.5,
+            margin: 0,
+            color: 'var(--color-text-dim)',
+          }}
+        >
+          One step closer. Keep moving.
         </p>
       </div>
 

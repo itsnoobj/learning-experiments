@@ -50,6 +50,20 @@ export function ResultCTA({ onContinue, fromGame, onShare }: ResultCTAProps) {
         {label}
       </button>
 
+      {fromGame && (
+        <p
+          style={{
+            margin: 0,
+            textAlign: 'center',
+            fontSize: '0.8rem',
+            fontStyle: 'italic',
+            color: 'var(--color-text-dim)',
+          }}
+        >
+          Next obstacle awaits
+        </p>
+      )}
+
       <button
         type="button"
         onClick={onShare}
