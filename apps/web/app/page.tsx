@@ -63,7 +63,7 @@ export default function LandingPage() {
         fontFamily: 'var(--font-primary)',
         textAlign: 'center',
         position: 'relative',
-        overflow: 'hidden',
+        overflow: 'visible',
       }}
     >
       {/* Background image */}
@@ -131,7 +131,7 @@ export default function LandingPage() {
               flex: '1',
               minWidth: '260px',
               border: 'none',
-              overflow: 'hidden',
+              overflow: 'visible',
               cursor: 'pointer',
               background: 'rgba(255,255,255,0.03)',
               position: 'relative',
@@ -143,10 +143,10 @@ export default function LandingPage() {
               viewBox="0 0 16 16"
               style={{
                 position: 'absolute',
-                top: '8px',
-                right: '8px',
-                width: '20px',
-                height: '20px',
+                top: '-14px',
+                right: '-14px',
+                width: '28px',
+                height: '28px',
               }}
             >
               <circle cx="8" cy="2" r="1" fill="#DAA520" />
@@ -227,7 +227,7 @@ export default function LandingPage() {
               flex: '1',
               minWidth: '260px',
               border: 'none',
-              overflow: 'hidden',
+              overflow: 'visible',
               cursor: 'pointer',
               background: 'rgba(255,255,255,0.03)',
               position: 'relative',
@@ -239,10 +239,10 @@ export default function LandingPage() {
               viewBox="0 0 16 16"
               style={{
                 position: 'absolute',
-                top: '8px',
-                right: '8px',
-                width: '20px',
-                height: '20px',
+                top: '-14px',
+                right: '-14px',
+                width: '28px',
+                height: '28px',
               }}
             >
               <circle cx="8" cy="2" r="1" fill="#DAA520" />
