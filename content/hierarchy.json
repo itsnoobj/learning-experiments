@@ -3,6 +3,7 @@
     {
       "id": 1,
       "title": "Understanding Yourself",
+      "tagline": "Know thyself",
       "worldName": "The Mirror",
       "landscape": "lake",
       "accent": "#4A90D9",
@@ -10,24 +11,28 @@
         {
           "id": "A",
           "title": "Identity",
+          "emoji": "🪩",
           "terrain": "reflection-pools",
           "missions": ["1", "2", "3", "4", "5", "6", "7", "8"]
         },
         {
           "id": "B",
           "title": "Ego",
+          "emoji": "👑",
           "terrain": "cracked-mirrors",
           "missions": ["9", "10", "11", "12", "13"]
         },
         {
           "id": "C",
           "title": "Motivation",
+          "emoji": "🚀",
           "terrain": "uphill-paths",
           "missions": ["14", "15", "16", "17", "18", "19"]
         },
         {
           "id": "D",
           "title": "Emotions",
+          "emoji": "⛈️",
           "terrain": "weather-zones",
           "missions": ["20", "21", "22", "23", "24", "25"]
         }
@@ -36,6 +41,7 @@
     {
       "id": 2,
       "title": "Understanding Other People",
+      "tagline": "Read the room",
       "worldName": "The Crowd",
       "landscape": "marketplace",
       "accent": "#DAA520",
@@ -43,24 +49,28 @@
         {
           "id": "A",
           "title": "Incentives & Hidden Motives",
+          "emoji": "🎪",
           "terrain": "market-stalls",
           "missions": ["26", "27", "28", "29", "30", "31", "32", "33"]
         },
         {
           "id": "B",
           "title": "Trust",
+          "emoji": "🤝",
           "terrain": "bridge",
           "missions": ["34", "35", "36", "37", "38"]
         },
         {
           "id": "C",
           "title": "Status & Recognition",
+          "emoji": "🏆",
           "terrain": "staircase",
           "missions": ["39", "40", "41", "42"]
         },
         {
           "id": "D",
           "title": "Difficult People",
+          "emoji": "🌵",
           "terrain": "thorny-path",
           "missions": ["43", "44", "45", "46", "47", "48"]
         }
@@ -69,6 +79,7 @@
     {
       "id": 3,
       "title": "Teams & Collaboration",
+      "tagline": "Build together",
       "worldName": "The Campfire",
       "landscape": "campsite",
       "accent": "#E67E22",
@@ -77,6 +88,7 @@
     {
       "id": 4,
       "title": "Leadership",
+      "tagline": "Lead the way",
       "worldName": "The Summit",
       "landscape": "mountain",
       "accent": "#95A5A6",
@@ -85,6 +97,7 @@
     {
       "id": 5,
       "title": "Organizations & Systems",
+      "tagline": "See the system",
       "worldName": "The Maze",
       "landscape": "labyrinth",
       "accent": "#7F8C8D",
@@ -93,6 +106,7 @@
     {
       "id": 6,
       "title": "Decision Making",
+      "tagline": "Choose wisely",
       "worldName": "The Crossroads",
       "landscape": "forest",
       "accent": "#27AE60",
@@ -101,6 +115,7 @@
     {
       "id": 7,
       "title": "Communication",
+      "tagline": "Be heard",
       "worldName": "The Bridge",
       "landscape": "cliffs",
       "accent": "#16A085",
@@ -109,6 +124,7 @@
     {
       "id": 8,
       "title": "Conflict & Power",
+      "tagline": "Stand your ground",
       "worldName": "The Arena",
       "landscape": "colosseum",
       "accent": "#C0392B",
@@ -117,6 +133,7 @@
     {
       "id": 9,
       "title": "Ethics & Judgment",
+      "tagline": "Find the balance",
       "worldName": "The Scale",
       "landscape": "balanced",
       "accent": "#8E44AD",
@@ -125,6 +142,7 @@
     {
       "id": 10,
       "title": "Career & Life",
+      "tagline": "Own your path",
       "worldName": "The Horizon",
       "landscape": "road",
       "accent": "#DAA520",

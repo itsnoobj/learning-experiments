@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import { useProgressStore } from '@/store/progressStore';
 import { generateMapLayout, type LayoutRegion } from '../data/mapNodes';
 import { generateTerrain, generateBackdrop } from '../lib/terrain';
+import { usePannable } from '../hooks/usePannable';
 import { MapPath } from './MapPath';
 import { MapNode } from './MapNode';
 import { PlayerIndicator } from './PlayerIndicator';
@@ -27,6 +28,9 @@ export interface WorldMapProps {
 
 const GOLD = '#DAA520';
 
+/** Perpendicular curve magnitude for path squiggles; sign alternates per edge. */
+const CURVE_MAGNITUDE = 28;
+
 /**
  * The Super Mario World style overworld map for a single world.
  *
@@ -34,9 +38,12 @@ const GOLD = '#DAA520';
  * the world's {@link WorldMapProps.regions} via {@link generateMapLayout}.
  * Behind the nodes sits a subtle hand-sketched landscape: ambient clouds,
  * mountains, trees and stones, plus per-region terrain decorations chosen by
- * each region's terrain hint. Regions are visual groupings only — they are not
- * labelled. Every mission is reachable; the first uncompleted one pulses as a
- * gentle recommendation. Clicking any node navigates to its chapter.
+ * each region's terrain hint. Each region also carries an emoji landmark drawn
+ * at the top of its band. Paths between nodes squiggle organically, curving in
+ * alternating directions. Regions are visual groupings only — they are not
+ * labelled. Every mission is reachable; the first uncompleted one pulses and
+ * gets a ✨ sparkle as a gentle recommendation. Clicking any node navigates to
+ * its chapter. The whole map can be dragged/panned.
  */
 export function WorldMap({ regions, accent, showUnlocked, onUnlockedDone }: WorldMapProps) {
   const router = useRouter();
@@ -55,13 +62,19 @@ export function WorldMap({ regions, accent, showUnlocked, onUnlockedDone }: Worl
     generateTerrain(area.terrain, area.x, area.y, area.width, area.height),
   );
 
+  const { containerRef, handlers, offset, isDragging } = usePannable<HTMLDivElement>();
+
   return (
     <div>
       <div
+        ref={containerRef}
+        {...handlers}
         style={{
           position: 'relative',
           maxWidth: '100%',
-          overflowX: 'auto',
+          overflow: 'hidden',
+          touchAction: 'none',
+          cursor: isDragging ? 'grabbing' : 'grab',
           WebkitOverflowScrolling: 'touch',
         }}
       >
@@ -69,7 +82,11 @@ export function WorldMap({ regions, accent, showUnlocked, onUnlockedDone }: Worl
           viewBox={`0 0 ${width} ${height}`}
           preserveAspectRatio="xMidYMid meet"
           className="h-auto"
-          style={{ minWidth: `${width}px`, width: '100%' }}
+          style={{
+            minWidth: `${width}px`,
+            width: '100%',
+            transform: `translate(${offset.x}px, ${offset.y}px)`,
+          }}
           role="img"
           aria-label={`World map with ${nodes.length} missions`}
         >
@@ -80,13 +97,32 @@ export function WorldMap({ regions, accent, showUnlocked, onUnlockedDone }: Worl
           <g aria-hidden="true">{backdrop}</g>
           <g aria-hidden="true">{terrain}</g>
 
-          {edges.map((edge) => (
+          {/* Region emoji landmarks, at the top-centre of each region's band. */}
+          <g aria-hidden="true">
+            {regionAreas.map((area) =>
+              area.emoji ? (
+                <text
+                  key={`emoji-${area.id}`}
+                  x={area.x + area.width / 2}
+                  y={area.y + 30}
+                  textAnchor="middle"
+                  dominantBaseline="middle"
+                  fontSize={24}
+                >
+                  {area.emoji}
+                </text>
+              ) : null,
+            )}
+          </g>
+
+          {edges.map((edge, i) => (
             <MapPath
               key={edge.key}
               x1={edge.x1}
               y1={edge.y1}
               x2={edge.x2}
               y2={edge.y2}
+              curveOffset={i % 2 === 0 ? CURVE_MAGNITUDE : -CURVE_MAGNITUDE}
               completed={edge.completed}
               isGate={edge.isGate}
               accent={accentColor}
@@ -109,6 +145,20 @@ export function WorldMap({ regions, accent, showUnlocked, onUnlockedDone }: Worl
           {recommendedNode && (
             <PlayerIndicator x={recommendedNode.x} y={recommendedNode.y} accent={accentColor} />
           )}
+
+          {/* Sparkle beside the recommended (first uncompleted) mission. */}
+          {recommendedNode && (
+            <text
+              aria-hidden="true"
+              x={recommendedNode.x + 24}
+              y={recommendedNode.y - 18}
+              textAnchor="middle"
+              dominantBaseline="middle"
+              fontSize={18}
+            >
+              ✨
+            </text>
+          )}
         </svg>
 
         {showUnlocked && (
@@ -129,7 +179,7 @@ export function WorldMap({ regions, accent, showUnlocked, onUnlockedDone }: Worl
           marginTop: 'var(--spacing-sm)',
         }}
       >
-        Scroll to explore →
+        Drag to explore ↔
       </p>
     </div>
   );

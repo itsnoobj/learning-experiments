@@ -18,3 +18,6 @@ export { generateMapLayout } from './data/mapNodes';
 export type { LayoutRegion, LayoutNode, LayoutEdge, RegionArea, MapLayout } from './data/mapNodes';
 
 export { generateTerrain, generateBackdrop } from './lib/terrain';
+
+export { usePannable } from './hooks/usePannable';
+export type { UsePannableResult, PannableHandlers, PanOffset } from './hooks/usePannable';

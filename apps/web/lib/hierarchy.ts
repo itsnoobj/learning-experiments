@@ -6,6 +6,8 @@ export interface Region {
   id: string;
   /** Human-readable region title (e.g. "Identity", "Trust"). */
   title: string;
+  /** Emoji landmark representing the region on the mission map. */
+  emoji: string;
   /** Visual terrain hint for the map renderer. */
   terrain?: string;
   /** Mission ids (also chapter/quiz ids) laid out along this region's band. */
@@ -18,6 +20,8 @@ export interface World {
   id: number;
   /** The theme title (e.g. "Understanding Yourself"). */
   title: string;
+  /** A short, evocative 2-3 word tagline shown on the world map (e.g. "Know thyself"). */
+  tagline: string;
   /** The evocative world name shown prominently (e.g. "The Mirror"). */
   worldName: string;
   /** Landscape hint for the world card / map backdrop. */

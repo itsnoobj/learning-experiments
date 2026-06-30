@@ -215,12 +215,12 @@ function WorldZone({
         x={x}
         y={y + 54}
         textAnchor="middle"
-        fontSize={9}
+        fontSize={11}
         fontWeight={400}
         fill={hovered ? world.accent : '#888'}
         opacity={0.9}
       >
-        {world.title}
+        {world.tagline}
       </text>
     </g>
   );

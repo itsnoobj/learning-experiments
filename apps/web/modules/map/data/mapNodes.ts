@@ -6,6 +6,8 @@ export interface LayoutRegion {
   id: string;
   /** Region title (used for grouping; no longer rendered as a label). */
   title: string;
+  /** Emoji landmark rendered at the top-centre of the region's band. */
+  emoji?: string;
   /** Visual terrain hint that drives background decorations. */
   terrain?: string;
   /** Ordered mission ids placed along this region's horizontal band. */
@@ -49,6 +51,8 @@ export interface LayoutEdge {
 export interface RegionArea {
   /** Region id. */
   id: string;
+  /** Emoji landmark rendered at the top-centre of the band. */
+  emoji?: string;
   /** Terrain hint that selects which decorations are drawn here. */
   terrain?: string;
   /** Left edge of the band. */
@@ -172,6 +176,7 @@ export function generateMapLayout(regions: LayoutRegion[], completedMissions: st
   // One band per region, spanning the full map width, for terrain placement.
   const regionAreas: RegionArea[] = regions.map((region, regionIndex) => ({
     id: region.id,
+    emoji: region.emoji,
     terrain: region.terrain,
     x: 0,
     y: TOP_PADDING + regionIndex * BAND_HEIGHT,
