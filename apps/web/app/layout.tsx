@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { IBM_Plex_Sans } from 'next/font/google';
 import { ThemeProvider } from './theme-provider';
 import { ThemeToggle } from '@/shared/components/ThemeToggle';
+import { ShareStoryButton } from '@/shared/components/ShareStoryButton';
 import { ServiceWorkerRegister } from './ServiceWorkerRegister';
 import './globals.css';
 
@@ -71,6 +72,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ServiceWorkerRegister />
         <ThemeProvider>
           <ThemeToggle />
+          <ShareStoryButton />
           {children}
         </ThemeProvider>
       </body>
