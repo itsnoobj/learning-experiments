@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#FAF7F2"/>
+  
+  <!-- HD Monogram v4 - Minimal, uses negative space, enclosed in circle -->
+  
+  <!-- Outer circle container -->
+  <circle cx="200" cy="170" r="110" fill="none" stroke="#2C2C2C" stroke-width="3"/>
+  
+  <!-- H left bar -->
+  <rect x="140" y="110" width="10" height="120" rx="5" fill="#2C2C2C"/>
+  <!-- H right bar -->
+  <rect x="210" y="110" width="10" height="120" rx="5" fill="#2C2C2C"/>
+  <!-- H cross -->
+  <rect x="150" y="164" width="60" height="7" rx="3.5" fill="#B8860B"/>
+  
+  <!-- Heads -->
+  <circle cx="145" cy="100" r="10" fill="#2C2C2C"/>
+  <circle cx="215" cy="100" r="10" fill="#2C2C2C"/>
+  
+  <!-- D - uses the right portion of the outer circle as the D curve -->
+  <!-- Inner D stroke that connects to H's right bar -->
+  <path d="M220,110 C275,110 275,230 220,230" 
+        stroke="#B8860B" stroke-width="7" fill="none" stroke-linecap="round"/>
+  
+  <!-- Text below circle -->
+  <text x="200" y="320" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="bold" letter-spacing="1" fill="#2C2C2C">human<tspan fill="#B8860B">dynamics</tspan></text>
+  <text x="200" y="345" text-anchor="middle" font-family="Georgia, serif" font-size="12" letter-spacing="3" fill="#999">.guide</text>
+</svg>

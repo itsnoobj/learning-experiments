@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#FAF7F2"/>
+  
+  <!-- 4x4 Pattern Grid - representing behavioral patterns -->
+  <!-- Row 1 -->
+  <rect x="130" y="80" width="35" height="35" rx="4" fill="#2C2C2C"/>
+  <rect x="172" y="80" width="35" height="35" rx="4" fill="#B8860B" opacity="0.3"/>
+  <rect x="214" y="80" width="35" height="35" rx="4" fill="#B8860B"/>
+  <rect x="256" y="80" width="35" height="35" rx="4" fill="#2C2C2C" opacity="0.2"/>
+  
+  <!-- Row 2 -->
+  <rect x="130" y="122" width="35" height="35" rx="4" fill="#B8860B" opacity="0.5"/>
+  <rect x="172" y="122" width="35" height="35" rx="4" fill="#2C2C2C"/>
+  <rect x="214" y="122" width="35" height="35" rx="4" fill="#2C2C2C" opacity="0.4"/>
+  <rect x="256" y="122" width="35" height="35" rx="4" fill="#B8860B"/>
+  
+  <!-- Row 3 -->
+  <rect x="130" y="164" width="35" height="35" rx="4" fill="#2C2C2C" opacity="0.3"/>
+  <rect x="172" y="164" width="35" height="35" rx="4" fill="#B8860B"/>
+  <rect x="214" y="164" width="35" height="35" rx="4" fill="#2C2C2C"/>
+  <rect x="256" y="164" width="35" height="35" rx="4" fill="#B8860B" opacity="0.4"/>
+  
+  <!-- Row 4 -->
+  <rect x="130" y="206" width="35" height="35" rx="4" fill="#B8860B"/>
+  <rect x="172" y="206" width="35" height="35" rx="4" fill="#2C2C2C" opacity="0.5"/>
+  <rect x="214" y="206" width="35" height="35" rx="4" fill="#B8860B" opacity="0.6"/>
+  <rect x="256" y="206" width="35" height="35" rx="4" fill="#2C2C2C"/>
+  
+  <!-- Text -->
+  <text x="200" y="295" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#2C2C2C">human<tspan fill="#B8860B">dynamics</tspan></text>
+  <text x="200" y="322" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#888">.guide</text>
+</svg>

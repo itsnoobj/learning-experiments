@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#FAF7F2"/>
+  
+  <!-- HD Monogram v3 - Geometric, bold, modern -->
+  
+  <!-- H structure -->
+  <!-- Left pillar -->
+  <rect x="100" y="80" width="14" height="180" rx="7" fill="#2C2C2C"/>
+  <!-- Right pillar -->
+  <rect x="200" y="80" width="14" height="180" rx="7" fill="#2C2C2C"/>
+  <!-- Crossbar -->
+  <rect x="114" y="162" width="86" height="10" rx="5" fill="#B8860B"/>
+  
+  <!-- Head circles (abstract humans) -->
+  <circle cx="107" cy="62" r="15" fill="#2C2C2C"/>
+  <circle cx="207" cy="62" r="15" fill="#2C2C2C"/>
+  
+  <!-- D arc - thick, bold, confident -->
+  <path d="M214,80 C310,80 310,260 214,260" 
+        stroke="#B8860B" stroke-width="14" fill="none" stroke-linecap="round"/>
+  
+  <!-- Subtle inner arc for depth -->
+  <path d="M214,105 C285,105 285,235 214,235" 
+        stroke="#B8860B" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.2"/>
+  
+  <!-- Text -->
+  <text x="200" y="320" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3" fill="#2C2C2C">HUMAN<tspan fill="#B8860B">DYNAMICS</tspan></text>
+  <text x="200" y="346" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" letter-spacing="4" fill="#999">.GUIDE</text>
+</svg>

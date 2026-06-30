@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#FAF7F2"/>
+  
+  <!-- Double helix strands -->
+  <!-- Strand 1 -->
+  <path d="M160,70 C220,100 240,130 180,160 C120,190 140,220 200,250 C260,280 240,310 180,330" 
+        stroke="#2C2C2C" stroke-width="4" fill="none" stroke-linecap="round"/>
+  
+  <!-- Strand 2 -->
+  <path d="M240,70 C180,100 160,130 220,160 C280,190 260,220 200,250 C140,280 160,310 220,330" 
+        stroke="#B8860B" stroke-width="4" fill="none" stroke-linecap="round"/>
+  
+  <!-- Connection rungs (the patterns/forces) -->
+  <line x1="175" y1="85" x2="225" y2="85" stroke="#B8860B" stroke-width="2" opacity="0.4"/>
+  <line x1="190" y1="120" x2="210" y2="120" stroke="#2C2C2C" stroke-width="2" opacity="0.4"/>
+  <line x1="185" y1="160" x2="215" y2="160" stroke="#B8860B" stroke-width="2" opacity="0.4"/>
+  <line x1="190" y1="200" x2="210" y2="200" stroke="#2C2C2C" stroke-width="2" opacity="0.4"/>
+  <line x1="195" y1="250" x2="205" y2="250" stroke="#B8860B" stroke-width="2" opacity="0.4"/>
+  <line x1="185" y1="290" x2="215" y2="290" stroke="#2C2C2C" stroke-width="2" opacity="0.4"/>
+  
+  <!-- Nodes at key intersections -->
+  <circle cx="200" cy="160" r="6" fill="#B8860B"/>
+  <circle cx="200" cy="250" r="6" fill="#2C2C2C"/>
+  
+  <!-- Text -->
+  <text x="200" y="370" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#2C2C2C">human<tspan fill="#B8860B">dynamics</tspan></text>
+  <text x="200" y="394" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#888">.guide</text>
+</svg>
