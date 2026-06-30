@@ -173,8 +173,22 @@ export default function LandingPage() {
                 strokeDasharray="2 8"
                 strokeLinecap="round"
               />
-              <circle cx="25" cy="85" r="6" fill="#DAA520" stroke="#FFF" strokeWidth="1" />
-              <circle cx="135" cy="58" r="6" fill="#DAA520" stroke="#FFF" strokeWidth="1" />
+              <circle
+                cx="25"
+                cy="85"
+                r="6"
+                fill="#DAA520"
+                stroke="var(--color-text)"
+                strokeWidth="1"
+              />
+              <circle
+                cx="135"
+                cy="58"
+                r="6"
+                fill="#DAA520"
+                stroke="var(--color-text)"
+                strokeWidth="1"
+              />
               <circle cx="245" cy="38" r="7" fill="none" stroke="#DAA520" strokeWidth="2">
                 <animate attributeName="r" values="7;9;7" dur="2s" repeatCount="indefinite" />
                 <animate
@@ -247,14 +261,7 @@ export default function LandingPage() {
               <circle cx="12" cy="8" r="1" fill="#DAA520" />
             </svg>
             <svg viewBox="0 0 300 110" style={{ width: '100%', display: 'block' }}>
-              <line
-                x1="0"
-                y1="95"
-                x2="300"
-                y2="95"
-                stroke="rgba(255,255,255,0.15)"
-                strokeWidth="1"
-              />
+              <line x1="0" y1="95" x2="300" y2="95" stroke="var(--color-border)" strokeWidth="1" />
               {/* Stick figure with bobbing */}
               <g>
                 <animateTransform
@@ -264,11 +271,18 @@ export default function LandingPage() {
                   dur="1s"
                   repeatCount="indefinite"
                 />
-                <circle cx="55" cy="55" r="6" fill="none" stroke="#FFF" strokeWidth="2" />
-                <line x1="55" y1="61" x2="55" y2="78" stroke="#FFF" strokeWidth="2" />
-                <line x1="55" y1="78" x2="49" y2="95" stroke="#FFF" strokeWidth="2" />
-                <line x1="55" y1="78" x2="61" y2="95" stroke="#FFF" strokeWidth="2" />
-                <line x1="55" y1="68" x2="63" y2="64" stroke="#FFF" strokeWidth="2" />
+                <circle
+                  cx="55"
+                  cy="55"
+                  r="6"
+                  fill="none"
+                  stroke="var(--color-text)"
+                  strokeWidth="2"
+                />
+                <line x1="55" y1="61" x2="55" y2="78" stroke="var(--color-text)" strokeWidth="2" />
+                <line x1="55" y1="78" x2="49" y2="95" stroke="var(--color-text)" strokeWidth="2" />
+                <line x1="55" y1="78" x2="61" y2="95" stroke="var(--color-text)" strokeWidth="2" />
+                <line x1="55" y1="68" x2="63" y2="64" stroke="var(--color-text)" strokeWidth="2" />
               </g>
               {/* Obstacles */}
               <rect
@@ -277,7 +291,7 @@ export default function LandingPage() {
                 width="18"
                 height="23"
                 fill="none"
-                stroke="rgba(255,255,255,0.35)"
+                stroke="var(--color-text-dim)"
                 strokeWidth="1.5"
               />
               <rect
@@ -286,7 +300,7 @@ export default function LandingPage() {
                 width="14"
                 height="35"
                 fill="none"
-                stroke="rgba(255,255,255,0.35)"
+                stroke="var(--color-text-dim)"
                 strokeWidth="1.5"
               />
               <polygon
@@ -344,7 +358,7 @@ export default function LandingPage() {
           left: 0;
           right: 0;
           bottom: 0;
-          height: 50%;
+          height: 40%;
           background-color: #FFFFFF;
           background-image: url('/assets/bg/landing-light.png');
           background-size: contain;
