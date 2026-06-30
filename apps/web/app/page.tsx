@@ -130,7 +130,7 @@ export default function LandingPage() {
               textDecoration: 'none',
               flex: '1',
               minWidth: '260px',
-              border: '1px solid rgba(255,255,255,0.1)',
+              border: 'none',
               overflow: 'hidden',
               cursor: 'pointer',
               background: 'rgba(255,255,255,0.03)',
@@ -164,7 +164,7 @@ export default function LandingPage() {
                 🤝
               </text>
             </svg>
-            <div style={{ padding: '0.7rem 1rem', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+            <div style={{ padding: '0.7rem 1rem', borderTop: 'none' }}>
               <div style={{ fontSize: '0.9rem', fontWeight: 600, color: '#E8E8E8' }}>
                 Explore the Map
               </div>
@@ -182,7 +182,7 @@ export default function LandingPage() {
               textDecoration: 'none',
               flex: '1',
               minWidth: '260px',
-              border: '1px solid rgba(255,255,255,0.1)',
+              border: 'none',
               overflow: 'hidden',
               cursor: 'pointer',
               background: 'rgba(255,255,255,0.03)',
@@ -242,7 +242,7 @@ export default function LandingPage() {
                 ★ 3
               </text>
             </svg>
-            <div style={{ padding: '0.7rem 1rem', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+            <div style={{ padding: '0.7rem 1rem', borderTop: 'none' }}>
               <div style={{ fontSize: '0.9rem', fontWeight: 600, color: '#E8E8E8' }}>
                 Play the Game
               </div>
