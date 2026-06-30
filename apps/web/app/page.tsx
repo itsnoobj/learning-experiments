@@ -7,18 +7,27 @@ const ROTATING_WORDS = [
   'manipulation',
   'difficult bosses',
   'team politics',
-  'career crossroads',
   'broken trust',
-  'ethical dilemmas',
   'ego traps',
-  'unfair promotions',
   'passive aggression',
   'resistance to change',
+  'unfair promotions',
+  'ethical dilemmas',
+  'office politics',
+];
+
+const SAMPLE_MISSIONS = [
+  'Why your manager hoards information',
+  'Why nobody owns the problem',
+  'How to handle someone who plays victim',
+  'Why smart people stop learning',
+  'When to stay vs. when to leave',
 ];
 
 export default function LandingPage() {
   const [wordIndex, setWordIndex] = useState(0);
   const [visible, setVisible] = useState(true);
+  const [sampleIndex, setSampleIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -28,6 +37,13 @@ export default function LandingPage() {
         setVisible(true);
       }, 400);
     }, 2800);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSampleIndex((i) => (i + 1) % SAMPLE_MISSIONS.length);
+    }, 3500);
     return () => clearInterval(interval);
   }, []);
 
@@ -45,20 +61,8 @@ export default function LandingPage() {
         textAlign: 'center',
       }}
     >
-      {/* Hero — the rotating text IS the headline */}
       <div style={{ maxWidth: '700px' }}>
-        <p
-          style={{
-            fontSize: '0.85rem',
-            letterSpacing: '2px',
-            textTransform: 'uppercase',
-            color: 'var(--color-text-dim)',
-            marginBottom: '1.5rem',
-          }}
-        >
-          A Field Guide to Being Human
-        </p>
-
+        {/* Hero — rotating text IS the headline */}
         <h1
           style={{
             fontSize: 'clamp(2rem, 6vw, 3.5rem)',
@@ -86,111 +90,44 @@ export default function LandingPage() {
           {ROTATING_WORDS[wordIndex]}
         </div>
 
+        {/* Simplified subtext — one idea per line */}
         <p
           style={{
             marginTop: '2rem',
-            fontSize: '1.1rem',
+            fontSize: '1.05rem',
             lineHeight: 1.7,
             color: 'var(--color-text-dim)',
-            maxWidth: '500px',
+            maxWidth: '460px',
             marginLeft: 'auto',
             marginRight: 'auto',
           }}
         >
-          Ancient wisdom meets real-world dilemmas. Learn through stories from the Mahabharata,
-          Lincoln, Mandela — then test yourself with interactive challenges.
+          Why do people resist change? Why does ego destroy teams?
+          <br />
+          Learn through stories from history, epics, and real life.
         </p>
 
-        {/* CTAs */}
+        {/* Sample mission — social proof / curiosity hook */}
         <div
           style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '1rem',
-            marginTop: '3rem',
-            maxWidth: '360px',
-            marginLeft: 'auto',
-            marginRight: 'auto',
+            marginTop: '1.5rem',
+            padding: '0.7rem 1.2rem',
+            border: '1px solid var(--color-border)',
+            display: 'inline-block',
+            fontSize: '0.85rem',
+            color: 'var(--color-text)',
+            fontStyle: 'italic',
           }}
         >
-          {/* Map CTA — exploration vibe */}
-          <Link
-            href="/worlds"
-            className="cta-primary"
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '0.75rem',
-              padding: '1rem 1.5rem',
-              background: 'var(--color-gold)',
-              color: '#1A1A1A',
-              textDecoration: 'none',
-              fontWeight: 600,
-              fontSize: '1rem',
-              textAlign: 'center',
-              borderRadius: 'var(--radius)',
-              transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-            }}
+          <span
+            style={{ color: 'var(--color-text-dim)', fontStyle: 'normal', marginRight: '0.5rem' }}
           >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-            >
-              <circle cx="10" cy="10" r="8" />
-              <path d="M10 2v16M2 10h16M4 4l12 12M16 4L4 16" opacity="0.4" />
-              <path d="M10 6l-2 4 4 0-2 4" strokeWidth="2" />
-            </svg>
-            Begin Your Journey
-          </Link>
-
-          {/* Game CTA — action/runner vibe */}
-          <Link
-            href="/game"
-            className="cta-secondary"
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '0.75rem',
-              padding: '1rem 1.5rem',
-              background: 'transparent',
-              color: 'var(--color-text)',
-              textDecoration: 'none',
-              fontWeight: 600,
-              fontSize: '1rem',
-              border: '1px solid var(--color-border)',
-              textAlign: 'center',
-              borderRadius: 'var(--radius)',
-              transition: 'border-color 0.2s ease, color 0.2s ease, transform 0.2s ease',
-            }}
-          >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-            >
-              <circle cx="12" cy="4" r="2" />
-              <path d="M8 8l4-1 2 3" />
-              <path d="M12 10l-3 4" />
-              <path d="M9 14l-2 4" />
-              <path d="M12 10l2 4" />
-              <path d="M14 14l1 4" />
-              <path d="M8 8l-3 1" />
-            </svg>
-            Jump Straight In
-          </Link>
+            e.g.
+          </span>
+          &ldquo;{SAMPLE_MISSIONS[sampleIndex]}&rdquo;
         </div>
-        {/* Glimpse previews */}
+
+        {/* CTAs with visual previews */}
         <div
           style={{
             display: 'flex',
@@ -203,7 +140,7 @@ export default function LandingPage() {
             justifyContent: 'center',
           }}
         >
-          {/* Map glimpse */}
+          {/* Map entry */}
           <Link href="/worlds" style={{ textDecoration: 'none', flex: '1', minWidth: '250px' }}>
             <div
               className="glimpse-card"
@@ -216,68 +153,53 @@ export default function LandingPage() {
               }}
             >
               <svg
-                viewBox="0 0 300 140"
+                viewBox="0 0 300 120"
                 style={{ width: '100%', display: 'block', background: '#1A1A1A' }}
               >
-                {/* Mini map preview — dotted paths and nodes */}
                 <path
-                  d="M40 110 Q80 60 140 80 Q200 100 240 50 Q270 30 280 40"
+                  d="M30 95 Q70 50 130 70 Q190 90 240 45 Q270 30 285 35"
                   fill="none"
                   stroke="#DAA520"
                   strokeWidth="3"
                   strokeDasharray="2 8"
                   strokeLinecap="round"
                 />
-                <circle cx="40" cy="110" r="8" fill="#DAA520" stroke="#FFF" strokeWidth="1.5" />
-                <circle cx="140" cy="80" r="8" fill="#DAA520" stroke="#FFF" strokeWidth="1.5" />
-                <circle cx="240" cy="50" r="8" fill="#FFF" stroke="#DAA520" strokeWidth="2" />
-                <text x="40" y="128" textAnchor="middle" fontSize="7" fill="#888">
-                  ★
-                </text>
-                <text x="140" y="98" textAnchor="middle" fontSize="7" fill="#888">
-                  ★
-                </text>
-                <text x="240" y="68" textAnchor="middle" fontSize="7" fill="#DAA520">
-                  4
-                </text>
-                {/* Nature bits */}
-                <path d="M90 40 l-5 10 h10 z" stroke="#555" strokeWidth="1" fill="none" />
-                <path d="M200 30 l-4 8 h8 z" stroke="#555" strokeWidth="1" fill="none" />
-                <circle
-                  cx="170"
-                  cy="120"
-                  r="12"
-                  stroke="#333"
-                  strokeWidth="1"
-                  fill="none"
-                  opacity="0.4"
-                />
-                {/* Emoji landmarks */}
-                <text x="80" y="95" fontSize="12" opacity="0.6">
+                <circle cx="30" cy="95" r="7" fill="#DAA520" stroke="#FFF" strokeWidth="1.5" />
+                <circle cx="130" cy="70" r="7" fill="#DAA520" stroke="#FFF" strokeWidth="1.5" />
+                <circle cx="240" cy="45" r="7" fill="#FFF" stroke="#DAA520" strokeWidth="2" />
+                <path d="M80 35 l-5 10 h10 z" stroke="#555" strokeWidth="1" fill="none" />
+                <path d="M190 25 l-4 8 h8 z" stroke="#555" strokeWidth="1" fill="none" />
+                <text x="75" y="82" fontSize="11" opacity="0.5">
                   🎪
                 </text>
-                <text x="200" y="70" fontSize="12" opacity="0.6">
+                <text x="190" y="58" fontSize="11" opacity="0.5">
                   🤝
                 </text>
               </svg>
               <div
                 style={{
-                  padding: '0.6rem 0.8rem',
+                  padding: '0.7rem 0.8rem',
                   background: 'var(--color-surface)',
                   borderTop: '1px solid var(--color-border)',
                 }}
               >
-                <div style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--color-text)' }}>
-                  Explore Worlds
+                <div style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--color-text)' }}>
+                  Explore the Map
                 </div>
-                <div style={{ fontSize: '0.65rem', color: 'var(--color-text-dim)' }}>
-                  10 worlds · Choose your path
+                <div
+                  style={{
+                    fontSize: '0.7rem',
+                    color: 'var(--color-text-dim)',
+                    marginTop: '0.2rem',
+                  }}
+                >
+                  Pick your problem. Read the story. Solve the challenge.
                 </div>
               </div>
             </div>
           </Link>
 
-          {/* Game glimpse */}
+          {/* Game entry */}
           <Link href="/game" style={{ textDecoration: 'none', flex: '1', minWidth: '250px' }}>
             <div
               className="glimpse-card"
@@ -290,86 +212,71 @@ export default function LandingPage() {
               }}
             >
               <svg
-                viewBox="0 0 300 140"
+                viewBox="0 0 300 120"
                 style={{ width: '100%', display: 'block', background: '#0D0D0D' }}
               >
-                {/* Ground */}
-                <line x1="0" y1="120" x2="300" y2="120" stroke="#333" strokeWidth="1" />
-                {/* Stick figure running */}
-                <circle cx="60" cy="90" r="6" fill="none" stroke="#FFF" strokeWidth="2" />
-                <line x1="60" y1="96" x2="60" y2="110" stroke="#FFF" strokeWidth="2" />
-                <line x1="60" y1="110" x2="54" y2="120" stroke="#FFF" strokeWidth="2" />
-                <line x1="60" y1="110" x2="66" y2="120" stroke="#FFF" strokeWidth="2" />
-                <line x1="60" y1="100" x2="68" y2="96" stroke="#FFF" strokeWidth="2" />
-                {/* Obstacles */}
+                <line x1="0" y1="105" x2="300" y2="105" stroke="#333" strokeWidth="1" />
+                <circle cx="55" cy="76" r="5" fill="none" stroke="#FFF" strokeWidth="2" />
+                <line x1="55" y1="81" x2="55" y2="93" stroke="#FFF" strokeWidth="2" />
+                <line x1="55" y1="93" x2="50" y2="105" stroke="#FFF" strokeWidth="2" />
+                <line x1="55" y1="93" x2="60" y2="105" stroke="#FFF" strokeWidth="2" />
+                <line x1="55" y1="85" x2="62" y2="82" stroke="#FFF" strokeWidth="2" />
                 <rect
-                  x="140"
-                  y="95"
-                  width="20"
-                  height="25"
+                  x="130"
+                  y="82"
+                  width="18"
+                  height="23"
                   fill="none"
                   stroke="#666"
                   strokeWidth="1.5"
                 />
                 <rect
-                  x="220"
-                  y="85"
-                  width="15"
-                  height="35"
+                  x="200"
+                  y="72"
+                  width="14"
+                  height="33"
                   fill="none"
                   stroke="#666"
                   strokeWidth="1.5"
                 />
-                {/* Spike */}
                 <polygon
-                  points="270,120 277,90 284,120"
+                  points="260,105 266,78 272,105"
                   fill="none"
                   stroke="#DAA520"
                   strokeWidth="1.5"
                 />
-                {/* Clouds */}
-                <ellipse
-                  cx="100"
-                  cy="30"
-                  rx="20"
-                  ry="8"
-                  fill="none"
-                  stroke="#333"
-                  strokeWidth="1"
-                />
+                <ellipse cx="95" cy="25" rx="18" ry="7" fill="none" stroke="#333" strokeWidth="1" />
                 <ellipse
                   cx="220"
-                  cy="20"
-                  rx="15"
-                  ry="6"
+                  cy="18"
+                  rx="14"
+                  ry="5"
                   fill="none"
                   stroke="#333"
                   strokeWidth="1"
                 />
-                {/* Score */}
                 <text x="10" y="15" fontSize="9" fill="#DAA520" fontWeight="600">
                   ★ 3
                 </text>
-                {/* Hills */}
-                <path
-                  d="M0 130 Q50 115 100 130 Q150 118 200 130 Q250 120 300 130"
-                  fill="none"
-                  stroke="#222"
-                  strokeWidth="1"
-                />
               </svg>
               <div
                 style={{
-                  padding: '0.6rem 0.8rem',
+                  padding: '0.7rem 0.8rem',
                   background: 'var(--color-surface)',
                   borderTop: '1px solid var(--color-border)',
                 }}
               >
-                <div style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--color-text)' }}>
-                  Run & Learn
+                <div style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--color-text)' }}>
+                  Play the Game
                 </div>
-                <div style={{ fontSize: '0.65rem', color: 'var(--color-text-dim)' }}>
-                  Hit obstacles · Solve challenges
+                <div
+                  style={{
+                    fontSize: '0.7rem',
+                    color: 'var(--color-text-dim)',
+                    marginTop: '0.2rem',
+                  }}
+                >
+                  Run. Hit obstacles. Lessons find you.
                 </div>
               </div>
             </div>
@@ -378,14 +285,6 @@ export default function LandingPage() {
       </div>
 
       <style>{`
-        .cta-primary:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 8px 22px rgba(212, 175, 55, 0.35);
-        }
-        .cta-secondary:hover {
-          border-color: var(--color-gold);
-          color: var(--color-gold);
-        }
         .glimpse-card:hover {
           border-color: var(--color-gold) !important;
           transform: translateY(-2px);
