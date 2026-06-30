@@ -39,10 +39,10 @@ export class Player {
     this.vy = 0;
     this.jumping = false;
     this.grounded = true;
-    // Tuned so the arc clears a pipe/block (~1x the player's height) without
-    // launching the figure off-screen. Gravity is unchanged, so the arc stays
-    // natural — just shorter than the old -15 impulse.
-    this.jumpVelocity = options.jumpVelocity ?? -10;
+    // Tuned so the arc reliably clears all obstacle types (spike=60px,
+    // pipe=57px) even on lower/variable frame rates (Windows). The old value
+    // of -10 gave only ~62px clearance which failed on inconsistent deltas.
+    this.jumpVelocity = options.jumpVelocity ?? -13;
   }
 
   /** Recompute the ground line (e.g. after a resize) and reseat if grounded. */
