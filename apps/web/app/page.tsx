@@ -134,8 +134,36 @@ export default function LandingPage() {
               overflow: 'hidden',
               cursor: 'pointer',
               background: 'rgba(255,255,255,0.03)',
+              position: 'relative',
             }}
           >
+            {/* Click indicator — dot-matrix pointer hand */}
+            <svg
+              className="click-hand"
+              viewBox="0 0 16 16"
+              style={{
+                position: 'absolute',
+                top: '8px',
+                right: '8px',
+                width: '20px',
+                height: '20px',
+              }}
+            >
+              <circle cx="8" cy="2" r="1" fill="#DAA520" />
+              <circle cx="8" cy="4" r="1" fill="#DAA520" />
+              <circle cx="8" cy="6" r="1" fill="#DAA520" />
+              <circle cx="8" cy="8" r="1" fill="#DAA520" />
+              <circle cx="6" cy="8" r="1" fill="#DAA520" />
+              <circle cx="4" cy="8" r="1" fill="#DAA520" />
+              <circle cx="6" cy="10" r="1" fill="#DAA520" />
+              <circle cx="8" cy="10" r="1" fill="#DAA520" />
+              <circle cx="10" cy="10" r="1" fill="#DAA520" />
+              <circle cx="6" cy="12" r="1" fill="#DAA520" />
+              <circle cx="8" cy="12" r="1" fill="#DAA520" />
+              <circle cx="10" cy="12" r="1" fill="#DAA520" />
+              <circle cx="10" cy="8" r="1" fill="#DAA520" />
+              <circle cx="12" cy="8" r="1" fill="#DAA520" />
+            </svg>
             <svg viewBox="0 0 300 110" style={{ width: '100%', display: 'block' }}>
               <path
                 d="M25 85 Q65 40 135 58 Q195 78 245 38 Q275 22 290 30"
@@ -186,8 +214,36 @@ export default function LandingPage() {
               overflow: 'hidden',
               cursor: 'pointer',
               background: 'rgba(255,255,255,0.03)',
+              position: 'relative',
             }}
           >
+            {/* Click indicator — dot-matrix pointer hand */}
+            <svg
+              className="click-hand"
+              viewBox="0 0 16 16"
+              style={{
+                position: 'absolute',
+                top: '8px',
+                right: '8px',
+                width: '20px',
+                height: '20px',
+              }}
+            >
+              <circle cx="8" cy="2" r="1" fill="#DAA520" />
+              <circle cx="8" cy="4" r="1" fill="#DAA520" />
+              <circle cx="8" cy="6" r="1" fill="#DAA520" />
+              <circle cx="8" cy="8" r="1" fill="#DAA520" />
+              <circle cx="6" cy="8" r="1" fill="#DAA520" />
+              <circle cx="4" cy="8" r="1" fill="#DAA520" />
+              <circle cx="6" cy="10" r="1" fill="#DAA520" />
+              <circle cx="8" cy="10" r="1" fill="#DAA520" />
+              <circle cx="10" cy="10" r="1" fill="#DAA520" />
+              <circle cx="6" cy="12" r="1" fill="#DAA520" />
+              <circle cx="8" cy="12" r="1" fill="#DAA520" />
+              <circle cx="10" cy="12" r="1" fill="#DAA520" />
+              <circle cx="10" cy="8" r="1" fill="#DAA520" />
+              <circle cx="12" cy="8" r="1" fill="#DAA520" />
+            </svg>
             <svg viewBox="0 0 300 110" style={{ width: '100%', display: 'block' }}>
               <line
                 x1="0"
@@ -304,6 +360,16 @@ export default function LandingPage() {
           border-color: rgba(218, 165, 32, 0.4) !important;
           transform: translateY(-3px);
           box-shadow: 0 8px 24px rgba(218, 165, 32, 0.1);
+        }
+        .click-hand {
+          animation: clickShake 1.5s ease-in-out infinite;
+        }
+        @keyframes clickShake {
+          0%, 100% { transform: translate(0, 0); }
+          20% { transform: translate(0, -2px); }
+          40% { transform: translate(0, 2px); }
+          60% { transform: translate(0, -1px); }
+          80% { transform: translate(0, 1px); }
         }
       `}</style>
     </main>
