@@ -364,12 +364,13 @@ export default function LandingPage() {
           background-size: contain;
           background-position: bottom center;
           background-repeat: no-repeat;
-          opacity: 1;
+          opacity: 0.5;
           pointer-events: none;
         }
         [data-theme="dark"] .landing-bg {
           background-color: #000000;
-          background-image: url('/assets/bg/landing-dark.png');
+          background-image: url("/assets/bg/landing-dark.png");
+          opacity: 0.6;
         }
         [data-theme="dark"] main {
           background: #000000 !important;
