@@ -133,3 +133,51 @@ describe('spawnObstacle — chapter rotation variety', () => {
     expect(obstacle.chapterId).toBe('ch1');
   });
 });
+
+describe('spawnObstacle — session simulation (no repeats until exhaustion)', () => {
+  const CHAPTERS = ['ch1', 'ch2', 'ch3', 'ch4', 'ch5'];
+
+  it('simulates a multi-hit session without repeating chapters', () => {
+    const rng = () => 0;
+    const seen = new Set<string>();
+    const hits: string[] = [];
+
+    // Simulate 5 rounds: spawn → "hit" → record → spawn next
+    for (let round = 0; round < 5; round++) {
+      const obstacle = spawnObstacle({ groundY: 400, spawnX: 800, rng }, CHAPTERS, round, seen);
+      // The chapter should not have been seen before
+      expect(seen.has(obstacle.chapterId)).toBe(false);
+      // Record the hit
+      seen.add(obstacle.chapterId);
+      hits.push(obstacle.chapterId);
+    }
+
+    // All 5 chapters should have been shown exactly once
+    expect(new Set(hits).size).toBe(5);
+  });
+
+  it('resets gracefully after all chapters exhausted', () => {
+    const rng = () => 0;
+    const seen = new Set(['ch1', 'ch2', 'ch3', 'ch4', 'ch5']);
+
+    // All seen — should fall back to full pool and not crash
+    const obstacle = spawnObstacle({ groundY: 400, spawnX: 800, rng }, CHAPTERS, 0, seen);
+    expect(CHAPTERS).toContain(obstacle.chapterId);
+  });
+
+  it('second session after exhaustion still produces valid chapters', () => {
+    const rng = () => 0;
+    const seen = new Set(['ch1', 'ch2', 'ch3', 'ch4', 'ch5']);
+
+    // Simulate clearing the seen set (as if starting fresh after exhaustion)
+    seen.clear();
+    const results: string[] = [];
+    for (let i = 0; i < 5; i++) {
+      const o = spawnObstacle({ groundY: 400, spawnX: 800, rng }, CHAPTERS, i, seen);
+      expect(seen.has(o.chapterId)).toBe(false);
+      seen.add(o.chapterId);
+      results.push(o.chapterId);
+    }
+    expect(new Set(results).size).toBe(5);
+  });
+});

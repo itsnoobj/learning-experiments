@@ -97,6 +97,27 @@ describe('GameCanvas', () => {
     // StartScreen should disappear after starting
     expect(screen.queryByText('Tap to Run')).not.toBeInTheDocument();
   });
+
+  it('starts a run without errors after multiple space presses (chapter tracking stable)', async () => {
+    render(<GameCanvas />);
+    expect(await screen.findByText('Tap to Run')).toBeInTheDocument();
+
+    // Start → should not throw even with seenChapters tracking active
+    act(() => {
+      fireEvent.keyDown(window, { code: 'Space', key: ' ' });
+    });
+    expect(screen.queryByText('Tap to Run')).not.toBeInTheDocument();
+
+    // Additional space presses (jump) should not throw
+    act(() => {
+      fireEvent.keyDown(window, { code: 'Space', key: ' ' });
+    });
+    act(() => {
+      fireEvent.keyDown(window, { code: 'Space', key: ' ' });
+    });
+    // No crash = seenChaptersRef integration is stable
+    expect(document.querySelector('canvas')).toBeInTheDocument();
+  });
 });
 
 describe('HitInterstitial', () => {
