@@ -142,16 +142,19 @@ export interface SpawnConfig {
 
 /**
  * Build a single obstacle at `spawnX` with a randomly chosen silhouette and a
- * chapter pulled round-robin from `chapterIds`.
+ * chapter pulled round-robin from `chapterIds`, skipping any IDs in `seenIds`.
+ * When all chapters have been seen, the full pool is used again (graceful reset).
  *
  * @param config      spawn geometry and difficulty.
  * @param chapterIds  pool of chapter ids to assign.
  * @param spawnCount  how many obstacles have spawned so far (for round-robin).
+ * @param seenIds     chapters already shown this session; skipped if possible.
  */
 export function spawnObstacle(
   config: SpawnConfig,
   chapterIds: string[],
   spawnCount: number,
+  seenIds?: Set<string>,
 ): Obstacle {
   const rng = config.rng ?? Math.random;
   const baseHeight = config.baseHeight ?? 48;
@@ -160,9 +163,13 @@ export function spawnObstacle(
 
   const height = dims.height ?? baseHeight * (dims.heightFactor ?? 1);
   const width = dims.width ?? baseHeight * (dims.widthFactor ?? 1);
-  const chapterId = chapterIds.length
-    ? chapterIds[spawnCount % chapterIds.length]
-    : String(spawnCount);
+
+  // Pick a chapter: prefer unseen ones, fall back to full pool if all seen.
+  let pool = chapterIds;
+  if (seenIds && seenIds.size > 0 && seenIds.size < chapterIds.length) {
+    pool = chapterIds.filter((id) => !seenIds.has(id));
+  }
+  const chapterId = pool.length ? pool[spawnCount % pool.length] : String(spawnCount);
 
   return new Obstacle({
     x: config.spawnX,

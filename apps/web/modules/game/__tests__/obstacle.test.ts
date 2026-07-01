@@ -61,3 +61,75 @@ describe('spawnObstacle — obstacle types', () => {
     }
   });
 });
+
+describe('spawnObstacle — chapter rotation variety', () => {
+  const FIVE_CHAPTERS = ['ch1', 'ch2', 'ch3', 'ch4', 'ch5'];
+
+  it('assigns chapters round-robin based on spawnCount', () => {
+    const rng = () => 0; // always pick first obstacle type
+    const chapters = Array.from(
+      { length: 5 },
+      (_, i) => spawnObstacle({ groundY: 400, spawnX: 800, rng }, FIVE_CHAPTERS, i).chapterId,
+    );
+    expect(chapters).toEqual(['ch1', 'ch2', 'ch3', 'ch4', 'ch5']);
+  });
+
+  it('wraps around after exhausting all chapters', () => {
+    const rng = () => 0;
+    const sixth = spawnObstacle({ groundY: 400, spawnX: 800, rng }, FIVE_CHAPTERS, 5);
+    expect(sixth.chapterId).toBe('ch1'); // wraps back to index 0
+  });
+
+  it('different spawnCount offsets produce different starting chapters', () => {
+    const rng = () => 0;
+    const fromZero = spawnObstacle({ groundY: 400, spawnX: 800, rng }, FIVE_CHAPTERS, 0);
+    const fromThree = spawnObstacle({ groundY: 400, spawnX: 800, rng }, FIVE_CHAPTERS, 3);
+    expect(fromZero.chapterId).not.toBe(fromThree.chapterId);
+    expect(fromZero.chapterId).toBe('ch1');
+    expect(fromThree.chapterId).toBe('ch4');
+  });
+
+  it('random offset covers all chapters across multiple seeds', () => {
+    const rng = () => 0;
+    const seen = new Set<string>();
+    for (let offset = 0; offset < FIVE_CHAPTERS.length; offset++) {
+      const obstacle = spawnObstacle({ groundY: 400, spawnX: 800, rng }, FIVE_CHAPTERS, offset);
+      seen.add(obstacle.chapterId);
+    }
+    expect(seen.size).toBe(5); // all chapters reachable
+  });
+
+  it('excludes already-seen chapters from assignment', () => {
+    const rng = () => 0;
+    const seen = new Set(['ch1', 'ch2']);
+    const obstacle = spawnObstacle({ groundY: 400, spawnX: 800, rng }, FIVE_CHAPTERS, 0, seen);
+    expect(seen.has(obstacle.chapterId)).toBe(false);
+    expect(['ch3', 'ch4', 'ch5']).toContain(obstacle.chapterId);
+  });
+
+  it('cycles through unseen chapters only', () => {
+    const rng = () => 0;
+    const seen = new Set(['ch1', 'ch3']);
+    const results = Array.from(
+      { length: 3 },
+      (_, i) => spawnObstacle({ groundY: 400, spawnX: 800, rng }, FIVE_CHAPTERS, i, seen).chapterId,
+    );
+    // Pool is ['ch2', 'ch4', 'ch5'], round-robin with spawnCount 0,1,2
+    expect(results).toEqual(['ch2', 'ch4', 'ch5']);
+  });
+
+  it('falls back to full pool when all chapters have been seen', () => {
+    const rng = () => 0;
+    const seen = new Set(['ch1', 'ch2', 'ch3', 'ch4', 'ch5']);
+    const obstacle = spawnObstacle({ groundY: 400, spawnX: 800, rng }, FIVE_CHAPTERS, 0, seen);
+    // All seen → uses full pool, so back to ch1
+    expect(obstacle.chapterId).toBe('ch1');
+  });
+
+  it('works with empty seenIds (no filtering)', () => {
+    const rng = () => 0;
+    const seen = new Set<string>();
+    const obstacle = spawnObstacle({ groundY: 400, spawnX: 800, rng }, FIVE_CHAPTERS, 0, seen);
+    expect(obstacle.chapterId).toBe('ch1');
+  });
+});

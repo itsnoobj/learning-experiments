@@ -119,6 +119,7 @@ export function GameCanvas() {
   const obstaclesRef = useRef<Obstacle[]>([]);
   const distanceRef = useRef(0);
   const spawnCountRef = useRef(Math.floor(Math.random() * gameChapterIds.length));
+  const seenChaptersRef = useRef<Set<string>>(new Set());
   const nextSpawnAtRef = useRef(0); // distance threshold for the next spawn
   const groundYRef = useRef(0);
   const sizeRef = useRef({ width: 0, height: 0 });
@@ -406,6 +407,7 @@ export function GameCanvas() {
             },
             gameChapterIds,
             spawnCountRef.current,
+            seenChaptersRef.current,
           );
           spawnCountRef.current += 1;
           obstaclesRef.current.push(obstacle);
@@ -425,6 +427,7 @@ export function GameCanvas() {
               },
               gameChapterIds,
               spawnCountRef.current,
+              seenChaptersRef.current,
             );
             spawnCountRef.current += 1;
             obstaclesRef.current.push(second);
@@ -440,6 +443,7 @@ export function GameCanvas() {
         // Collision → hit phase.
         for (const obstacle of obstaclesRef.current) {
           if (checkCollision(player, obstacle)) {
+            seenChaptersRef.current.add(obstacle.chapterId);
             game.hit(obstacle.chapterId);
             break;
           }
