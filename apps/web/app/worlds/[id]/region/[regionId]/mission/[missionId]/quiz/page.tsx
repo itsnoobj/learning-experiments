@@ -1,11 +1,28 @@
+import type { Metadata } from 'next';
+
 import { loadChapter, loadQuiz } from '@/lib/content';
 import { worlds } from '@/lib/hierarchy';
+import { SITE_NAME } from '@/lib/seo';
 
 import { QuizClient } from './QuizClient';
 
 /** Route params for the hierarchical quiz page. */
 interface QuizPageProps {
   params: Promise<{ id: string; regionId: string; missionId: string }>;
+}
+
+/**
+ * Quiz pages are app-only interactive flows — not useful as standalone search
+ * results. Mark noindex so Google doesn't index dozens of quiz pages with
+ * thin/duplicate content.
+ */
+export async function generateMetadata({ params }: QuizPageProps): Promise<Metadata> {
+  const { missionId } = await params;
+  const chapter = await loadChapter(missionId);
+  return {
+    title: chapter ? `Quiz: ${chapter.title} — ${SITE_NAME}` : `Quiz — ${SITE_NAME}`,
+    robots: { index: false, follow: true },
+  };
 }
 
 /**

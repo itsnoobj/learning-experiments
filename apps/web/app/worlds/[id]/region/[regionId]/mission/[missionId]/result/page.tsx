@@ -1,11 +1,27 @@
+import type { Metadata } from 'next';
+
 import { loadChapter, loadQuiz } from '@/lib/content';
 import { worlds } from '@/lib/hierarchy';
+import { SITE_NAME } from '@/lib/seo';
 
 import { ResultClient, type ResultData } from './ResultClient';
 
 /** Route params for the hierarchical result page. */
 interface ResultPageProps {
   params: Promise<{ id: string; regionId: string; missionId: string }>;
+}
+
+/**
+ * Result pages show quiz scores — app-only interactive state. Mark noindex
+ * so Google doesn't index dozens of result pages with duplicate titles.
+ */
+export async function generateMetadata({ params }: ResultPageProps): Promise<Metadata> {
+  const { missionId } = await params;
+  const chapter = await loadChapter(missionId);
+  return {
+    title: chapter ? `Result: ${chapter.title} — ${SITE_NAME}` : `Result — ${SITE_NAME}`,
+    robots: { index: false, follow: true },
+  };
 }
 
 /**

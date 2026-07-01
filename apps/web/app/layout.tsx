@@ -18,12 +18,13 @@ const ibmPlexSans = IBM_Plex_Sans({
 // render SVG previews. The PNG was generated from `/og-image.svg` via:
 //   rsvg-convert -w 1200 -h 630 public/og-image.svg -o public/og-image.png
 // Regenerate the PNG after editing the SVG so the two stay in sync.
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://humandynamics.guide';
+import { SITE_URL, SITE_NAME } from '@/lib/seo';
+
 const OG_IMAGE = '/og-image.png';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: 'A Field Guide to Being Human',
+  title: SITE_NAME,
   description:
     'Stories from history, epics, and real life to navigate workplace dynamics, relationships, and hard decisions.',
   manifest: '/manifest.json',
@@ -41,19 +42,17 @@ export const metadata: Metadata = {
     'apple-mobile-web-app-capable': 'yes',
   },
   openGraph: {
-    title: 'A Field Guide to Being Human',
-    description:
-      'Stories to navigate difficult bosses, unfair promotions, and hard decisions.',
+    title: SITE_NAME,
+    description: 'Stories to navigate difficult bosses, unfair promotions, and hard decisions.',
     url: SITE_URL,
-    siteName: 'A Field Guide to Being Human',
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'A Field Guide to Being Human' }],
+    siteName: SITE_NAME,
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: SITE_NAME }],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'A Field Guide to Being Human',
-    description:
-      'Stories to navigate difficult bosses, unfair promotions, and hard decisions.',
+    title: SITE_NAME,
+    description: 'Stories to navigate difficult bosses, unfair promotions, and hard decisions.',
     images: [OG_IMAGE],
   },
 };

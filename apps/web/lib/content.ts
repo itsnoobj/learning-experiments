@@ -64,9 +64,7 @@ const chapterSchema = z.object({
   connections: z.array(z.string()),
   audio: z.string().min(1),
   visual: z.string().min(1),
-  sections: z
-    .array(chapterSectionSchema)
-    .nonempty('a chapter must have at least one section'),
+  sections: z.array(chapterSectionSchema).nonempty('a chapter must have at least one section'),
 });
 
 const challengeOptionSchema = z.object({
@@ -95,9 +93,7 @@ const quizChallengeSchema = z.discriminatedUnion('type', [
   z.object({
     type: z.literal('drag-match'),
     instruction: z.string().min(1),
-    items: z
-      .array(z.object({ id: z.string().min(1), text: z.string().min(1) }))
-      .min(2),
+    items: z.array(z.object({ id: z.string().min(1), text: z.string().min(1) })).min(2),
     correctOrder: z.array(z.string().min(1)).min(2),
   }),
   z.object({
@@ -112,9 +108,7 @@ const quizChallengeSchema = z.discriminatedUnion('type', [
 
 const quizSchema = z.object({
   chapterId: z.string().min(1),
-  challenges: z
-    .array(quizChallengeSchema)
-    .nonempty('a quiz must have at least one challenge'),
+  challenges: z.array(quizChallengeSchema).nonempty('a quiz must have at least one challenge'),
   principle: z.object({
     text: z.string().min(1),
     subtext: z.string().min(1).optional(),
@@ -311,10 +305,7 @@ export async function loadChapter(id: string): Promise<LoadedChapter | null> {
 
   const result = chapterSchema.safeParse(data);
   if (!result.success) {
-    logger.warn(
-      `Chapter "${id}" failed schema validation (${file}):`,
-      result.error.flatten(),
-    );
+    logger.warn(`Chapter "${id}" failed schema validation (${file}):`, result.error.flatten());
     return null;
   }
 
@@ -351,10 +342,7 @@ export async function loadQuiz(id: string): Promise<LoadedQuiz | null> {
 
   const result = quizSchema.safeParse(data);
   if (!result.success) {
-    logger.warn(
-      `Quiz "${id}" failed schema validation (${file}):`,
-      result.error.flatten(),
-    );
+    logger.warn(`Quiz "${id}" failed schema validation (${file}):`, result.error.flatten());
     return null;
   }
 
@@ -366,4 +354,23 @@ export async function loadQuiz(id: string): Promise<LoadedQuiz | null> {
     principle: quiz.principle,
     reflection: quiz.reflection,
   };
+}
+
+/**
+ * Get the filesystem modification time of a chapter's content file.
+ * Used by the sitemap to set meaningful `lastModified` dates instead of
+ * `new Date()` which Google ignores.
+ *
+ * Returns `null` if the file doesn't exist.
+ */
+export async function getContentMtime(id: string): Promise<Date | null> {
+  const file = await findContentFile(id, '.json');
+  if (!file) return null;
+
+  try {
+    const stat = await fs.stat(file);
+    return stat.mtime;
+  } catch {
+    return null;
+  }
 }
