@@ -118,7 +118,7 @@ export function GameCanvas() {
   const playerRef = useRef<Player | null>(null);
   const obstaclesRef = useRef<Obstacle[]>([]);
   const distanceRef = useRef(0);
-  const spawnCountRef = useRef(0);
+  const spawnCountRef = useRef(Math.floor(Math.random() * gameChapterIds.length));
   const nextSpawnAtRef = useRef(0); // distance threshold for the next spawn
   const groundYRef = useRef(0);
   const sizeRef = useRef({ width: 0, height: 0 });
@@ -220,6 +220,8 @@ export function GameCanvas() {
     distanceRef.current = 0;
     // NOTE: spawnCountRef is NOT reset — it persists across runs so each
     // new run cycles to the next chapter instead of repeating the same one.
+    // It's also randomised at mount so a fresh page load doesn't always start
+    // with the same chapter.
     nextSpawnAtRef.current = nextSpacing(0);
   }, []);
 
