@@ -64,12 +64,19 @@ export const viewport: Viewport = {
   viewportFit: 'cover',
 };
 
+import Script from 'next/script';
 import Link from 'next/link';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" data-theme="dark" className={ibmPlexSans.variable} suppressHydrationWarning>
       <body>
+        {/* Cloudflare Web Analytics — cookie-free, privacy-respecting */}
+        <Script
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "2645cf3afbfd40e48ac89a8621027548"}'
+          strategy="afterInteractive"
+        />
         <ServiceWorkerRegister />
         <ThemeProvider>
           <nav
