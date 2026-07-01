@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { spawnObstacle, Obstacle, type ObstacleType } from '../lib/obstacle';
+import { spawnObstacle, Obstacle, type ObstacleType } from './obstacle';
 
 const CHAPTERS = ['c1', 'c2', 'c3'];
 
