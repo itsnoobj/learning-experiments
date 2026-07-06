@@ -356,6 +356,28 @@ export async function loadQuiz(id: string): Promise<LoadedQuiz | null> {
   };
 }
 
+const PUBLIC_ROOT_CANDIDATES = [
+  path.join(process.cwd(), 'public'),
+  path.join(process.cwd(), 'apps', 'web', 'public'),
+];
+
+export const DEFAULT_OG_IMAGE = '/og-image.png';
+
+export async function resolveOgImage(id: string): Promise<string> {
+  if (!VALID_ID.test(id)) return DEFAULT_OG_IMAGE;
+
+  const rel = path.join('og', `mission-${id}.png`);
+  for (const root of PUBLIC_ROOT_CANDIDATES) {
+    try {
+      await fs.access(path.join(root, rel));
+      return `/og/mission-${id}.png`;
+    } catch {
+      continue;
+    }
+  }
+  return DEFAULT_OG_IMAGE;
+}
+
 /**
  * Get the filesystem modification time of a chapter's content file.
  * Used by the sitemap to set meaningful `lastModified` dates instead of
