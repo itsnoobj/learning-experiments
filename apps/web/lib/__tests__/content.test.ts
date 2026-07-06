@@ -62,3 +62,23 @@ describe('loadQuiz', () => {
     expect(await loadQuiz('../../../etc/shadow')).toBeNull();
   });
 });
+
+describe('resolveOgImage', () => {
+  it('returns per-mission OG image when the PNG exists', async () => {
+    const { resolveOgImage } = await import('../content');
+    const result = await resolveOgImage('1');
+    expect(result).toBe('/og/mission-1.png');
+  });
+
+  it('returns default OG image for non-existent mission', async () => {
+    const { resolveOgImage, DEFAULT_OG_IMAGE } = await import('../content');
+    const result = await resolveOgImage('9999');
+    expect(result).toBe(DEFAULT_OG_IMAGE);
+  });
+
+  it('returns default OG image for invalid id (path traversal)', async () => {
+    const { resolveOgImage, DEFAULT_OG_IMAGE } = await import('../content');
+    const result = await resolveOgImage('../../../etc/passwd');
+    expect(result).toBe(DEFAULT_OG_IMAGE);
+  });
+});
