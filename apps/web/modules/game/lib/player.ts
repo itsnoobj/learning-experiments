@@ -40,8 +40,8 @@ export class Player {
     this.jumping = false;
     this.grounded = true;
     // Tuned so the arc reliably clears all obstacle types (spike=60px,
-    // pipe=57px) even on lower/variable frame rates (Windows). The old value
-    // of -10 gave only ~62px clearance which failed on inconsistent deltas.
+    // pipe=57px) even on lower/variable frame rates. Fixed-timestep loop in
+    // GameCanvas guarantees this velocity always produces the same arc.
     this.jumpVelocity = options.jumpVelocity ?? -13;
   }
 
@@ -62,11 +62,10 @@ export class Player {
   }
 
   /**
-   * Advance the player one frame under the given gravity.
-   * @param gravity downward acceleration in px/frame^2 (at 60fps baseline).
-   * @param step    normalised time step (1.0 = one 60fps frame). Both gravity
-   *               and velocity integration are scaled by this so jump height
-   *               is frame-rate independent (fixes 120Hz Mac over-jumping).
+   * Advance the player one physics tick under the given gravity.
+   * @param gravity downward acceleration in px/tick².
+   * @param step    always 1 when driven by the fixed-timestep loop in
+   *               GameCanvas. Kept as a parameter for testability.
    */
   update(gravity: number, step = 1): void {
     this.vy += gravity * step;

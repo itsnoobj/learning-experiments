@@ -13,7 +13,7 @@ vi.mock('@/lib/content', () => ({
         id: '1',
         title: 'Why Do I Defend Decisions I Know Are Wrong?',
         forces: ['identity', 'ego'],
-        sections: [{ type: 'situation', content: 'Three months ago the vendor was chosen.' }],
+        sections: { situation: { content: 'Three months ago the vendor was chosen.' } },
         visual: '1.svg',
       };
     }

@@ -7,34 +7,28 @@
   "connections": ["23", "39", "40", "42"],
   "audio": "3.mp3",
   "visual": "3.svg",
-  "sections": [
-    {
-      "type": "situation",
+  "sections": {
+    "situation": {
       "content": "The raise came through. For about a day, it felt great. Then came the news of what a colleague got, and the good news turned into a quiet ache.\n\nNothing about life changed. The same salary that thrilled on Monday feels like an insult by Friday — not because the number moved, but because a new number appeared to stand it next to. The unhappiness isn't with what we have. It's with where we rank."
     },
-    {
-      "type": "story",
+    "story": {
       "title": "The Story",
       "content": "The Pandavas have built a palace unlike anything in the world — the Maya Sabha, a hall conjured by a master of illusions. Its floors are polished to look like still water; its pools are so clear they look like solid floor. Duryodhana, the eldest of the rival cousins and heir to his own kingdom, is invited to walk through it.\n\nHe has everything a prince could want. Wealth, an army, a hundred brothers, a crown waiting for him. He strolls into the great hall expecting to be impressed, perhaps a little envious, and to leave.\n\nThen he reaches a stretch of glassy floor and, certain it is a pond, lifts his royal robes to wade across — stepping high, exposed, ridiculous, over dry stone.\n\nA few steps later he reaches a real pool, mistakes the water for more polished floor, and walks straight in. He goes down hard, robes soaked, crown askew, sprawling in the shallow water in front of everyone.\n\nThe servants laugh. And from a balcony, Draupadi — wife to the Pandava brothers — laughs too. A small, bright, careless laugh. Maybe she says it, maybe she only thinks it loud enough to carry: the blind king's son is blind too.\n\nThat laugh lodges in Duryodhana like a splinter that never works its way out.\n\nHe rides home with everything he arrived with — still a prince, still rich, still heir to a throne. But he can no longer feel any of it. He tells his uncle, plainly, that he is burning up inside. He cannot eat. He cannot sleep. His own vast wealth has turned to ash in his mouth, because somewhere out there his cousins shine brighter, and as long as they do, his own light feels like nothing.\n\nNothing was taken from him. His life is exactly as rich as it was the morning before. But one moment of comparison reached in and stole the pleasure of all of it.\n\nFrom that soaked, laughing moment grows a rigged game of dice, a public humiliation, an exile, and finally a war that destroys nearly everyone on both sides — Duryodhana among them. A man who had everything, undone because he could not stand that someone had slightly more, and had once seen him fall."
     },
-    {
-      "type": "contrast",
+    "contrast": {
       "title": "The Contrast",
       "content": "Theodore Roosevelt kept a line he used to steady himself: \"Comparison is the thief of joy.\"\n\nHe knew the pull from the inside — a man surrounded by rivals, fortune, and ambition. The insight is brutally simple. Joy lives in one's own relationship with one's own life. The moment someone else's life is set beside it, joy doesn't get divided — it gets stolen outright. We can hold a genuinely good thing and feel nothing, simply because a slightly better thing was placed next to it. The thief doesn't take what we have. It takes the ability to enjoy it."
     },
-    {
-      "type": "principle",
+    "principle": {
       "content": "Comparison is not measurement — it's a status hunt, and the hunt never ends.\n\nThere is always someone ahead. So when satisfaction depends on ranking, it's a race with no finish line, where every win just reveals the next person to lose to."
     },
-    {
-      "type": "psychology",
+    "psychology": {
       "title": "Why It Happens",
       "content": "Social comparison theory (Festinger, 1954): we evaluate ourselves not in absolute terms but against the people around us, because for most of human history relative rank — not absolute wealth — decided access to food, safety, and mates. The brain that obsessively tracked status is the one that survived.\n\nTwo effects keep it spinning. Hedonic adaptation (Brickman & Campbell, 1971): whatever you gain becomes the new baseline within days, so you need a fresh comparison to feel anything again. And the modern firehose — social feeds serve everyone's curated best moment at once, so the gut reads 'everyone is ahead of me,' a comparison the ancient wiring was never built to process. The tell is specific: not 'I want more,' but 'I want more than them.'"
     },
-    {
-      "type": "move",
+    "move": {
       "title": "The Move",
       "content": "1. Catch the swap. When good news sours, name exactly what changed: 'My situation didn't move — I just found a comparison.' Seeing the swap in real time breaks its grip. Only the measuring stick moved.\n\n2. Turn envy into a question. When the sting hits, interrogate it: 'What specifically do they have that I want?' Often the honest answer is 'I don't want their life, I just don't want to feel behind.' That clarity dissolves most of it.\n\n3. Compare to past-you, not peer-you. Once a week, ask: 'Am I better than I was a year ago?' It's the only comparison where you control both data points and own the finish line.\n\n4. Audit the inputs. Notice which feeds and conversations reliably trigger rank-anxiety. Go in knowing they're highlight reels, not lives. Forewarned, the gut reaction loses its power.\n\n5. Name what's already enough. Write down three things you have right now that past-you would have been thrilled to reach. Comparison steals joy by hiding what you already won. This steals it back."
     }
-  ]
+  }
 }

@@ -19,10 +19,10 @@ describe('loadChapter', () => {
     expect(Array.isArray(chapter!.forces)).toBe(true);
     expect(chapter!.forces.length).toBeGreaterThan(0);
     expect(Array.isArray(chapter!.connections)).toBe(true);
-    expect(Array.isArray(chapter!.sections)).toBe(true);
-    expect(chapter!.sections.length).toBeGreaterThan(0);
-    expect(chapter!.sections[0]).toHaveProperty('type');
-    expect(chapter!.sections[0]).toHaveProperty('content');
+    expect(typeof chapter!.sections).toBe('object');
+    expect(chapter!.sections).not.toBeNull();
+    expect(chapter!.sections.situation).toBeDefined();
+    expect(chapter!.sections.situation).toHaveProperty('content');
   });
 
   it('returns null for an invalid id (path traversal)', async () => {

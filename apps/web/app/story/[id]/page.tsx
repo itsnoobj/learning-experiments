@@ -29,9 +29,8 @@ export async function generateMetadata({ params }: StoryPageProps): Promise<Meta
     };
   }
 
-  const situationSection = chapter.sections.find((s: { type: string }) => s.type === 'situation');
-  const description = situationSection
-    ? truncateDescription(situationSection.content)
+  const description = chapter.sections.situation
+    ? truncateDescription(chapter.sections.situation.content)
     : `A story about ${chapter.forces.join(' and ')} — and what to do about it.`;
 
   const canonical = missionUrlFor(id);

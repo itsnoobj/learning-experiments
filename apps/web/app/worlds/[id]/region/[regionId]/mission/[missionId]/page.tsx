@@ -33,9 +33,8 @@ export async function generateMetadata({ params }: MissionPageProps): Promise<Me
     };
   }
 
-  const situationSection = chapter.sections.find((s) => s.type === 'situation');
-  const description = situationSection
-    ? truncateDescription(situationSection.content)
+  const description = chapter.sections.situation
+    ? truncateDescription(chapter.sections.situation.content)
     : `A story about ${chapter.forces.join(' and ')} — and what to do about it.`;
 
   const url = `${SITE_URL}/worlds/${id}/region/${regionId}/mission/${missionId}`;
@@ -97,9 +96,8 @@ export default async function MissionPage({ params }: MissionPageProps) {
   const url = `${SITE_URL}/worlds/${id}/region/${regionId}/mission/${missionId}`;
 
   // Description for JSON-LD
-  const situationSection = chapter.sections.find((s) => s.type === 'situation');
-  const description = situationSection
-    ? truncateDescription(situationSection.content)
+  const description = chapter.sections.situation
+    ? truncateDescription(chapter.sections.situation.content)
     : `A story about ${chapter.forces.join(' and ')}.`;
 
   // Look up world/region titles for breadcrumb

@@ -7,34 +7,28 @@
   "connections": ["3", "5", "16", "39"],
   "audio": "4.mp3",
   "visual": "4.svg",
-  "sections": [
-    {
-      "type": "situation",
+  "sections": {
+    "situation": {
       "content": "Someone stayed late on the deck, and the boss called it 'brilliant' in front of the team. That one word carried them for days.\n\nSo they chased it again. And again. Slowly the choices start bending — toward the visible work that gets noticed, away from the quiet work that matters. The question stops being 'is this right?' and becomes 'will this get that feeling again?' Somewhere the applause stopped being a reward for the work and became the reason for it."
     },
-    {
-      "type": "story",
+    "story": {
       "title": "The Story",
       "content": "A monkey lives in a rose-apple tree on the riverbank, happy and free. A crocodile drifts by one afternoon, and the two strike up an unlikely friendship. Every day the monkey drops sweet rose-apples down into the water, and the crocodile eats some and carries the rest home to his wife.\n\nThe fruit is so good that the wife grows greedy — and then cunning. If the fruit is this sweet, she reasons, the heart of the monkey who eats it all day long must be sweeter still. She tells her husband to bring her that heart.\n\nThe crocodile is sick about it — this is his friend — but he goes anyway. He swims to the tree and calls up: 'My wife has prepared a great feast in your honor. Climb onto my back, and I'll carry you across the river to our home.'\n\nHere is the moment. A feast — in his honor? The monkey glows. He scrambles down, climbs onto the broad scaly back without a second thought, and they push off into the deep water.\n\nHalfway across, far from any tree, the monkey now utterly helpless, the crocodile's guilt gets the better of him and he blurts the truth: 'Forgive me, friend. My wife wants to eat your heart. That's the real reason I brought you.'\n\nThe monkey's stomach drops. He is in the middle of a river, on the back of a predator, lured out by nothing but flattery and the word 'honor.' The praise that felt so warm has carried him straight toward the jaws of death.\n\nBut he is quick. He keeps his face light and says, almost laughing, 'Oh — why didn't you say so sooner? We monkeys keep our hearts hanging safely in the tree. I left mine back home. Turn around and I'll fetch it for you gladly.'\n\nThe foolish crocodile, relieved, swims him back. The instant they touch the bank, the monkey springs up into the branches — safe, and far wiser.\n\n'You fool,' he calls down. 'No one keeps their heart in a tree. And no one rides into deep water on the back of someone who feeds him flattery.'\n\nThe fruit, the friendship, the feast 'in his honor' — all of it nearly cost the monkey his life. What saved him wasn't refusing praise. It was waking up, mid-river, to what the praise was actually for."
     },
-    {
-      "type": "contrast",
+    "contrast": {
       "title": "The Contrast",
       "content": "Epictetus, born a slave and later one of Rome's great teachers, put it flatly: \"If you wish to be loved, do not be enslaved by the desire to be loved.\"\n\nHe taught that the moment peace depends on someone's approval, one has handed them the controls. Praise feels like a gift, but a gift you need becomes a leash. Anyone who can grant the applause you crave can also withhold it — and now they own you. The free person enjoys praise the way you enjoy good weather: pleasant when it comes, never something you'd reshape your life to chase."
     },
-    {
-      "type": "principle",
+    "principle": {
       "content": "Praise is a fine reward and a terrible master.\n\nWhen approval becomes the fuel your identity runs on, you stop steering by 'what's true' and start steering by 'what gets applause' — and whoever controls the applause now controls you."
     },
-    {
-      "type": "psychology",
+    "psychology": {
       "title": "Why It Happens",
       "content": "Praise hits the same dopamine reward circuitry as food and money, and dopamine doesn't just feel good — it teaches, tagging whatever you just did as 'do that again.' So praise literally trains behavior, often without conscious consent.\n\nThe addiction comes from intermittent reinforcement (Skinner's variable-ratio schedule): rewards that arrive unpredictably are far more compulsive than reliable ones. Sometimes the work gets celebrated, sometimes ignored — the exact randomness that makes slot machines and social feeds so hard to put down. The brain keeps pulling the lever hoping this time is the hit. Underneath sits the real vulnerability: if your sense of worth was never secured from the inside, praise isn't a bonus — it's oxygen. The tell is the felt quality. Quiet pride is self-contained; the addiction feels anxious, hungry, scanning the room."
     },
-    {
-      "type": "move",
+    "move": {
       "title": "The Move",
       "content": "1. Define 'good' before you're judged. Write down what success looks like by a personal standard, before starting. Now praise gets checked against that scorecard instead of becoming the scorecard.\n\n2. Separate the signal from the supply. Take the information ('this resonated'), set down the craving ('I need more to feel okay'). Ask: would I still be proud of this if no one had noticed? If yes, you're anchored.\n\n3. Do deliberately unseen work. Once a week, do something valuable no one will praise — the unglamorous fix, the quiet help. It rebuilds the muscle of acting from 'this matters' rather than 'this gets seen.'\n\n4. Name who holds the leash. List whose approval you find yourself working for. Naming them weakens the grip — you can't be unconsciously steered by something you've made conscious.\n\n5. Sit with one unanswered moment. Next time you do something good and the acknowledgment doesn't come, don't fill the silence. Feel the itch and let it pass. Each time, the addiction loses a little of its hold."
     }
-  ]
+  }
 }

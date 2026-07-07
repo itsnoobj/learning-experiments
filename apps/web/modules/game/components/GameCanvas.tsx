@@ -12,6 +12,8 @@ import { GameHUD } from './GameHUD';
 import { HitInterstitial } from './HitInterstitial';
 import { StartScreen } from './StartScreen';
 import { ObstacleCleared } from './ObstacleCleared';
+import { AudioToggle } from './AudioToggle';
+import { useGameAudio } from '../hooks/useGameAudio';
 
 /**
  * Per-theme canvas palette. The DOM overlays (start screen, HUD, interstitial)
@@ -131,6 +133,7 @@ export function GameCanvas() {
   const [showCleared, setShowCleared] = useState(false);
 
   const game = useGameState();
+  const audio = useGameAudio();
   // Mirror the phase into a ref so the frame callback reads the live value.
   const phaseRef = useRef(game.phase);
   useEffect(() => {
@@ -219,6 +222,7 @@ export function GameCanvas() {
     playerRef.current = new Player({ groundY });
     obstaclesRef.current = [];
     distanceRef.current = 0;
+    accumRef.current = 0;
     // NOTE: spawnCountRef is NOT reset — it persists across runs so each
     // new run cycles to the next chapter instead of repeating the same one.
     // It's also randomised at mount so a fresh page load doesn't always start
@@ -369,33 +373,59 @@ export function GameCanvas() {
     playerRef.current?.draw(ctx, distanceRef.current, colors.playerStroke);
   }, []);
 
+  // Time accumulator for fixed-timestep physics (survives across frames via ref).
+  const accumRef = useRef(0);
+
   const onFrame = useCallback(
     (deltaMs: number) => {
-      // Normalise to 60fps-equivalent steps so physics stay consistent.
-      const step = Math.min(deltaMs / TARGET_FRAME_MS, 3);
       const player = playerRef.current;
       if (!player) return;
 
       if (phaseRef.current === 'running') {
+        // Fixed-timestep physics: accumulate real elapsed time and step in
+        // exact 16.6ms increments. This guarantees identical jump arcs
+        // regardless of display refresh rate (60Hz, 120Hz ProMotion, variable).
+        // Leftover time carries to the next frame via accumRef.
+        const fixedDt = TARGET_FRAME_MS;
+        accumRef.current += Math.min(deltaMs, fixedDt * 4); // cap to avoid spiral of death
+
         const difficulty = Math.min(1, distanceRef.current / 12000);
-        const speed = (BASE_SPEED + difficulty * 5) * step;
+        const speed = BASE_SPEED + difficulty * 5;
+        let ticks = 0;
 
-        player.update(GRAVITY, step);
-        distanceRef.current += speed;
+        while (accumRef.current >= fixedDt) {
+          accumRef.current -= fixedDt;
+          ticks++;
 
-        // Scroll + cull obstacles.
-        for (const obstacle of obstaclesRef.current) {
-          obstacle.update(speed);
+          player.update(GRAVITY, 1);
+
+          distanceRef.current += speed;
+
+          for (const obstacle of obstaclesRef.current) {
+            obstacle.update(speed);
+          }
         }
+
+        if (ticks === 0) {
+          // Not enough time has accumulated for a full tick yet (120Hz frame).
+          // Still draw the current state but don't advance physics.
+          draw();
+          return;
+        }
+
+        // Cull off-screen obstacles
         const before = obstaclesRef.current.length;
         obstaclesRef.current = obstaclesRef.current.filter((o) => {
           if (o.isOffscreen()) return false;
           return true;
         });
         const cleared = before - obstaclesRef.current.length;
-        if (cleared > 0) game.addScore(cleared);
+        if (cleared > 0) {
+          game.addScore(cleared);
+          audio.playScore();
+        }
 
-        game.addDistance(speed);
+        game.addDistance(speed * ticks);
 
         // Spawn when the world has scrolled far enough.
         if (distanceRef.current >= nextSpawnAtRef.current) {
@@ -445,6 +475,8 @@ export function GameCanvas() {
           if (checkCollision(player, obstacle)) {
             seenChaptersRef.current.add(obstacle.chapterId);
             game.hit(obstacle.chapterId);
+            audio.playHit();
+            audio.stopAmbient();
             break;
           }
         }
@@ -452,7 +484,7 @@ export function GameCanvas() {
 
       draw();
     },
-    [draw, game],
+    [draw, game, audio],
   );
 
   const loop = useGameLoop(onFrame);
@@ -488,16 +520,18 @@ export function GameCanvas() {
     resize();
     initWorld();
     game.start();
+    audio.playStart();
     forceTick((n) => n + 1);
-  }, [game, initWorld, resize]);
+  }, [game, initWorld, resize, audio]);
 
   // Jump input: space / tap / click. Active only while running.
   // Also starts the game when idle.
   const handleJump = useCallback(() => {
     if (phaseRef.current === 'running') {
       playerRef.current?.jump();
+      audio.playJump();
     }
-  }, []);
+  }, [audio]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -545,6 +579,8 @@ export function GameCanvas() {
       onPointerDown={handleJump}
     >
       <canvas ref={canvasRef} style={{ display: 'block', width: '100%', height: '100%' }} />
+
+      <AudioToggle muted={audio.muted} onToggle={audio.toggleMute} />
 
       {game.phase === 'running' && <GameHUD score={game.score} distance={game.distance} />}
 

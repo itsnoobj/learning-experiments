@@ -1,13 +1,12 @@
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { StoryView } from '../StoryView';
-import type { StorySectionProps } from '../StorySection';
 
-const sections: StorySectionProps[] = [
-  { type: 'situation', content: 'You face a difficult coworker.' },
-  { type: 'story', title: 'The Tale', content: 'Once upon a time.' },
-  { type: 'principle', content: 'Understand the force at play.' },
-];
+const sections = {
+  situation: { content: 'You face a difficult coworker.' },
+  story: { title: 'The Tale', content: 'Once upon a time.' },
+  principle: { content: 'Understand the force at play.' },
+};
 
 describe('StoryView', () => {
   it('renders the chapter title as a heading', () => {

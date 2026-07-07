@@ -1,9 +1,11 @@
 import type { Metadata, Viewport } from 'next';
+import Link from 'next/link';
 import { IBM_Plex_Sans } from 'next/font/google';
 import { ThemeProvider } from './theme-provider';
 import { ThemeToggle } from '@/shared/components/ThemeToggle';
 import { ShareStoryButton } from '@/shared/components/ShareStoryButton';
 import { ServiceWorkerRegister } from './ServiceWorkerRegister';
+import { SITE_URL, SITE_NAME } from '@/lib/seo';
 import './globals.css';
 
 const ibmPlexSans = IBM_Plex_Sans({
@@ -18,7 +20,6 @@ const ibmPlexSans = IBM_Plex_Sans({
 // render SVG previews. The PNG was generated from `/og-image.svg` via:
 //   rsvg-convert -w 1200 -h 630 public/og-image.svg -o public/og-image.png
 // Regenerate the PNG after editing the SVG so the two stay in sync.
-import { SITE_URL, SITE_NAME } from '@/lib/seo';
 
 const OG_IMAGE = '/og-image.png';
 
@@ -64,18 +65,15 @@ export const viewport: Viewport = {
   viewportFit: 'cover',
 };
 
-import Script from 'next/script';
-import Link from 'next/link';
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" data-theme="dark" className={ibmPlexSans.variable} suppressHydrationWarning>
       <body>
         {/* Cloudflare Web Analytics — cookie-free, privacy-respecting */}
-        <Script
+        <script
+          defer
           src="https://static.cloudflareinsights.com/beacon.min.js"
           data-cf-beacon='{"token": "2645cf3afbfd40e48ac89a8621027548"}'
-          strategy="afterInteractive"
         />
         <ServiceWorkerRegister />
         <ThemeProvider>

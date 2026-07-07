@@ -1,11 +1,32 @@
-import { StorySection, type StorySectionProps } from './StorySection';
+import { StorySection } from './StorySection';
+import type { StorySectionType } from './StorySection';
+
+/** A single section's data (without the type key, which comes from the object key). */
+interface SectionData {
+  title?: string;
+  content: string;
+}
+
+/** Sections as an object keyed by section type. */
+type StorySections = Partial<Record<StorySectionType, SectionData>>;
 
 interface StoryViewProps {
   /** Chapter title rendered as the page heading. */
   title: string;
-  /** Ordered sections that make up the chapter body. */
-  sections: StorySectionProps[];
+  /** Sections keyed by type that make up the chapter body. */
+  sections: StorySections;
 }
+
+/** Canonical rendering order for section types. */
+const SECTION_ORDER: StorySectionType[] = [
+  'situation',
+  'story',
+  'contrast',
+  'principle',
+  'psychology',
+  'trap',
+  'move',
+];
 
 /** Renders a chapter title and its ordered story sections. */
 export function StoryView({ title, sections }: StoryViewProps) {
@@ -23,9 +44,13 @@ export function StoryView({ title, sections }: StoryViewProps) {
       >
         {title}
       </h1>
-      {sections.map((section, index) => (
-        <StorySection key={index} {...section} />
-      ))}
+      {SECTION_ORDER.map((type) => {
+        const section = sections[type];
+        if (!section) return null;
+        return (
+          <StorySection key={type} type={type} title={section.title} content={section.content} />
+        );
+      })}
     </article>
   );
 }
