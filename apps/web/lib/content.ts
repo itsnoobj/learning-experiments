@@ -8,7 +8,6 @@ import { z } from 'zod';
 import type { QuizChallenge } from '@field-guide/shared-types';
 
 import { logger } from '@/shared/lib/logger';
-import type { StorySectionType } from '@/modules/story';
 
 /**
  * Server-only content loaders.
@@ -39,20 +38,19 @@ import type { StorySectionType } from '@/modules/story';
 // in sync when either changes.
 // ---------------------------------------------------------------------------
 
-const sectionTypeSchema = z.enum([
-  'situation',
-  'story',
-  'contrast',
-  'principle',
-  'psychology',
-  'trap',
-  'move',
-]);
-
 const chapterSectionSchema = z.object({
-  type: sectionTypeSchema,
   title: z.string().optional(),
   content: z.string().min(1, 'section content must not be empty'),
+});
+
+const chapterSectionsSchema = z.object({
+  situation: chapterSectionSchema,
+  story: chapterSectionSchema.optional(),
+  contrast: chapterSectionSchema.optional(),
+  principle: chapterSectionSchema.optional(),
+  psychology: chapterSectionSchema.optional(),
+  trap: chapterSectionSchema.optional(),
+  move: chapterSectionSchema.optional(),
 });
 
 const chapterSchema = z.object({
@@ -64,7 +62,7 @@ const chapterSchema = z.object({
   connections: z.array(z.string()),
   audio: z.string().min(1),
   visual: z.string().min(1),
-  sections: z.array(chapterSectionSchema).nonempty('a chapter must have at least one section'),
+  sections: chapterSectionsSchema,
 });
 
 const challengeOptionSchema = z.object({
@@ -116,11 +114,21 @@ const quizSchema = z.object({
   reflection: z.string().min(1),
 });
 
-/** A narrative section of a chapter, after `type` narrowing. */
+/** A narrative section of a chapter. */
 export interface ChapterSection {
-  type: StorySectionType;
   title?: string;
   content: string;
+}
+
+/** Sections as an object keyed by section type. */
+export interface ChapterSections {
+  situation: ChapterSection;
+  story?: ChapterSection;
+  contrast?: ChapterSection;
+  principle?: ChapterSection;
+  psychology?: ChapterSection;
+  trap?: ChapterSection;
+  move?: ChapterSection;
 }
 
 /** A fully-loaded chapter, with asset names pointing at `public/content/`. */
@@ -135,7 +143,7 @@ export interface LoadedChapter {
   visual: string;
   /** Asset filename served from `public/content/` (e.g. `31.mp3`). */
   audio: string;
-  sections: ChapterSection[];
+  sections: ChapterSections;
 }
 
 /** A fully-loaded quiz, with challenges narrowed to the discriminated union. */
@@ -293,8 +301,8 @@ async function readJsonFile(file: string): Promise<unknown | null> {
  *
  * The chapter's `visual`/`audio` fields are overridden with the `{id}.svg` /
  * `{id}.mp3` asset names served from `public/content/` (the chapter page builds
- * `/content/${visual|audio}`), and section `type` is narrowed to the
- * `StorySectionType` union expected by the story components.
+ * `/content/${visual|audio}`), and sections are validated against the schema
+ * to ensure all required fields are present.
  */
 export async function loadChapter(id: string): Promise<LoadedChapter | null> {
   const file = await findContentFile(id, '.json');
@@ -320,11 +328,7 @@ export async function loadChapter(id: string): Promise<LoadedChapter | null> {
     connections: chapter.connections,
     visual: `${id}.svg`,
     audio: `${id}.mp3`,
-    sections: chapter.sections.map((s) => ({
-      type: s.type,
-      title: s.title,
-      content: s.content,
-    })),
+    sections: chapter.sections,
   };
 }
 
@@ -354,6 +358,28 @@ export async function loadQuiz(id: string): Promise<LoadedQuiz | null> {
     principle: quiz.principle,
     reflection: quiz.reflection,
   };
+}
+
+const PUBLIC_ROOT_CANDIDATES = [
+  path.join(process.cwd(), 'public'),
+  path.join(process.cwd(), 'apps', 'web', 'public'),
+];
+
+export const DEFAULT_OG_IMAGE = '/og-image.png';
+
+export async function resolveOgImage(id: string): Promise<string> {
+  if (!VALID_ID.test(id)) return DEFAULT_OG_IMAGE;
+
+  const rel = path.join('og', `mission-${id}.png`);
+  for (const root of PUBLIC_ROOT_CANDIDATES) {
+    try {
+      await fs.access(path.join(root, rel));
+      return `/og/mission-${id}.png`;
+    } catch {
+      continue;
+    }
+  }
+  return DEFAULT_OG_IMAGE;
 }
 
 /**

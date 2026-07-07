@@ -40,13 +40,14 @@ function MissionClientInner({ chapter, worldId, regionId, missionId }: MissionCl
         <Link href={backHref} className="text-sm text-[var(--color-text)]">
           {backLabel}
         </Link>
-        <span className="ml-auto text-xs text-[var(--color-text-dim)]">
-          Chapter {chapter.id}
-        </span>
+        <span className="ml-auto text-xs text-[var(--color-text-dim)]">Chapter {chapter.id}</span>
       </nav>
 
       <section className="mt-6">
-        <ChapterVisual src={`/content/${chapter.visual}`} alt="Chapter illustration" />
+        <ChapterVisual
+          src={`/content/${chapter.visual.replace('.svg', '.png')}`}
+          alt="Chapter illustration"
+        />
       </section>
 
       <section className="mt-4">

@@ -72,7 +72,7 @@ export default async function SituationsPage() {
     const region = world?.regions.find((r) => r.id === location.regionId);
     if (!world || !region) continue;
 
-    const situationSection = chapter.sections.find((s) => s.type === 'situation');
+    const situationSection = chapter.sections.situation;
     entries.push({
       id,
       title: chapter.title,

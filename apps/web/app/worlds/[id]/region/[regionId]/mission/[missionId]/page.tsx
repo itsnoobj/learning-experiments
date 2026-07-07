@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { loadChapter, listChapterIds, getContentMtime } from '@/lib/content';
+import { loadChapter, listChapterIds, getContentMtime, resolveOgImage } from '@/lib/content';
 import { worlds, getWorld } from '@/lib/hierarchy';
 import { SITE_URL, SITE_NAME, PUBLISHER, truncateDescription } from '@/lib/seo';
 
@@ -33,12 +33,12 @@ export async function generateMetadata({ params }: MissionPageProps): Promise<Me
     };
   }
 
-  const situationSection = chapter.sections.find((s) => s.type === 'situation');
-  const description = situationSection
-    ? truncateDescription(situationSection.content)
+  const description = chapter.sections.situation
+    ? truncateDescription(chapter.sections.situation.content)
     : `A story about ${chapter.forces.join(' and ')} — and what to do about it.`;
 
   const url = `${SITE_URL}/worlds/${id}/region/${regionId}/mission/${missionId}`;
+  const ogImage = await resolveOgImage(missionId);
 
   return {
     title: `${chapter.title} — ${SITE_NAME}`,
@@ -52,12 +52,13 @@ export async function generateMetadata({ params }: MissionPageProps): Promise<Me
       url,
       type: 'article',
       siteName: SITE_NAME,
-      images: [{ url: '/og-image.png', width: 1200, height: 630, alt: chapter.title }],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: chapter.title }],
     },
     twitter: {
       card: 'summary_large_image',
       title: chapter.title,
       description,
+      images: [ogImage],
     },
   };
 }
@@ -95,9 +96,8 @@ export default async function MissionPage({ params }: MissionPageProps) {
   const url = `${SITE_URL}/worlds/${id}/region/${regionId}/mission/${missionId}`;
 
   // Description for JSON-LD
-  const situationSection = chapter.sections.find((s) => s.type === 'situation');
-  const description = situationSection
-    ? truncateDescription(situationSection.content)
+  const description = chapter.sections.situation
+    ? truncateDescription(chapter.sections.situation.content)
     : `A story about ${chapter.forces.join(' and ')}.`;
 
   // Look up world/region titles for breadcrumb
@@ -111,7 +111,7 @@ export default async function MissionPage({ params }: MissionPageProps) {
     headline: chapter.title,
     description,
     url,
-    image: `${SITE_URL}/content/${chapter.visual}`,
+    image: `${SITE_URL}/content/${chapter.visual.replace('.svg', '.png')}`,
     datePublished: mtime?.toISOString(),
     dateModified: mtime?.toISOString(),
     author: { '@type': 'Organization', name: 'Human Dynamics' },

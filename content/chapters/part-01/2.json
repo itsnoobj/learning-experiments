@@ -7,34 +7,28 @@
   "connections": ["1", "9", "10", "55"],
   "audio": "2.mp3",
   "visual": "2.svg",
-  "sections": [
-    {
-      "type": "situation",
+  "sections": {
+    "situation": {
       "content": "The bug shipped. The deadline slipped. And now, in the moment when the cleanest move is two words — 'my mistake' — something else comes out instead.\n\nExplanations. Gentle pointing at the timeline, the unclear brief, the other team. Every word technically true. And every word a small wall between the person speaking and the simple sentence they can't quite say."
     },
-    {
-      "type": "story",
+    "story": {
       "title": "The Story",
       "content": "July 1863. The Union army has just won at Gettysburg, and General Lee's defeated forces are pinned against the Potomac River, swollen and impossible to cross. Lincoln sees it clearly from Washington: trap Lee here, and the war that has already swallowed hundreds of thousands of lives could end this week.\n\nHe sends General Meade the order. Attack. Finish it.\n\nMeade holds a council of war. He deliberates. He waits. The river falls, the bridges go up, and Lee's whole army slips across to safety. The war will grind on for nearly two more years.\n\nWhen the news reaches Lincoln, something in him breaks open. He sits at his desk and writes Meade a letter, and every line of it burns. He tells Meade the escape was an immeasurable misfortune, that the prize was within his grasp, that he is 'distressed immeasurably' by what the hesitation has cost.\n\nEvery word is justified. Lincoln is right, and the stakes could not be higher.\n\nThen he stops. He reads it back. And instead of sending it, he folds the page, sets it in a drawer, and writes across it in his own hand: \"never sent, or signed.\"\n\nIt sat in his papers, unsent, until after his death.\n\nHere is the thing he understood in that pause. Sending the letter would feel wonderful. It would be correct. It would prove, in writing, that he was right and Meade was wrong. And it would do nothing but crush a man already doing his best — and buy Lincoln nothing but the thin satisfaction of having won the exchange.\n\nSo he wrote the savage letter to drain the venom, and then refused himself the victory of sending it. He could be right in private and generous in public. He did not need Meade to admit he was wrong in order to feel like himself.\n\nThat is the same muscle that lets a person say 'my mistake' and stop there. The ability to not need the ego's win."
     },
-    {
-      "type": "contrast",
+    "contrast": {
       "title": "The Contrast",
       "content": "In Japan there's a craft called kintsugi — mending a broken bowl by filling its cracks with gold. The break isn't hidden. It's traced in something precious and made part of the bowl's story. A mended bowl is prized above one that never broke.\n\nIt is the exact inverse of ego. Ego says a crack is shameful — hide it, deny it happened. Kintsugi says the crack is proof you survived something, and showing it honestly is what makes you whole. Admitting a mistake isn't the gold leaking out. It's the gold going in."
     },
-    {
-      "type": "principle",
+    "principle": {
       "content": "Ego doesn't protect you from the mistake. It protects you from the feeling of having made one.\n\nThe pain isn't the error. It's the gap between 'I am competent' and 'I just proved I'm not' — and the defending, explaining, and deflecting are all attempts to close that gap without having to feel it."
     },
-    {
-      "type": "psychology",
+    "psychology": {
       "title": "Why It Happens",
       "content": "The ego is the immune system of the self-story: I am capable, I am good, I know what I'm doing. A mistake reads as an infection, and the ego attacks it before awareness kicks in — with denial, blame, and quiet revision.\n\nTwo named effects drive it. Self-serving bias: we automatically credit success to skill and failure to circumstance. The deflection arrives pre-written and feels like the truth. And the social-pain overlap (Eisenberger et al., 2003): being wrong in front of others activates the same neural regions as physical pain, so 'I made a mistake' triggers a flinch as real as touching a hot stove. The cruel irony — the people we trust most are precisely the ones who admit errors easily."
     },
-    {
-      "type": "move",
+    "move": {
       "title": "The Move",
       "content": "1. Write the hot letter. Pour every defensive, blaming, self-justifying thought into a document no one will see. Drain the venom in private so it doesn't leak into the conversation that matters.\n\n2. Lead with the two words. 'My mistake.' Or 'I got that wrong.' Say it first, before any explanation. The instant you add 'but,' the apology becomes a defense, and everyone hears it.\n\n3. Separate explanation from excuse. Give context only after ownership, and only if it helps the other person. Ask: am I explaining so they understand, or so I look less responsible?\n\n4. State the repair, not just the regret. 'Here's what I'm changing so it can't recur' converts the mistake from a stain into evidence you can be trusted with hard things. Action rebuilds standing; the apology alone doesn't.\n\n5. Log the relief. The first time you cleanly own something and feel the room relax instead of pounce, mark it. That felt sense — 'owning it was easier than defending it' — is what slowly rewires the flinch."
     }
-  ]
+  }
 }

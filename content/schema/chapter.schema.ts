@@ -19,12 +19,28 @@ export type SectionType = z.infer<typeof sectionTypeSchema>;
 
 /** A single titled block of chapter content. */
 export const chapterSectionSchema = z.object({
-  type: sectionTypeSchema,
   title: z.string().optional(),
   content: z.string().min(1, 'section content must not be empty'),
 });
 
 export type ChapterSection = z.infer<typeof chapterSectionSchema>;
+
+/**
+ * Sections as an object keyed by section type.
+ * Each key maps to a section object with optional title and required content.
+ * At minimum, a chapter must have a `situation` section.
+ */
+export const chapterSectionsSchema = z.object({
+  situation: chapterSectionSchema,
+  story: chapterSectionSchema.optional(),
+  contrast: chapterSectionSchema.optional(),
+  principle: chapterSectionSchema.optional(),
+  psychology: chapterSectionSchema.optional(),
+  trap: chapterSectionSchema.optional(),
+  move: chapterSectionSchema.optional(),
+});
+
+export type ChapterSections = z.infer<typeof chapterSectionsSchema>;
 
 /** Runtime schema for a chapter JSON document. */
 export const chapterSchema = z.object({
@@ -36,7 +52,7 @@ export const chapterSchema = z.object({
   connections: z.array(z.string()),
   audio: z.string().min(1),
   visual: z.string().min(1),
-  sections: z.array(chapterSectionSchema).nonempty('a chapter must have at least one section'),
+  sections: chapterSectionsSchema,
 });
 
 export type ChapterDocument = z.infer<typeof chapterSchema>;

@@ -11,6 +11,9 @@ import { useEffect } from 'react';
  */
 export function ServiceWorkerRegister() {
   useEffect(() => {
+    // Skip SW in development — it caches chunks and causes stale code on refresh
+    if (process.env.NODE_ENV === 'development') return;
+
     // Register SW
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js').catch(() => {
@@ -20,10 +23,7 @@ export function ServiceWorkerRegister() {
 
     // Handle chunk load failures — auto-reload once to get fresh HTML
     const handleError = (event: ErrorEvent) => {
-      if (
-        event.message?.includes('ChunkLoadError') ||
-        event.message?.includes('Loading chunk')
-      ) {
+      if (event.message?.includes('ChunkLoadError') || event.message?.includes('Loading chunk')) {
         // Prevent infinite reload loop: only reload once per session
         const key = 'hd-chunk-reload';
         if (!sessionStorage.getItem(key)) {
