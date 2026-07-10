@@ -17,9 +17,17 @@ export interface MissionClientProps {
   regionId: string;
   /** Mission id (route param) — same value as the chapter/quiz id. */
   missionId: string;
+  /** Next mission id in the region, or null if this is the last. */
+  nextMissionId: string | null;
 }
 
-function MissionClientInner({ chapter, worldId, regionId, missionId }: MissionClientProps) {
+function MissionClientInner({
+  chapter,
+  worldId,
+  regionId,
+  missionId,
+  nextMissionId,
+}: MissionClientProps) {
   const searchParams = useSearchParams();
   const fromGame = searchParams.get('from') === 'game';
 
@@ -28,8 +36,10 @@ function MissionClientInner({ chapter, worldId, regionId, missionId }: MissionCl
   // The quiz lives directly under the mission; carry the game context through
   // so the quiz → result flow can route back into the game.
   const quizHref = fromGame ? `${base}/quiz?from=game` : `${base}/quiz`;
-  const backHref = fromGame ? '/game?resume=1' : `/worlds/${worldId}/region/${regionId}`;
-  const backLabel = fromGame ? '← Game' : '← Map';
+  const mapHref = fromGame ? '/game?resume=1' : `/worlds/${worldId}/region/${regionId}`;
+  const nextHref = nextMissionId
+    ? `/worlds/${worldId}/region/${regionId}/mission/${nextMissionId}${fromGame ? '?from=game' : ''}`
+    : null;
 
   return (
     <main className="max-w-[620px] mx-auto px-4 pb-12">
@@ -37,8 +47,8 @@ function MissionClientInner({ chapter, worldId, regionId, missionId }: MissionCl
         <Link href="/" className="text-sm text-[var(--color-text)] no-underline">
           🏠
         </Link>
-        <Link href={backHref} className="text-sm text-[var(--color-text)]">
-          {backLabel}
+        <Link href={mapHref} className="text-sm text-[var(--color-text)]">
+          {fromGame ? '← Game' : '← Map'}
         </Link>
         <span className="ml-auto text-xs text-[var(--color-text-dim)]">Chapter {chapter.id}</span>
       </nav>
@@ -58,18 +68,50 @@ function MissionClientInner({ chapter, worldId, regionId, missionId }: MissionCl
         <StoryView title={chapter.title} sections={chapter.sections} />
       </section>
 
-      <Link
-        href={quizHref}
-        className="block w-full mt-8 py-3 text-center font-bold uppercase tracking-wider"
-        style={{
-          color: 'var(--color-bg)',
-          backgroundColor: 'var(--color-gold)',
-          fontSize: '0.95rem',
-          letterSpacing: '0.06em',
-        }}
-      >
-        Test Your Understanding →
-      </Link>
+      <nav className="mt-8 flex flex-col gap-3" aria-label="What to do next">
+        <Link
+          href={quizHref}
+          className="block w-full py-3 text-center font-bold uppercase tracking-wider"
+          style={{
+            color: 'var(--color-bg)',
+            backgroundColor: 'var(--color-gold)',
+            fontSize: '0.95rem',
+            letterSpacing: '0.06em',
+            borderRadius: 'var(--radius, 0)',
+          }}
+        >
+          Test Your Understanding →
+        </Link>
+
+        <div className="flex gap-3">
+          {nextHref && (
+            <Link
+              href={nextHref}
+              className="flex-1 block py-2.5 text-center text-sm font-semibold uppercase tracking-wider"
+              style={{
+                color: 'var(--color-text)',
+                border: '1px solid var(--color-border)',
+                borderRadius: 'var(--radius, 0)',
+                letterSpacing: '0.04em',
+              }}
+            >
+              Next Story →
+            </Link>
+          )}
+          <Link
+            href={mapHref}
+            className="flex-1 block py-2.5 text-center text-sm font-semibold uppercase tracking-wider"
+            style={{
+              color: 'var(--color-text)',
+              border: '1px solid var(--color-border)',
+              borderRadius: 'var(--radius, 0)',
+              letterSpacing: '0.04em',
+            }}
+          >
+            {fromGame ? '🎮 Back to Game' : '🗺️ Mission Map'}
+          </Link>
+        </div>
+      </nav>
     </main>
   );
 }

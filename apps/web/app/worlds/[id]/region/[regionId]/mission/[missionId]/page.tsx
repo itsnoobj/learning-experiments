@@ -104,6 +104,14 @@ export default async function MissionPage({ params }: MissionPageProps) {
   const world = getWorld(id);
   const region = world?.regions.find((r) => r.id === regionId);
 
+  // Determine next mission in this region
+  const missionList = region?.missions ?? [];
+  const currentIndex = missionList.indexOf(missionId);
+  const nextMissionId =
+    currentIndex >= 0 && currentIndex < missionList.length - 1
+      ? missionList[currentIndex + 1]
+      : null;
+
   // Article JSON-LD with full recommended fields
   const articleJsonLd = {
     '@context': 'https://schema.org',
@@ -162,7 +170,13 @@ export default async function MissionPage({ params }: MissionPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <MissionClient chapter={chapter} worldId={id} regionId={regionId} missionId={missionId} />
+      <MissionClient
+        chapter={chapter}
+        worldId={id}
+        regionId={regionId}
+        missionId={missionId}
+        nextMissionId={nextMissionId}
+      />
     </>
   );
 }
