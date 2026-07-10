@@ -71,3 +71,16 @@ body {
     transform: translateY(0);
   }
 }
+
+/* Collapsible story sections */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary {
+  user-select: none;
+}
+
+details[open] .details-arrow {
+  transform: rotate(90deg);
+}

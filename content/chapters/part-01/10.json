@@ -1,0 +1,30 @@
+{
+  "id": "10",
+  "part": 1,
+  "section": "B",
+  "title": "What's the Line Between Confidence and Arrogance?",
+  "forces": ["ego", "identity"],
+  "connections": ["6", "9", "11", "28"],
+  "audio": "10.mp3",
+  "visual": "10.svg",
+  "sections": {
+    "situation": {
+      "content": "The pitch went well — bold, clear, certain. But afterwards, a colleague says quietly: \"You didn't leave room for anyone else's ideas in there.\"\n\nIt stings because it might be true. The line between \"I believe in this\" and \"I'm not listening\" is invisible from the inside. Confidence feels the same as arrogance while you're inside it. The difference only shows up in what happens to the people around you."
+    },
+    "story": {
+      "content": "Before the first Sonny Liston fight in 1964, Muhammad Ali was considered a loudmouth who was about to get destroyed. He'd stand outside Liston's house at 3am screaming \"I'm the greatest!\" He'd predict the exact round of his knockouts on live television. Reporters called him a clown. Vegas gave him 7-to-1 odds against.\n\nHe knocked Liston out.\n\nWhat looked like arrogance from the outside was something more interesting from the inside. Ali later explained that the showmanship was strategic — it sold tickets, it destabilized opponents, and it built a character that protected the private person underneath. \"I am the greatest\" wasn't delusion. It was a tool.\n\nBut here's where the line blurs.\n\nTwenty years later, Ali was still fighting. His body was visibly slower. His doctors told him to stop. His trainers told him to stop. His corner told him to stop. Against Larry Holmes in 1980, Ali took a beating so severe that those watching wept. He couldn't lift his arms by the eighth round. Holmes, who loved Ali, later said he wished the referee had stopped it sooner.\n\nAli's confidence — the same quality that let him shock the world against Liston — had crossed into something that couldn't hear \"stop.\" The tool had become the master. \"I am the greatest\" had started as a strategic performance and ended as a belief so deep it overrode his body's signals, his doctors' warnings, and his friends' pleading.\n\nThe line between confidence and arrogance isn't about volume or boldness. It's about whether the signal can still get in. Young Ali heard everything — the odds, the doubters, the reality — and used it as fuel. Older Ali couldn't hear anything that contradicted the story.\n\nSame man. Same words. The difference was whether he was still listening."
+    },
+    "contrast": {
+      "content": "Satya Nadella took over Microsoft when the company was widely seen as irrelevant — a slow giant that had missed mobile, missed social, missed the future. He could have come in with force, demanding loyalty, projecting certainty.\n\nInstead, he handed every executive a copy of a book about growth mindset and said publicly: \"We need to go from know-it-alls to learn-it-alls.\" He projected confidence in the direction — cloud, AI, openness — while staying explicitly humble about the details. The stock price went up tenfold. Not despite the humility. Because confidence that still listens is the only kind that compounds."
+    },
+    "principle": {
+      "content": "Confidence says \"I can handle what comes.\" Arrogance says \"I already know what's coming.\"\n\nThe line between them isn't how loudly you speak or how certain you sound. It's whether the feedback loop is still open — whether new information can still get in and change your mind. The moment it can't, confidence has become a wall instead of a foundation."
+    },
+    "psychology": {
+      "content": "Confidence and arrogance share the same neural signature in the moment — both feel like certainty, both reduce anxiety, both produce the dopamine of self-assurance. The brain cannot easily distinguish between them from the inside.\n\nThe difference shows up in one measurable behaviour: information-seeking. Dunning-Kruger research shows that genuinely competent people actively seek disconfirming evidence — they want to know where they're wrong. Overconfident people avoid it — not because they're stupid, but because the ego has fused with the position, and contradicting the position now feels like a personal attack.\n\nPsychologists call this the \"earned dogmatism effect\" (Ottati et al., 2015): past success gives people psychological permission to close their minds. The more you've been right, the less you feel obligated to check whether you still are. Arrogance isn't the opposite of confidence. It's confidence that stopped updating."
+    },
+    "move": {
+      "content": "1. Check the feedback loop. After any strong stance, ask: \"What would change my mind?\" If you can't answer, you've crossed the line. Confidence has an answer. Arrogance doesn't need one.\n\n2. Watch what happens to disagreement. When someone pushes back, notice your first internal response. If it's curiosity (\"tell me more\") — that's confidence. If it's irritation (\"they don't get it\") — that's the wall going up.\n\n3. Separate conviction from identity. \"I believe strongly in this approach\" is confidence. \"I am the kind of person who knows the answer\" is arrogance. The first can change with evidence. The second can't, because changing would mean becoming a different person.\n\n4. Earn the right to be loud. Ali's early confidence worked because it was backed by relentless preparation — 6am runs, thousands of sparring rounds. Volume without preparation underneath is just noise. Check: is your certainty backed by current work, or by past wins?\n\n5. Ask the people closest to you. Not \"am I arrogant?\" — no one will answer that honestly. Ask: \"When was the last time I changed my mind because of something you said?\" If they can't remember, the feedback loop is closed — no matter how confident you feel from the inside."
+    }
+  }
+}
