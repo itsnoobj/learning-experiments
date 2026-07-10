@@ -25,10 +25,10 @@ describe('StoryView', () => {
 
   it('applies the correct section type labels', () => {
     render(<StoryView title="Chapter" sections={sections} />);
-    // Default label falls back to the section type.
-    expect(screen.getByRole('heading', { level: 2, name: 'situation' })).toBeInTheDocument();
+    // Default label uses the DEFAULT_LABELS map.
+    expect(screen.getByRole('heading', { level: 2, name: 'The Situation' })).toBeInTheDocument();
     // Custom title overrides the type label.
     expect(screen.getByRole('heading', { level: 2, name: 'The Tale' })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { level: 2, name: 'principle' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 2, name: 'The Principle' })).toBeInTheDocument();
   });
 });

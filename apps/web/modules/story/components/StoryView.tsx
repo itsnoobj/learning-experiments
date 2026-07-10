@@ -28,8 +28,11 @@ const SECTION_ORDER: StorySectionType[] = [
   'move',
 ];
 
+/** Sections that are collapsible (deeper content, not the core read). */
+const COLLAPSIBLE_SECTIONS: Set<StorySectionType> = new Set(['contrast', 'psychology', 'move']);
+
 /** Renders a chapter title and its ordered story sections. */
-export function StoryView({ title, sections }: StoryViewProps) {
+export function StoryView({ title, sections = {} }: StoryViewProps) {
   return (
     <article>
       <h1
@@ -48,7 +51,13 @@ export function StoryView({ title, sections }: StoryViewProps) {
         const section = sections[type];
         if (!section) return null;
         return (
-          <StorySection key={type} type={type} title={section.title} content={section.content} />
+          <StorySection
+            key={type}
+            type={type}
+            title={section.title}
+            content={section.content}
+            collapsible={COLLAPSIBLE_SECTIONS.has(type)}
+          />
         );
       })}
     </article>
