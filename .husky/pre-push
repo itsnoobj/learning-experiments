@@ -1,1 +1,11 @@
+#!/bin/sh
+
+# Verify assets can be generated (catches missing SVGs before CI fails)
+if command -v rsvg-convert >/dev/null 2>&1 && command -v jq >/dev/null 2>&1; then
+  echo "pre-push: running sync-assets.sh..."
+  bash scripts/sync-assets.sh || exit 1
+else
+  echo "pre-push: skipping sync-assets (install librsvg + jq for local validation)"
+fi
+
 cd apps/web && npx vitest run
