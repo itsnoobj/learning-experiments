@@ -1,0 +1,89 @@
+{
+  "chapterId": "10",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "After a successful product launch, a tech lead presents his architecture plan for the next quarter. A junior developer raises a concern about scalability. The tech lead's first internal reaction is irritation — 'she doesn't get it.'",
+      "options": [
+        {
+          "text": "He should acknowledge her point publicly, even if he disagrees, to seem approachable.",
+          "correct": false,
+          "feedback": "Performing openness without actually processing the input is theater, not confidence. The issue isn't optics — it's whether the feedback loop is genuinely open or shut."
+        },
+        {
+          "text": "The irritation is the signal. He should notice it, then ask 'tell me more' — because curiosity is the marker of confidence, irritation is the marker of the wall going up.",
+          "correct": true,
+          "feedback": "The internal response reveals which side of the line he's on. Curiosity = confidence. Irritation at being questioned = the feedback loop closing. Noticing the irritation is the moment to choose differently."
+        },
+        {
+          "text": "He's earned the right to be confident — she should build more experience before challenging his architecture.",
+          "correct": false,
+          "feedback": "This is the 'earned dogmatism effect' — past success giving permission to close the mind. Being right before doesn't mean being right now, and shutting out input based on seniority is exactly how confidence becomes arrogance."
+        }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "Muhammad Ali, at 38, takes a brutal beating against Larry Holmes that makes onlookers weep. His doctors, trainers, and friends had all told him to stop. He fought anyway.",
+      "question": "What primarily drove Ali to keep fighting long past the point where the signals told him to stop?",
+      "options": [
+        {
+          "text": "Financial pressure — he needed the money from the fight.",
+          "correct": false,
+          "feedback": "Ali had earned enough to retire comfortably. The drive wasn't economic. It was a belief about himself that had become so deep it overrode physical reality."
+        },
+        {
+          "text": "Ego fused with identity — 'I am the greatest' had crossed from strategic tool to unchallengeable belief, closing the feedback loop.",
+          "correct": true,
+          "feedback": "The same confidence that was a strategic tool in his youth became a wall that blocked all incoming signals — from his body, his doctors, his friends. The feedback loop closed, and a tool became a prison."
+        },
+        {
+          "text": "Courage — true champions never quit regardless of the odds.",
+          "correct": false,
+          "feedback": "This is the story ego tells to justify ignoring every signal. Courage that can't hear 'stop' — from your own body, from people who love you — isn't courage. It's arrogance wearing courage's name."
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "The more successful you've been, the more you've earned the right to trust your own judgment.",
+      "back": "The opposite is true. Past success gives psychological permission to close your mind (the 'earned dogmatism effect'). The more you've been right, the less you feel obligated to check whether you still are. Arrogance isn't the opposite of confidence — it's confidence that stopped updating."
+    },
+    {
+      "type": "before-after",
+      "context": "Two CEOs take over companies that need transformation.",
+      "scenarioA": {
+        "label": "The 'I know the answer' CEO",
+        "text": "Arrives with a bold 100-day plan, rejects pushback from executives who know the company, says 'I was hired to fix this — trust me.' Within a year, key talent leaves and the board intervenes."
+      },
+      "scenarioB": {
+        "label": "Satya Nadella at Microsoft",
+        "text": "Projects confidence in the direction (cloud, AI) while staying explicitly humble about the details. Hands executives a book on growth mindset. Says 'We need to go from know-it-alls to learn-it-alls.' Stock price rises tenfold."
+      },
+      "correctScenario": "B",
+      "explanation": "Confidence in direction plus humility about details keeps the feedback loop open. Nadella's approach compounded because it could absorb new information. The first CEO's certainty was a wall — it felt like strength but produced the brittleness of arrogance."
+    },
+    {
+      "type": "drag-match",
+      "instruction": "Put these checks for whether you've crossed from confidence to arrogance in the right order:",
+      "items": [
+        { "id": "a", "text": "After a strong stance, ask: 'What would change my mind?'" },
+        {
+          "id": "b",
+          "text": "Notice your internal response to pushback — curiosity or irritation?"
+        },
+        { "id": "c", "text": "Check: is your certainty backed by current work or past wins?" },
+        {
+          "id": "d",
+          "text": "Ask people close to you: 'When did I last change my mind because of something you said?'"
+        }
+      ],
+      "correctOrder": ["a", "b", "c", "d"]
+    }
+  ],
+  "principle": {
+    "text": "Confidence says 'I can handle what comes.' Arrogance says 'I already know what's coming.'",
+    "subtext": "The line between them isn't volume or boldness. It's whether the feedback loop is still open — whether new information can still get in and change your mind. The moment it can't, confidence has become a wall instead of a foundation."
+  },
+  "reflection": "Ask someone close to you — not 'am I arrogant?' but 'when was the last time I changed my mind because of something you said?' If they struggle to remember, what does that tell you about whether your feedback loop is still open?"
+}
