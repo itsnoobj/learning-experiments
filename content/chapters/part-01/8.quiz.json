@@ -1,0 +1,83 @@
+{
+  "chapterId": "8",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "A product manager has been gathering data on a new feature for three weeks. The team is waiting. She has 75% confidence in the direction but keeps scheduling 'one more user interview' before committing.",
+      "options": [
+        {
+          "text": "Schedule the interview — more data always leads to better decisions.",
+          "correct": false,
+          "feedback": "Research shows decisions made at 70% information are almost as good as those at 95% — but arrive weeks earlier. The last 25% costs enormously in time and delivers almost nothing in quality. This is anxiety-soothing, not decision-improving."
+        },
+        {
+          "text": "Ask: 'Is this a one-way door or a two-way door?' If reversible, decide now with what she has.",
+          "correct": true,
+          "feedback": "Most decisions are two-way doors — reversible if wrong. Asking this question exposes whether the delay is genuine caution or a disguised refusal to accept risk. At 75% confidence on a reversible decision, the cost of waiting likely exceeds the cost of being wrong."
+        },
+        {
+          "text": "Set a deadline of one more week to feel fully prepared, then commit no matter what.",
+          "correct": false,
+          "feedback": "This still feeds the pattern — 'just one more week' is the same mechanism with a time limit bolted on. The question isn't when to stop gathering. It's whether the gathering is serving the decision or soothing the nervous system."
+        }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "Einstein spent years trying to disprove Heisenberg's uncertainty principle — not because the math was wrong, but because what it proved felt unbearable to him.",
+      "question": "What force drove Einstein's resistance to a mathematically sound proof?",
+      "options": [
+        {
+          "text": "Ego — his identity as 'the person who understands the universe' was threatened by fundamental unknowability.",
+          "correct": true,
+          "feedback": "Einstein's entire self-image rested on the universe being deterministic and knowable. Heisenberg wasn't threatening his equations — he was threatening his identity as someone who could, given enough effort, know everything."
+        },
+        {
+          "text": "Scientific rigour — he was simply holding the theory to high standards.",
+          "correct": false,
+          "feedback": "The math was correct and experiments confirmed it. His resistance outlasted every evidential test. This wasn't rigour — it was existential discomfort dressed as methodology."
+        },
+        {
+          "text": "Status — he didn't want a younger physicist to overshadow his legacy.",
+          "correct": false,
+          "feedback": "Einstein's legacy was already secure. The resistance was deeper than status — it was about whether the universe itself matched the story he'd built his identity around."
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "Waiting for more information before deciding is always the responsible, careful thing to do.",
+      "back": "Waiting for certainty in an uncertain situation is itself a decision — usually the worst one. The cost of a wrong decision is visible; the cost of no decision hides in missed opportunities, lost momentum, and eroded trust. Seeking more data often isn't about making a better choice — it's about soothing anxiety."
+    },
+    {
+      "type": "before-after",
+      "context": "An engineering director must choose between two architecture approaches for a new service.",
+      "scenarioA": {
+        "label": "The certainty-seeker",
+        "text": "Commissions a six-week spike, brings in two consultants, schedules four architecture reviews. Six weeks later, the market window has closed and a competitor shipped first."
+      },
+      "scenarioB": {
+        "label": "The 70% decider",
+        "text": "Asks 'is this reversible?' — it is, because the service can be re-platformed. Picks the approach with 70% confidence, ships in two weeks, and course-corrects based on real traffic data."
+      },
+      "correctScenario": "B",
+      "explanation": "For reversible decisions, speed beats certainty. The cost of being wrong was a future migration; the cost of waiting was a lost market window. The first director paid for a feeling of certainty that delivered almost no decision-quality improvement."
+    },
+    {
+      "type": "drag-match",
+      "instruction": "Put these steps for deciding under uncertainty in the right order:",
+      "items": [
+        { "id": "a", "text": "Name the door — is this decision reversible or irreversible?" },
+        { "id": "b", "text": "Ask: what's the cost of waiting?" },
+        { "id": "c", "text": "Separate information-seeking from anxiety-soothing" },
+        { "id": "d", "text": "Check your certainty budget — are you past 70%?" }
+      ],
+      "correctOrder": ["a", "b", "c", "d"]
+    }
+  ],
+  "principle": {
+    "text": "The demand for certainty is not caution — it's a refusal to accept how the world actually works.",
+    "subtext": "The universe operates on probability, not certainty. Waiting for complete information isn't wisdom — it's a disguised refusal to accept risk, and it carries its own risk: the cost of standing still while the world moves."
+  },
+  "reflection": "What decision are you currently delaying? Honestly — will one more piece of information actually change what you decide, or will it just make you feel better about a decision you've already effectively made?"
+}
