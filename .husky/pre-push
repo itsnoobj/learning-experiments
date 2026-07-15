@@ -8,4 +8,8 @@ else
   echo "pre-push: skipping sync-assets (install librsvg + jq for local validation)"
 fi
 
+# Verify all available missions have complete assets (chapter, quiz, svg, audio)
+echo "pre-push: checking mission completeness..."
+node scripts/check-missions.mjs || exit 1
+
 cd apps/web && npx vitest run
