@@ -211,13 +211,19 @@ async function findContentFile(id: string, suffix: string): Promise<string | nul
     .sort();
 
   for (const part of partDirs) {
-    const candidate = path.join(root, part, `${id}${suffix}`);
+    // Per-mission folder structure: part-XX/{id}/{id}{suffix}
+    const nested = path.join(root, part, id, `${id}${suffix}`);
     try {
-      await fs.access(candidate);
-      return candidate;
-    } catch {
-      // Not in this part; keep scanning.
-    }
+      await fs.access(nested);
+      return nested;
+    } catch {}
+
+    // Legacy flat structure: part-XX/{id}{suffix}
+    const flat = path.join(root, part, `${id}${suffix}`);
+    try {
+      await fs.access(flat);
+      return flat;
+    } catch {}
   }
 
   return null;
@@ -247,16 +253,36 @@ async function listContentIds(suffix: string, exclude?: string): Promise<string[
 
   const ids = new Set<string>();
   for (const part of partDirs) {
-    let files: string[];
+    const partPath = path.join(root, part);
+    let items: import('fs').Dirent[];
     try {
-      files = await fs.readdir(path.join(root, part));
+      items = await fs.readdir(partPath, { withFileTypes: true });
     } catch {
       continue;
     }
-    for (const file of files) {
-      if (exclude && file.endsWith(exclude)) continue;
-      if (file.endsWith(suffix)) {
-        ids.add(file.slice(0, -suffix.length));
+
+    for (const item of items) {
+      if (item.isDirectory()) {
+        // Per-mission folder: part-XX/{id}/{id}{suffix}
+        let files: string[];
+        try {
+          files = await fs.readdir(path.join(partPath, item.name));
+        } catch {
+          continue;
+        }
+        for (const file of files) {
+          if (exclude && file.endsWith(exclude)) continue;
+          if (file.endsWith(suffix)) {
+            ids.add(file.slice(0, -suffix.length));
+          }
+        }
+      } else {
+        // Legacy flat: part-XX/{id}{suffix}
+        const file = item.name;
+        if (exclude && file.endsWith(exclude)) continue;
+        if (file.endsWith(suffix)) {
+          ids.add(file.slice(0, -suffix.length));
+        }
       }
     }
   }

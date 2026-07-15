@@ -35,9 +35,16 @@ function findInParts(filename) {
       .filter(d => d.isDirectory() && d.name.startsWith('part-'))
       .map(d => d.name);
 
+    const id = filename.split('.')[0];
+
     for (const part of parts) {
-      const candidate = join(CONTENT_DIR, part, filename);
-      if (existsSync(candidate)) return candidate;
+      // Per-mission folder: part-XX/{id}/{filename}
+      const nested = join(CONTENT_DIR, part, id, filename);
+      if (existsSync(nested)) return nested;
+
+      // Legacy flat: part-XX/{filename}
+      const flat = join(CONTENT_DIR, part, filename);
+      if (existsSync(flat)) return flat;
     }
   } catch {}
   return null;

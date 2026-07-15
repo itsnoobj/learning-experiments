@@ -48,7 +48,8 @@ trap cleanup EXIT
 shopt -s nullglob
 
 count=0
-for svg in "$CONTENT_DIR"/*/*.svg; do
+for svg in "$CONTENT_DIR"/*/*/*.svg "$CONTENT_DIR"/*/*.svg; do
+  [ -f "$svg" ] || continue
   id="$(basename "$svg" .svg)"
 
   # Content image used inside the app (800px wide, aspect preserved).
@@ -77,7 +78,7 @@ fi
 # Manifest of chapter ids that have content (excludes *.quiz.json). Built with
 # jq so ids are always valid JSON strings, sorted numerically.
 find "$CONTENT_DIR" -name '*.json' ! -name '*.quiz.json' -exec basename {} .json \; \
-  | jq -R . | jq -s 'sort_by(tonumber? // .)' > "$ROOT/content/available.json"
+  | sort -u | jq -R . | jq -s 'sort_by(tonumber? // .)'> "$ROOT/content/available.json"
 
 echo "✓ Converted $count SVG(s) → PNGs in apps/web/public/content/"
 echo "✓ Generated $count OG image(s) (${OG_W}x${OG_H}) in apps/web/public/og/"
