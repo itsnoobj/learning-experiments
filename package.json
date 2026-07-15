@@ -11,6 +11,7 @@
     "test": "turbo test",
     "lint": "turbo lint",
     "format": "prettier --write .",
+    "check-missions": "node scripts/check-missions.mjs",
     "prepare": "husky"
   },
   "devDependencies": {
