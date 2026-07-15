@@ -10,6 +10,7 @@ test-results/
 
 # Generated intermediates
 content/chapters/part-*/[0-9]*.md
+*.quiz-prompt.txt
 
 # misc
 .DS_Store

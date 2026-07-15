@@ -26,7 +26,7 @@ So he goes back. To free the others.
 
 And they think he's insane.
 
-His eyes can't readjust to the dark. He stumbles. He can't name the shadows as quickly as they can. To them, the journey to the light *broke* him. He's proof that leaving is dangerous.
+His eyes can't readjust to the dark. He stumbles. He can't name the shadows as quickly as they can. To them, the journey to the light _broke_ him. He's proof that leaving is dangerous.
 
 They don't just refuse to go. If anyone tries to drag them out, Plato writes, **they would kill him if they could.**
 
@@ -36,7 +36,7 @@ They don't just refuse to go. If anyone tries to drag them out, Plato writes, **
 
 In the 1990s, Kodak engineers built one of the first digital cameras. They showed it to leadership. The response wasn't excitement — it was burial.
 
-Kodak made its money from film. Everyone in the company — from executives to factory workers — had built their identity, expertise, and daily routines around film. Digital wasn't just a new product. It was a threat to *who they were*.
+Kodak made its money from film. Everyone in the company — from executives to factory workers — had built their identity, expertise, and daily routines around film. Digital wasn't just a new product. It was a threat to _who they were_.
 
 They didn't lack information. They lacked the willingness to let go of a self-image that was already dying.
 
@@ -48,7 +48,7 @@ Kodak filed for bankruptcy in 2012 — killed not by ignorance, but by the inabi
 
 **People don't resist change. They resist loss.**
 
-Every change asks someone to give something up — familiarity, competence, status, identity, comfort. The new thing might be better *in the future*, but the loss is felt *right now*. And the brain weighs losses roughly twice as heavily as gains.
+Every change asks someone to give something up — familiarity, competence, status, identity, comfort. The new thing might be better _in the future_, but the loss is felt _right now_. And the brain weighs losses roughly twice as heavily as gains.
 
 ---
 
@@ -60,9 +60,9 @@ Three forces working together:
 
 **Loss aversion.** Psychologically, losing 100 dollars hurts more than gaining 200 feels good. Change is always framed as "give up the known for the uncertain." The math never feels fair.
 
-**Mere exposure effect.** We prefer things simply because they're familiar. The current way — however broken — feels safe because it's *known*. The new way could be better, but it could also be a disaster. The status quo has a built-in advantage just by existing.
+**Mere exposure effect.** We prefer things simply because they're familiar. The current way — however broken — feels safe because it's _known_. The new way could be better, but it could also be a disaster. The status quo has a built-in advantage just by existing.
 
-This is why people say "I'm open to change" and then resist every specific instance of it. In the abstract, change is fine. In the specific — when it touches *my* routine, *my* expertise, *my* comfort — it's a different story.
+This is why people say "I'm open to change" and then resist every specific instance of it. In the abstract, change is fine. In the specific — when it touches _my_ routine, _my_ expertise, _my_ comfort — it's a different story.
 
 ---
 
@@ -72,7 +72,7 @@ This is why people say "I'm open to change" and then resist every specific insta
 
 **If you give up:** Nothing changes. The slow decay continues. Kodak stays comfortable until it doesn't exist.
 
-The trap is thinking this is a logic problem. You present better data, clearer arguments, more compelling charts. But you're arguing with *emotion* using *reason*. It's like trying to extinguish a fire by explaining the chemistry of combustion.
+The trap is thinking this is a logic problem. You present better data, clearer arguments, more compelling charts. But you're arguing with _emotion_ using _reason_. It's like trying to extinguish a fire by explaining the chemistry of combustion.
 
 ---
 

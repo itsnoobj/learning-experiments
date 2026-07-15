@@ -65,12 +65,7 @@
           "text": "Show up generous in public, not needing the other person to lose"
         }
       ],
-      "correctOrder": [
-        "a",
-        "b",
-        "c",
-        "d"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     },
     {
       "type": "card-flip",
