@@ -1,0 +1,88 @@
+{
+  "chapterId": "14",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "You have a major presentation due tomorrow. You've opened the file six times today and closed it each time. It's 8 PM and you still haven't started. Your instinct is to tell yourself to just push through.",
+      "options": [
+        {
+          "text": "Set a timer for 2 hours and force yourself to sit until it's done.",
+          "correct": false,
+          "feedback": "Willpower against a threat response is a losing battle. The brain treats 'make a great presentation' as too large and uncertain — forcing a marathon session adds pressure without reducing the overwhelm."
+        },
+        {
+          "text": "Ask: 'What's one sentence I could write for the opening slide right now?' and do only that.",
+          "correct": true,
+          "feedback": "This is the Apollo 13 principle — shrink the question until action is possible. Once you write one sentence, the paralysis often breaks because you've proven movement is possible. The rest follows."
+        },
+        {
+          "text": "Accept that you work best under pressure and wait until the adrenaline kicks in at midnight.",
+          "correct": false,
+          "feedback": "Sometimes this works — but it's not 'working best under pressure.' It's using panic to override the freeze response. The cost is chronic stress and work quality that's reactive instead of considered."
+        }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "A team lead has been procrastinating on a difficult performance review for three weeks. She's done everything else on her list — even low-priority tasks — but can't seem to start this one.",
+      "question": "What's most likely driving the avoidance?",
+      "options": [
+        {
+          "text": "Task paralysis — the conversation has high uncertainty and no clear 'right' first step, so her brain blocks initiation.",
+          "correct": true,
+          "feedback": "High-stakes + high-ambiguity = amygdala flagging it as threat. The brain then diverts to tasks that feel completable (low-priority items) to generate substitute dopamine. It's not laziness — it's a mismatch between threat level and clarity of first action."
+        },
+        {
+          "text": "She's lazy and needs better time management.",
+          "correct": false,
+          "feedback": "She did everything else. That's the opposite of lazy. Selective avoidance of one specific high-stakes task while completing others is the signature of task paralysis, not poor discipline."
+        },
+        {
+          "text": "She doesn't care enough about the review to prioritize it.",
+          "correct": false,
+          "feedback": "If she didn't care, she wouldn't feel the weight of it for three weeks. The avoidance is proportional to how much she cares — not inversely related."
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "If I just had more willpower, I wouldn't freeze up before important tasks.",
+      "back": "Willpower doesn't override a threat response — it fights one. And it loses. The Apollo 13 crew didn't muster more willpower. They asked a smaller question. Paralysis breaks from below (shrink the step) not from above (force harder). The issue was never insufficient will. It was an oversized first move."
+    },
+    {
+      "type": "drag-match",
+      "instruction": "Order these from most likely to break task paralysis to least likely:",
+      "items": [
+        "Define a first step that takes under 2 minutes",
+        "Name out loud: 'I'm frozen because this feels too big'",
+        "Set a timer for just 7 minutes of work",
+        "Tell yourself 'just push through — you've done harder things'"
+      ],
+      "correctOrder": [
+        "Define a first step that takes under 2 minutes",
+        "Name out loud: 'I'm frozen because this feels too big'",
+        "Set a timer for just 7 minutes of work",
+        "Tell yourself 'just push through — you've done harder things'"
+      ]
+    },
+    {
+      "type": "before-after",
+      "context": "An engineer needs to write a design doc for a complex new system. The scope is large and the architecture is unclear.",
+      "scenarioA": {
+        "label": "Fighting the freeze",
+        "text": "Blocks 4 hours on the calendar for 'Write design doc.' Opens a blank page. Stares. Checks Slack. Opens the page again. Writes a sentence. Deletes it. Two hours later, gives up."
+      },
+      "scenarioB": {
+        "label": "Apollo 13 approach",
+        "text": "Asks: 'What's one thing I know for certain about this system?' Writes that down. Then asks: 'What's the next question I'd need to answer?' Writes that. Thirty minutes later, has a rough outline without ever trying to 'write the doc.'"
+      },
+      "correctScenario": "B",
+      "explanation": "Scenario A treats the whole doc as one action. The brain can't find a starting point in 'write a complex document' so it produces blank-page paralysis. Scenario B decomposes into answerable questions — each one small enough that the threat response doesn't fire. The doc assembles itself from answers."
+    }
+  ],
+  "principle": {
+    "text": "Motivation disappears because your brain can't find a first move in a problem that feels too large.",
+    "subtext": "The fix is never 'try harder.' It's always 'make the next step smaller until your nervous system stops blocking it.'"
+  },
+  "reflection": "What's the task you've been avoiding longest right now? What would a two-minute version of starting it look like — something so small your brain can't justify blocking it?"
+}

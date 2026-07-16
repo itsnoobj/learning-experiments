@@ -1,0 +1,88 @@
+{
+  "chapterId": "16",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "Your team just shipped a feature they'd been excited about. Management announces a cash bonus tied to how many users adopt it in the next quarter. You notice the team's conversations shift from 'this is a cool problem' to 'how do we hit the metric.'",
+      "options": [
+        {
+          "text": "This is fine — incentives align the team with business goals. That's how companies work.",
+          "correct": false,
+          "feedback": "Alignment happened, but at a cost. The team's curiosity — the engine that made the feature creative in the first place — has been replaced by metric optimization. The next feature won't have the same energy because the reason has shifted from intrinsic to transactional."
+        },
+        {
+          "text": "Flag the risk: contingent rewards can replace intrinsic motivation. Suggest recognizing effort and learning instead of tying bonuses to specific adoption numbers.",
+          "correct": true,
+          "feedback": "Contingent rewards ('if X then Y') are the mechanism that replaces internal drive. Recognition of effort and learning preserves the 'I do this because I care' engine while still acknowledging achievement. The distinction is between rewarding the person vs. purchasing the behavior."
+        },
+        {
+          "text": "Ask management to increase the bonus — if the incentive is big enough, motivation will stay high.",
+          "correct": false,
+          "feedback": "More money doesn't fix the replacement problem. It accelerates it. Now the team needs an even bigger reward next time to feel the same engagement. The old man's trick works in reverse too: once you're paying, you can only pay more. Never less."
+        }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "A developer used to contribute to open source every weekend for fun. Their company started a '20% time' program rewarding open source contributions with promotion points. Six months later, they haven't contributed to anything outside that program.",
+      "question": "What happened to their weekend contributions?",
+      "options": [
+        {
+          "text": "Overjustification — the promotion points replaced curiosity as the reason. Now contributing without points feels like unpaid work.",
+          "correct": true,
+          "feedback": "The brain reappraised: 'Why do I do this? For promotion points.' Once that frame is set, contributing without the external reward feels like loss rather than play. The internal reason was overwritten, not supplemented."
+        },
+        {
+          "text": "They're just busy and the program gives them structured time.",
+          "correct": false,
+          "feedback": "They had time before — weekends. The difference isn't availability. It's that weekend contributions now feel voluntary in the bad sense: 'why would I do this for free when the company pays for it during the week?' The reward created a comparison that didn't exist before."
+        },
+        {
+          "text": "They realized they only liked open source because it looked good on their resume.",
+          "correct": false,
+          "feedback": "They did it for years before any career benefit was attached. The pattern is textbook overjustification: introduce an external reason, watch the internal reason fade. They didn't discover a hidden motive — one was installed over the original."
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "Paying people more for what they love should make them love it more.",
+      "back": "The opposite is often true. Payment converts the relationship from 'I do this because I choose to' into 'I do this because I'm compensated.' Now removing the payment removes the reason entirely. The old man understood: making something transactional doesn't add motivation. It replaces motivation with dependency on the transaction."
+    },
+    {
+      "type": "before-after",
+      "context": "A manager wants their team of designers to be more creative and experimental in their work.",
+      "scenarioA": {
+        "label": "The old man's mistake (in reverse)",
+        "text": "Announces: 'Best experimental design each month wins a $500 bonus.' The team produces safe, crowd-pleasing work that looks experimental but takes no real risks — because now failure has a cost (losing the bonus)."
+      },
+      "scenarioB": {
+        "label": "Preserving intrinsic drive",
+        "text": "Creates 'experiment Fridays' with no evaluation, no prizes, just protected time. Occasionally, after the fact, highlights surprising discoveries in team meetings. The team takes genuine risks because there's nothing to lose."
+      },
+      "correctScenario": "B",
+      "explanation": "Contingent rewards ('if you do X, you get Y') kill risk-taking because failure becomes costly. Protected time with surprise recognition preserves intrinsic motivation because the reason remains internal. The designs that actually break ground come from play, not competition."
+    },
+    {
+      "type": "drag-match",
+      "instruction": "Rank these reward approaches from most likely to preserve intrinsic motivation to most likely to kill it:",
+      "items": [
+        "Surprise recognition after good work (no prior promise)",
+        "Protected time for self-directed exploration",
+        "Performance bonus tied to creative output metrics",
+        "Pay raise conditional on specific measurable targets"
+      ],
+      "correctOrder": [
+        "Surprise recognition after good work (no prior promise)",
+        "Protected time for self-directed exploration",
+        "Performance bonus tied to creative output metrics",
+        "Pay raise conditional on specific measurable targets"
+      ]
+    }
+  ],
+  "principle": {
+    "text": "External rewards don't add to internal motivation — they replace it.",
+    "subtext": "And replacements, once established, can't be removed without leaving a vacuum. The most dangerous incentive isn't too little reward. It's a reward that teaches you to forget why you cared in the first place."
+  },
+  "reflection": "What's something you used to do for love that now feels like an obligation? When did the shift happen — and was there a reward (money, recognition, expectation) that may have replaced your original reason?"
+}
