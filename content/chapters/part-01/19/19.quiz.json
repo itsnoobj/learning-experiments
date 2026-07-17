@@ -1,0 +1,88 @@
+{
+  "chapterId": "19",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "A software engineer, three years into her career, feels restless. She's good at her job but doesn't feel 'called' to it. She sees peers who seem utterly certain about their paths — one left to start a climate tech company, another pivoted to medicine. She's considering quitting to 'find herself' through travel and introspection.",
+      "options": [
+        {
+          "text": "She should quit and travel — sometimes you need to step outside your life to see it clearly. The epiphany will come with enough reflection.",
+          "correct": false,
+          "feedback": "This assumes purpose arrives through thinking rather than doing. Research shows that purpose crystallizes through engagement, not detachment. More introspection without new commitments usually produces more confusion, not clarity."
+        },
+        {
+          "text": "She should stay and commit harder to her current job — purpose comes from going deep in one thing, and she hasn't given it enough time.",
+          "correct": false,
+          "feedback": "Grinding through something that genuinely doesn't interest you won't generate purpose. The issue isn't insufficient commitment to her current path — it's that she's comparing her messy middle to other people's curated endpoints."
+        },
+        {
+          "text": "She should stop comparing timelines and take the next available step that genuinely interests her — a side project, a new team, a skill — and see what accumulates.",
+          "correct": true,
+          "feedback": "Purpose assembles through accumulated action, not grand decisions. Kalam didn't plan his trajectory — he took the next door that opened. Her job isn't to find the final answer. It's to take one genuine step and see what it connects to."
+        }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "Kalam failed the Air Force selection — he was ninth on the list with only eight spots. Instead of continuing to pursue aviation, he applied to DRDO and eventually built India's space program.",
+      "question": "What primarily enabled Kalam to turn a failure into a path toward purpose?",
+      "options": [
+        {
+          "text": "He had a clear vision of his purpose from the start and simply found another path to the same destination.",
+          "correct": false,
+          "feedback": "This retrofits clarity onto a messy process. Kalam didn't know he'd build rockets. He simply took the next available door. Purpose emerged from engagement, not foresight."
+        },
+        {
+          "text": "He treated each step as the next available door rather than the final answer — allowing purpose to assemble through accumulated commitment.",
+          "correct": true,
+          "feedback": "The key was his willingness to commit to what was available without requiring it to be the ultimate destination. Each genuine step created the conditions for the next. Purpose was residue, not revelation."
+        },
+        {
+          "text": "He was naturally resilient and didn't feel disappointment the way others do — some people are just built for setbacks.",
+          "correct": false,
+          "feedback": "Kalam described the Air Force rejection as devastating. Resilience isn't the absence of pain — it's the willingness to take the next step while still hurting. The relevant force is identity flexibility, not emotional immunity."
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "You need to discover your purpose before you can meaningfully commit to anything.",
+      "back": "Research shows the opposite: purpose follows investment, it rarely precedes it. Bill Damon's studies found that people with strong life purpose usually started with mild curiosity, not grand clarity. Commitment came first. The sense of purpose crystallized around the doing, not before it."
+    },
+    {
+      "type": "drag-match",
+      "instruction": "Put these steps in the order that purpose actually assembles (according to research), not the order we assume it should:",
+      "items": [
+        "Curiosity about something specific",
+        "Commitment deepens through engagement",
+        "Pattern recognition in retrospect",
+        "Sense of purpose crystallizes"
+      ],
+      "correctOrder": [
+        "Curiosity about something specific",
+        "Commitment deepens through engagement",
+        "Pattern recognition in retrospect",
+        "Sense of purpose crystallizes"
+      ]
+    },
+    {
+      "type": "before-after",
+      "context": "Two people, both 28, both feeling lost about life direction.",
+      "scenarioA": {
+        "label": "The Revelation Seeker",
+        "text": "Reads books about purpose, takes personality tests, journals daily, quits job to travel for six months 'to figure it out.' Returns home with beautiful Instagram photos and the same gnawing uncertainty. Has spent a year optimizing for insight without new commitments."
+      },
+      "scenarioB": {
+        "label": "The Next-Step Taker",
+        "text": "Notices she's unusually energized by teaching moments at work. Volunteers to mentor an intern. Starts writing short explanations of complex topics. After a year, realizes she's accidentally built a teaching practice. Didn't plan it — just followed interest and let commitment accumulate."
+      },
+      "correctScenario": "B",
+      "explanation": "Purpose assembles from the residue of action, not from the clarity of thought. Person B didn't find purpose through reflection — she generated it through accumulated small commitments. The signal got stronger because she kept doing, not because she kept thinking."
+    }
+  ],
+  "principle": {
+    "text": "Purpose is residue, not revelation.",
+    "subtext": "You find it by doing things long enough for meaning to crystallize around the doing — not by thinking until clarity arrives."
+  },
+  "reflection": "Look at the last year: what activities gave you energy even when they were hard? What did you do that you'd do even without being paid or praised? What pattern do you see forming that you haven't named yet?"
+}

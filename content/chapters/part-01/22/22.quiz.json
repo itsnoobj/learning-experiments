@@ -1,0 +1,88 @@
+{
+  "chapterId": "22",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "A first-generation college graduate joins a prestigious consulting firm. During a team dinner, colleagues casually reference boarding school stories and family holiday homes. She feels a familiar tightening — the sense that she doesn't belong here. She has an insight about the client problem they're discussing, but the words won't come out.",
+      "options": [
+        {
+          "text": "She should work harder to fit in — learn the cultural references, adopt the mannerisms, minimize the differences. Eventually the shame will fade as she assimilates.",
+          "correct": false,
+          "feedback": "This is Karna's strategy: prove your way out of shame through performance and mimicry. It doesn't work because the hiding itself reinforces the shame. Every successful performance says 'I belong' while the internal voice says 'only because they don't know the real you.'"
+        },
+        {
+          "text": "She should recognize shame is silencing her, and speak her insight — not as a confession of background, but simply as a contribution. The act of speaking breaks the loop.",
+          "correct": true,
+          "feedback": "Shame survives in silence. Speaking — even when it feels like exposure — is what breaks the cycle. She doesn't need to announce her background. She just needs to stop letting shame veto her contributions. The insight has value regardless of her origin."
+        },
+        {
+          "text": "She should accept that these environments weren't designed for people like her and find a workplace where she naturally fits instead.",
+          "correct": false,
+          "feedback": "This is shame speaking in a reasonable voice. 'People like me don't belong here' sounds like self-awareness but is actually shame's core narrative. Her discomfort is real — but the conclusion that she should therefore leave is shame deciding for her."
+        }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "Karna fights on Duryodhana's side in the Kurukshetra war — the side he knows is unjust — because Duryodhana crowned him king when no one else would acknowledge his skill.",
+      "question": "What force primarily drives Karna's loyalty to the wrong side?",
+      "options": [
+        {
+          "text": "Genuine friendship and shared values with Duryodhana — they truly believed in the same cause.",
+          "correct": false,
+          "feedback": "Karna knew Duryodhana's cause was unjust. His loyalty wasn't values-based — it was gratitude-based. When shame has made you invisible, anyone who sees you earns a loyalty that transcends judgment. That's not friendship. That's debt."
+        },
+        {
+          "text": "Shame-driven gratitude — when someone validates you in the moment shame is loudest, you become loyal to them regardless of alignment.",
+          "correct": true,
+          "feedback": "Shame makes us loyal to whoever first relieves it. Duryodhana's validation wasn't friendship — it was a political move. But to a man publicly humiliated for his birth, it felt like rescue. And rescue creates debt that overrides values, judgment, even self-preservation."
+        },
+        {
+          "text": "Strategic self-interest — Duryodhana's side offered him the best path to power and recognition.",
+          "correct": false,
+          "feedback": "Karna already had extraordinary skill. Krishna offered him the Pandava throne — revealing his true royal birth. Karna refused. His loyalty to Duryodhana wasn't strategic. It was the binding force of shame-gratitude: 'he saw me when no one else would.'"
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "If people knew the full truth about my background / past / struggles, they would think less of me.",
+      "back": "This is shame's core prediction — and it's almost always wrong. Research shows that vulnerability generates connection, not rejection, in most contexts. The thing you're hiding is often the source of your depth, empathy, and unique perspective. Kintsugi teaches that the crack, filled with gold, becomes the most beautiful part. What you hide as weakness is frequently what others would recognize as strength."
+    },
+    {
+      "type": "drag-match",
+      "instruction": "Order shame's self-reinforcing loop from trigger to entrenchment:",
+      "items": [
+        "Something triggers the 'I don't belong' feeling",
+        "Shame predicts that speaking will confirm unworthiness",
+        "You stay silent to avoid exposure",
+        "Silence is interpreted by shame as proof: 'See? You know you don't belong'"
+      ],
+      "correctOrder": [
+        "Something triggers the 'I don't belong' feeling",
+        "Shame predicts that speaking will confirm unworthiness",
+        "You stay silent to avoid exposure",
+        "Silence is interpreted by shame as proof: 'See? You know you don't belong'"
+      ]
+    },
+    {
+      "type": "before-after",
+      "context": "Two leaders both grew up in poverty — a fact they rarely share.",
+      "scenarioA": {
+        "label": "Karna's pattern",
+        "text": "Hides his background completely. Overcompensates with expensive suits, name-dropping, aggressive confidence. Is grateful to the first mentor who 'accepted' him, staying loyal even when the mentor's ethics become questionable. Spends energy maintaining an image rather than speaking his actual perspective."
+      },
+      "scenarioB": {
+        "label": "Kintsugi pattern",
+        "text": "Doesn't lead with his background, but doesn't hide it either. When relevant, shares what growing up without resources taught him — resourcefulness, reading people, operating without safety nets. His team trusts him more because he's legible. His background becomes a visible strength, not a hidden liability."
+      },
+      "correctScenario": "B",
+      "explanation": "The kintsugi pattern doesn't require theatrical vulnerability or oversharing. It simply refuses to let shame control what's visible. When the crack is shown rather than hidden, it becomes gold — a source of credibility, depth, and trust. Hiding drains energy and creates distance. Selective honesty creates connection."
+    }
+  ],
+  "principle": {
+    "text": "Shame survives in silence.",
+    "subtext": "It convinces you that hiding is safer than being seen. But every silence confirms its story. The exit is speech — even small speech — to someone who won't weaponize it."
+  },
+  "reflection": "What's one thing about your background, past, or self that you actively hide in professional settings? What would change if one trusted person knew? What is shame protecting you from — and is that protection still serving you?"
+}

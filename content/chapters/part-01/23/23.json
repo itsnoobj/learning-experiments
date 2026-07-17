@@ -1,0 +1,34 @@
+{
+  "id": "23",
+  "part": 1,
+  "section": "D",
+  "title": "How Do I Handle Envy Without Pretending It Doesn't Exist?",
+  "forces": ["status", "identity"],
+  "connections": ["10", "19", "22", "39"],
+  "audio": "23.mp3",
+  "visual": "23.svg",
+  "sections": {
+    "situation": {
+      "content": "A colleague gets promoted. You're happy for them — or you tell yourself you are. But underneath there's a twist. A heat. A question you don't want to ask out loud: why them and not me?\n\nYou know envy is supposed to be beneath you. Mature people celebrate others' success. So you perform the congratulations and carry the sting privately, where it curdles into something harder to name."
+    },
+    "story": {
+      "content": "In 1979, Larry Bird and Magic Johnson played against each other in the NCAA Championship final. It was the most-watched college basketball game in history. Magic won. Bird took it personally in a way that would define the next decade of his life.\n\nBird later admitted something remarkably honest: every single morning, the first thing he did was check the newspaper for Magic's stats from the night before. Not his own team's scores. Not the league standings. Magic's numbers. If Magic had 30 points, Bird needed 35. If Magic had 12 assists, Bird needed 13. The comparison was relentless, obsessive, and — here's the part no one talks about — incredibly productive.\n\nThis wasn't admiration. Bird was clear about that. \"I hated him,\" he said about those early years. \"I hated everything about him. His smile. His personality. The way everyone loved him.\" What Bird was describing is textbook envy — not resentment of someone undeserving, but the specific pain of seeing someone excel at the thing you've built your identity around.\n\nFor years, this envy was pure fuel. Bird trained harder than anyone in the league. He showed up to practice early and left late specifically because he was thinking about Magic. The envy didn't make him bitter — it made him better. Every skills drill was an argument with an absent rival. He won three MVPs, three championships, and reshaped what a forward could be.\n\nBut here's where the story turns interesting.\n\nIn 1991, Magic announced he was HIV-positive. The basketball world was in shock. Bird's reaction surprised everyone, including himself. He was devastated. Not politely, publicly devastated — privately gutted. \"It was like losing a brother,\" he said. A brother he'd claimed to hate for twelve years.\n\nWhat Bird realized, in that moment of potential loss, was that the envy had never been about wanting Magic to have less. It was about wanting himself to have more. Magic wasn't his enemy. Magic was his measuring stick — the thing that kept showing him where his own ceiling was. Without Magic, Bird's career would have been smaller. Not because Magic helped him, but because envy, honestly held, had been information: you care about this, you haven't reached your limit yet, keep going.\n\nThey became genuine friends. Not despite the envy — through it. The envy had been a bridge disguised as a wall. It pointed Bird toward exactly what he valued most and wouldn't let him look away.",
+      "title": "The Story"
+    },
+    "contrast": {
+      "content": "In Buddhist psychology, there's a teaching about the \"second arrow.\" The first arrow is the natural pang — you see someone succeed where you want to succeed, and it stings. That's human. Unavoidable. The second arrow is the shame of feeling envious: \"I shouldn't feel this way. What's wrong with me?\" The second arrow does more damage than the first. Most people's suffering from envy isn't the envy itself — it's the self-judgment about having it. Drop the second arrow, and the first one becomes simple information: this matters to me.",
+      "title": "The Contrast"
+    },
+    "principle": {
+      "content": "Envy is a compass, not a character flaw. It points directly at what you value most and haven't achieved yet.\n\nThe problem isn't feeling envy. It's what you do with it. Suppressed envy becomes resentment. Acknowledged envy becomes information. The question isn't \"how do I stop being envious?\" — it's \"what is this envy telling me about what I actually want?\""
+    },
+    "psychology": {
+      "content": "Evolutionary psychologists argue that envy exists because it solved a survival problem: in social species, tracking others' relative gains was essential for knowing when to compete harder for resources. Envy is literally a comparison engine — it can't be turned off because it's doing a job your brain considers critical.\n\nResearchers distinguish between \"benign envy\" (motivating: \"I want what they have, so I'll work harder\") and \"malicious envy\" (destructive: \"I want them to lose what they have\"). The same trigger can produce either response. The difference is whether you interpret the envy as information about yourself or as judgment about them.\n\nStudies show that people who acknowledge envy directly — naming it, examining what it points to — are more likely to channel it into motivation. People who suppress it (\"I shouldn't feel this way\") are more likely to experience schadenfreude and passive aggression. The suppression itself corrupts the signal. Envy acknowledged stays useful. Envy denied goes toxic.",
+      "title": "Why It Happens"
+    },
+    "move": {
+      "content": "1. Name it without the second arrow. When you feel the sting of someone else's success, say internally: \"I'm envious. That means this matters to me.\" Don't add: \"and that makes me a bad person.\" The first statement is information. The second is self-punishment that corrupts the signal.\n\n2. Ask the compass question. Envy points at values. Ask: \"What specifically am I envious of?\" Not \"their success\" — that's too vague. Drill down. Is it their visibility? Their craft? Their freedom? Their recognition? The specific answer tells you exactly what you want and aren't pursuing.\n\n3. Convert to action. Bird didn't wish Magic was worse. He made himself better. Once you know what the envy points at, ask: \"What's one thing I could do this week toward that thing?\" Envy that produces action dissolves. Envy that produces only rumination compounds.\n\n4. Separate envy from injustice. Sometimes you're envious AND the situation is unfair (someone got a promotion through politics, not merit). These are two different problems. Envy is your signal. Injustice is a system problem. Address them separately.\n\n5. Notice your measuring sticks. Bird's entire career was shaped by one person he checked himself against. Who are your measuring sticks? Are they pushing you to grow — or just making you feel small? Choose your rivals deliberately. The people you envy most will shape who you become.",
+      "title": "The Move"
+    }
+  }
+}
