@@ -1,0 +1,88 @@
+{
+  "chapterId": "26",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "A VP of Engineering announces to the company that the team will adopt a 'no crunch' policy — no more 60-hour weeks. Three months later, nothing has changed. Engineers are still working weekends. The VP hasn't mentioned the policy again.",
+      "options": [
+        {
+          "text": "The VP was lying to look good — they never intended to reduce hours. It was pure performance for company culture optics.",
+          "correct": false,
+          "feedback": "Attributing malice is usually wrong. The VP likely believed their own statement. But their real incentives (ship the product, meet board deadlines, look productive) are stronger than the stated commitment. It's not deception — it's an unexamined incentive hierarchy."
+        },
+        {
+          "text": "The VP's structural incentives (ship dates, board pressure, visible productivity) conflict with the stated commitment. The incentives won. They probably don't even realize the contradiction.",
+          "correct": true,
+          "feedback": "When stated motives and structural incentives conflict, incentives win almost every time — and the person will tell themselves a story about why the stated motive is still active ('we're working on it'). This isn't malice. It's the motivated reasoning that makes us all unreliable narrators of our own priorities."
+        },
+        {
+          "text": "The VP meant it but the team culture is too entrenched — leadership can't change culture alone no matter how committed they are.",
+          "correct": false,
+          "feedback": "Culture change IS possible from leadership — but only when the leader's incentive structure is realigned to support it. If the VP's bonus depends on shipping by Q3, 'no crunch' will lose to 'hit the date' every time. The issue isn't powerlessness. It's incentive conflict."
+        }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "Elizabeth Holmes started Theranos genuinely wanting to revolutionize healthcare. As the technology failed, she escalated with fake demonstrations and intimidation of whistleblowers rather than admitting the technology wasn't ready.",
+      "question": "What drove the escalation from vision to fraud?",
+      "options": [
+        {
+          "text": "Greed — she wanted to maintain her billionaire status and couldn't afford to admit failure.",
+          "correct": false,
+          "feedback": "Holmes lived modestly and wasn't motivated by wealth. The real driver was deeper: identity preservation. 'I am a visionary who will change healthcare' was so fused with her self-concept that admitting failure felt like annihilation — not financial loss, but existential threat."
+        },
+        {
+          "text": "Identity preservation — the real motive (being seen as a visionary) gradually overtook the stated motive (help patients) without conscious choice, because admitting failure would destroy the identity.",
+          "correct": true,
+          "feedback": "The gap widened not through deliberate fraud but through the unconscious priority of identity over mission. Each rationalization ('it'll work eventually') preserved the visionary identity while the stated mission receded. People don't always know their own real motives — especially when those motives are about who they need to be."
+        },
+        {
+          "text": "Sunk cost fallacy — she'd invested too many years to turn back, so she kept pushing forward even when the evidence was against her.",
+          "correct": false,
+          "feedback": "Sunk cost is a factor, but it doesn't explain the specific escalation to fraud. What makes someone fabricate results isn't 'I've spent too long on this' — it's 'admitting failure would destroy who I am.' The identity motive is what makes the sunk cost feel unsurvivable."
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "If someone consistently doesn't do what they say they'll do, they're dishonest and can't be trusted.",
+      "back": "More often than dishonesty, the gap reveals incentive conflict. People follow their strongest incentive, not their stated one — and they usually don't realize the contradiction. Your manager who doesn't deliver the promised promotion isn't evil; they're caught between competing pressures they haven't examined. Watch incentives, not words. Make it safe to tell the truth. Deception is often a safety strategy, not a character flaw."
+    },
+    {
+      "type": "before-after",
+      "context": "A startup founder promises investors the product will be ready for launch in 6 months. It's not even close.",
+      "scenarioA": {
+        "label": "The naive response",
+        "text": "Investors feel betrayed: 'He lied to us.' They pull funding. The founder is shocked — he genuinely believed the timeline when he said it. Nobody examines the structural incentives (fundraising requires optimistic timelines) that made the stated motive impossible to deliver on."
+      },
+      "scenarioB": {
+        "label": "The incentive-aware response",
+        "text": "An experienced investor asks: 'What are you incentivized to tell me, and what's the real timeline if your funding didn't depend on optimism?' The founder, given safety to be honest, says: '12 months.' They plan accordingly. The gap between stated and real motives closes when honesty becomes safe."
+      },
+      "correctScenario": "B",
+      "explanation": "The gap between words and actions usually closes when you make it safe to tell the truth. The founder wasn't lying — he was following the incentive structure of fundraising (optimism required). When someone created space for honesty, the stated motive aligned with the real one. Understanding incentives produces better outcomes than prosecuting character."
+    },
+    {
+      "type": "drag-match",
+      "instruction": "Order these from least to most accurate explanation when someone doesn't follow through on a commitment:",
+      "items": [
+        "They're a liar and can't be trusted",
+        "They forgot or got overwhelmed by competing priorities",
+        "Their structural incentives conflict with their stated commitment",
+        "They don't know their own real motives — identity or safety needs override stated goals unconsciously"
+      ],
+      "correctOrder": [
+        "They're a liar and can't be trusted",
+        "They forgot or got overwhelmed by competing priorities",
+        "Their structural incentives conflict with their stated commitment",
+        "They don't know their own real motives — identity or safety needs override stated goals unconsciously"
+      ]
+    }
+  ],
+  "principle": {
+    "text": "Watch the incentives, not the words.",
+    "subtext": "The gap between what people say and do usually isn't deception — it's a hierarchy of motives they haven't examined. Make it safe to tell the truth, and the gap closes."
+  },
+  "reflection": "Think of a commitment you made recently that you haven't fully kept. What's your stated reason? And if you're honest — what incentive or need is actually winning? What would make it safe for you to say that out loud?"
+}

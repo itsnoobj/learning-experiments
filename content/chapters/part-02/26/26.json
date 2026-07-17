@@ -1,0 +1,34 @@
+{
+  "id": "26",
+  "part": 2,
+  "section": "A",
+  "title": "Why Don't People Do What They Say They'll Do?",
+  "forces": ["incentives", "identity"],
+  "connections": ["16", "25", "27", "30"],
+  "audio": "26.mp3",
+  "visual": "26.svg",
+  "sections": {
+    "situation": {
+      "content": "Your manager said the promotion was coming next quarter. The client said the contract would be signed by Friday. Your partner said they'd handle it this weekend. None of it happened.\n\nThe obvious explanation is deception — they lied. But that's rarely the full story. Most people aren't lying when they make commitments they don't keep. Something more interesting is happening."
+    },
+    "story": {
+      "content": "In 2003, a nineteen-year-old Stanford dropout named Elizabeth Holmes told investors she was building a device that could run hundreds of blood tests from a single finger prick. The vision was genuinely beautiful: democratize healthcare, eliminate painful blood draws, put diagnostic power in every pharmacy. She believed it.\n\nInvestors believed it. George Shultz, Henry Kissinger, Rupert Murdoch — titans of industry and politics — wrote checks based on her stated mission. The board believed it. Employees who joined Theranos believed it. For nearly a decade, everyone operated on stated motives: revolutionize healthcare, save lives, change the world.\n\nThe device never worked.\n\nHere's what makes this story more interesting than simple fraud: Holmes almost certainly believed her own stated motives at the beginning. The desire to revolutionize healthcare was real. But underneath it, invisible even to her, was a different engine: the need to be seen as a visionary. To be the next Steve Jobs. To matter on a historic scale.\n\nAs the technology failed to materialize, the stated motive (save lives) and the real motive (be a visionary) diverged. A person truly driven by saving lives would have said: \"The technology isn't ready. Let's go back to the lab.\" A person driven by being seen as a visionary couldn't say that — because admitting failure would destroy the identity the real motive was protecting.\n\nSo the gap widened. Fake demonstrations. Doctored results. Intimidation of whistleblowers. Not because Holmes woke up one morning deciding to be a fraud — but because the real motive (identity preservation) gradually took priority over the stated motive (help patients) without her consciously choosing it.\n\nThe terrifying lesson isn't that people lie. It's that people often don't know their own real motives until those motives collide with reality. Holmes told investors she'd change healthcare and genuinely meant it — while simultaneously being driven by something she couldn't name. The gap between stated and real motives isn't always deception. Sometimes it's self-deception so deep that the person themselves can't see it.",
+      "title": "The Story"
+    },
+    "contrast": {
+      "content": "Hanlon's Razor states: \"Never attribute to malice what can adequately be explained by incompetence.\" But there's a sharper version for understanding hidden motives: never attribute to deliberate deception what can be explained by misaligned incentives. Your manager who promised a promotion may genuinely intend to deliver it — but their incentive structure (retain you cheaply) conflicts with their stated commitment. They're not lying. They're following a stronger signal than the one they articulated. The gap between words and actions usually reveals not dishonesty but a hierarchy of motives the person hasn't examined.",
+      "title": "The Contrast"
+    },
+    "principle": {
+      "content": "People don't always know their own real motives. The gap between what someone says and what they do usually isn't deception — it's a hierarchy of incentives they haven't examined.\n\nWhen someone's actions diverge from their words, don't ask \"are they lying?\" Ask: \"what incentive is stronger than their stated commitment?\" That question reveals the hidden architecture driving the behavior — and it's rarely malice. It's usually an unexamined need for safety, status, or identity preservation."
+    },
+    "psychology": {
+      "content": "Psychologists call this \"motivated reasoning\" — the brain's ability to construct rational-sounding justifications for decisions actually driven by emotion or self-interest. The critical insight: this process is largely unconscious. People genuinely believe their stated reasons while being driven by unstated ones.\n\nResearch on cognitive dissonance (Festinger, 1957) shows that when actions and beliefs conflict, the brain resolves the discomfort not by changing behavior but by revising the internal narrative. Holmes didn't think: \"I'm going to defraud investors.\" She thought: \"The technology will catch up. I just need more time. Sharing preliminary results isn't dishonest — it's visionary.\" Each rationalization felt genuine from the inside.\n\nThis means the most reliable predictor of behavior isn't what someone says — it's what they're incentivized to do. When stated motives and structural incentives align, people follow through. When they conflict, incentives win almost every time — but the person will tell a story about why the stated motive was still operative. We are all unreliable narrators of our own motivation.",
+      "title": "Why It Happens"
+    },
+    "move": {
+      "content": "1. Watch the incentives, not the words. When someone makes a commitment, ask: what are they structurally incentivized to do? If the incentive aligns with the commitment, trust it. If it conflicts, weight the incentive more heavily. This isn't cynicism — it's pattern recognition.\n\n2. Apply it to yourself first. Before assuming others are deceptive, check your own stated vs. real motives. Ask: \"If I'm honest, what am I actually optimizing for here?\" The answer might surprise you. Most self-deception starts with not asking this question.\n\n3. Look for the identity motive. When someone's stated motive is noble (\"I'm doing this for the team\") but their actions don't match, ask: what identity are they protecting? People will unconsciously sacrifice stated goals to preserve how they see themselves.\n\n4. Don't attribute to malice what's explained by incentive conflict. Your manager isn't evil for not delivering the promotion they promised. They're caught between competing incentives (retain you, manage budget, look good to their boss). Understanding this lets you address the actual obstacle rather than prosecuting character.\n\n5. Make it safe to tell the truth. People hide real motives when honesty feels dangerous. If you create environments where people can say \"I need more time\" or \"I'm not sure I can deliver\" without punishment, stated motives start matching real ones. Deception is often a safety strategy, not a character flaw.",
+      "title": "The Move"
+    }
+  }
+}
