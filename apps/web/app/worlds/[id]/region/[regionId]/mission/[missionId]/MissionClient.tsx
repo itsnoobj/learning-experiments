@@ -17,8 +17,8 @@ export interface MissionClientProps {
   regionId: string;
   /** Mission id (route param) — same value as the chapter/quiz id. */
   missionId: string;
-  /** Next mission id in the region, or null if this is the last. */
-  nextMissionId: string | null;
+  /** Next mission href, or null if there is no next mission available. */
+  nextMissionHref: string | null;
 }
 
 function MissionClientInner({
@@ -26,7 +26,7 @@ function MissionClientInner({
   worldId,
   regionId,
   missionId,
-  nextMissionId,
+  nextMissionHref,
 }: MissionClientProps) {
   const searchParams = useSearchParams();
   const fromGame = searchParams.get('from') === 'game';
@@ -37,9 +37,7 @@ function MissionClientInner({
   // so the quiz → result flow can route back into the game.
   const quizHref = fromGame ? `${base}/quiz?from=game` : `${base}/quiz`;
   const mapHref = fromGame ? '/game?resume=1' : `/worlds/${worldId}/region/${regionId}`;
-  const nextHref = nextMissionId
-    ? `/worlds/${worldId}/region/${regionId}/mission/${nextMissionId}${fromGame ? '?from=game' : ''}`
-    : null;
+  const nextHref = nextMissionHref ? `${nextMissionHref}${fromGame ? '?from=game' : ''}` : null;
 
   return (
     <main className="max-w-[620px] mx-auto px-4 pb-12">

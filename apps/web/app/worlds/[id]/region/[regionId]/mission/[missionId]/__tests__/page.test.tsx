@@ -72,6 +72,7 @@ vi.mock('@/lib/hierarchy', () => ({
       },
     ],
   }),
+  availableChapterIds: new Set(['1', '2', '3', '4', '5']),
 }));
 
 vi.mock('@/lib/seo', () => ({
@@ -117,24 +118,24 @@ describe('MissionPage', () => {
   });
 
   describe('MissionPage component', () => {
-    it('passes nextMissionId to MissionClient when not the last mission', async () => {
+    it('passes nextMissionHref to MissionClient when not the last mission', async () => {
       const { default: MissionPage } = await import('../page');
       const element = await MissionPage({ params });
 
       // The page renders JSON-LD scripts + MissionClient
-      // MissionClient should get nextMissionId='4' since '3' is at index 2 and '4' is at index 3
+      // MissionClient should get nextMissionHref for mission '4' since '3' is at index 2
       const rendered = element as any;
       // Find the MissionClient component in the tree
       const children = rendered.props.children;
       // Last child should be MissionClient
       const missionClient = Array.isArray(children)
-        ? children.find((c: any) => c?.props?.nextMissionId !== undefined)
+        ? children.find((c: any) => c?.props?.nextMissionHref !== undefined)
         : children;
 
-      expect(missionClient.props.nextMissionId).toBe('4');
+      expect(missionClient.props.nextMissionHref).toBe('/worlds/1/region/A/mission/4');
     });
 
-    it('passes null nextMissionId for the last mission in a region', async () => {
+    it('passes next region mission href for the last mission in a region', async () => {
       const { default: MissionPage } = await import('../page');
       const element = await MissionPage({
         params: Promise.resolve({ id: '1', regionId: 'A', missionId: '5' }),
@@ -143,10 +144,17 @@ describe('MissionPage', () => {
       const rendered = element as any;
       const children = rendered.props.children;
       const missionClient = Array.isArray(children)
-        ? children.find((c: any) => c?.props?.nextMissionId !== undefined)
+        ? children.find((c: any) => c?.props?.nextMissionHref !== undefined)
         : children;
 
-      expect(missionClient.props.nextMissionId).toBeNull();
+      // Should link to the first mission of the next region (B) if available
+      // If not available, should be null
+      const href = missionClient.props.nextMissionHref;
+      if (href) {
+        expect(href).toMatch(/^\/worlds\/1\/region\/B\/mission\//);
+      } else {
+        expect(href).toBeNull();
+      }
     });
   });
 });
