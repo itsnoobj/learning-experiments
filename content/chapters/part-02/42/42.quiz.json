@@ -1,0 +1,88 @@
+{
+  "chapterId": "42",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "Two senior engineers are competing for the same principal engineer role. One notices himself withholding helpful code review feedback from the other, thinking: 'Why help my competition?' He recognizes this isn't who he wants to be but feels the competitive pressure justifying it.",
+      "options": [
+        {
+          "text": "It's rational self-interest — in a zero-sum promotion race, helping your competitor directly hurts your chances. He should focus his mentoring energy on people who aren't competing with him.",
+          "correct": false,
+          "feedback": "This is the Karna pattern: organizing behavior around beating the rival rather than being excellent. Withholding feedback makes HIM worse (less generous, less collaborative, less of a principal-level engineer). The promotion committee will see the pattern. And even if he wins, he's become someone who withholds help from colleagues — which IS who he'll be as a principal."
+        },
+        {
+          "text": "The moment he noticed himself withholding help is the signal: competition has shifted from excellence-mode to threat-mode. The fix is giving the feedback generously — because the person he becomes through the competition matters more than the outcome.",
+          "correct": true,
+          "feedback": "The Arjuna test: is this competition making me more or less of who I want to be? Withholding help is a corruption signal — the rivalry is now degrading his character rather than building it. A principal engineer is defined by elevating others. If he can't do that under competitive pressure, he's not demonstrating principal-level behavior. Give the feedback. Let the competition elevate both."
+        },
+        {
+          "text": "He should talk to his manager and ask them to make the promotion process more transparent — the ambiguity is creating unhealthy competition between teammates.",
+          "correct": false,
+          "feedback": "Process transparency helps, but it doesn't solve the internal problem: his identity is threatened by the rival's potential win. Even with perfect process clarity, the Karna pattern can persist. The primary fix is internal: separate identity from outcome ('their winning doesn't diminish me') and define his standard internally ('I want to be excellent') rather than relatively ('I need to beat them')."
+        }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "Karna was arguably the more talented archer in the Mahabharata — yet his rivalry with Arjuna led him to progressively worse decisions: fighting for the wrong side, participating in Draupadi's humiliation, giving away his armor out of pride.",
+      "question": "What made Karna's superior talent insufficient to overcome his rivalry's corruption?",
+      "options": [
+        {
+          "text": "Bad luck and systemic disadvantage — Karna was denied his birthright and fought against rigged systems that favored Arjuna, forcing him into compromises.",
+          "correct": false,
+          "feedback": "Karna DID face systemic disadvantage (caste denial, birthright concealment). But the corruption of his judgment came from HOW he responded to that injustice — by organizing his entire identity around proving himself against Arjuna. This made him choose allies (Duryodhana) and actions (Draupadi's humiliation) based on rivalry utility rather than values. The system was unfair. His response to the unfairness is what corroded him."
+        },
+        {
+          "text": "His competition was organized around grievance (proving something TO someone) rather than excellence (becoming something FOR himself) — and that organizing principle poisoned every decision downstream.",
+          "correct": true,
+          "feedback": "When beating the rival becomes the organizing principle, every downstream decision is filtered through 'does this help me beat Arjuna?' rather than 'is this right?' This is why Karna allies with Duryodhana (gives him a platform against Arjuna), participates in evil acts (proves loyalty to his patron), and makes self-destructive choices (pride over strategy). The mode of competition — not the lack of talent — determined his fate."
+        },
+        {
+          "text": "Karna's fatal flaw was his generosity — giving away his divine armor and weapons when asked, leaving him vulnerable in the final battle.",
+          "correct": false,
+          "feedback": "Generosity was one of Karna's genuine virtues. But even that was corrupted by the rivalry: he gave away his armor partly because refusing would undermine his identity as 'more generous than Arjuna.' When even virtues are performed in competition with a rival rather than expressed from internal values, they become liabilities rather than strengths."
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "Healthy competition requires caring deeply about winning — you can't improve without the drive to beat your rival.",
+      "back": "The drive to improve and the drive to beat someone are different neural circuits. Approach motivation ('I want to reach that level') enhances performance and creativity. Threat motivation ('I can't let them beat me') narrows thinking and degrades judgment over time. Federer didn't need to hate Nadal to improve — he used Nadal's level as proof that more was possible. You can care deeply about excellence without organizing your identity around defeating a specific person. The first sustains you. The second corrodes you."
+    },
+    {
+      "type": "before-after",
+      "context": "Two modes of rivalry in the Mahabharata, same level of talent, opposite outcomes.",
+      "scenarioA": {
+        "label": "Arjuna (compete toward)",
+        "text": "Uses Karna's excellence as proof that higher levels exist. Trains to perfect his art, not to defeat a person. Competition expands his capability, deepens his character. Makes better decisions under pressure because his organizing principle is 'become excellent' not 'beat him.' Wins — and remains someone he respects."
+      },
+      "scenarioB": {
+        "label": "Karna (compete against)",
+        "text": "Organizes identity around proving superiority over Arjuna. Allies with the wrong side (utility over values). Participates in acts beneath him (loyalty to rivalry patron). Gives away advantages out of pride. Greater natural talent, progressively worse judgment. The rivalry doesn't sharpen him — it narrows him until catastrophe."
+      },
+      "correctScenario": "A",
+      "explanation": "Same rivalry, same level of talent, opposite organizing principles. Arjuna competes toward (excellence as standard) and expands. Karna competes against (the rival as target) and narrows. The difference isn't talent or circumstances — it's whether the competition makes you more or less of who you want to be."
+    },
+    {
+      "type": "drag-match",
+      "instruction": "Order these competition behaviors from most corrupting to most elevating:",
+      "items": [
+        "Withholding help from the rival to gain advantage",
+        "Monitoring the rival's wins and feeling them as your losses",
+        "Using the rival's level as proof that more is possible for you",
+        "Maintaining respect for the rival while pushing yourself harder"
+      ],
+      "correctOrder": [
+        "Withholding help from the rival to gain advantage",
+        "Monitoring the rival's wins and feeling them as your losses",
+        "Using the rival's level as proof that more is possible for you",
+        "Maintaining respect for the rival while pushing yourself harder"
+      ]
+    }
+  ],
+  "principle": {
+    "text": "Competition makes you more — or makes you less. The test: is the rivalry expanding who you are, or narrowing you into someone you dislike?",
+    "subtext": "Compete toward excellence, not against a person. The first builds you up. The second corrodes you — regardless of who gets the trophy."
+  },
+  "reflection": "Think of your current rivalry or competition. Are you in Arjuna-mode (using them as proof of what's possible) or Karna-mode (organizing around grievance)? What behavior would shift you from one to the other?"
+}
