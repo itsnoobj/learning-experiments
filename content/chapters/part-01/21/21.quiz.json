@@ -1,0 +1,88 @@
+{
+  "chapterId": "21",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "A product designer has been offered the chance to present her team's work directly to the CEO — a huge visibility opportunity. She's prepared extensively. The night before, she can't sleep. Her mind runs worst-case scenarios. In the morning, she still feels the dread in her stomach.",
+      "options": [
+        {
+          "text": "She should postpone until she feels more confident. Presenting while afraid will make her seem nervous and undermine the work.",
+          "correct": false,
+          "feedback": "Waiting for fear to leave is waiting forever. Fear before high-stakes moments isn't a sign that you're not ready — it's a sign that the moment matters. The fear won't leave. The presentation won't wait."
+        },
+        {
+          "text": "She should tell herself 'I'm not afraid, I'm excited' — reframing the physical sensation — and then present with the energy still running through her body.",
+          "correct": true,
+          "feedback": "The physical sensations of fear and excitement are nearly identical — racing heart, adrenaline, heightened focus. Research shows that reappraising anxiety as excitement improves performance because you stop fighting the arousal and start directing it. Move with the energy, not against it."
+        },
+        {
+          "text": "She should do deep breathing exercises until the fear subsides completely, then present from a place of calm.",
+          "correct": false,
+          "feedback": "Some calming helps, but waiting for fear to fully subside before a high-stakes moment is often impossible — and the wrong goal. Elite performers don't feel less fear. They've learned to perform with fear as a companion, not wait for its absence as permission."
+        }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "Tenzing Norgay had attempted Everest six times before his successful 1953 summit. He'd watched friends die on the mountain. At 28,700 feet, his body was screaming at him to descend. He climbed the Hillary Step anyway.",
+      "question": "What enabled Tenzing to act despite genuine, earned fear?",
+      "options": [
+        {
+          "text": "He was naturally braver than other climbers — some people simply feel less fear due to their temperament.",
+          "correct": false,
+          "feedback": "Research on elite performers shows they feel the same physiological fear as everyone else. Tenzing didn't feel less fear — he'd watched friends die on this same mountain. What was different wasn't the fear. It was his relationship to it."
+        },
+        {
+          "text": "He treated fear as information ('this is dangerous') without treating it as instruction ('therefore stop') — negotiating with it rather than obeying or fighting it.",
+          "correct": true,
+          "feedback": "Tenzing listened to fear's data (yes, genuinely dangerous) without accepting its automatic conclusion (therefore turn around). He moved with fear, not after it. This is cohabitation — fear and action occupying the same moment."
+        },
+        {
+          "text": "His six previous attempts had dulled the fear through exposure — by his seventh try, the mountain simply wasn't scary anymore.",
+          "correct": false,
+          "feedback": "Repeated exposure to life-threatening danger doesn't eliminate fear — it deepens it. Each failed attempt brought more loss (friends dead, body damaged). The fear was likely worse, not better, by attempt seven. What changed was his skill at moving alongside it."
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "Courage means not feeling fear. Truly brave people aren't scared — they've overcome that weakness.",
+      "back": "Courage literally requires fear. Without something to be afraid of, there's nothing courageous about acting. Research on elite performers (soldiers, surgeons, athletes) shows identical physiological fear responses to everyone else. The difference is their relationship to the sensation — interpreting racing heart as 'I'm ready' rather than 'I'm in danger.' Courage isn't the absence of fear. It's action in its presence."
+    },
+    {
+      "type": "before-after",
+      "context": "Two equally qualified engineers are asked to lead a critical system migration with high failure risk.",
+      "scenarioA": {
+        "label": "Fear as instruction",
+        "text": "Feels the fear, interprets it as a sign he's not ready. Asks for more time, more preparation, more certainty. Delays kick-off three times. Eventually the project is reassigned. He never finds out whether he could have done it."
+      },
+      "scenarioB": {
+        "label": "Fear as information",
+        "text": "Feels the same fear. Names it: 'I'm afraid because failure here is visible and consequential.' Uses the fear to identify risks and build rollback plans. Starts the migration with contingencies in place. Fear stays in the backpack but doesn't hold the map."
+      },
+      "correctScenario": "B",
+      "explanation": "Both engineers felt identical fear. The difference: Engineer A treated fear as instruction ('I shouldn't do this') while Engineer B treated it as information ('this is risky — let me plan for that'). Fear identified the stakes. Planning addressed the risks. Action happened alongside the fear, not after it."
+    },
+    {
+      "type": "drag-match",
+      "instruction": "Order Seneca's premeditatio malorum practice from first step to last:",
+      "items": [
+        "Imagine the realistic worst case",
+        "Ask: could I survive this?",
+        "Plan what you'd do if it happened",
+        "Notice that the feared future has lost its surprise power"
+      ],
+      "correctOrder": [
+        "Imagine the realistic worst case",
+        "Ask: could I survive this?",
+        "Plan what you'd do if it happened",
+        "Notice that the feared future has lost its surprise power"
+      ]
+    }
+  ],
+  "principle": {
+    "text": "Fear is information, not instruction.",
+    "subtext": "It tells you something matters. It doesn't tell you to stop. Courage isn't the absence of fear — it's action in its presence."
+  },
+  "reflection": "What are you currently not doing because you're waiting to not be afraid first? What would change if you accepted that the fear won't leave — and moved anyway?"
+}

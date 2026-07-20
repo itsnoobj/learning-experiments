@@ -1,0 +1,88 @@
+{
+  "chapterId": "23",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "A software architect sees that a peer — someone she started with at the same level — just published a widely-shared article on system design that's getting thousands of reactions. She feels the sting. She tells herself she's happy for him. But she's already mentally cataloging flaws in his article.",
+      "options": [
+        {
+          "text": "She should be honest that she's envious, and use it as information: clearly she values thought leadership and hasn't pursued it. Time to start writing herself.",
+          "correct": true,
+          "feedback": "Envy is a compass. The sting is telling her: 'you value this — visibility, craft, public expertise — and you're not pursuing it.' Named envy becomes motivation. She doesn't need to diminish him. She needs to start her own thing."
+        },
+        {
+          "text": "She should genuinely celebrate his success and let go of the comparison — mature professionals don't feel envious of peers.",
+          "correct": false,
+          "feedback": "This is the 'second arrow' — adding shame about envy on top of the envy itself. Envy is a natural comparison signal that can't be turned off by willpower. Pretending it doesn't exist doesn't make it go away — it just pushes it underground where it becomes resentment or passive aggression."
+        },
+        {
+          "text": "She should share her honest critique of his article publicly — if the work has real flaws, people deserve to know.",
+          "correct": false,
+          "feedback": "The urge to find flaws in something you're envious of is envy wearing the mask of 'intellectual honesty.' The critique may be valid, but the motivation is corrupted. When envy drives criticism, it reads as bitterness — because it is."
+        }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "Larry Bird checked Magic Johnson's stats in the newspaper every single morning before checking his own team's scores. He described it as 'hatred' at the time.",
+      "question": "What was actually driving Bird's obsessive comparison?",
+      "options": [
+        {
+          "text": "Pure competitive aggression — the desire to dominate and be the undisputed best at any cost.",
+          "correct": false,
+          "feedback": "If it were about domination, Bird would have wanted Magic to fail. Instead, he used Magic's excellence as a target to match and exceed. The obsession was about elevating himself, not diminishing Magic. That's envy as fuel, not aggression."
+        },
+        {
+          "text": "Envy functioning as a compass and engine — pointing at what he valued most (basketball excellence) and generating the energy to pursue it relentlessly.",
+          "correct": true,
+          "feedback": "Bird's 'hatred' was envy honestly held. It pointed at his deepest value (being the best) and provided daily fuel to pursue it. When Magic got HIV, Bird realized he'd never wanted Magic to have less — he'd wanted himself to have more. The envy was information about Bird, not judgment about Magic."
+        },
+        {
+          "text": "Insecurity about his own talent — Bird felt naturally inferior to Magic and was overcompensating.",
+          "correct": false,
+          "feedback": "Bird won three MVPs. He wasn't insecure about his talent. The envy wasn't about doubting himself — it was about wanting to reach a ceiling he could see someone else touching. That's not insecurity. It's ambition with a measuring stick."
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "Mature, successful people don't feel envious. If you're still envious of others, you haven't developed enough self-confidence.",
+      "back": "Envy is a hardwired comparison engine that evolution gave us for tracking relative position — it cannot be turned off through confidence or maturity. Research shows that people who acknowledge envy directly channel it into motivation, while people who suppress it ('I shouldn't feel this') are more likely to experience schadenfreude and passive aggression. The issue isn't feeling envy. It's whether you use it as information or deny it into toxicity."
+    },
+    {
+      "type": "before-after",
+      "context": "Two designers see a peer win a prestigious industry award for work they consider no better than their own.",
+      "scenarioA": {
+        "label": "Denied envy",
+        "text": "Tells herself she's fine with it. Congratulates publicly. Privately starts distancing from the award-winner, subtly undermining her work in conversations. Doesn't examine why it stings. Six months later, still hasn't submitted her own work for anything. The envy went underground and became resentment."
+      },
+      "scenarioB": {
+        "label": "Named envy",
+        "text": "Feels the sting. Says to herself: 'I'm envious — that means I value recognition and I'm not pursuing it.' Submits three pieces to awards over the next quarter. One wins. The envy dissolved because she converted it to action. The compass did its job and went quiet."
+      },
+      "correctScenario": "B",
+      "explanation": "Envy acknowledged and acted on dissolves naturally — it was just a signal pointing at an unmet value. Envy denied doesn't disappear; it corrupts into resentment, gossip, and avoidance. The difference isn't character — it's whether you let the compass do its job or cover it up."
+    },
+    {
+      "type": "drag-match",
+      "instruction": "Order these from least to most productive relationship with envy:",
+      "items": [
+        "Deny it and perform happiness for others' success",
+        "Acknowledge it but add self-shame ('I'm a bad person for feeling this')",
+        "Name it as information: 'this matters to me'",
+        "Convert it to specific action toward what you actually want"
+      ],
+      "correctOrder": [
+        "Deny it and perform happiness for others' success",
+        "Acknowledge it but add self-shame ('I'm a bad person for feeling this')",
+        "Name it as information: 'this matters to me'",
+        "Convert it to specific action toward what you actually want"
+      ]
+    }
+  ],
+  "principle": {
+    "text": "Envy is a compass, not a character flaw.",
+    "subtext": "It points directly at what you value most and haven't achieved yet. Suppressed envy becomes resentment. Named envy becomes direction."
+  },
+  "reflection": "Who are you most envious of right now — not in general, but specifically? What exactly about their situation stings? That specific thing is probably what you most want and aren't pursuing. What would pursuing it look like this month?"
+}
