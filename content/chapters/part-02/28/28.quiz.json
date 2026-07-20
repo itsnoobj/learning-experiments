@@ -1,0 +1,88 @@
+{
+  "chapterId": "28",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "A beloved engineering manager gets promoted to VP. Six months later, engineers on his old team notice he's changed: he uses strategy jargon, cancels 1-on-1s for exec meetings, and recently made a reorganization decision without consulting the people affected. When confronted, he's genuinely surprised — he thinks he's the same person.",
+      "options": [
+        {
+          "text": "The promotion revealed who he really was all along — power just exposed the ambition and indifference that was always underneath.",
+          "correct": false,
+          "feedback": "This is the 'corruption reveals' narrative, and it's almost always wrong. The Stanford Prison Experiment showed that position creates behavior — personality tests before the experiment couldn't predict who would become authoritarian. Same person, different role, different behavior."
+        },
+        {
+          "text": "The role has gradually reshaped his behavior through environmental pressure — social cues, incentive shifts, reduced feedback — all below his conscious awareness. He genuinely doesn't see the change.",
+          "correct": true,
+          "feedback": "Position restructures behavior through mechanisms the person can't see: social role pressure (act like other VPs), reduced perspective-taking (power dampens empathy), and filtered feedback (subordinates stop being honest). He's not lying about not seeing it. The role has rewritten his defaults without his conscious participation."
+        },
+        {
+          "text": "He's deliberately prioritizing executive relationships over his old team — it's a conscious career strategy that he should own rather than pretend hasn't happened.",
+          "correct": false,
+          "feedback": "Some prioritization is conscious, but research shows most role-based behavior change is invisible to the person changing. He's not strategically choosing distance — he's absorbing what 'VP' means from environmental cues. The jargon, the cancellations, the unilateral decisions feel normal from inside because everyone at his level does the same."
+        }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "In Zimbardo's Stanford Prison Experiment, psychologically normal students randomly assigned as guards began showing sadistic behavior within 36 hours. Personality tests taken before the experiment had zero predictive power.",
+      "question": "What does this reveal about the relationship between role and character?",
+      "options": [
+        {
+          "text": "That everyone has a dark side that authority activates — the guards simply had permission to express cruelty that's latent in all humans.",
+          "correct": false,
+          "feedback": "The 'latent cruelty' explanation is too simple. Not all guards became sadistic — about one-third did, one-third were 'by the book,' and one-third actively tried to be kind. What determined which category? Not personality (pre-tests showed nothing). Situational factors in the moment — who was around, what other guards modeled, what got rewarded."
+        },
+        {
+          "text": "Position doesn't reveal character — it creates it. The role generates its own behavioral logic through social pressure, incentive structures, and identity absorption, independent of the person's pre-existing personality.",
+          "correct": true,
+          "feedback": "This is the core insight: the role creates behavior, not reveals it. The guards didn't discover hidden cruelty — the position manufactured behaviors that didn't exist before assignment. Same mechanism operates in every promotion: the role restructures behavior below conscious awareness through social reinforcement and identity pressure."
+        },
+        {
+          "text": "The experiment was flawed — Zimbardo influenced the guards, and the results don't apply to real-world hierarchies where people have genuine accountability.",
+          "correct": false,
+          "feedback": "While the experiment had methodological critiques, the core finding has been replicated across dozens of studies on power and hierarchy. Real-world evidence (Abu Ghraib, corporate misconduct patterns, promotion behavior change) consistently shows: position restructures behavior independent of pre-existing character."
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "Power corrupts — it reveals the true character that was hidden beneath the surface all along.",
+      "back": "More accurately: position creates character. The Stanford Prison Experiment, Abu Ghraib, and decades of power research show that role-based behavior change isn't revelation — it's construction. Personality tests can't predict who will change because it's not about personality. It's about situational forces: social pressure, incentive shifts, reduced feedback, and identity absorption. The question isn't 'will the role change me?' — it's 'what will I anchor before it does?'"
+    },
+    {
+      "type": "before-after",
+      "context": "Two engineers are promoted to management on the same day at the same company.",
+      "scenarioA": {
+        "label": "Role absorption (no anchors)",
+        "text": "Absorbs 'manager' identity from context cues: starts speaking like other managers, cancelling code review time, and spending all energy on exec visibility. Within six months, his old team barely recognizes him. He can't see the change because everyone at his level acts the same way. The role became him."
+      },
+      "scenarioB": {
+        "label": "Anchored identity (Cincinnatus pattern)",
+        "text": "Before starting, writes down: 'I stay technical. I keep one weekly pairing session. I never cancel 1-on-1s for anything except emergencies.' Sets up anonymous team feedback every quarter. Tells his best friend to flag when he starts using jargon without substance. The role pressures him — but the anchors hold."
+      },
+      "correctScenario": "B",
+      "explanation": "Both face identical role pressure — the difference is pre-set anchors. Manager A let the role's gravitational pull operate unopposed. Manager B identified which behaviors to protect before the pressure started. Cincinnatus survived absolute power because 'farmer' was anchored as identity. The role will pull. Only deliberate resistance preserves who you were before it started."
+    },
+    {
+      "type": "drag-match",
+      "instruction": "Order the mechanisms by which a new role changes behavior — from fastest-acting to slowest:",
+      "items": [
+        "Social mimicry — copying how others at your level act",
+        "Incentive shift — rewarded for different things than before",
+        "Feedback degradation — subordinates filter honest input",
+        "Identity absorption — you forget who you were before the title"
+      ],
+      "correctOrder": [
+        "Social mimicry — copying how others at your level act",
+        "Incentive shift — rewarded for different things than before",
+        "Feedback degradation — subordinates filter honest input",
+        "Identity absorption — you forget who you were before the title"
+      ]
+    }
+  ],
+  "principle": {
+    "text": "Position doesn't reveal character — it creates it.",
+    "subtext": "The role reshapes behavior below conscious awareness. The question isn't 'will power change me?' — it's 'what will I anchor before it starts pulling?'"
+  },
+  "reflection": "If you've been promoted (or ever are), what three behaviors from your current self do you want to anchor — practices you commit to keeping regardless of what the new role pressures you toward?"
+}

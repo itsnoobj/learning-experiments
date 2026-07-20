@@ -1,0 +1,34 @@
+{
+  "id": "27",
+  "part": 2,
+  "section": "A",
+  "title": "Why Do Metrics Always Get Gamed?",
+  "forces": ["incentives", "uncertainty"],
+  "connections": ["16", "26", "28", "30"],
+  "audio": "27.mp3",
+  "visual": "27.svg",
+  "sections": {
+    "situation": {
+      "content": "The team adopted a new metric last quarter: story points completed per sprint. Within weeks, engineers started breaking large tasks into tiny ones. The number went up. The actual output didn't change. Your manager is delighted by the dashboard. You're staring at the same codebase wondering what actually improved.\n\nEvery metric you've ever seen eventually gets optimized for — and the optimization always kills the thing the metric was supposed to measure."
+    },
+    "story": {
+      "content": "In colonial India, the British government was troubled by the number of venomous cobras in Delhi. The solution seemed elegant: offer a bounty for every dead cobra brought to a government office. Citizens would hunt cobras, cobra population would decline, problem solved.\n\nAt first, it worked. Dead cobras piled up. Bounties were paid. Officials congratulated themselves.\n\nThen something shifted. Enterprising citizens realized that hunting wild cobras was dangerous and unpredictable — but breeding cobras was easy and safe. Cobra farms appeared across the city. People were breeding snakes specifically to kill them and collect the bounty. The metric (dead cobras delivered) was hitting record highs. The actual goal (fewer living cobras) was getting worse.\n\nWhen the government discovered the farming operations and cancelled the bounty program, the cobra breeders — now holding worthless snakes — released them into the streets. The cobra population ended up larger than before the program started.\n\nThe metric was perfect. The outcome was catastrophic. And the gap between them is where Goodhart's Law lives: \"When a measure becomes a target, it ceases to be a good measure.\"\n\nThe British officials weren't stupid. Their logic was sound: incentivize cobra removal, get fewer cobras. What they missed was that the moment you attach a reward to a metric, you've changed the system. You haven't created cobra-killers. You've created bounty-optimizers. And bounty-optimizers will find the path of least resistance to the reward — which is almost never the path you intended.\n\nThis isn't a failure of the metric. It's a property of metrics. Every measurement, the moment it becomes a target, creates a new game — and humans will always find the optimal strategy for the game you've actually created, not the game you think you created.",
+      "title": "The Story"
+    },
+    "contrast": {
+      "content": "In Soviet Russia, central planners set quotas for nail factories. When measured by total weight of nails produced, factories made a few enormous, unusable nails. When the metric switched to number of nails produced, factories made millions of tiny, useless tacks. Same principle, different continent, same outcome: the metric was gamed to perfection while the actual goal (useful nails for construction) was completely abandoned. The workers weren't rebellious. They were rational. They optimized for exactly what was measured.",
+      "title": "The Contrast"
+    },
+    "principle": {
+      "content": "When a measure becomes a target, it ceases to be a good measure. People don't game metrics because they're dishonest — they game them because they're rational. If you reward the metric, you get metric-optimizers, not outcome-producers.\n\nThe solution isn't better metrics. It's understanding that any single metric, once targeted, will be optimized at the expense of the thing it was meant to represent. Measure the system, not the proxy."
+    },
+    "psychology": {
+      "content": "The mechanism behind metric gaming is straightforward reinforcement learning: the brain optimizes for whatever delivers reward with the least effort. This isn't cynicism — it's the same process that makes us check our phones (variable reward), eat sugar (immediate feedback), and answer easy emails before hard ones (completion dopamine).\n\nCampbell's Law formalizes this: \"The more any quantitative social indicator is used for social decision-making, the more subject it will be to corruption pressures and the more apt it will be to distort and corrupt the social processes it is intended to monitor.\"\n\nResearch on \"teaching to the test\" shows the same pattern in education. When school funding depends on standardized test scores, teachers optimize for test performance — drilling specific question formats rather than building understanding. Scores rise. Learning doesn't. The metric and the reality diverge precisely because the metric has become the target.\n\nThe deeper insight: metrics don't just get gamed from below. They get gamed from above too. Managers select metrics that make their teams look good. Executives report the numbers that support the narrative. The gaming is system-wide, not a failure of individual character.",
+      "title": "Why It Happens"
+    },
+    "move": {
+      "content": "1. Assume every metric will be gamed. Not because people are dishonest — because they're rational optimizers. When designing incentives, ask: \"If someone wanted to hit this number without producing the actual outcome I care about, how would they do it?\" Then watch for exactly that.\n\n2. Measure outcomes, not proxies. Dead cobras was a proxy for fewer living cobras. Story points is a proxy for working software. Lines of code is a proxy for productivity. Whenever possible, measure the actual thing you want — even if it's harder to quantify. Customer problems solved > tickets closed.\n\n3. Use multiple metrics in tension. A single metric gets gamed. Two metrics that pull against each other are harder to game. Speed + quality. Quantity + satisfaction. Revenue + retention. When optimizing one necessarily trades off against another, gaming requires genuine performance.\n\n4. Rotate metrics. A metric that changes every quarter can't build a permanent gaming strategy around it. The cobra farmers needed time to build their operations. Changing the game faster than it can be gamed preserves the signal.\n\n5. Watch for the gap between metric and reality. When the dashboard looks great but the ground truth feels off, trust the feeling. The cobra bounty looked excellent on paper. Someone walking the streets of Delhi could see the problem immediately. Spend time in the reality your metrics are supposed to represent.",
+      "title": "The Move"
+    }
+  }
+}
