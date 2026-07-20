@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 import { loadChapter, listChapterIds, getContentMtime, resolveOgImage } from '@/lib/content';
-import { worlds, getWorld } from '@/lib/hierarchy';
+import { worlds, getWorld, availableChapterIds } from '@/lib/hierarchy';
 import { SITE_URL, SITE_NAME, PUBLISHER, truncateDescription } from '@/lib/seo';
 
 import { MissionClient } from './MissionClient';
@@ -107,9 +107,40 @@ export default async function MissionPage({ params }: MissionPageProps) {
   // Determine next mission in this region
   const missionList = region?.missions ?? [];
   const currentIndex = missionList.indexOf(missionId);
-  const nextMissionId =
+  let nextMissionId: string | null =
     currentIndex >= 0 && currentIndex < missionList.length - 1
       ? missionList[currentIndex + 1]
+      : null;
+
+  // If this is the last mission in the region, look for the next region/world
+  let nextMissionWorldId: string = id;
+  let nextMissionRegionId: string = regionId;
+
+  if (!nextMissionId && world && region) {
+    const regionIndex = world.regions.indexOf(region);
+    // Try next region in same world
+    if (regionIndex >= 0 && regionIndex < world.regions.length - 1) {
+      const nextRegion = world.regions[regionIndex + 1];
+      if (nextRegion.missions.length > 0) {
+        nextMissionId = nextRegion.missions[0];
+        nextMissionRegionId = nextRegion.id;
+      }
+    }
+    // If still null, try first region of next world
+    if (!nextMissionId) {
+      const nextWorld = worlds.find((w) => w.id === world.id + 1);
+      if (nextWorld && nextWorld.regions.length > 0 && nextWorld.regions[0].missions.length > 0) {
+        nextMissionId = nextWorld.regions[0].missions[0];
+        nextMissionWorldId = String(nextWorld.id);
+        nextMissionRegionId = nextWorld.regions[0].id;
+      }
+    }
+  }
+
+  // Only show next if the target mission actually has content available
+  const nextMissionHref =
+    nextMissionId && availableChapterIds.has(nextMissionId)
+      ? `/worlds/${nextMissionWorldId}/region/${nextMissionRegionId}/mission/${nextMissionId}`
       : null;
 
   // Article JSON-LD with full recommended fields
@@ -175,7 +206,7 @@ export default async function MissionPage({ params }: MissionPageProps) {
         worldId={id}
         regionId={regionId}
         missionId={missionId}
-        nextMissionId={nextMissionId}
+        nextMissionHref={nextMissionHref}
       />
     </>
   );

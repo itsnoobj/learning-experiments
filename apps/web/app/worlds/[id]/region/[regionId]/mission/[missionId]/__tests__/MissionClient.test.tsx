@@ -28,7 +28,7 @@ const baseProps = {
   worldId: '1',
   regionId: 'A',
   missionId: '3',
-  nextMissionId: '4',
+  nextMissionHref: '/worlds/1/region/A/mission/4',
 };
 
 describe('MissionClient', () => {
@@ -46,15 +46,15 @@ describe('MissionClient', () => {
     expect(quizLink).toHaveAttribute('href', '/worlds/1/region/A/mission/3/quiz');
   });
 
-  it('renders the next story link when nextMissionId is provided', () => {
+  it('renders the next story link when nextMissionHref is provided', () => {
     render(<MissionClient {...baseProps} />);
     const nextLink = screen.getByRole('link', { name: /next story/i });
     expect(nextLink).toBeInTheDocument();
     expect(nextLink).toHaveAttribute('href', '/worlds/1/region/A/mission/4');
   });
 
-  it('does not render next story link when nextMissionId is null', () => {
-    render(<MissionClient {...baseProps} nextMissionId={null} />);
+  it('does not render next story link when nextMissionHref is null', () => {
+    render(<MissionClient {...baseProps} nextMissionHref={null} />);
     expect(screen.queryByRole('link', { name: /next story/i })).not.toBeInTheDocument();
   });
 
