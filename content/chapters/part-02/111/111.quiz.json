@@ -1,0 +1,94 @@
+{
+  "id": "111",
+  "title": "Why Does Cooperation Collapse Even When Everyone Benefits?",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "stem": "Two competing SaaS companies are locked in a pricing war. Both have cut margins to near-zero. Both CEOs privately admit they'd profit more if prices went back up. Neither raises prices first. What structure is preventing cooperation?",
+      "options": [
+        {
+          "text": "It's a prisoner's dilemma — whoever raises prices first loses customers to the one who doesn't",
+          "correct": true
+        },
+        { "text": "Both CEOs are irrational and driven by ego", "correct": false },
+        { "text": "The market is truly zero-sum so cooperation is impossible", "correct": false },
+        {
+          "text": "They haven't tried communicating their intentions clearly enough",
+          "correct": false
+        }
+      ],
+      "explanation": "This is a classic prisoner's dilemma. Mutual cooperation (both raise prices) is optimal, but unilateral cooperation (you raise, they don't) is the worst outcome for the one who moves first. Communication alone doesn't fix it — they need structural changes like long-term signaling or simultaneous action."
+    },
+    {
+      "type": "spot-the-force",
+      "stem": "During the Cuban Missile Crisis, Kennedy's military advisors pushed for immediate air strikes despite knowing it could trigger nuclear war. What force made 'defection' (striking first) feel rational to them?",
+      "options": [
+        {
+          "text": "Fear — being the one who cooperates while the other defects means maximum loss",
+          "correct": true
+        },
+        { "text": "Ego — they wanted to prove American military superiority", "correct": false },
+        { "text": "Status — they wanted recognition for decisive action", "correct": false },
+        { "text": "Identity — they saw themselves as warriors, not diplomats", "correct": false }
+      ],
+      "explanation": "The core force in any prisoner's dilemma is fear of the 'sucker's payoff' — cooperating while the other side defects. The military's logic wasn't about ego or glory; it was genuinely about preventing the scenario where the Soviets strike first while America hesitates. Fear of asymmetric vulnerability drives defection."
+    },
+    {
+      "type": "card-flip",
+      "pairs": [
+        {
+          "front": "Both cooperate",
+          "back": "Best mutual outcome — Cuban Missile Crisis resolved, both sides save face"
+        },
+        {
+          "front": "You defect, they cooperate",
+          "back": "You 'win' locally — but only if they don't retaliate (rarely true in repeated games)"
+        },
+        {
+          "front": "Both defect",
+          "back": "Worst mutual outcome — nuclear war, price destruction, relationship breakdown"
+        },
+        {
+          "front": "Sucker's payoff",
+          "back": "You cooperate, they defect — maximum individual loss, drives fear of going first"
+        }
+      ]
+    },
+    {
+      "type": "drag-match",
+      "pairs": [
+        {
+          "left": "Kennedy-Dobrynin back-channel",
+          "right": "Communication in a non-cooperative game"
+        },
+        {
+          "left": "WWI trench soldiers seeing each other's faces",
+          "right": "Making identities visible to enable cooperation"
+        },
+        {
+          "left": "Military rotating units to prevent truces",
+          "right": "Preventing repeated-game conditions from forming"
+        },
+        {
+          "left": "Both sides secretly wanting the same outcome but not acting",
+          "right": "The structure of the prisoner's dilemma"
+        },
+        {
+          "left": "Public removal of Cuban missiles, quiet removal of Turkish ones",
+          "right": "Removing audience cost so cooperation doesn't look like weakness"
+        }
+      ]
+    },
+    {
+      "type": "before-after",
+      "before": {
+        "label": "Trapped in the dilemma",
+        "text": "I can see we'd both benefit from cooperation, but I can't risk going first because if they don't reciprocate, I'm the sucker. So I'll keep defecting and hope they blink first."
+      },
+      "after": {
+        "label": "Breaking the structure",
+        "text": "I'll name the game we're in, create a private channel to discuss without audience pressure, signal that this interaction will repeat, and make a small cooperative move first to test their response — while being ready to punish defection immediately."
+      }
+    }
+  ]
+}
