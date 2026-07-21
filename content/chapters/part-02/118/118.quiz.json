@@ -1,0 +1,106 @@
+{
+  "id": "118",
+  "title": "Why Do Conventions Form Without Anyone Deciding?",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "stem": "Your engineering team uses a testing framework everyone agrees is outdated. A clearly better alternative exists. You propose switching. Everyone agrees it's better — then nobody switches. Why?",
+      "options": [
+        {
+          "text": "It's a Nash equilibrium — each person's best response is to use what everyone else uses. Unilateral switching means your tests aren't compatible with the team's CI pipeline.",
+          "correct": true
+        },
+        { "text": "The team is resistant to change due to comfort and laziness", "correct": false },
+        {
+          "text": "The current framework is actually good enough and the improvement isn't worth discussing",
+          "correct": false
+        },
+        {
+          "text": "Leadership hasn't mandated the change, so nobody feels authorized to switch",
+          "correct": false
+        }
+      ],
+      "explanation": "This is a coordination equilibrium: each person's best response is to use what everyone else uses, regardless of whether a better option exists. Switching alone creates incompatibility (your tests don't run in the shared pipeline). It's not laziness (they agree the alternative is better), not adequacy (they acknowledge it's worse), and not authority (they have autonomy). The lock-in is structural: nobody benefits from switching unless everyone switches simultaneously."
+    },
+    {
+      "type": "spot-the-force",
+      "stem": "Sweden needed an act of Parliament, years of propaganda, new road signs, and a simultaneous national switchover to change from left to right driving. The citizens already agreed it was safer. What force kept them locked in?",
+      "options": [
+        {
+          "text": "Incentives — each individual's best incentive is to drive on the same side as everyone else, regardless of which side is 'better.' The equilibrium is self-enforcing.",
+          "correct": true
+        },
+        {
+          "text": "Fear — people were afraid of the chaos a transition would cause",
+          "correct": false
+        },
+        {
+          "text": "Identity — driving on the left was part of Swedish cultural identity",
+          "correct": false
+        },
+        {
+          "text": "Uncertainty — nobody knew whether right-hand driving would actually be safer",
+          "correct": false
+        }
+      ],
+      "explanation": "The lock-in force is pure incentive structure: your payoff from driving on any side depends entirely on what others do. If everyone drives left, driving right kills you — regardless of whether right is 'objectively' better. There's no uncertainty (everyone agreed right was safer), no identity attachment (Sweden wasn't culturally attached to left), and while fear of transition existed, the fundamental lock-in was incentive-based: unilateral deviation has maximum downside."
+    },
+    {
+      "type": "card-flip",
+      "pairs": [
+        {
+          "front": "Nash equilibrium",
+          "back": "A stable state where every player's strategy is the best response to everyone else's. Nobody can benefit by changing alone — even if a better equilibrium exists."
+        },
+        {
+          "front": "Path dependence",
+          "back": "Historical accident determines which equilibrium you land in. QWERTY wasn't chosen for quality — it was chosen for 1873 typewriter mechanics and then locked in."
+        },
+        {
+          "front": "Switching cost",
+          "back": "The price of moving from one equilibrium to another. High switching costs protect bad equilibria from challengers."
+        },
+        {
+          "front": "Dagen H (coordination event)",
+          "back": "Sweden's simultaneous national switch from left to right driving — an example of how escaping a locked equilibrium requires coordinated simultaneous action."
+        }
+      ]
+    },
+    {
+      "type": "drag-match",
+      "pairs": [
+        {
+          "left": "QWERTY persisting despite Dvorak being faster",
+          "right": "Suboptimal Nash equilibrium maintained by switching costs exceeding individual benefits"
+        },
+        {
+          "left": "A new team choosing their communication tool on Day 1",
+          "right": "Pre-equilibrium moment — easy to establish a good convention before lock-in"
+        },
+        {
+          "left": "One developer switching to a new framework while the team stays",
+          "right": "Unilateral deviation from equilibrium — costly because it creates incompatibility"
+        },
+        {
+          "left": "An industry adopting a common API standard",
+          "right": "Coordination equilibrium — value comes from everyone using the same interface, not from the interface being optimal"
+        },
+        {
+          "left": "Sweden passing a law to switch driving sides on one day",
+          "right": "Coordinated simultaneous movement — the only way to escape a locked-in equilibrium"
+        }
+      ]
+    },
+    {
+      "type": "before-after",
+      "before": {
+        "label": "Convention = wisdom",
+        "text": "If everyone does it this way, there must be a good reason. The established approach has survived this long because it works. I should follow the convention unless I have overwhelming evidence it's wrong."
+      },
+      "after": {
+        "label": "Convention = lock-in (maybe)",
+        "text": "I ask: is this convention good, or just locked in? Would anyone choose it fresh? If not, I look for moments where coordinated switching is possible — new teams, new projects, new contexts — and establish better equilibria before the old ones take hold."
+      }
+    }
+  ]
+}
