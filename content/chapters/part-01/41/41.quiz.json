@@ -1,0 +1,88 @@
+{
+  "chapterId": "41",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "A manager turned down a talented engineer's transfer request two years ago because the timing wasn't right for the team. That engineer left the company entirely and is now thriving at a competitor. The manager replays the conversation weekly, thinking 'I should have let her go.'",
+      "options": [
+        {
+          "text": "He should reach out to the engineer, apologize, and try to recruit her back — action is the antidote to regret.",
+          "correct": false,
+          "feedback": "While closing open loops is valid, this specific loop is closed — she's thriving elsewhere. The reaching out would be for his benefit, not hers. The real work is internal: accepting he made the best call he could with the information he had at the time."
+        },
+        {
+          "text": "He should recognize he's not carrying the decision — he's carrying the identity gap between 'who I was' and 'the manager I think I should have been.' Then convert it to future policy.",
+          "correct": true,
+          "feedback": "The event is over. What persists is the identity threat: 'A good manager would have let her go.' The productive path is self-compassion (he made a reasonable call) plus policy update (next time, prioritize individual growth even when timing is hard). Regret converted to policy has done its job."
+        },
+        {
+          "text": "He should accept that some decisions have bad outcomes and simply stop thinking about it — dwelling changes nothing.",
+          "correct": false,
+          "feedback": "'Just stop thinking about it' doesn't work — it's suppression, not processing. The brain's counterfactual engine can't be shut off by willpower. What works is compassion for the past self plus conversion of regret into updated behavior."
+        }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "Ekido walked for hours in silence, churning over Tanzan carrying the woman across the river. When he finally exploded, Tanzan said: 'I set her down at the river. You are still carrying her.'",
+      "question": "What was Ekido actually carrying for those hours?",
+      "options": [
+        {
+          "text": "Moral outrage — a genuine ethical concern about Tanzan breaking monastic vows.",
+          "correct": false,
+          "feedback": "If it were purely ethical concern, he would have spoken immediately. The hours of silent churning reveal something deeper — he was carrying a threat to his identity framework. What does it mean to be a good monk if the rules can be broken compassionately?"
+        },
+        {
+          "text": "An identity crisis — Tanzan's action challenged Ekido's entire framework of what a monk should be, and the weight was that unresolved threat to self-concept.",
+          "correct": true,
+          "feedback": "Regret and rumination always work this way. The event is the trigger, but the weight is the identity gap — the distance between what happened and who you think you should be. Ekido wasn't carrying the woman. He was carrying the question of what kind of monk he was."
+        },
+        {
+          "text": "Jealousy — he wished he had the courage to act compassionately himself and resented Tanzan for showing him up.",
+          "correct": false,
+          "feedback": "Jealousy might be a thread, but the primary weight is simpler: his framework for 'good monk' just broke. The rumination is the mind trying to reconcile the contradiction, not resolve an envy."
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "I can't stop replaying this because the decision was so important and I need to understand what went wrong.",
+      "back": "You're not replaying the decision — you're replaying the identity gap. Your brain's counterfactual engine is simulating an alternative timeline where you were the better version of yourself. The 'understanding' you're seeking isn't about the event (which is over) — it's about resolving the threat to your self-concept. Self-compassion resolves it faster than analysis."
+    },
+    {
+      "type": "before-after",
+      "context": "Two people both declined a life-changing opportunity five years ago that they now wish they'd taken.",
+      "scenarioA": {
+        "label": "The Prosecutor",
+        "text": "Replays the moment weekly. 'I was so stupid. I was afraid. I should have known.' Five years of carrying it has produced no change in behavior — just accumulated self-punishment. The regret has become part of his identity: 'I'm the person who missed his chance.'"
+      },
+      "scenarioB": {
+        "label": "The Witness",
+        "text": "Acknowledges the loss. Speaks to her past self with compassion: 'You were 26, overwhelmed, and made the safe choice with what you knew.' Converts the regret to policy: 'Now, when I feel fear about an opportunity, that's my signal TO act, not to retreat.' The regret did its job and was released."
+      },
+      "correctScenario": "B",
+      "explanation": "Regret that converts to policy has done its job — it updated future behavior and can be set down. Regret that only prosecutes the past self is pain without purpose. The event is identical. The relationship to it determines whether it weighs five years or five months."
+    },
+    {
+      "type": "drag-match",
+      "instruction": "Order these from least to most productive relationship with regret:",
+      "items": [
+        "Suppress it — 'just don't think about it'",
+        "Prosecute yourself — replay the identity gap endlessly",
+        "Witness with compassion — 'I did my best with what I knew'",
+        "Convert to policy — update future behavior, then release"
+      ],
+      "correctOrder": [
+        "Suppress it — 'just don't think about it'",
+        "Prosecute yourself — replay the identity gap endlessly",
+        "Witness with compassion — 'I did my best with what I knew'",
+        "Convert to policy — update future behavior, then release"
+      ]
+    }
+  ],
+  "principle": {
+    "text": "The event ended. The carrying is optional.",
+    "subtext": "Regret isn't about the past — it's about an identity crisis in the present. Set it down by converting it to policy, not punishment."
+  },
+  "reflection": "What regret are you still carrying that the event itself has long since ended? What identity gap is it really about? And what policy could you extract from it that would let you set it down?"
+}

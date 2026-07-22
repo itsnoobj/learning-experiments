@@ -1,0 +1,109 @@
+{
+  "id": "13",
+  "title": "Why Is Reputation Your Most Valuable Asset?",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "stem": "A freelancer has built a strong reputation over 5 years. A client offers triple their normal rate for a project that requires cutting corners on quality — no one would notice. The project is a one-off with no future work expected. What does reputation math say?",
+      "options": [
+        {
+          "text": "Still don't cut corners — the client's network talks, and one negative data point propagates faster than five years of positive ones. The 'one-off' frame is usually wrong.",
+          "correct": true
+        },
+        {
+          "text": "Take it — this is a one-shot game and reputation only matters in repeated interactions",
+          "correct": false
+        },
+        {
+          "text": "Negotiate a middle ground — do slightly less quality for a moderate premium",
+          "correct": false
+        },
+        {
+          "text": "Take it but ensure the contract prevents the client from sharing negative reviews",
+          "correct": false
+        }
+      ],
+      "explanation": "Reputation math says: one-offs are rarely truly one-off. The client's network overlaps with yours. One negative signal propagates exponentially while positive ones propagate linearly. The 'triple rate' is finite; the reputation damage is potentially unbounded. NDAs (option D) don't prevent word-of-mouth. Middle ground (option C) still compromises the standard your reputation is built on."
+    },
+    {
+      "type": "spot-the-force",
+      "stem": "The Medici bank charged LOWER interest rates than competitors — yet attracted FAR more deposits and became the dominant bank in Europe. What force made 'cheaper' more profitable?",
+      "options": [
+        {
+          "text": "Trust — their century of never-default reputation made depositors feel safe, attracting massive volume that compensated for lower margins",
+          "correct": true
+        },
+        {
+          "text": "Status — being the pope's bank attracted clients who wanted the prestige of banking with the Medici",
+          "correct": false
+        },
+        {
+          "text": "Scarcity — they limited who could deposit, creating exclusivity that attracted more demand",
+          "correct": false
+        },
+        {
+          "text": "Incentives — their lower rates incentivized borrowers to choose them over competitors",
+          "correct": false
+        }
+      ],
+      "explanation": "The Medici's competitive advantage was trust: depositors chose safety over higher returns. This produced volume that exceeded what higher-margin competitors could attract. It's the trust premium — reputation as a moat. Status (B) was an effect, not the cause. They didn't limit deposits (C). And lower lending rates (D) would reduce profits; the advantage was on the deposit side — people giving them money to hold."
+    },
+    {
+      "type": "card-flip",
+      "pairs": [
+        {
+          "front": "Reputation as compound interest",
+          "back": "Each honest action earns a return that reinvests — future honesty becomes more credible, attracting more opportunity, creating more occasions for honest action"
+        },
+        {
+          "front": "The asymmetry of reputation",
+          "back": "Builds linearly (years of consistency add small increments) but destroys exponentially (one revelation eliminates all accumulated trust instantly)"
+        },
+        {
+          "front": "The Medici principle",
+          "back": "No single profitable deception exceeds the value of continued trust across all relationships over your remaining lifespan. Honesty is the greedy strategy on a long enough timeline."
+        },
+        {
+          "front": "Reputation transfer",
+          "back": "Trust in one domain transfers to others — being seen as honest in business makes people assume honesty in personal life. Investment pays broader returns than expected."
+        }
+      ]
+    },
+    {
+      "type": "drag-match",
+      "pairs": [
+        {
+          "left": "Medici never defaulting even when they could",
+          "right": "Protecting reputation's compound returns over any single-transaction profit"
+        },
+        {
+          "left": "Enron winning 'Most Innovative' for 6 years then collapsing",
+          "right": "Reputation built on false signals — exponential destruction when truth emerged"
+        },
+        {
+          "left": "Arthur Andersen dissolving after Enron association",
+          "right": "Reputation contagion — proximity to one bad actor destroyed a century-old firm"
+        },
+        {
+          "left": "J&J immediately recalling Tylenol in 1982",
+          "right": "Rapid transparent repair that preserved (and enhanced) long-term reputation"
+        },
+        {
+          "left": "A freelancer always delivering one day early",
+          "right": "Small consistent data points compounding into 'reliable' faster than any grand gesture"
+        }
+      ]
+    },
+    {
+      "type": "before-after",
+      "before": {
+        "label": "Transaction-by-transaction thinking",
+        "text": "Each deal is separate. I'll optimize each interaction for maximum return. If I can get away with something, the rational move is to take the gain while the cost is low."
+      },
+      "after": {
+        "label": "Reputation-as-portfolio thinking",
+        "text": "Every interaction is a data point in my permanent record. I protect my reputation's compound returns above any single transaction's gain — because the math always favors long-term trust over short-term extraction in repeated games."
+      }
+    }
+  ]
+}

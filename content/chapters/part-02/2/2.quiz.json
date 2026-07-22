@@ -1,0 +1,109 @@
+{
+  "id": "2",
+  "title": "Why Does the Nice Guy Keep Losing — Until He Doesn't?",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "stem": "You've been helping a colleague for months — covering their gaps, sharing your research. They keep taking without reciprocating. A friend says 'stop being nice.' What does Tit-for-Tat actually prescribe?",
+      "options": [
+        {
+          "text": "Stop helping them next time they ask (punish), but if they start reciprocating, immediately return to helping (forgive)",
+          "correct": true
+        },
+        {
+          "text": "Cut them off permanently — they've shown their true character",
+          "correct": false
+        },
+        {
+          "text": "Keep helping anyway because the relationship is long-term and they might come around eventually",
+          "correct": false
+        },
+        {
+          "text": "Escalate by publicly calling out their behavior to create social pressure",
+          "correct": false
+        }
+      ],
+      "explanation": "Tit-for-Tat is retaliatory AND forgiving. It punishes defection immediately (stop helping next time) but doesn't hold grudges — if they start reciprocating, you return to cooperation. Permanent cutoff is too harsh (locks in mutual defection). Indefinite tolerance is too soft (signals that exploitation has no consequences). Public escalation introduces noise."
+    },
+    {
+      "type": "spot-the-force",
+      "stem": "In Axelrod's tournament, 'always defect' strategies scored well in individual rounds but lost overall. Complex strategies that mixed cooperation and defection also lost. What made Tit-for-Tat's simplicity its superpower?",
+      "options": [
+        {
+          "text": "Trust — its predictable pattern let opponents feel safe cooperating, triggering mutual gain across hundreds of rounds",
+          "correct": true
+        },
+        {
+          "text": "Fear — opponents feared its retaliation and never tried to exploit it",
+          "correct": false
+        },
+        {
+          "text": "Status — being known as the tournament winner gave it an advantage in later rounds",
+          "correct": false
+        },
+        {
+          "text": "Incentives — the point system naturally rewarded simple strategies over complex ones",
+          "correct": false
+        }
+      ],
+      "explanation": "Tit-for-Tat's clarity created trust. When opponents could instantly predict 'if I cooperate, it cooperates back,' they chose cooperation — because the safe path was also the profitable one. Complex strategies failed because opponents couldn't build stable expectations, so they defaulted to self-protection. Readability enables trust."
+    },
+    {
+      "type": "card-flip",
+      "pairs": [
+        {
+          "front": "Nice",
+          "back": "Never defects first — starts every new interaction with cooperation"
+        },
+        {
+          "front": "Retaliatory",
+          "back": "Punishes defection immediately — you cheat once, I mirror it next round"
+        },
+        {
+          "front": "Forgiving",
+          "back": "After one punishment, returns to cooperation — always offers a path back"
+        },
+        {
+          "front": "Clear",
+          "back": "Pattern is instantly recognizable — opponents quickly learn what to expect"
+        }
+      ]
+    },
+    {
+      "type": "drag-match",
+      "pairs": [
+        {
+          "left": "Antwerp diamond traders using handshakes",
+          "right": "Infinite repeated game with total reputation visibility"
+        },
+        {
+          "left": "Online marketplace with anonymous one-time sellers",
+          "right": "One-shot game where defection (fraud) is rational"
+        },
+        {
+          "left": "Colleague who is sometimes generous, sometimes cold",
+          "right": "Unpredictable strategy that destroys trust conditions"
+        },
+        {
+          "left": "Rotating WWI soldiers to prevent truces",
+          "right": "Converting a repeated game into one-shot interactions"
+        },
+        {
+          "left": "Community expelling a cheating trader permanently",
+          "right": "Making defection cost exceed any possible single-round gain"
+        }
+      ]
+    },
+    {
+      "type": "before-after",
+      "before": {
+        "label": "Naive or Cynical",
+        "text": "Either I'm generous without boundaries (and get exploited) or I'm protective without generosity (and miss every opportunity for cooperation). Nice guys finish last."
+      },
+      "after": {
+        "label": "Strategic Generosity",
+        "text": "I cooperate first. I punish defection immediately. I forgive after one punishment. I make my pattern crystal clear. I'm not nice or tough — I'm readable. And readable wins in every repeated game."
+      }
+    }
+  ]
+}

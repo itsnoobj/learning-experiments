@@ -1,0 +1,88 @@
+{
+  "chapterId": "52",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "A team lead discovers they shipped a bug to production that affected 200 customers. Nobody has noticed yet — monitoring didn't catch it and no complaints have come in. They could quietly fix it with a hotfix and nobody would ever know. Or they could disclose it to leadership and the affected customers proactively.",
+      "options": [
+        {
+          "text": "Fix it quietly — no customers noticed, no harm done. Disclosing would create unnecessary panic and damage the team's reputation for something that's already resolved.",
+          "correct": false,
+          "feedback": "This is the cover-up instinct in action. It feels rational in the moment — but it creates a ticking bomb. If anyone discovers the bug AND the concealment later, you haven't just shipped a bug (forgivable) — you've demonstrated that you hide problems from the people who trust you. The concealment is always worse than the bug."
+        },
+        {
+          "text": "Disclose immediately — even though no one noticed. The window between transgression and discovery is where voluntary truth-telling preserves trust. Once someone discovers it independently, confession becomes damage control instead of integrity.",
+          "correct": true,
+          "feedback": "Confessing before being caught preserves the other person's confidence in their own reality. 'We shipped a bug, caught it, fixed it, here's what we're doing to prevent recurrence' builds trust. Getting caught hiding it destroys trust — not because of the bug, but because of the concealment. The cover-up always costs more than the confession."
+        },
+        {
+          "text": "Disclose the bug but frame it as a 'learning opportunity' and emphasize the quick fix — manage the narrative so it reflects well on the team's responsiveness.",
+          "correct": false,
+          "feedback": "Spin is a softer form of concealment. When people detect that you're managing their perception rather than sharing truth, trust erodes — not dramatically, but steadily. The trust-building version is uncomfortable honesty: 'We made a mistake. Here's exactly what happened. Here's what we're doing about it.' No framing. No narrative management."
+        }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "Lance Armstrong didn't just deny doping — he sued journalists, intimidated teammates, and made believing him feel like a moral act. When the truth emerged, people felt not just betrayed but foolish.",
+      "question": "Why did Armstrong's betrayal feel more devastating than other athletes who also doped and lied?",
+      "options": [
+        {
+          "text": "Because his cancer survival story made people more emotionally invested — the higher the pedestal, the harder the fall.",
+          "correct": false,
+          "feedback": "Emotional investment intensified the pain, but other beloved athletes have fallen without generating the same level of rage. The differentiator wasn't the height of the pedestal — it was that Armstrong attacked people for telling the truth. He made doubt feel like betrayal, so that victims questioned their own judgment, not just his character."
+        },
+        {
+          "text": "Because he weaponized trust itself — he used people's belief in him as a tool to punish anyone who voiced the truth, making victims feel foolish for their own accurate instincts.",
+          "correct": true,
+          "feedback": "This is the deepest level of trust violation: making people's goodwill into a weapon against their own perception. Armstrong didn't just lie. He made believing him virtuous and doubting him cynical. When the truth emerged, people didn't just lose faith in him — they lost faith in their own judgment. That's what people can't forgive."
+        },
+        {
+          "text": "Because cycling fans are more passionate than other sports fans — the betrayal hit a tight-knit community harder than a mainstream sport would.",
+          "correct": false,
+          "feedback": "Armstrong's betrayal was felt far beyond cycling. Millions of Livestrong bracelet wearers who never watched a race felt it. The mechanism was universal: when someone makes your trust into a weapon against truth-tellers, the betrayal extends to everyone who believed — regardless of what sport or domain it's in."
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "The worst thing about being lied to is the lie itself — the fact that someone said something untrue to your face.",
+      "back": "The lie is painful but survivable. What's actually unforgivable is the sustained deception that follows — especially when the liar attacks people who voice the truth. Because that turns the lie into something worse: a weaponization of your goodwill. You weren't just deceived. Your trust was used as a tool against your own accurate perception of reality. The lie makes you a victim. The cover-up makes you a fool. That's the asymmetry that makes trust destruction irreversible."
+    },
+    {
+      "type": "before-after",
+      "context": "Two public figures both commit the same transgression: an extramarital affair becomes public.",
+      "scenarioA": {
+        "label": "Confess before caught (Letterman)",
+        "text": "Discloses on his own show before the story breaks. Awkward, uncomfortable, no spin. Says 'I had sex with women who work on this show.' Doesn't minimize or reframe. Career survives. Trust recovers. Because: he preserved the audience's confidence in their own perception of reality."
+      },
+      "scenarioB": {
+        "label": "Deny until cornered (archetype)",
+        "text": "Denies for months. Attacks accusers. Makes supporters feel guilty for doubting. Eventually caught with undeniable evidence. Confesses only when lying is no longer viable. Career destroyed — not by the affair, but by months of making everyone who trusted him feel foolish for their belief."
+      },
+      "correctScenario": "A",
+      "explanation": "Same transgression, opposite trust outcomes. The difference isn't the act — it's what happens next. Voluntary confession says 'your reality is accurate.' Denial-until-caught says 'your reality was wrong this whole time.' People can forgive wrongdoing. They can't forgive being made to feel foolish for trusting their own judgment."
+    },
+    {
+      "type": "drag-match",
+      "instruction": "Order these from most to least damaging to trust:",
+      "items": [
+        "Attacking people who voice accurate suspicions",
+        "Sustained concealment after the original transgression",
+        "The original transgression itself",
+        "Confessing voluntarily before being discovered"
+      ],
+      "correctOrder": [
+        "Attacking people who voice accurate suspicions",
+        "Sustained concealment after the original transgression",
+        "The original transgression itself",
+        "Confessing voluntarily before being discovered"
+      ]
+    }
+  ],
+  "principle": {
+    "text": "The original sin wounds trust. The cover-up kills it. Attacking truth-tellers buries it.",
+    "subtext": "What people can't forgive isn't wrongdoing — it's discovering that their trust was weaponized against their own perception of reality."
+  },
+  "reflection": "Have you ever concealed something small to avoid an uncomfortable conversation — and felt the concealment grow heavier over time? What would it cost to confess now versus being discovered later?"
+}

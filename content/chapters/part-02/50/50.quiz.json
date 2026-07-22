@@ -1,0 +1,88 @@
+{
+  "chapterId": "50",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "A VP presents a product strategy in a meeting with 15 people. She asks 'Does anyone see problems with this approach?' The room is silent. After the meeting, three separate engineers tell each other in Slack DMs that the timeline is unrealistic and the architecture won't scale. None of them said anything in the room.",
+      "options": [
+        {
+          "text": "The engineers are being cowardly — they should speak up in meetings regardless of seniority dynamics. Professional courage is a personal responsibility.",
+          "correct": false,
+          "feedback": "Blaming individuals for a structural problem doesn't fix anything. The same engineers DO share concerns — in DMs, with peers, in safe contexts. The meeting structure made disagreement feel career-threatening. The fix is structural (how the question is asked, who speaks first), not motivational."
+        },
+        {
+          "text": "The VP's question 'Does anyone see problems?' in her authoritative tone functions as 'please don't.' She should restructure: collect written concerns before the meeting, or ask 'What would make this fail?' to make dissent the expected response.",
+          "correct": true,
+          "feedback": "'Any concerns?' from a VP is a permission structure that makes silence the safe default. Restructuring the prompt changes what's expected: 'What's the strongest argument against this?' makes disagreement the invited response rather than the risky one. The engineers have the concerns — the structure just needs to make sharing them safe."
+        },
+        {
+          "text": "The meeting is too large — with 15 people, individuals feel less responsible for speaking up. Reduce the meeting to 5 key people and the real discussion will happen.",
+          "correct": false,
+          "feedback": "Smaller meetings help (less diffusion, more psychological safety), but the core problem is structural, not size-related. Even in a 5-person meeting, if the VP speaks first and asks 'any concerns?' in an authority tone, the same silence results. The prompt and speaking order matter more than headcount."
+        }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "On the USS Santa Fe, Captain Marquet banned 'request permission to...' and replaced it with 'I intend to...' The submarine went from last to first in fleet performance.",
+      "question": "Why did this language change produce such dramatic performance improvement?",
+      "options": [
+        {
+          "text": "It boosted morale — the crew felt more empowered and respected, which increased their motivation and effort.",
+          "correct": false,
+          "feedback": "Morale was a byproduct, not the mechanism. The real change was cognitive: 'request permission' requires only waiting for orders. 'I intend to' requires actually thinking through the action yourself. The language shift moved thinking from one person (captain) to 130 people (entire crew)."
+        },
+        {
+          "text": "It moved thinking from one person (captain) to the whole crew — 'I intend to' requires each officer to think through their action, transforming meetings from performance of deference into actual problem-solving.",
+          "correct": true,
+          "feedback": "The old structure concentrated all thinking in the captain and converted everyone else into performers of obedience. The new structure distributed thinking to 130 minds instead of 1. The submarine didn't get new people — it got a structure that let existing intelligence actually function. The intelligence was always there. The theatre was blocking it."
+        },
+        {
+          "text": "It reduced the captain's workload — by delegating decisions, Marquet had more time to focus on strategy rather than micromanaging daily operations.",
+          "correct": false,
+          "feedback": "Workload reduction happened, but it's not why performance improved. Performance improved because the crew started thinking rather than waiting. A submarine where 130 people are thinking about problems will outperform one where 1 person is thinking and 129 are executing, regardless of how rested the captain is."
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "Our meetings would be better if people just had the courage to speak up and disagree when they see problems.",
+      "back": "This blames individuals for a structural problem. The same people who are silent in meetings share freely in DMs, in 1-on-1s, and with peers — because those contexts make disagreement safe. Meeting theatre isn't a courage deficit. It's a rational response to structures where disagreement has asymmetric consequences: being wrong in agreement is forgotten, being wrong in disagreement is remembered. Change the structure (who speaks first, how questions are framed, mandated devil's advocates), and the 'courage' appears instantly."
+    },
+    {
+      "type": "before-after",
+      "context": "Two leadership teams both have a strategic decision to make with significant risk.",
+      "scenarioA": {
+        "label": "Theatre-optimized meeting",
+        "text": "The CEO presents their preferred direction. Asks 'Thoughts?' Senior leaders echo support with minor variations. The one dissenter is 'noted' and the discussion moves on. The decision ships. Six months later it fails for exactly the reason the dissenter (and three silent people) saw coming. Post-mortem: 'We didn't have the right information.'"
+      },
+      "scenarioB": {
+        "label": "Thinking-optimized meeting",
+        "text": "Before the meeting, each leader writes their position independently (no anchoring). Meeting opens with the most junior person sharing first. One person is assigned devil's advocate. The CEO speaks last. Three genuine risks surface that the CEO hadn't considered. The plan is adjusted. It succeeds — not because the group is smarter, but because the structure let intelligence function."
+      },
+      "correctScenario": "B",
+      "explanation": "Both teams had identical intelligence in the room. The difference was structural: Team A's meeting was optimized to confirm the CEO's position (theatre). Team B's meeting was optimized to surface disagreement (thinking). The information was available in both rooms. Only one structure let it get voiced."
+    },
+    {
+      "type": "drag-match",
+      "instruction": "Order these meeting practices from most theatre-producing to most thinking-producing:",
+      "items": [
+        "Senior person speaks first and asks 'any concerns?'",
+        "Open discussion with no structure — whoever is loudest speaks",
+        "Written positions collected before meeting; junior speaks first",
+        "Assigned devil's advocate + 'What would make this fail?' prompt"
+      ],
+      "correctOrder": [
+        "Senior person speaks first and asks 'any concerns?'",
+        "Open discussion with no structure — whoever is loudest speaks",
+        "Written positions collected before meeting; junior speaks first",
+        "Assigned devil's advocate + 'What would make this fail?' prompt"
+      ]
+    }
+  ],
+  "principle": {
+    "text": "Meetings become theatre when the structure makes agreement safer than thinking.",
+    "subtext": "The fix isn't better people or more courage — it's restructuring who speaks first, what questions are asked, and whether disagreement is the expected response or the risky one."
+  },
+  "reflection": "Think of your last important meeting: was the decision actually made in the room, or was the meeting performing a decision already made? What structural change would make genuine disagreement safer next time?"
+}

@@ -1,0 +1,88 @@
+{
+  "chapterId": "51",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "A new engineering manager wants to build trust with their team quickly. They're considering organizing an offsite team-building event — escape rooms, dinner, personal sharing exercises — to 'accelerate' the trust-building process.",
+      "options": [
+        {
+          "text": "Great idea — shared experiences outside work create bonds that accelerate trust. The team will open up and trust will deepen through vulnerability.",
+          "correct": false,
+          "feedback": "Offsites can create goodwill, but they don't build trust in the compound-interest sense. Trust that matters forms through consistent, small demonstrations over time — not through manufactured bonding experiences. You can enjoy an escape room with someone you don't trust professionally."
+        },
+        {
+          "text": "Skip the offsite. Instead, focus on the mundane: keep every small promise, follow through on every commitment, share honest assessments when it's uncomfortable. Trust builds like compound interest — tiny daily deposits, not events.",
+          "correct": true,
+          "feedback": "Trust compounds through micro-behaviors: saying 'I'll send that by EOD' and doing it. Admitting 'I was wrong about the estimate.' Following through when no one is watching. These deposits are invisible individually but unmistakable over months. An offsite can complement this — but can't substitute for it."
+        },
+        {
+          "text": "They should be transparent about their own vulnerabilities first — trust requires the leader to model openness, and sharing personal struggles will create psychological safety.",
+          "correct": false,
+          "feedback": "Premature vulnerability from a leader can feel performative or even create discomfort rather than trust. Trust is earned through consistent reliable behavior over time, not through vulnerability displays. The leader's job is to be reliably honest and consistently competent — vulnerability will feel natural once the foundation exists."
+        }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "Buffett bought Nebraska Furniture Mart for $60 million on a handshake — no lawyers, no audit, no multi-month negotiation. The entire deal fit on one page.",
+      "question": "What enabled this seemingly reckless transaction to be completely rational?",
+      "options": [
+        {
+          "text": "Buffett's superior financial judgment — he could assess the business value without needing formal due diligence.",
+          "correct": false,
+          "feedback": "Financial judgment is necessary but insufficient. You don't hand someone $60 million based on a handshake because you trust the numbers. You do it because decades of consistent behavior have made the other person's word more reliable than a contract. The trust IS the due diligence."
+        },
+        {
+          "text": "Decades of compound trust — years of observing Mrs. B's consistent behavior (transparent pricing, reliable service, honest dealings) made the handshake a withdrawal from an enormous accumulated trust balance.",
+          "correct": true,
+          "feedback": "The handshake wasn't where trust was built. It was where trust was cashed. Mrs. B's 40 years of running the business the same way every day — consistent, transparent, reliable — created a trust balance so large that formal verification became redundant. The deposits were invisible individually. The total made lawyers unnecessary."
+        },
+        {
+          "text": "Mutual reputation risk — both Buffett and Mrs. B had public reputations that would be destroyed by a bad-faith deal, creating a natural enforcement mechanism.",
+          "correct": false,
+          "feedback": "Reputation stakes help explain why the deal held, but not why it was made so casually. Many parties with reputation stakes still use lawyers and lengthy contracts. What made this deal possible was specifically the accumulated trust from consistent observed behavior — not just the incentive structure."
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "Trust can be accelerated through grand gestures — a dramatic demonstration of loyalty, a major sacrifice, or a vulnerable disclosure can build trust quickly.",
+      "back": "Trust works like compound interest, not like a transaction. Grand gestures can signal good intent, but they don't compound — because trust is built through observed consistency over time, not through peak moments. One dramatic act doesn't tell you how someone behaves every Tuesday when nothing is at stake. What builds trust is boring: kept promises, honest communication, reliable follow-through, day after day, until the accumulated total becomes unmistakable."
+    },
+    {
+      "type": "before-after",
+      "context": "Two product managers both want to build trust with engineering teams they've recently joined.",
+      "scenarioA": {
+        "label": "Grand gesture approach",
+        "text": "Takes the team's side in a big public argument with leadership about timeline. Wins the battle. Engineers are grateful in the moment. But next month, she's late to three standups, forgets to follow up on a blocker she promised to escalate, and shares information selectively. Trust doesn't grow despite the dramatic gesture — because the daily deposits aren't being made."
+      },
+      "scenarioB": {
+        "label": "Compound interest approach",
+        "text": "Does nothing dramatic. Just shows up on time. Follows up on every action item within 24 hours. Shares context even when she doesn't have to. Admits when she doesn't know something. After three months, the team trusts her completely — they'd rather work with her than anyone. No single moment built it. The consistency did."
+      },
+      "correctScenario": "B",
+      "explanation": "Trust compounds through consistency, not events. PM A made a large single deposit but failed at daily ones — and the withdrawal of unreliability erased the gesture. PM B made tiny daily deposits that individually seemed unremarkable but accumulated into genuine trust. Grand gestures feel trust-like in the moment. Consistency IS trust."
+    },
+    {
+      "type": "drag-match",
+      "instruction": "Order these trust-building behaviors from largest individual deposit to smallest (but remember: the small ones compound more because they happen daily):",
+      "items": [
+        "Being honest when it costs you something",
+        "Keeping a small promise no one would notice if you broke",
+        "Being reliable when no one is watching",
+        "Admitting a mistake before being caught"
+      ],
+      "correctOrder": [
+        "Being honest when it costs you something",
+        "Admitting a mistake before being caught",
+        "Being reliable when no one is watching",
+        "Keeping a small promise no one would notice if you broke"
+      ]
+    }
+  ],
+  "principle": {
+    "text": "Trust is compound interest — built daily in deposits too small to notice, too large to fake over time.",
+    "subtext": "You can't accelerate it with grand gestures. You can only compound it through consistency. The individual deposits are pennies. The accumulated total is priceless."
+  },
+  "reflection": "Think of the person you trust most professionally. Was there a single moment that built it — or was it an accumulation of consistent behavior over months and years? What daily deposit could you start making today?"
+}

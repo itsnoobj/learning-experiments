@@ -44,10 +44,10 @@ describe('loadChapter', () => {
 
 describe('loadQuiz', () => {
   it('returns a LoadedQuiz with a challenges array for an existing quiz', async () => {
-    const quiz = await loadQuiz('1');
+    const quiz = await loadQuiz('18');
 
     expect(quiz).not.toBeNull();
-    expect(quiz!.chapterId).toBe('1');
+    expect(quiz!.chapterId).toBe('18');
     expect(Array.isArray(quiz!.challenges)).toBe(true);
     expect(quiz!.challenges.length).toBeGreaterThan(0);
     expect(quiz!.principle.text.length).toBeGreaterThan(0);

@@ -1,0 +1,106 @@
+{
+  "id": "7",
+  "title": "Why Does Going First Sometimes Win and Sometimes Lose?",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "stem": "Two VPs in a company disagree about product direction. Both have dug in publicly. Neither will back down in meetings. The conflict is paralyzing the team. What's the Kennedy move?",
+      "options": [
+        {
+          "text": "Create a private channel (1-on-1 with each VP separately) to find a synthesis that lets both claim contribution, then present the joint solution publicly",
+          "correct": true
+        },
+        { "text": "Escalate to the CEO and force a decision from above", "correct": false },
+        {
+          "text": "Let the conflict play out — eventually one will yield when they see the team impact",
+          "correct": false
+        },
+        {
+          "text": "Propose a compromise that splits the difference between both positions",
+          "correct": false
+        }
+      ],
+      "explanation": "This is a chicken game — both VPs can't back down publicly without losing face. Kennedy's move was the back-channel: private communication that lets both sides cooperate without the audience cost. A 50/50 split (option D) often satisfies nobody. Escalation (option B) creates a loser. Waiting (option C) lets the crash happen. The back-channel changes the game from 'who yields publicly' to 'who gets credit for the synthesis.'"
+    },
+    {
+      "type": "spot-the-force",
+      "stem": "Japanese nemawashi involves consulting every stakeholder privately before any formal meeting. The person who proposes in the meeting has already secured agreement. What force gives the last-mover power here?",
+      "options": [
+        {
+          "text": "Uncertainty — by gathering everyone's positions first, the last-mover eliminates uncertainty and constructs a proposal no one can object to",
+          "correct": true
+        },
+        {
+          "text": "Power — the person doing nemawashi has more organizational authority to consult widely",
+          "correct": false
+        },
+        {
+          "text": "Trust — the slow, personal approach builds deeper trust than rapid first-movers",
+          "correct": false
+        },
+        {
+          "text": "Fear — stakeholders are afraid to object in the formal meeting after private agreement",
+          "correct": false
+        }
+      ],
+      "explanation": "Nemawashi is fundamentally about information advantage: the last-mover knows everyone's position, red lines, and preferences. They use this to construct a proposal that's already pre-approved. It's not about authority (anyone can do nemawashi), trust (the relationships are instrumental), or fear (people could still object). It's about eliminating uncertainty — the last-mover operates with complete information while first-movers operate blind."
+    },
+    {
+      "type": "card-flip",
+      "pairs": [
+        {
+          "front": "First-mover advantage",
+          "back": "Exists when the game rewards commitment, framing, and lock-in. Setting standards, defining markets, establishing norms. You win by making others respond to YOUR frame."
+        },
+        {
+          "front": "Last-mover advantage",
+          "back": "Exists when the game rewards information and adaptation. Complex negotiations, uncertain markets, multi-stakeholder decisions. You win by knowing everyone's position before acting."
+        },
+        {
+          "front": "The game of chicken",
+          "back": "Two players driving at each other — whoever swerves is 'weak' but if neither swerves, both crash. Commitment becomes both weapon and trap."
+        },
+        {
+          "front": "Kennedy's blockade (the third option)",
+          "back": "Refusing the binary (invade or accept), introducing a graduated response that shifts the next move to the opponent and creates time for face-saving resolution."
+        }
+      ]
+    },
+    {
+      "type": "drag-match",
+      "pairs": [
+        {
+          "left": "Startup launching a product in a brand-new category",
+          "right": "First-mover advantage — framing the category and capturing network effects early"
+        },
+        {
+          "left": "Amazon entering markets after others prove demand",
+          "right": "Last-mover advantage — learning from first-movers' mistakes, entering with superior execution"
+        },
+        {
+          "left": "Two countries in a tariff escalation war",
+          "right": "Chicken game — both lose from escalation but neither wants to be seen yielding first"
+        },
+        {
+          "left": "Doing private 1-on-1s before a big team proposal",
+          "right": "Nemawashi — eliminating uncertainty by gathering positions before committing publicly"
+        },
+        {
+          "left": "CEO publicly announcing a pivot before securing board buy-in",
+          "right": "First-mover gamble — framing power but risks being opposed publicly with no exit"
+        }
+      ]
+    },
+    {
+      "type": "before-after",
+      "before": {
+        "label": "Speed is always power",
+        "text": "I need to move first — set the agenda, stake my position, force others to respond. Hesitation is weakness. The first-mover captures the market/conversation/frame."
+      },
+      "after": {
+        "label": "Timing is strategic",
+        "text": "I diagnose the game first. Does it reward commitment (go first) or information (go last)? In chicken dynamics, I look for the third option. I never let 'appearing strong' override the question of what actually produces the best outcome."
+      }
+    }
+  ]
+}

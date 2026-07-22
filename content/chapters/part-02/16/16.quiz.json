@@ -1,0 +1,109 @@
+{
+  "id": "16",
+  "title": "Why Do Arms Races Happen in Business?",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "stem": "Two SaaS companies have been matching each other's feature releases for 18 months. Neither has gained market share. Both teams are exhausted. A PM proposes 'we should just focus on our top 3 use cases and make them incredible instead of matching their feature list.' Is this the right move?",
+      "options": [
+        {
+          "text": "Yes — this is the Southwest strategy. Stop matching the competitor feature-for-feature and compete on a different axis (depth/quality vs. breadth) where escalation isn't the dynamic.",
+          "correct": true
+        },
+        {
+          "text": "No — stopping the feature race means falling behind while the competitor continues adding features customers expect",
+          "correct": false
+        },
+        {
+          "text": "Only if customers explicitly say they want fewer, better features rather than more features",
+          "correct": false
+        },
+        {
+          "text": "Yes, but only temporarily — use the breathing room to leapfrog them with a major release later",
+          "correct": false
+        }
+      ],
+      "explanation": "This is the classic arms-race escape: change the axis of competition. Matching feature-for-feature hasn't produced market share gain — it's pure escalation tax. Option B is the trap logic that keeps you in the race. Option C is too cautious — customers rarely articulate what they want this clearly. Option D still operates within the race frame. The PM is proposing the Southwest move: refuse the race, compete differently."
+    },
+    {
+      "type": "spot-the-force",
+      "stem": "During the Cold War, both superpowers built 70,000 nuclear warheads when 500 would have provided identical deterrence. What force drove the escalation far beyond rational need?",
+      "options": [
+        {
+          "text": "Scarcity — relative military position felt scarce (zero-sum), and each side feared ANY gap could be exploited, driving overinvestment beyond absolute need",
+          "correct": true
+        },
+        {
+          "text": "Power — both nations wanted to dominate the other completely, not just deter them",
+          "correct": false
+        },
+        {
+          "text": "Fear — paranoia about the other side's secret capabilities drove constant overbuilding",
+          "correct": false
+        },
+        {
+          "text": "Identity — both nations defined themselves as superpowers and needed arsenals to match that identity",
+          "correct": false
+        }
+      ],
+      "explanation": "The core force is scarcity of relative position — each side perceived military advantage as zero-sum. Any gap, however small, felt existentially threatening. This drove investment far beyond what absolute deterrence required. Fear (C) contributed to overestimation, but the driving force was the zero-sum competition for relative advantage. Neither side wanted total dominance (B) — they wanted to ensure the other couldn't gain even slight superiority."
+    },
+    {
+      "type": "card-flip",
+      "pairs": [
+        {
+          "front": "Arms race",
+          "back": "Competition for relative position that consumes resources without improving anyone's absolute situation. Both sides spend more; neither gains advantage."
+        },
+        {
+          "front": "Mutually Assured Destruction (MAD)",
+          "back": "The ugly stable equilibrium: peace through certainty of mutual annihilation. Nobody chose it; it emerged from escalation logic."
+        },
+        {
+          "front": "The Southwest strategy",
+          "back": "Escape the arms race by competing on a different axis entirely. Don't win the race — change what race you're running."
+        },
+        {
+          "front": "Escalation tax",
+          "back": "Resources spent purely to maintain relative position vs. competitors — producing no customer value and no sustainable advantage."
+        }
+      ]
+    },
+    {
+      "type": "drag-match",
+      "pairs": [
+        {
+          "left": "Two companies endlessly matching each other's feature releases",
+          "right": "Business arms race — relative position unchanged, both teams exhausted, customers indifferent"
+        },
+        {
+          "left": "Southwest flying one aircraft type while competitors operate twelve",
+          "right": "Refusing the complexity arms race — competing on cost/simplicity instead"
+        },
+        {
+          "left": "Tech salary war where all companies pay 50% more but hire the same number",
+          "right": "Arms race in compensation — relative positions unchanged, everyone poorer"
+        },
+        {
+          "left": "US and USSR agreeing to SALT treaties limiting warheads",
+          "right": "Mutual de-escalation — both sides agree to stop simultaneously"
+        },
+        {
+          "left": "Startup ignoring the incumbent's feature set and solving the problem differently",
+          "right": "Changing the game rather than escalating within it"
+        }
+      ]
+    },
+    {
+      "type": "before-after",
+      "before": {
+        "label": "Match or fall behind",
+        "text": "They added X, so we must add X. If we stop matching, they'll pull ahead and we'll lose customers. We have to keep up."
+      },
+      "after": {
+        "label": "Escape or redefine",
+        "text": "I ask: is this investment improving my absolute position (customer value) or just maintaining relative position? If it's only relative, I'm paying an escalation tax. I look for the Southwest move — a different axis where this race doesn't apply."
+      }
+    }
+  ]
+}

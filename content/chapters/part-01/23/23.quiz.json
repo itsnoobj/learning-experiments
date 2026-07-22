@@ -3,86 +3,70 @@
   "challenges": [
     {
       "type": "scenario-choice",
-      "situation": "A software architect sees that a peer — someone she started with at the same level — just published a widely-shared article on system design that's getting thousands of reactions. She feels the sting. She tells herself she's happy for him. But she's already mentally cataloging flaws in his article.",
+      "situation": "A senior engineer has shipped three successful projects in a row. In the next planning meeting, a junior teammate suggests a different architectural approach. The senior's first instinct is to dismiss it — the track record speaks for itself.",
       "options": [
         {
-          "text": "She should be honest that she's envious, and use it as information: clearly she values thought leadership and hasn't pursued it. Time to start writing herself.",
+          "text": "Override the suggestion quickly to keep the meeting moving — past results justify the call.",
+          "correct": false,
+          "feedback": "This is the dismissal reflex in action. Past success in one domain doesn't guarantee correctness in the next decision. Newton had gravity and optics behind him — and still couldn't tolerate Leibniz arriving at the same idea."
+        },
+        {
+          "text": "Ask the junior to walk through their reasoning, genuinely looking for what they might see that experience has made invisible.",
           "correct": true,
-          "feedback": "Envy is a compass. The sting is telling her: 'you value this — visibility, craft, public expertise — and you're not pursuing it.' Named envy becomes motivation. She doesn't need to diminish him. She needs to start her own thing."
+          "feedback": "Darwin had twenty years of head start on Wallace and still chose to hear him out rather than crush him. Seeking what others see is the countermeasure to success narrowing your vision."
         },
         {
-          "text": "She should genuinely celebrate his success and let go of the comparison — mature professionals don't feel envious of peers.",
+          "text": "Let the junior speak but internally decide to go with the proven approach regardless.",
           "correct": false,
-          "feedback": "This is the 'second arrow' — adding shame about envy on top of the envy itself. Envy is a natural comparison signal that can't be turned off by willpower. Pretending it doesn't exist doesn't make it go away — it just pushes it underground where it becomes resentment or passive aggression."
-        },
-        {
-          "text": "She should share her honest critique of his article publicly — if the work has real flaws, people deserve to know.",
-          "correct": false,
-          "feedback": "The urge to find flaws in something you're envious of is envy wearing the mask of 'intellectual honesty.' The critique may be valid, but the motivation is corrupted. When envy drives criticism, it reads as bitterness — because it is."
+          "feedback": "Performative listening is the polite version of not listening. The architecture of arrogance doesn't require rudeness — just the quiet certainty that the answer was already known before anyone else spoke."
         }
       ]
     },
     {
       "type": "spot-the-force",
-      "situation": "Larry Bird checked Magic Johnson's stats in the newspaper every single morning before checking his own team's scores. He described it as 'hatred' at the time.",
-      "question": "What was actually driving Bird's obsessive comparison?",
+      "situation": "A founder who took a company from zero to a hundred million in revenue starts ignoring board feedback, fires advisors who push back, and surrounds herself with people who agree with her vision. She genuinely believes her track record proves her instincts are better than committee thinking.",
+      "question": "What force is primarily driving this pattern?",
       "options": [
         {
-          "text": "Pure competitive aggression — the desire to dominate and be the undisputed best at any cost.",
+          "text": "Power — she wants to control others and consolidate authority.",
           "correct": false,
-          "feedback": "If it were about domination, Bird would have wanted Magic to fail. Instead, he used Magic's excellence as a target to match and exceed. The obsession was about elevating himself, not diminishing Magic. That's envy as fuel, not aggression."
+          "feedback": "Control is a symptom here, not the root driver. She's not seeking power for its own sake — she genuinely believes the dissent is wrong because her past results 'prove' her judgment is superior."
         },
         {
-          "text": "Envy functioning as a compass and engine — pointing at what he valued most (basketball excellence) and generating the energy to pursue it relentlessly.",
+          "text": "Ego — success has eroded the friction that kept self-correction in place.",
           "correct": true,
-          "feedback": "Bird's 'hatred' was envy honestly held. It pointed at his deepest value (being the best) and provided daily fuel to pursue it. When Magic got HIV, Bird realized he'd never wanted Magic to have less — he'd wanted himself to have more. The envy was information about Bird, not judgment about Magic."
+          "feedback": "Each win filed as evidence for a broader conclusion: 'my judgment is simply better.' The hubris hypothesis in action — sustained achievement reducing the brain's automatic perspective-taking, brick by invisible brick."
         },
         {
-          "text": "Insecurity about his own talent — Bird felt naturally inferior to Magic and was overcompensating.",
+          "text": "Fear — she's afraid of losing what she built.",
           "correct": false,
-          "feedback": "Bird won three MVPs. He wasn't insecure about his talent. The envy wasn't about doubting himself — it was about wanting to reach a ceiling he could see someone else touching. That's not insecurity. It's ambition with a measuring stick."
+          "feedback": "Fear would look like defensive, anxious decision-making. This looks like expansive certainty — not protecting against loss, but assuming continued rightness based on past wins."
         }
       ]
     },
     {
       "type": "card-flip",
-      "front": "Mature, successful people don't feel envious. If you're still envious of others, you haven't developed enough self-confidence.",
-      "back": "Envy is a hardwired comparison engine that evolution gave us for tracking relative position — it cannot be turned off through confidence or maturity. Research shows that people who acknowledge envy directly channel it into motivation, while people who suppress it ('I shouldn't feel this') are more likely to experience schadenfreude and passive aggression. The issue isn't feeling envy. It's whether you use it as information or deny it into toxicity."
+      "front": "Arrogance is a character flaw — some people are just wired to become full of themselves when they succeed.",
+      "back": "It's closer to a neurological side effect than a character flaw. Repeated success literally reduces mirror-neuron activity — the circuitry for perspective-taking. The brain can't easily distinguish 'I was right about this' from 'I am right in general.' Newton wasn't born petty — decades of being right made it impossible to tolerate being equaled."
     },
     {
       "type": "before-after",
-      "context": "Two designers see a peer win a prestigious industry award for work they consider no better than their own.",
+      "context": "Two scientists faced the same situation: someone else independently arrived at their life's work.",
       "scenarioA": {
-        "label": "Denied envy",
-        "text": "Tells herself she's fine with it. Congratulates publicly. Privately starts distancing from the award-winner, subtly undermining her work in conversations. Doesn't examine why it stings. Six months later, still hasn't submitted her own work for anything. The envy went underground and became resentment."
+        "label": "Newton",
+        "text": "Used his institutional power to secretly write a 'neutral' report declaring himself sole inventor. Spent a decade publishing anonymous attacks. Leibniz died discredited and alone."
       },
       "scenarioB": {
-        "label": "Named envy",
-        "text": "Feels the sting. Says to herself: 'I'm envious — that means I value recognition and I'm not pursuing it.' Submits three pieces to awards over the next quarter. One wins. The envy dissolved because she converted it to action. The compass did its job and went quiet."
+        "label": "Darwin",
+        "text": "Arranged a joint presentation — both papers read together, both men credited. Had the reputation and connections to claim sole priority. Chose shared credit over sole ownership."
       },
       "correctScenario": "B",
-      "explanation": "Envy acknowledged and acted on dissolves naturally — it was just a signal pointing at an unmet value. Envy denied doesn't disappear; it corrupts into resentment, gossip, and avoidance. The difference isn't character — it's whether you let the compass do its job or cover it up."
-    },
-    {
-      "type": "drag-match",
-      "instruction": "Order these from least to most productive relationship with envy:",
-      "items": [
-        "Deny it and perform happiness for others' success",
-        "Acknowledge it but add self-shame ('I'm a bad person for feeling this')",
-        "Name it as information: 'this matters to me'",
-        "Convert it to specific action toward what you actually want"
-      ],
-      "correctOrder": [
-        "Deny it and perform happiness for others' success",
-        "Acknowledge it but add self-shame ('I'm a bad person for feeling this')",
-        "Name it as information: 'this matters to me'",
-        "Convert it to specific action toward what you actually want"
-      ]
+      "explanation": "Both had earned their success. The difference: Darwin's identity didn't require being the only one. Newton's success had become so fused with his self-image that sharing credit felt like annihilation — even though it would have cost him nothing."
     }
   ],
   "principle": {
-    "text": "Envy is a compass, not a character flaw.",
-    "subtext": "It points directly at what you value most and haven't achieved yet. Suppressed envy becomes resentment. Named envy becomes direction."
+    "text": "Success doesn't create arrogance — it removes the friction that kept arrogance in check.",
+    "subtext": "Every win makes it slightly easier to stop listening, slightly harder to hear 'no,' and slightly more tempting to believe the rules have a you-shaped exception. The slide is never sudden."
   },
-  "reflection": "Who are you most envious of right now — not in general, but specifically? What exactly about their situation stings? That specific thing is probably what you most want and aren't pursuing. What would pursuing it look like this month?"
+  "reflection": "Where has a streak of being right made it harder to hear someone out — and what would Darwin's move look like in that situation?"
 }

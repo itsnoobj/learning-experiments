@@ -1,0 +1,109 @@
+{
+  "id": "5",
+  "title": "How Do Strangers Coordinate Without Talking?",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "stem": "Your company needs to pick a date for a cross-team offsite. There's no scheduling tool and emails aren't getting responses. You notice everyone keeps referencing 'the first Monday after quarter-end.' What's happening?",
+      "options": [
+        {
+          "text": "A focal point is forming — 'first Monday after quarter-end' is culturally prominent enough that everyone expects everyone else to converge on it",
+          "correct": true
+        },
+        {
+          "text": "Someone with authority already decided and communicated it informally",
+          "correct": false
+        },
+        {
+          "text": "It's the objectively optimal date because workloads are lighter after quarter-end",
+          "correct": false
+        },
+        {
+          "text": "Social proof — once a few people mentioned it, others just followed",
+          "correct": false
+        }
+      ],
+      "explanation": "This is a Schelling focal point — a solution that emerges because it's 'obvious' given shared context (quarterly rhythm is shared knowledge). It doesn't need to be optimal or decided by authority. It just needs to be the answer everyone expects everyone else to pick. Social proof plays a minor role, but the focal point preceded any explicit mentions."
+    },
+    {
+      "type": "spot-the-force",
+      "stem": "Bitcoin has over 100 million users coordinating around the same rules despite never meeting or trusting each other. Many technically superior alternatives exist. What force keeps coordination locked on Bitcoin?",
+      "options": [
+        {
+          "text": "Uncertainty — switching to an alternative is risky because you can't be sure others will switch too, so everyone stays at the existing focal point",
+          "correct": true
+        },
+        {
+          "text": "Trust — people trust Bitcoin's track record more than newer alternatives",
+          "correct": false
+        },
+        {
+          "text": "Scarcity — the 21 million cap creates value that alternatives can't replicate",
+          "correct": false
+        },
+        {
+          "text": "Identity — Bitcoin holders identify with the community and resist alternatives",
+          "correct": false
+        }
+      ],
+      "explanation": "The core force is coordination uncertainty — even if an alternative is better, you can't use it unless everyone else moves too. Focal points are self-reinforcing because the cost of unilateral switching is total loss of coordination. This is uncertainty about others' behavior, not trust in Bitcoin itself. Scarcity and identity are effects, not the coordinating mechanism."
+    },
+    {
+      "type": "card-flip",
+      "pairs": [
+        {
+          "front": "Focal point (Schelling point)",
+          "back": "The solution that emerges when people must coordinate without communicating — not the best option, but the most obvious one given shared context"
+        },
+        {
+          "front": "Common knowledge",
+          "back": "Not just 'I know X' but 'I know you know X, and you know I know you know X' — the recursive expectation that makes focal points work"
+        },
+        {
+          "front": "Salience",
+          "back": "What stands out in a field of options — bigger, older, more familiar, more culturally referenced. The brain's shortcut for focal point selection"
+        },
+        {
+          "front": "Self-reinforcing coordination",
+          "back": "Once enough people coordinate around a focal point, it becomes even more prominent, attracting more coordination — a positive feedback loop"
+        }
+      ]
+    },
+    {
+      "type": "drag-match",
+      "pairs": [
+        {
+          "left": "Grand Central Terminal at noon",
+          "right": "Culturally prominent meeting point that most New Yorkers would pick without discussion"
+        },
+        {
+          "left": "Bitcoin's 21 million supply cap",
+          "right": "A specific, memorable number that gives everyone the same shared expectation"
+        },
+        {
+          "left": "QWERTY keyboard layout persisting for 150 years",
+          "right": "An established focal point that persists because switching costs exceed individual benefit"
+        },
+        {
+          "left": "English as the language of international business",
+          "right": "A focal point created by historical prominence, now self-reinforcing through network effects"
+        },
+        {
+          "left": "A startup trying to displace Slack with a better chat tool",
+          "right": "Attempting to displace an existing focal point — requires creating new prominence, not just better features"
+        }
+      ]
+    },
+    {
+      "type": "before-after",
+      "before": {
+        "label": "Optimizing for quality",
+        "text": "My proposal is objectively the best option. If I explain why it's superior, everyone will rationally converge on it. The best idea wins."
+      },
+      "after": {
+        "label": "Optimizing for obviousness",
+        "text": "The best idea doesn't win coordination games — the most obvious one does. I'll make my proposal maximally prominent, simple, and easy-to-expect. I need others to predict that others will predict my option."
+      }
+    }
+  ]
+}

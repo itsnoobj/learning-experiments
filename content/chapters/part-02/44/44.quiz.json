@@ -3,86 +3,86 @@
   "challenges": [
     {
       "type": "scenario-choice",
-      "situation": "A colleague invites you to 'just a quick coffee chat' where she casually mentions she's putting together a proposal and 'it would really help if you could present the technical section — you're so much better at this than me.' You feel flattered but something feels off: the deadline is tomorrow, she's already committed you in the proposal deck, and saying no now would make HER look bad to leadership.",
+      "situation": "A customer support team is measured on 'average ticket resolution time.' Over the past quarter, the metric improved dramatically — tickets are being closed 40% faster. But customer satisfaction surveys show increasing frustration. Agents are closing tickets prematurely with 'Did this resolve your issue?' and marking them solved when customers don't respond within 24 hours.",
       "options": [
         {
-          "text": "Help her out — she clearly respects your skills, the deadline is real, and being a team player is important. You can discuss boundaries later.",
+          "text": "The agents are gaming the system and need to be disciplined — their behavior is dishonest and undermines the customer experience.",
           "correct": false,
-          "feedback": "This is Shakuni's structure in miniature: (1) dress the trap as flattery/hospitality, (2) create a situation where saying no has social cost, (3) make you complicit before you've consciously decided. 'Discuss boundaries later' never happens because the next 'quick favor' uses the same pattern. The time to establish boundaries is NOW — not after compliance."
+          "feedback": "The agents aren't dishonest — they're rational optimizers doing exactly what the incentive structure rewards. Punishing them without changing the metric just creates fear. The system created the behavior. Fix the system."
         },
         {
-          "text": "Recognize the setup: flattery → manufactured urgency → social cost of refusal. Say 'I need to think about this overnight' — breaking the urgency. If the opportunity is real, it survives 24 hours. If it's manipulation, the delay exposes it.",
+          "text": "The metric is being gamed because it's a proxy (speed) for the actual goal (resolution). Add a counter-metric like customer satisfaction or re-open rate to create tension that makes gaming harder.",
           "correct": true,
-          "feedback": "Slowing down is the primary defense against manipulation. 'I'll think about it' buys you time to check: Was I genuinely consulted, or presented with a fait accompli? Is the urgency real, or manufactured? Am I making this choice freely, or has the social cost of 'no' been deliberately inflated? Legitimate requests survive a delay. Manipulative setups require immediate compliance."
+          "feedback": "This is Goodhart's Law in action. Resolution time was a proxy for customer satisfaction. Once it became a target, agents optimized for speed at the expense of actual resolution. Adding CSAT or re-open rate as a paired metric creates productive tension — you can't game speed without hurting satisfaction."
         },
         {
-          "text": "Confront her directly: 'I feel like I'm being manipulated here. You committed me without asking and are using flattery to get compliance.' Call out the pattern clearly.",
+          "text": "The metric needs to be recalibrated — perhaps measure 'time to first resolution' instead of 'time to ticket close' to account for premature closures.",
           "correct": false,
-          "feedback": "Naming the pattern is powerful, but direct accusation often triggers DARVO ('I'm just asking for help! You're being paranoid!'). A better move is to name what you need ('I need time to decide') rather than accuse ('you're manipulating me'). The first protects you. The second starts a conflict where the manipulator has home-field advantage."
+          "feedback": "This is a marginal improvement but misses the deeper point: any single metric, once targeted, will be gamed. A new single metric will get gamed in a new way. The solution isn't a better proxy — it's multiple metrics in tension, or measuring the actual outcome (customer satisfaction)."
         }
       ]
     },
     {
       "type": "spot-the-force",
-      "situation": "Shakuni's dice game destroyed the Pandavas — not through force but through a sequence: a social invitation they couldn't refuse, a challenge that honor required accepting, loaded dice, and gradual escalation from small stakes to everything.",
-      "question": "Why was Yudhishthira — described as the wisest of the Pandavas — unable to see or stop the manipulation?",
+      "situation": "Delhi's cobra bounty program: citizens started breeding cobras to collect bounties. When the program was cancelled, they released the cobras, making the population larger than before.",
+      "question": "What fundamental error did the British administrators make?",
       "options": [
         {
-          "text": "He was blinded by gambling addiction — once he started winning and losing, the dopamine cycle took over and rational thinking was impossible.",
+          "text": "They underestimated human dishonesty — they didn't anticipate that people would cheat a system designed to help the community.",
           "correct": false,
-          "feedback": "Gambling psychology played a role in the escalation, but doesn't explain why he entered the game or why he couldn't stop at major loss points. The deeper mechanism: his own values (honor, duty, keeping commitments) were being weaponized against him. He couldn't refuse because refusing violated his code. Manipulation doesn't exploit weakness — it exploits strength."
+          "feedback": "The cobra breeders weren't dishonest — they were rational. The bounty rewarded dead cobras, and breeding was the most efficient way to produce dead cobras. They optimized for exactly what was measured. The error wasn't trusting people too much. It was designing an incentive that diverged from the goal."
         },
         {
-          "text": "His own values — honor, duty, commitment to rules — were weaponized against him. The manipulation worked BECAUSE of his integrity, not despite it. His strengths became the levers of his destruction.",
+          "text": "They confused the metric (dead cobras delivered) with the outcome (fewer living cobras), creating an incentive that could be optimized without achieving the actual goal.",
           "correct": true,
-          "feedback": "This is the deepest insight about manipulation: it targets strengths. Yudhishthira's sense of honor (can't refuse a challenge), his fairness (believes the game is legitimate), his commitment consistency (can't reverse a wager already made) — these are virtues in normal contexts. Shakuni turned each one into a constraint. Intelligence doesn't protect against manipulation that uses your specific intelligence as its tool."
+          "feedback": "The metric was a proxy for the goal. Once rewarded, rational actors found the easiest path to the metric (breeding) rather than the easiest path to the goal (reducing wild population). This is universal: attach a reward to a measurement, and you create measurement-optimizers, not outcome-producers."
         },
         {
-          "text": "He trusted the social contract — as a king and cousin, he believed Duryodhana would follow basic rules of fairness. He simply couldn't conceive of someone cheating at that level.",
+          "text": "They failed to enforce the program properly — with better monitoring of where the cobras came from, they could have prevented the gaming.",
           "correct": false,
-          "feedback": "Trust in the social contract was one factor, but Vidura explicitly warned him the game was rigged. The information was available. What made it unusable was that acting on the warning would require Yudhishthira to violate his own code (refuse a legitimate-seeming invitation from family). The manipulation was designed so that the ONLY escape route ran through his own values."
+          "feedback": "Adding enforcement is a band-aid that creates an arms race. The deeper lesson is structural: any single metric, once targeted, creates a game. The answer isn't policing the game better — it's designing incentives that make the easy path and the right path the same path."
         }
       ]
     },
     {
       "type": "card-flip",
-      "front": "Smart people don't get manipulated — if you're intelligent and aware, you can see through manipulation attempts.",
-      "back": "Intelligence is NOT protective against manipulation — it's often the vector OF manipulation. Smart people are manipulated through sophisticated rationalizations, through their trust in their own judgment, and through their willingness to engage with complex scenarios. Research consistently shows that fraud and manipulation victims span all intelligence levels. The protective factor isn't IQ — it's pattern recognition: knowing what manipulation LOOKS LIKE before you're inside it. Yudhishthira was described as the wisest man alive. He was still destroyed by Shakuni's dice."
+      "front": "If our current metrics are being gamed, we just need better, more precise metrics that can't be manipulated.",
+      "back": "There is no ungameable single metric. Goodhart's Law and Campbell's Law are properties of measurement itself, not failures of specific measures. Every metric, once targeted, creates a new optimization game. The solution isn't precision — it's structural: multiple metrics in tension, rotating targets, direct observation of outcomes, and spending time in the reality the numbers claim to represent."
     },
     {
       "type": "before-after",
-      "context": "Shakuni's five-step manipulation structure applied to a modern workplace scenario.",
+      "context": "Two engineering managers want to improve developer productivity on their teams.",
       "scenarioA": {
-        "label": "The setup (Shakuni's design)",
-        "text": "Step 1: Frame it as opportunity ('We'd love your input on this initiative'). Step 2: Use your values as leverage ('You always said you believe in collaboration'). Step 3: Escalate gradually (small tasks → larger commitments). Step 4: Create asymmetry (they have information you don't). Step 5: Make reversal costly ('We already told leadership you're leading this')."
+        "label": "Single metric target",
+        "text": "Implements 'pull requests merged per week' as the team metric, displayed on a dashboard. Within a month, PRs get smaller and more trivial. Developers split features into 8 tiny PRs instead of 2 meaningful ones. The dashboard looks amazing. Actual feature delivery hasn't changed. The team has created PR-optimizers, not productivity."
       },
       "scenarioB": {
-        "label": "The defense (Vidura's wisdom)",
-        "text": "Slow down ('I'll think about it'). Check: are my values being used as constraints? Get outside perspective (is this normal?). Name what's happening ('I notice I'm being asked to commit before I have full information'). Refuse to play on someone else's timeline ('If this is real, it survives 24 hours')."
+        "label": "Metrics in tension",
+        "text": "Tracks PR throughput AND deployment frequency AND change failure rate together. Gaming one metric necessarily hurts another. Splitting into trivial PRs improves throughput but doesn't improve deployment frequency. Rushing hurts change failure rate. The tension between metrics makes genuine performance the easiest path."
       },
       "correctScenario": "B",
-      "explanation": "Manipulation works through speed, isolation, and weaponized values. The defense works through delay, external reality-checking, and naming the pattern. You can't out-clever a manipulator inside their game (the dice are loaded). But you can refuse to sit at the table until you've verified the game is fair."
+      "explanation": "A single metric creates a single game to optimize. Multiple metrics in tension make gaming harder because optimizing one at the expense of another is visible. The DORA metrics work precisely because they pull against each other — speed vs. stability. When genuine performance is the easiest way to satisfy all metrics simultaneously, gaming becomes harder than doing the actual work."
     },
     {
       "type": "drag-match",
-      "instruction": "Order Shakuni's manipulation steps from first (setup) to last (trap closed):",
+      "instruction": "Order these strategies from most vulnerable to least vulnerable to metric gaming:",
       "items": [
-        "Create context where saying no is socially costly",
-        "Make the target's own values the weapon of compliance",
-        "Escalate gradually so each step feels like natural continuation",
-        "Make reversal feel worse than continuing (sunk cost trap)"
+        "Single metric tied to individual bonuses",
+        "Multiple metrics reported but only one rewarded",
+        "Paired metrics in tension with each other",
+        "Direct observation of outcomes + rotating metric focus"
       ],
       "correctOrder": [
-        "Create context where saying no is socially costly",
-        "Make the target's own values the weapon of compliance",
-        "Escalate gradually so each step feels like natural continuation",
-        "Make reversal feel worse than continuing (sunk cost trap)"
+        "Single metric tied to individual bonuses",
+        "Multiple metrics reported but only one rewarded",
+        "Paired metrics in tension with each other",
+        "Direct observation of outcomes + rotating metric focus"
       ]
     }
   ],
   "principle": {
-    "text": "Manipulation targets strengths, not weaknesses. It works BECAUSE of your integrity, trust, and fairness — not despite them.",
-    "subtext": "The defense isn't cynicism. It's pattern recognition: seeing the setup before you're at the table with loaded dice."
+    "text": "When a measure becomes a target, it ceases to be a good measure.",
+    "subtext": "People don't game metrics because they're dishonest — they game them because they're rational. Design systems where the easy path and the right path are the same path."
   },
-  "reflection": "Think of a time you agreed to something and only realized later that you'd been maneuvered. Which of your values was used as the lever? How would slowing down — 'I'll think about it' — have changed the outcome?"
+  "reflection": "What metric in your life or work has become a target that you optimize for at the expense of the actual goal? What would change if you measured the outcome directly instead of the proxy?"
 }

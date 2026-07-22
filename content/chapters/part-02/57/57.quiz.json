@@ -1,0 +1,88 @@
+{
+  "chapterId": "57",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "A senior engineer was passed over for Staff promotion. The person promoted instead joined the team 18 months ago and has less technical depth but better cross-team visibility. The engineer is considering reducing her effort: 'Why go above and beyond if it doesn't get recognized?'",
+      "options": [
+        {
+          "text": "She's right to pull back — if the system doesn't reward excellence, investing energy beyond what's required is irrational. She should do her job adequately and invest her extra energy in job searching.",
+          "correct": false,
+          "feedback": "Disengagement creates a self-fulfilling prophecy: reduced effort → reduced visibility → reduced likelihood of future promotion → more resentment. The system told her visibility matters. Pulling back makes her LESS visible. The rational response is to address the gap (visibility) while maintaining the strength (technical depth)."
+        },
+        {
+          "text": "The feedback is clear: visibility matters more than depth alone. She should maintain her technical excellence while deliberately building cross-team visibility — the gap is addressable without disengaging.",
+          "correct": true,
+          "feedback": "Being passed over is information, not identity. The system told her what it values: cross-team impact visibility. She can build that without sacrificing her technical depth. Joseph in prison didn't reduce his competence — he kept excelling AND looked for the opportunity to demonstrate value to a broader audience. Excellence + visibility > either alone."
+        },
+        {
+          "text": "She should schedule a meeting with her VP, explain that she deserves the promotion more, and demand a timeline for when she'll be promoted next.",
+          "correct": false,
+          "feedback": "Demanding recognition rarely works — it positions you as someone focused on title rather than impact. The better intelligence-gathering move: 'What would have made me the choice?' then listen without defending. The answer reveals whether the gap is fixable here or whether this system will never see her clearly."
+        }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "Joseph spent 13 years in slavery and prison — being passed over repeatedly. When opportunity finally arrived (Pharaoh's dream), he was immediately ready to propose and execute a national food security plan.",
+      "question": "What made Joseph 'ready' when the opportunity arrived, rather than merely lucky?",
+      "options": [
+        {
+          "text": "Divine favor — Joseph was blessed with prophetic gifts that made him uniquely qualified regardless of his circumstances.",
+          "correct": false,
+          "feedback": "Dream interpretation got him in the room. But Pharaoh didn't promote him for interpreting the dream — he promoted him because Joseph immediately proposed a SPECIFIC, EXECUTABLE plan for managing the famine. That operational competence came from 13 years of managing increasingly complex systems: a household, then a prison. The preparation was practical, not mystical."
+        },
+        {
+          "text": "Thirteen years of operating at full capacity in every position — household management, then prison operations — built genuine competence that made the bigger opportunity landable when it arrived.",
+          "correct": true,
+          "feedback": "The years weren't wasted — they were compound preparation. Running Potiphar's household taught resource management. Running the prison taught managing people under constraint. When the opportunity to manage a nation's food supply appeared, Joseph had already managed logistics at two smaller scales. Continued excellence during 'passed over' periods isn't just noble — it's strategic capacity-building."
+        },
+        {
+          "text": "Joseph was naturally brilliant — some people are simply talented enough that any environment eventually recognizes their value.",
+          "correct": false,
+          "feedback": "Natural talent explains part of it, but the key insight is behavioral: Joseph didn't disengage during the waiting period. Many talented people respond to being passed over with resentment and reduced effort — which atrophies the very competence that would make them ready for the next opportunity. Talent + sustained engagement > talent + disengagement."
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "If you get passed over for promotion, the best response is to immediately start looking for a new job — clearly this organization doesn't value you.",
+      "back": "Leaving is sometimes correct — but it shouldn't be the reflexive first response. Being passed over once is information (what does this system value? what gap do they see?). It becomes a pattern signal only after 2-3 occurrences at the same place. The immediate response should be: feel the sting, gather intelligence ('What would have made me the choice?'), then decide whether the gap is fixable here or whether the system genuinely can't see you. Joseph's cupbearer forgot him for two years — and the eventual opportunity that arrived was bigger than anything he could have found by leaving."
+    },
+    {
+      "type": "before-after",
+      "context": "Two equally talented engineers both get passed over for the same promotion cycle.",
+      "scenarioA": {
+        "label": "Disengagement response",
+        "text": "Reduces effort to 'adequate.' Stops volunteering for cross-team work. Spends energy on resentment and job searching. Six months later, is less visible, less connected, less sharp than before the pass-over. Leaves for a lateral move. The disengagement made her LESS ready for the next opportunity, not more."
+      },
+      "scenarioB": {
+        "label": "Joseph response",
+        "text": "Feels the sting fully. Asks for specific feedback. Learns that cross-team visibility was the gap. Maintains technical excellence while deliberately taking on one high-visibility cross-team project. Six months later, is promoted — or has built portable capacity that makes her undeniable at the next organization. Either way, the pass-over became preparation."
+      },
+      "correctScenario": "B",
+      "explanation": "Disengagement is the most common response to being passed over — and the most self-defeating. It reduces exactly the qualities (visibility, sharpness, readiness) that would make the next opportunity landable. The Joseph pattern — continued excellence + addressing the specific gap — turns the setback into compound preparation."
+    },
+    {
+      "type": "drag-match",
+      "instruction": "Order these responses to being passed over from most self-defeating to most effective:",
+      "items": [
+        "Disengage in protest ('why bother if they don't see me?')",
+        "Demand an explanation and argue your case aggressively",
+        "Ask 'What would have made me the choice?' — then build that capacity",
+        "Maintain excellence + build portable skills that work anywhere"
+      ],
+      "correctOrder": [
+        "Disengage in protest ('why bother if they don't see me?')",
+        "Demand an explanation and argue your case aggressively",
+        "Ask 'What would have made me the choice?' — then build that capacity",
+        "Maintain excellence + build portable skills that work anywhere"
+      ]
+    }
+  ],
+  "principle": {
+    "text": "Being passed over is information, not identity. The thirteen years weren't wasted — they were preparation.",
+    "subtext": "Don't disengage in protest. Every unit of energy spent resenting the decision is a unit not spent becoming undeniable for the next one."
+  },
+  "reflection": "Have you been passed over for something recently? What did the system tell you it values — and is that gap something you can build, or is it a signal that this system will never see you clearly?"
+}

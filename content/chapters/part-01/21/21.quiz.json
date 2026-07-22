@@ -3,86 +3,70 @@
   "challenges": [
     {
       "type": "scenario-choice",
-      "situation": "A product designer has been offered the chance to present her team's work directly to the CEO — a huge visibility opportunity. She's prepared extensively. The night before, she can't sleep. Her mind runs worst-case scenarios. In the morning, she still feels the dread in her stomach.",
+      "situation": "Ever since your boss called your launch deck 'brilliant' in front of leadership, you find yourself volunteering for visible, demo-able work and quietly dropping the unglamorous maintenance no one watches.",
       "options": [
         {
-          "text": "She should postpone until she feels more confident. Presenting while afraid will make her seem nervous and undermine the work.",
+          "text": "Decide praise is hollow, stop seeking it, and ignore feedback on principle.",
           "correct": false,
-          "feedback": "Waiting for fear to leave is waiting forever. Fear before high-stakes moments isn't a sign that you're not ready — it's a sign that the moment matters. The fear won't leave. The presentation won't wait."
+          "feedback": "Total imperviousness is just a different deafness. Praise carries real signal about what's landing — refusing all of it throws out useful information."
         },
         {
-          "text": "She should tell herself 'I'm not afraid, I'm excited' — reframing the physical sensation — and then present with the energy still running through her body.",
+          "text": "Write down what 'good work' means by your own standard, and weigh tasks against that, not the applause.",
           "correct": true,
-          "feedback": "The physical sensations of fear and excitement are nearly identical — racing heart, adrenaline, heightened focus. Research shows that reappraising anxiety as excitement improves performance because you stop fighting the arousal and start directing it. Move with the energy, not against it."
+          "feedback": "Defining good before you're judged keeps your direction anchored inside. Praise can then inform you without governing what you choose to do."
         },
         {
-          "text": "She should do deep breathing exercises until the fear subsides completely, then present from a place of calm.",
+          "text": "Lean into the visible work — the recognition confirms it's where you add the most value.",
           "correct": false,
-          "feedback": "Some calming helps, but waiting for fear to fully subside before a high-stakes moment is often impossible — and the wrong goal. Elite performers don't feel less fear. They've learned to perform with fear as a companion, not wait for its absence as permission."
+          "feedback": "You've let applause become the scorecard. Steering by 'what gets noticed' instead of 'what matters' hands the wheel to whoever grants the praise."
         }
       ]
     },
     {
       "type": "spot-the-force",
-      "situation": "Tenzing Norgay had attempted Everest six times before his successful 1953 summit. He'd watched friends die on the mountain. At 28,700 feet, his body was screaming at him to descend. He climbed the Hillary Step anyway.",
-      "question": "What enabled Tenzing to act despite genuine, earned fear?",
+      "situation": "A strong engineer ships a solid fix, then keeps refreshing the channel, visibly deflating when the thread stays quiet, unable to move on to the next task.",
+      "question": "What's behind the inability to let it go?",
       "options": [
         {
-          "text": "He was naturally braver than other climbers — some people simply feel less fear due to their temperament.",
-          "correct": false,
-          "feedback": "Research on elite performers shows they feel the same physiological fear as everyone else. Tenzing didn't feel less fear — he'd watched friends die on this same mountain. What was different wasn't the fear. It was his relationship to it."
-        },
-        {
-          "text": "He treated fear as information ('this is dangerous') without treating it as instruction ('therefore stop') — negotiating with it rather than obeying or fighting it.",
+          "text": "External validation propping up his sense of worth.",
           "correct": true,
-          "feedback": "Tenzing listened to fear's data (yes, genuinely dangerous) without accepting its automatic conclusion (therefore turn around). He moved with fear, not after it. This is cohabitation — fear and action occupying the same moment."
+          "feedback": "When the doing isn't enough without the seeing, the hook is in. If worth wasn't secured from inside, praise isn't a bonus — it's oxygen."
         },
         {
-          "text": "His six previous attempts had dulled the fear through exposure — by his seventh try, the mountain simply wasn't scary anymore.",
+          "text": "Healthy pride in solid work.",
           "correct": false,
-          "feedback": "Repeated exposure to life-threatening danger doesn't eliminate fear — it deepens it. Each failed attempt brought more loss (friends dead, body damaged). The fear was likely worse, not better, by attempt seven. What changed was his skill at moving alongside it."
+          "feedback": "Healthy pride is quiet and self-contained — 'I did this well, I know it.' The anxious scanning for a reaction is its opposite."
+        },
+        {
+          "text": "Reasonable interest in whether the fix worked.",
+          "correct": false,
+          "feedback": "Interest in the outcome could be checked once and dropped. The refreshing and deflating is about a reaction, not the result."
         }
       ]
     },
     {
       "type": "card-flip",
-      "front": "Courage means not feeling fear. Truly brave people aren't scared — they've overcome that weakness.",
-      "back": "Courage literally requires fear. Without something to be afraid of, there's nothing courageous about acting. Research on elite performers (soldiers, surgeons, athletes) shows identical physiological fear responses to everyone else. The difference is their relationship to the sensation — interpreting racing heart as 'I'm ready' rather than 'I'm in danger.' Courage isn't the absence of fear. It's action in its presence."
+      "front": "Why does praise that comes only sometimes hook you harder than praise that comes every time?",
+      "back": "Intermittent reinforcement. Reliable rewards lose their pull; unpredictable ones make the brain keep pulling the lever, hoping this time's the hit. It's the same variable-ratio pattern that makes slot machines and feeds compulsive — randomness, not generosity, builds the addiction."
     },
     {
       "type": "before-after",
-      "context": "Two equally qualified engineers are asked to lead a critical system migration with high failure risk.",
+      "context": "A monkey is lured onto a crocodile's back by a feast thrown 'in his honor,' then told mid-river the real plan is to eat his heart.",
       "scenarioA": {
-        "label": "Fear as instruction",
-        "text": "Feels the fear, interprets it as a sign he's not ready. Asks for more time, more preparation, more certainty. Delays kick-off three times. Eventually the project is reassigned. He never finds out whether he could have done it."
+        "label": "Flattered",
+        "text": "Glows at the honor, climbs aboard without a question, ends up helpless in deep water."
       },
       "scenarioB": {
-        "label": "Fear as information",
-        "text": "Feels the same fear. Names it: 'I'm afraid because failure here is visible and consequential.' Uses the fear to identify risks and build rollback plans. Starts the migration with contingencies in place. Fear stays in the backpack but doesn't hold the map."
+        "label": "Awake to the bait",
+        "text": "Snaps alert mid-river, sees the flattery for what it is, and talks his way back to the tree."
       },
       "correctScenario": "B",
-      "explanation": "Both engineers felt identical fear. The difference: Engineer A treated fear as instruction ('I shouldn't do this') while Engineer B treated it as information ('this is risky — let me plan for that'). Fear identified the stakes. Planning addressed the risks. Action happened alongside the fear, not after it."
-    },
-    {
-      "type": "drag-match",
-      "instruction": "Order Seneca's premeditatio malorum practice from first step to last:",
-      "items": [
-        "Imagine the realistic worst case",
-        "Ask: could I survive this?",
-        "Plan what you'd do if it happened",
-        "Notice that the feared future has lost its surprise power"
-      ],
-      "correctOrder": [
-        "Imagine the realistic worst case",
-        "Ask: could I survive this?",
-        "Plan what you'd do if it happened",
-        "Notice that the feared future has lost its surprise power"
-      ]
+      "explanation": "What saved the monkey wasn't refusing praise — it was waking up to what the praise was for. As Epictetus warned, when your peace depends on approval, you've handed over the controls."
     }
   ],
   "principle": {
-    "text": "Fear is information, not instruction.",
-    "subtext": "It tells you something matters. It doesn't tell you to stop. Courage isn't the absence of fear — it's action in its presence."
+    "text": "Praise is a fine reward and a terrible master.",
+    "subtext": "When approval becomes the fuel your identity runs on, you stop steering by 'what's true' and start steering by 'what gets applause' — and whoever controls the applause now controls you."
   },
-  "reflection": "What are you currently not doing because you're waiting to not be afraid first? What would change if you accepted that the fear won't leave — and moved anyway?"
+  "reflection": "List whose approval you find yourself working for. Now ask of your current work: would I still be proud of this if no one ever noticed it?"
 }

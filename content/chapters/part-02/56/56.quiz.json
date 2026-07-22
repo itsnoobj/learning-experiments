@@ -1,0 +1,88 @@
+{
+  "chapterId": "56",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "A senior engineer designed and built a complex distributed system over 6 months. At the all-hands, the VP of Engineering presents the project and says 'The platform team did amazing work.' The engineer's name is never mentioned. A colleague suggests she should 'just be happy the work shipped — credit doesn't matter if you know you did it.'",
+      "options": [
+        {
+          "text": "The colleague is right — the work speaks for itself. If she does great work consistently, recognition will come naturally. Demanding credit looks insecure.",
+          "correct": false,
+          "feedback": "This is the Tesla trap. 'The work speaks for itself' is empirically false — work speaks through whoever presents it, narrates it, and claims it. Tesla's contributions would have been LARGER if he'd been better at claiming credit, because credit converts into resources for future work. Invisible contribution = invisible to the systems that allocate opportunity."
+        },
+        {
+          "text": "Credit isn't vanity — it's the resource that converts past contribution into future capacity. She should make her contribution visible: documentation, update emails that name her specific work, and a conversation with the VP about attribution practices.",
+          "correct": true,
+          "feedback": "Credit is a flywheel: credit → visibility → opportunity → bigger work → more credit. Without it, you're perpetually starting from zero regardless of what you've built. Making contributions visible isn't bragging — it's providing accurate information to the systems that allocate resources and opportunity. The pain she feels isn't ego. It's her system correctly detecting that a resource essential for future impact is being diverted."
+        },
+        {
+          "text": "She should confront the VP directly in a 1-on-1 and demand proper attribution — leadership needs to know that stealing credit from ICs destroys morale.",
+          "correct": false,
+          "feedback": "Framing it as 'credit theft' and 'demanding' attribution converts a structural issue into a personal confrontation. The VP may not even realize the omission. The better move is systemic: establish practices where individual contributions are named naturally (demo days where builders present, design docs with author attribution, release notes with names). Fix the structure, not the individual."
+        }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "Edison's 'invention factory' employed dozens of brilliant engineers but every patent bore Edison's name. He became the 'Wizard of Menlo Park' while his employees remained anonymous.",
+      "question": "What did Edison understand about credit that Tesla didn't?",
+      "options": [
+        {
+          "text": "That the public needs a single heroic figure to attach stories to — credit-claiming was primarily about marketing and narrative simplification.",
+          "correct": false,
+          "feedback": "Marketing simplification was a tactic, not the insight. Edison's deeper understanding was about the flywheel: credit → fame → funding → bigger lab → more inventions → more credit. He treated credit as an economic resource that compounds, not a trophy that sits on a shelf. The narrative was a means to the resources."
+        },
+        {
+          "text": "That credit is a resource that compounds: credit → funding → bigger lab → more inventions → more credit. Each cycle amplifies the next. Without credit-claiming, the flywheel can't spin.",
+          "correct": true,
+          "feedback": "Edison treated credit as working capital, not as vanity. He reinvested the reputation into larger capacity: more engineers, more equipment, more patents, more credit. Tesla's refusal to play this game didn't just cost him recognition — it cost humanity decades of inventions that died in his notebooks because he couldn't attract the funding that credit would have unlocked."
+        },
+        {
+          "text": "That intellectual property law rewards whoever files first, not whoever invents first — Edison was simply better at the legal game of patents.",
+          "correct": false,
+          "feedback": "Patent strategy was one tool, but the insight is broader than legal tactics. Edison understood credit as a compounding resource across ALL domains: public narrative, investor confidence, talent attraction, political influence. His credit system wasn't just about who filed patents. It was about building an identity that converted into every form of future capacity."
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "You can accomplish anything if you don't care who gets the credit. Noble leaders should be selfless about recognition.",
+      "back": "This sounds noble but is empirically wrong and strategically harmful. Credit is the mechanism by which past contribution converts into future capacity: funding, authority, team, autonomy. Tesla didn't care about credit — and his best ideas died in notebooks while others built (and were credited for) them decades later. Franklin's uncredited contribution meant she couldn't influence the field her data revolutionized. The work that matters most needs the resources that credit unlocks. Selflessness about credit doesn't serve the work — it hinders it."
+    },
+    {
+      "type": "before-after",
+      "context": "Tesla and Edison both had extraordinary technical ability. Their approaches to credit produced radically different outcomes.",
+      "scenarioA": {
+        "label": "Credit as flywheel (Edison)",
+        "text": "Claimed credit systematically → built fame → attracted funding → built bigger lab → hired more engineers → produced more inventions → claimed more credit. Died wealthy with 1,093 patents and an industrial empire. His engineers remained anonymous but his resources enabled enormous output."
+      },
+      "scenarioB": {
+        "label": "Credit refused on principle (Tesla)",
+        "text": "Refused to play the credit game → remained unknown to funders → couldn't attract capital → best ideas stayed in notebooks → others independently built (and got credit for) radar, radio, X-ray imaging decades later. Died alone in a hotel room. His nobility about credit didn't serve science — it subtracted from human progress."
+      },
+      "correctScenario": "A",
+      "explanation": "This isn't 'Edison was better' — it's 'credit is a resource, not a trophy.' Edison's approach had real costs (exploited engineers, sometimes fraudulent claims). But the structural insight is clear: credit converts into capacity. Refusing credit on principle doesn't make you noble — it makes you unable to do the bigger work that credit would have enabled."
+    },
+    {
+      "type": "drag-match",
+      "instruction": "Order these from most to least effective at making contributions visible:",
+      "items": [
+        "Documentation + demos where builders present their own work",
+        "Update emails naming specific individual contributions",
+        "'The team did great work' (generic group attribution)",
+        "Doing excellent work quietly and hoping it's noticed"
+      ],
+      "correctOrder": [
+        "Documentation + demos where builders present their own work",
+        "Update emails naming specific individual contributions",
+        "'The team did great work' (generic group attribution)",
+        "Doing excellent work quietly and hoping it's noticed"
+      ]
+    }
+  ],
+  "principle": {
+    "text": "Credit isn't vanity — it's the resource that converts past contribution into future capacity.",
+    "subtext": "The work that matters most needs the resources that credit unlocks. Refusing credit on principle doesn't serve the work — it hinders it."
+  },
+  "reflection": "Where are you doing Tesla — building important things but letting the credit flow elsewhere? What's one structural change you could make this week to ensure your contributions are visible to the people who allocate opportunity?"
+}

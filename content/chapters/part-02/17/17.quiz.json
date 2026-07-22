@@ -1,0 +1,109 @@
+{
+  "id": "17",
+  "title": "How Do I Change a Game I'm Trapped In?",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "stem": "Your team has a 'blameless postmortem' culture on paper, but in practice nobody shares their mistakes because they've seen others quietly penalized for admissions. The culture doc says 'psychological safety.' What does mechanism design say to fix?",
+      "options": [
+        {
+          "text": "Make sharing rewarded visibly (praise, promotion points for catching issues) AND make hiding failures costlier than admitting them (discovered-later penalties). Change the payoff structure, not the words.",
+          "correct": true
+        },
+        {
+          "text": "Retrain people on the blameless culture values through workshops and team discussions",
+          "correct": false
+        },
+        {
+          "text": "Have leadership model vulnerability by sharing their own mistakes first",
+          "correct": false
+        },
+        {
+          "text": "Remove the people who penalize others for admissions — the culture will follow",
+          "correct": false
+        }
+      ],
+      "explanation": "Mechanism design: change the payoff structure so self-interest produces the desired behavior. Workshops (B) change words, not incentives. Modeling (C) helps but doesn't fix the structural incentive. Removing bad actors (D) treats symptoms. The mechanism fix: make visible sharing rewarded (consequences for good behavior) and make hiding-then-discovered penalized (consequences for bad behavior). When admitting is cheaper than hiding, rational people admit."
+    },
+    {
+      "type": "spot-the-force",
+      "stem": "Wikipedia has 300,000+ active editors writing 60M articles for free. eBay has millions of honest sellers in an anonymous marketplace. Both work with ordinary self-interested humans. What force does mechanism design harness?",
+      "options": [
+        {
+          "text": "Incentives — the systems make good behavior (contributing, being honest) more rewarding than bad behavior (free-riding, cheating) through reputation, visibility, and consequences",
+          "correct": true
+        },
+        {
+          "text": "Identity — people identify as 'Wikipedia editors' or 'trusted sellers' and act accordingly",
+          "correct": false
+        },
+        {
+          "text": "Trust — the platforms created trust through transparency and community norms",
+          "correct": false
+        },
+        {
+          "text": "Status — contributors gain social status through visible participation metrics",
+          "correct": false
+        }
+      ],
+      "explanation": "Mechanism design fundamentally works through incentive alignment — making the desired behavior also the self-interested behavior. Identity (B), trust (C), and status (D) are all effects of good mechanism design, not the mechanism itself. The underlying force is incentives: the structure makes honesty/contribution more profitable than cheating/free-riding. Status and identity emerge because the mechanism rewards them — they're downstream, not upstream."
+    },
+    {
+      "type": "card-flip",
+      "pairs": [
+        {
+          "front": "Mechanism design (reverse game theory)",
+          "back": "Instead of 'given rules, what will players do?' ask 'given desired outcome, what rules produce it from self-interested players?'"
+        },
+        {
+          "front": "The four building blocks",
+          "back": "Visibility (behavior observed), Memory (past accessible), Consequences (behavior affects future), Symmetry (all parties accountable)"
+        },
+        {
+          "front": "eBay's reputation system",
+          "back": "Makes honesty more profitable than cheating: visible ratings + permanent history + direct impact on future sales = self-enforcing honesty"
+        },
+        {
+          "front": "US healthcare as mechanism failure",
+          "back": "Invisible prices + per-procedure payment + secret rates + diffused consequences = rational self-interest produces waste and opacity"
+        }
+      ]
+    },
+    {
+      "type": "drag-match",
+      "pairs": [
+        {
+          "left": "Wikipedia's edit history and barnstars",
+          "right": "Visibility + reputation = contributing feels rewarding, vandalism feels futile"
+        },
+        {
+          "left": "Paying doctors per procedure instead of per outcome",
+          "right": "Misaligned incentive: more procedures (not better health) is rewarded"
+        },
+        {
+          "left": "Making team contributions visible on a dashboard",
+          "right": "Adding VISIBILITY where it was missing — free-riding becomes observable"
+        },
+        {
+          "left": "Opt-out (vs. opt-in) for retirement savings",
+          "right": "Nudge: changing the default to align path-of-least-resistance with desired behavior"
+        },
+        {
+          "left": "Anonymous feedback with no consequences",
+          "right": "Missing CONSEQUENCES — behavior has no effect on future outcomes, so it degrades"
+        }
+      ]
+    },
+    {
+      "type": "before-after",
+      "before": {
+        "label": "Changing people",
+        "text": "The system would work if people were more honest, more collaborative, more long-term oriented. We need better training, better culture, better values."
+      },
+      "after": {
+        "label": "Changing the game",
+        "text": "I design systems where honest, collaborative, long-term behavior IS the self-interested behavior. I don't need better people — I need better rules. If the desired outcome requires heroism, I haven't finished the design."
+      }
+    }
+  ]
+}

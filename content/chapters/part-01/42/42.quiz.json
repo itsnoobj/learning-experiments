@@ -1,0 +1,88 @@
+{
+  "chapterId": "42",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "A team lead made a hiring decision six months ago that didn't work out — the new hire struggled, got put on a PIP, and eventually left. The team lead apologized to the team for the disruption, improved her interview process, and hasn't made the same mistake since. But she still feels guilty every time she sees the empty desk.",
+      "options": [
+        {
+          "text": "The guilt is healthy — it means she takes hiring seriously and will be even more careful next time. She should sit with it.",
+          "correct": false,
+          "feedback": "Guilt that persists after behavior has already changed is no longer serving as a compass — it's serving as a sentence. She already improved her process. The guilt delivered its message. Continuing to carry it doesn't make her more careful; it just drains energy she could use elsewhere."
+        },
+        {
+          "text": "Guilt has delivered its message — she changed her behavior. What remains isn't useful guilt; it's self-punishment masquerading as conscientiousness. She can set it down.",
+          "correct": true,
+          "feedback": "The guilt did its job: it signaled a values violation and motivated change. She apologized, improved her process, and hasn't repeated the mistake. What persists isn't information — it's suffering without purpose. Recognizing that guilt has an expiration date isn't callousness. It's resource management."
+        },
+        {
+          "text": "She should reach out to the former hire and apologize directly — the guilt will lift once she closes that loop.",
+          "correct": false,
+          "feedback": "Sometimes closing loops helps, but this risks making the other person relive a painful experience for the team lead's emotional benefit. The guilt isn't persisting because an action is missing — it's persisting because she's shifted from 'I made a bad call' (guilt) to 'I'm someone who makes bad calls' (shame)."
+        }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "After Trinity, Oppenheimer spent a decade lobbying against nuclear proliferation — sacrificing his career, his security clearance, and his health. Yet he never stopped suffering. Friends described him as hollowed out, unable to forgive himself.",
+      "question": "What had Oppenheimer's guilt become by the end?",
+      "options": [
+        {
+          "text": "A proportional response — the scale of destruction he enabled justified a lifetime of suffering.",
+          "correct": false,
+          "feedback": "Whether the guilt was 'deserved' isn't the question. The question is whether it was still producing useful output. Guilt that generates only suffering — not action, not change, not prevention — has crossed from compass to cage regardless of whether it's proportional."
+        },
+        {
+          "text": "Identity-level shame wearing guilt's costume — 'I am Death' had become who he was, not what he did, making the guilt undischargeable through any action.",
+          "correct": true,
+          "feedback": "'Now I am become Death' — that's the identity shift. Guilt says 'I did something terrible' and has an endpoint (change behavior). Shame says 'I am something terrible' and has no endpoint. Oppenheimer did everything guilt asked — but shame demands only indefinite suffering, and no action can satisfy it."
+        },
+        {
+          "text": "A motivational tool — the guilt kept him working on non-proliferation even when his career was destroyed.",
+          "correct": false,
+          "feedback": "In the early years, yes — guilt as fuel was productive. But by the end, the guilt was no longer producing action. It was producing only hollowness. The fuel had burned the engine. When guilt persists after all possible action is exhausted, it's no longer motivation — it's self-destruction."
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "Continuing to feel guilty after apologizing shows that you genuinely care. Letting go of guilt means you don't take the harm seriously.",
+      "back": "This conflates suffering with caring. Guilt's purpose is behavioral correction — once behavior changes, guilt has done its job. Continuing to suffer doesn't make you more moral; research shows excessive guilt actually correlates with worse moral behavior because self-punishment consumes the psychological resources needed for doing better. Letting go isn't indifference. It's freeing up energy for the next right thing."
+    },
+    {
+      "type": "drag-match",
+      "instruction": "Order these from 'guilt as compass' (useful) to 'guilt as cage' (self-punishment):",
+      "items": [
+        "'I snapped at her — I need to apologize'",
+        "'I apologized, now I'll watch my tone in future meetings'",
+        "'I keep replaying it even though I've already changed my behavior'",
+        "'I'm the kind of person who hurts people I care about'"
+      ],
+      "correctOrder": [
+        "'I snapped at her — I need to apologize'",
+        "'I apologized, now I'll watch my tone in future meetings'",
+        "'I keep replaying it even though I've already changed my behavior'",
+        "'I'm the kind of person who hurts people I care about'"
+      ]
+    },
+    {
+      "type": "before-after",
+      "context": "Two engineers both shipped a bug to production that caused an outage affecting customers.",
+      "scenarioA": {
+        "label": "Guilt as identity",
+        "text": "Wrote a blameless postmortem, added tests, improved the deployment pipeline. But six months later still flinches before every deploy. Tells new hires 'I'm the one who caused that outage.' The guilt became a permanent identity marker — 'I'm the person who breaks things' — even though his behavior changed completely."
+      },
+      "scenarioB": {
+        "label": "Guilt as transaction (giri)",
+        "text": "Wrote the same postmortem, added the same tests, improved the same pipeline. Acknowledged: 'I made an error, I paid the debt through repair, and the system is now better because of it.' Deploys with appropriate caution but no flinching. The guilt was a debt, he paid it, and the account is closed."
+      },
+      "correctScenario": "B",
+      "explanation": "Both engineers made the same mistake and took the same corrective actions. The difference: Engineer A let guilt become identity ('I am the person who breaks things'), creating permanent suffering. Engineer B treated guilt as giri — a debt discharged through action. Same event, same repair. One carries it forever; the other set it down."
+    }
+  ],
+  "principle": {
+    "text": "Guilt is a compass, not a sentence.",
+    "subtext": "It tells you where your actions violated your values. Once you've changed the behavior, guilt's job is done. Suffering beyond that point isn't conscience — it's self-punishment."
+  },
+  "reflection": "What guilt are you carrying that has already delivered its message? What behavior have you already changed? And what would it mean to acknowledge the debt as paid?"
+}
