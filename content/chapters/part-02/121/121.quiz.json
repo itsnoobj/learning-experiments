@@ -1,0 +1,109 @@
+{
+  "id": "121",
+  "title": "How Do I Know If Someone's Bluffing?",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "stem": "A vendor says 'this is our absolute lowest price — we can't go below $50k.' This is the third negotiation with this vendor. In the previous two, their 'final price' dropped 15% when pushed. What should you do?",
+      "options": [
+        {
+          "text": "Push back — their historical bluff rate (2/2 previous 'final prices' dropped) suggests this one likely isn't final either",
+          "correct": true
+        },
+        {
+          "text": "Accept — even bluffers are eventually genuine, and the third time might be real",
+          "correct": false
+        },
+        {
+          "text": "Walk away to see if they chase you — the ultimate bluff test",
+          "correct": false
+        },
+        {
+          "text": "Ask them directly if this is truly their final price — honesty is more likely with direct questions",
+          "correct": false
+        }
+      ],
+      "explanation": "Base rate thinking: 2/2 previous 'final prices' weren't final = 100% historical bluff rate on this type of claim. While they could be genuine this time, the probability is low given the pattern. Push back (small probe) rather than accepting. Walking away (option C) is too aggressive — you might lose a deal you want. Direct questions (option D) don't work because bluffers lie."
+    },
+    {
+      "type": "spot-the-force",
+      "stem": "Israel's nuclear ambiguity policy has deterred enemies for 50+ years without ever confirming weapons exist. What force makes the UNDEFINED threat more powerful than a confirmed one?",
+      "options": [
+        {
+          "text": "Uncertainty — enemies must defend against the worst case (nuclear retaliation) without knowing the exact trigger, making all aggressive options feel risky",
+          "correct": true
+        },
+        {
+          "text": "Power — the weapons themselves are the deterrent regardless of whether they're confirmed",
+          "correct": false
+        },
+        {
+          "text": "Fear — the psychological terror of nuclear weapons prevents rational calculation",
+          "correct": false
+        },
+        {
+          "text": "Trust — allies and enemies alike trust that Israel would use weapons if needed",
+          "correct": false
+        }
+      ],
+      "explanation": "The key force is uncertainty: ambiguity forces enemies to prepare for the strongest possible response without knowing what triggers it. If Israel confirmed weapons with specific use-conditions, enemies could calculate exactly what provokes nuclear response and plan around it. The undefined threat prevents planning — which is why ambiguity is more deterrent than confirmation. Power (option B) would exist regardless, but leverage comes from uncertainty."
+    },
+    {
+      "type": "card-flip",
+      "pairs": [
+        {
+          "front": "Optimal bluff frequency (game theory)",
+          "back": "Bluff just often enough that opponents can't profitably always-call or always-fold. Makes you unexploitable by creating permanent uncertainty."
+        },
+        {
+          "front": "Credible threat",
+          "back": "Requires three elements: capability (you could do it), communication (they know you could), and commitment or ambiguity (they can't be sure you won't)."
+        },
+        {
+          "front": "Range advantage (poker)",
+          "back": "When opponents can't narrow down your hand/position, they must defend against everything — which is exhausting and expensive. Ambiguity IS leverage."
+        },
+        {
+          "front": "Base rate detection",
+          "back": "Don't ask 'is THIS a bluff?' Ask 'what percentage of the time does this person bluff in this situation?' Past patterns predict current behavior better than any single-instance read."
+        }
+      ]
+    },
+    {
+      "type": "drag-match",
+      "pairs": [
+        {
+          "left": "Competitor publicly announcing '$1B investment in your market'",
+          "right": "Possibly cheap talk — track whether previous announcements led to actual follow-through"
+        },
+        {
+          "left": "Employee threatening to resign unless promoted (first time ever)",
+          "right": "Likely credible — no history of bluffing suggests genuine breaking point"
+        },
+        {
+          "left": "Negotiator who has made 'final offers' three times today that weren't final",
+          "right": "High bluff rate — current 'final offer' is probably also moveable"
+        },
+        {
+          "left": "Israel's neither-confirm-nor-deny nuclear policy",
+          "right": "Strategic ambiguity — undefined threat forces maximum defensive posture from enemies"
+        },
+        {
+          "left": "A poker player who bets big only with strong hands (never bluffs)",
+          "right": "Perfectly predictable — opponents always fold to their big bets, limiting their winnings"
+        }
+      ]
+    },
+    {
+      "type": "before-after",
+      "before": {
+        "label": "Reading body language for lies",
+        "text": "I'll watch for nervous ticks, eye movement, or voice changes to detect if someone's bluffing. Liars always reveal themselves if you watch closely enough."
+      },
+      "after": {
+        "label": "Tracking patterns and base rates",
+        "text": "Body language detection is barely better than chance. I track historical patterns: has this person followed through before? What's their bluff rate in this type of situation? I use small probes to test credibility. And I calculate the cost of being wrong in each direction before deciding."
+      }
+    }
+  ]
+}
