@@ -1,0 +1,88 @@
+{
+  "chapterId": "46",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "A senior data engineer has built a critical pipeline that only she fully understands. She's been asked multiple times to document it, but the documentation stays perpetually 'in progress.' Meanwhile, she's the only person who can debug production issues, making her indispensable to the on-call rotation.",
+      "options": [
+        {
+          "text": "She's being irresponsible — documentation is part of her job. Her manager should mandate it with a deadline and consequences.",
+          "correct": false,
+          "feedback": "Mandating documentation without changing the incentive structure won't work. If being the bottleneck is what makes her safe (irreplaceable), documentation threatens her security. The behavior is rational given the environment. Change the incentive, not just the expectation."
+        },
+        {
+          "text": "The environment likely rewards indispensability over documentation. Make sharing powerful: credit her publicly when others succeed using her knowledge, and make replaceability safe rather than threatening.",
+          "correct": true,
+          "feedback": "Hoarding is usually a fear response dressed as a power move. If the org punishes replaceability (replaces people who document themselves out of a job), hoarding is rational self-preservation. Make sharing credit-generating and replaceability safe, and the hoarding will stop on its own."
+        },
+        {
+          "text": "Pair her with a junior engineer who can learn the system through osmosis — this sidesteps the documentation problem entirely.",
+          "correct": false,
+          "feedback": "This helps transfer knowledge but doesn't address the underlying incentive. If she sees the junior as a potential replacement rather than a complement, she'll share selectively (just enough to seem helpful, not enough to make herself dispensable). The incentive structure still needs to change."
+        }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "General Groves compartmentalized the Manhattan Project so that 75,000 workers at Oak Ridge didn't know they were building an atomic bomb. Calutron operators watched dials without understanding what they were separating.",
+      "question": "What was the fundamental trade-off Groves made — and that every information hoarder makes?",
+      "options": [
+        {
+          "text": "Security vs. efficiency — compartmentalization slowed the project but kept it safe from spies.",
+          "correct": false,
+          "feedback": "Closer, but the trade-off is deeper than speed. Compartmentalization didn't just slow things — it made the system dumber. Brilliant physicists couldn't optimize across boundaries. Errors propagated without correction. The trade-off isn't security vs. speed. It's control vs. collective intelligence."
+        },
+        {
+          "text": "Control vs. collective intelligence — hoarding increases individual power (Groves controlled everything) while making the system more fragile and less capable of self-correction.",
+          "correct": true,
+          "feedback": "This is the universal trade-off of information hoarding. The hoarder becomes more important (Groves was indispensable). The system becomes more fragile (no one could catch cross-boundary errors). Same mechanism in every org: the person who hoards gains leverage while the team loses intelligence."
+        },
+        {
+          "text": "Trust vs. distrust — Groves didn't trust the workers, so he kept them ignorant. The lesson is that hoarding always reflects a trust deficit.",
+          "correct": false,
+          "feedback": "Trust is a factor, but the primary driver is structural. Even in high-trust environments, information hoarding persists when the incentive structure rewards knowing more than sharing. Groves's compartmentalization would have been rational even if he trusted every worker — because any one leak could compromise the whole project."
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "People hoard information because they're selfish or insecure — the fix is to build a culture of transparency and openness.",
+      "back": "Culture appeals don't work because hoarding is usually a rational response to incentive structures, not a character flaw. If knowing more than others = job security, power, and indispensability, then sharing = vulnerability. The fix isn't 'be more open' — it's redesigning the system so that sharing creates more power than hoarding. Make credit flow to the source. Make replaceability safe. Make the connector more valued than the bottleneck."
+    },
+    {
+      "type": "before-after",
+      "context": "Two teams both have a knowledge-hoarding problem — critical information lives in one person's head.",
+      "scenarioA": {
+        "label": "Moral appeal approach",
+        "text": "Manager gives a speech about transparency and teamwork. Sets up a wiki. Asks people to document their knowledge. Three months later, the wiki has 4 half-finished pages and the same people still hoard. Nothing changed because the incentives didn't change — being the bottleneck is still the safest position."
+      },
+      "scenarioB": {
+        "label": "Incentive redesign approach",
+        "text": "Manager starts crediting knowledge sources publicly: 'Using Maya's pipeline documentation, three teams shipped 2 weeks early.' Promotes someone specifically for 'enabling others through knowledge sharing.' Within a quarter, documentation triples — because sharing now builds career capital instead of eroding job security."
+      },
+      "correctScenario": "B",
+      "explanation": "Information hoarding responds to incentives, not appeals. When sharing becomes the path to recognition, promotion, and power, rational actors will share. When hoarding remains the path to indispensability, no amount of transparency culture will change behavior. Redesign the game, not the players."
+    },
+    {
+      "type": "drag-match",
+      "instruction": "Order these from most likely to produce lasting knowledge-sharing behavior to least likely:",
+      "items": [
+        "Promote someone for enabling others through shared knowledge",
+        "Credit knowledge sources publicly in outcomes they enable",
+        "Ask people nicely to document their work",
+        "Mandate documentation with deadlines"
+      ],
+      "correctOrder": [
+        "Promote someone for enabling others through shared knowledge",
+        "Credit knowledge sources publicly in outcomes they enable",
+        "Ask people nicely to document their work",
+        "Mandate documentation with deadlines"
+      ]
+    }
+  ],
+  "principle": {
+    "text": "Information hoarding is a rational response to incentive structures, not a character flaw.",
+    "subtext": "People don't hoard because they're selfish — they hoard because the environment rewards it. Change the incentives so sharing creates more power than knowing."
+  },
+  "reflection": "Where are you hoarding information right now — and what would you need to feel safe enough to share it? What incentive is the hoarding protecting?"
+}

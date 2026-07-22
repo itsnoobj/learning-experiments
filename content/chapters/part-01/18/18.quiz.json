@@ -3,86 +3,70 @@
   "challenges": [
     {
       "type": "scenario-choice",
-      "situation": "You're about to start a creative task — writing, designing, coding something new. You think: 'I need to get into the zone first.' You spend 20 minutes adjusting your environment, choosing music, and trying to clear your mind. You still don't feel 'ready.'",
+      "situation": "You championed a vendor three months ago. The integration is clearly failing, and in standup a teammate floats switching. You feel the heat rise.",
       "options": [
         {
-          "text": "Keep preparing until the right feeling arrives — flow requires the right mental state.",
-          "correct": false,
-          "feedback": "Flow isn't a state you prepare for — it's a state that emerges from engagement. Preparing to feel ready is the conscious mind trying to control something that only happens when it lets go. Every minute of preparation is a minute of delay disguised as productivity."
-        },
-        {
-          "text": "Start the work anyway, even if it feels clunky. Let quality be bad for the first ten minutes. Flow arrives during work, not before it.",
+          "text": "Say the data has shifted and propose a two-week bake-off against one alternative.",
           "correct": true,
-          "feedback": "This is the Zen archer insight. The master doesn't aim — the arrow releases itself when the moment is right. But the moment only comes during drawing the bow, not while thinking about drawing it. Flow is a byproduct of engagement, not a prerequisite for it."
+          "feedback": "You separated past-you from present-you and made updating a normal engineering step, not a confession. The decision becomes just a decision again."
         },
         {
-          "text": "Switch to an easier task to build momentum, then come back to the creative work.",
+          "text": "Walk through the original evaluation again so everyone sees the choice made sense.",
           "correct": false,
-          "feedback": "Easy tasks generate a different kind of engagement — they satisfy the brain's need for completion but don't produce flow because they lack sufficient challenge. You'll complete the easy tasks and run out of time for the one that actually matters."
+          "feedback": "Re-litigating why it made sense then is defending the decider, not solving the present. It keeps a failing tool alive to protect the call you made."
+        },
+        {
+          "text": "Agree to switch on the spot and concede the vendor was a bad pick all along.",
+          "correct": false,
+          "feedback": "Folding instantly is identity collapse, not openness. People stop trusting your judgment when you abandon it the moment it's questioned."
         }
       ]
     },
     {
       "type": "spot-the-force",
-      "situation": "A writer describes her best work sessions: 'I sit down at 5 AM, start writing terribly, and somewhere around minute 30, I disappear into it. I don't know how to make it happen — I just know it usually does if I keep going.'",
-      "question": "What enables her flow state?",
+      "situation": "A senior engineer keeps producing fresh, plausible reasons the architecture she designed is fine — each rebuttal more detailed than the last, none moved by the latest failure data.",
+      "question": "What's actually driving the endless supply of reasons?",
       "options": [
         {
-          "text": "The consistent ritual (time, place, action) triggers automaticity, which quiets the self-monitoring prefrontal cortex — creating the conditions for flow without trying to induce it.",
+          "text": "She's avoiding the effort of redesigning it.",
+          "correct": false,
+          "feedback": "Generating that many detailed defenses is more work than a redesign. The energy is real; it's just aimed at protecting the self, not dodging labor."
+        },
+        {
+          "text": "Her identity has fused with the design, so questioning it feels like questioning her.",
           "correct": true,
-          "feedback": "The ritual doesn't produce flow directly — it produces the absence of self-consciousness that flow requires. By automating the entry conditions, her brain stops asking 'should I do this?' and starts doing it. Transient hypofrontality follows naturally."
+          "feedback": "Once 'I designed this' becomes 'this is who I am,' skill turns into a lawyer for the ego — the smarter she is, the better the rationalizations."
         },
         {
-          "text": "She has a natural talent for getting into creative states.",
+          "text": "She has information the team lacks and is genuinely correct.",
           "correct": false,
-          "feedback": "She literally says 'I start writing terribly.' There's no natural talent at play — there's a system. Thirty minutes of bad writing is the price of entry. The 'talent' is the willingness to produce garbage until the conscious mind gives up monitoring."
-        },
-        {
-          "text": "5 AM is when the brain is freshest and most creative.",
-          "correct": false,
-          "feedback": "The time matters only because it's consistent — it's a trained cue, not a biological window. Another writer might flow at midnight. The key is ritual, not chronobiology. The brain responds to 'this is the context where we let go' — whatever that context is."
+          "feedback": "Genuine conviction updates when new evidence lands. The tell here is that no data moves her — that's defense, not analysis."
         }
       ]
     },
     {
       "type": "card-flip",
-      "front": "The best performers must feel more 'in the zone' than everyone else — that's their advantage.",
-      "back": "Peak performers' advantage isn't feeling flow more often. It's that they work effectively without it. They show up regardless, produce through the ugly minutes, and let flow arrive as a bonus rather than requiring it as a precondition. The Zen archer hits the target in complete darkness — not by seeing, but by practicing until seeing was unnecessary."
+      "front": "If I admit my decision was wrong, I'll look like an unreliable decision-maker.",
+      "back": "It's the reverse. Defending a sinking choice is what reads as weak. Saying 'I was wrong, here's the new plan' signals you're secure enough to update — which is exactly what makes people trust your future calls."
     },
     {
       "type": "before-after",
-      "context": "A software engineer wants to enter flow state more reliably during deep work sessions.",
+      "context": "The higher your status, the tighter your identity fuses to your decisions — and the more a correction stings.",
       "scenarioA": {
-        "label": "Herrigel before enlightenment",
-        "text": "Tries to force focus: noise-cancelling headphones, flow-state playlists, caffeine optimization, blocking two hours minimum. Monitors whether he's 'in the zone' every few minutes. Usually ends the session frustrated."
+        "label": "The fused leader",
+        "text": "Treats every correction as a defeat to resist, because being wrong feels like erasing himself."
       },
       "scenarioB": {
-        "label": "The Zen archer",
-        "text": "Same time, same desk, starts with a single function — doesn't evaluate the code quality for the first 15 minutes. Doesn't check if flow is happening. Some days it arrives. Some days it doesn't. The code ships either way."
+        "label": "Marcus Aurelius",
+        "text": "Reminds himself in private: 'If anyone can prove I am wrong, I will gladly change.'"
       },
       "correctScenario": "B",
-      "explanation": "Monitoring for flow prevents flow — because monitoring is a prefrontal cortex activity, and flow requires that region to quiet. The engineer in Scenario A is trying to hit the target by aiming harder. The one in B is drawing the bow and letting the arrow release itself."
-    },
-    {
-      "type": "drag-match",
-      "instruction": "Order these from most conducive to flow to most likely to prevent it:",
-      "items": [
-        "Task slightly exceeds current skill (appropriate challenge)",
-        "Clear immediate goal with instant feedback",
-        "Consistent entry ritual that eliminates decision-making",
-        "Consciously checking whether you're in flow yet"
-      ],
-      "correctOrder": [
-        "Task slightly exceeds current skill (appropriate challenge)",
-        "Clear immediate goal with instant feedback",
-        "Consistent entry ritual that eliminates decision-making",
-        "Consciously checking whether you're in flow yet"
-      ]
+      "explanation": "Marcus separated the choice from the self on purpose, treating correction as a gift. That kept his judgment open at the exact moment — peak power — when ego pressure is strongest."
     }
   ],
   "principle": {
-    "text": "Flow is not the reward for effort. It's what happens when effort becomes effortless.",
-    "subtext": "You cannot force flow. But you can build the conditions where it's likely to arrive: sufficient skill, appropriate challenge, clear goals, and the willingness to stop monitoring yourself."
+    "text": "You don't defend the decision — you defend the self that made it.",
+    "subtext": "The moment a choice becomes part of your identity, changing your mind feels like erasing yourself. Separate the two, and the decision becomes just a decision again — something you can update without dying."
   },
-  "reflection": "When did you last lose track of time in your work? What were the conditions — not your emotional state, but the actual setup: the task, the challenge level, the absence of interruption? How could you recreate those conditions more reliably?"
+  "reflection": "Think of a call you're quietly over-defending right now. Finish honestly: 'If I admit this was wrong, people will think I'm ___.' What does seeing that word do to its grip?"
 }

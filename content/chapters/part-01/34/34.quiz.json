@@ -1,0 +1,86 @@
+{
+  "chapterId": "34",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "A high-performing colleague tells you she's 'fine, just tired.' She's been delivering as usual, but you notice she's stopped volunteering for new projects, makes more cynical comments in meetings, and seems to go through motions rather than engage.",
+      "options": [
+        {
+          "text": "She's probably just going through a busy patch — she'll bounce back once things slow down.",
+          "correct": false,
+          "feedback": "Burnout isn't caused by a busy patch — it's caused by sustained effort without meaning or progress. If the workload normalizes but the cynicism and disengagement remain, she won't 'bounce back.' Burnout doesn't respond to reduced volume. It responds to restored meaning."
+        },
+        {
+          "text": "Check in privately and ask: 'Does the work still feel like it matters to you? Not whether you can do it — whether it feels worth doing.'",
+          "correct": true,
+          "feedback": "This targets the core: burnout isn't about capability, it's about the connection between effort and meaning. Asking whether it 'feels worth doing' opens the conversation burnout makes invisible. Most burned-out people can still perform — they just can't tell you why."
+        },
+        {
+          "text": "Suggest she takes a vacation — she needs to recharge.",
+          "correct": false,
+          "feedback": "Rest helps fatigue. It doesn't help burnout. If the problem is meaning, not energy, she'll return from vacation to the same empty feeling. The difference between fatigue and burnout: fatigue is solved by rest. Burnout is solved by restoring the reason."
+        }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "An engineer has been maintaining a legacy system for two years. He keeps it running perfectly. No one complains. His performance reviews are positive. But he's applied to three other teams in the last month.",
+      "question": "What's the most likely driver?",
+      "options": [
+        {
+          "text": "Reduced efficacy — his work is invisible maintenance. He can't point to anything he's built, only to problems that didn't happen. Effort without visible progress.",
+          "correct": true,
+          "feedback": "This is the Shackleton insight: the worst days aren't the storms, they're the still ones. Maintenance work is the organizational equivalent of camping on drifting ice — effort expended to maintain position, with no visible advance. The brain needs evidence that its energy is buying something."
+        },
+        {
+          "text": "He wants more money or a better title.",
+          "correct": false,
+          "feedback": "He's applying to lateral moves on other teams — not asking for promotion. The move is about changing what he does, not what he's paid. This is meaning-seeking, not status-seeking."
+        },
+        {
+          "text": "The legacy system is boring and he wants newer technology.",
+          "correct": false,
+          "feedback": "Technology boredom is real but secondary. The deeper issue is that his effort produces nothing he can show — no new feature, no shipped product, no measurable impact. The invisible nature of his contribution, not the age of the stack, is what's draining him."
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "Burnout means I'm not tough enough to handle the workload.",
+      "back": "Shackleton's crew were among the toughest humans alive — and they nearly broke during the waiting, not during the storms. Burnout isn't a weakness signal. It's a meaning signal. Your capacity is fine. It's the connection between effort and purpose that's severed. Toughness doesn't fix a broken reward loop."
+    },
+    {
+      "type": "before-after",
+      "context": "A project manager feels burned out — exhausted, cynical, and questioning whether any of it matters.",
+      "scenarioA": {
+        "label": "Treating it like fatigue",
+        "text": "Takes a two-week vacation. Sleeps twelve hours a day. Returns to the same role, same tasks, same lack of visible impact. Within a week, feels exactly the same as before the break."
+      },
+      "scenarioB": {
+        "label": "Treating it like burnout",
+        "text": "Identifies the broken link (no visible progress — all work disappears into status reports nobody reads). Negotiates one small deliverable with a real user. Sees someone actually use what she built. The energy starts returning before the workload changes."
+      },
+      "correctScenario": "B",
+      "explanation": "Vacation doesn't fix burnout for the same reason sleep doesn't fix hunger. The depleted resource isn't energy — it's meaning. Restoring one visible connection between effort and impact restarts the motivational engine without requiring any change in workload."
+    },
+    {
+      "type": "drag-match",
+      "instruction": "Order the three dimensions of burnout from earliest warning sign to final stage:",
+      "items": [
+        "Reduced efficacy — 'Does anything I do even matter?'",
+        "Emotional exhaustion — 'I'm tired in a way sleep doesn't fix'",
+        "Cynicism — 'Why should I care? Nothing changes anyway'"
+      ],
+      "correctOrder": [
+        "Emotional exhaustion — 'I'm tired in a way sleep doesn't fix'",
+        "Cynicism — 'Why should I care? Nothing changes anyway'",
+        "Reduced efficacy — 'Does anything I do even matter?'"
+      ]
+    }
+  ],
+  "principle": {
+    "text": "Burnout isn't caused by too much work. It's caused by too much effort without enough meaning, progress, or control.",
+    "subtext": "The opposite of burnout isn't rest. It's engagement — the feeling that what you're spending energy on actually matters and actually moves."
+  },
+  "reflection": "Rate yourself right now on the three dimensions: Am I exhausted? Am I cynical? Do I feel like my effort produces visible results? If the answer is yes/yes/no — what's the one connection between effort and meaning that broke?"
+}

@@ -1,6 +1,48 @@
 {
   "worlds": [
     {
+      "id": 0,
+      "title": "Strategic Thinking",
+      "tagline": "Play the long game",
+      "worldName": "The Game Board",
+      "landscape": "chessboard",
+      "accent": "#2C3E50",
+      "regions": [
+        {
+          "id": "A",
+          "title": "The Rules of the Game",
+          "description": "Core mechanics — the building blocks of strategic interaction.",
+          "emoji": "♟️",
+          "terrain": "game-grid",
+          "missions": ["1", "2", "3", "4"]
+        },
+        {
+          "id": "B",
+          "title": "Coordination Without Control",
+          "description": "How people align without anyone being in charge.",
+          "emoji": "🎯",
+          "terrain": "focal-points",
+          "missions": ["5", "6", "7", "8"]
+        },
+        {
+          "id": "C",
+          "title": "Information as Weapon",
+          "description": "What you know, what you reveal, and what you hide.",
+          "emoji": "🃏",
+          "terrain": "fog-of-war",
+          "missions": ["9", "10", "11", "12"]
+        },
+        {
+          "id": "D",
+          "title": "The Long Game",
+          "description": "Repeated interactions, reputation, and evolutionary strategy.",
+          "emoji": "♾️",
+          "terrain": "infinite-path",
+          "missions": ["13", "14", "15", "16", "17"]
+        }
+      ]
+    },
+    {
       "id": 1,
       "title": "Understanding Yourself",
       "tagline": "Know thyself",
@@ -14,7 +56,7 @@
           "description": "Why you defend, compare, and fear. The stories you tell yourself.",
           "emoji": "🪩",
           "terrain": "reflection-pools",
-          "missions": ["1", "2", "3", "4", "5", "6", "7", "8"]
+          "missions": ["18", "19", "20", "21", "22", "23", "24", "25"]
         },
         {
           "id": "B",
@@ -22,7 +64,7 @@
           "description": "The invisible force that protects and destroys. Learn to see it.",
           "emoji": "👑",
           "terrain": "cracked-mirrors",
-          "missions": ["9", "10", "11", "12", "13"]
+          "missions": ["26", "27", "28", "29", "30"]
         },
         {
           "id": "C",
@@ -30,7 +72,7 @@
           "description": "Why you start, stop, burn out, and find flow.",
           "emoji": "🚀",
           "terrain": "uphill-paths",
-          "missions": ["14", "15", "16", "17", "18", "19"]
+          "missions": ["31", "32", "33", "34", "35", "36"]
         },
         {
           "id": "D",
@@ -38,7 +80,7 @@
           "description": "Anger, fear, shame, envy — signals, not enemies.",
           "emoji": "⛈️",
           "terrain": "weather-zones",
-          "missions": ["20", "21", "22", "23", "24", "25"]
+          "missions": ["37", "38", "39", "40", "41", "42"]
         }
       ]
     },
@@ -56,7 +98,7 @@
           "description": "Why people don't do what they say. The hidden logic of behavior.",
           "emoji": "🎪",
           "terrain": "market-stalls",
-          "missions": ["26", "27", "28", "29", "30", "31", "32", "33"]
+          "missions": ["43", "44", "45", "46", "47", "48", "49", "50"]
         },
         {
           "id": "B",
@@ -64,7 +106,7 @@
           "description": "How it's built, how it dies, and why it matters more than skill.",
           "emoji": "🤝",
           "terrain": "bridge",
-          "missions": ["34", "35", "36", "37", "38"]
+          "missions": ["51", "52", "53", "54", "55"]
         },
         {
           "id": "C",
@@ -72,7 +114,7 @@
           "description": "Why credit, titles, and recognition change people.",
           "emoji": "🏆",
           "terrain": "staircase",
-          "missions": ["39", "40", "41", "42"]
+          "missions": ["56", "57", "58", "59"]
         },
         {
           "id": "D",
@@ -80,7 +122,7 @@
           "description": "Narcissists, manipulators, victims — patterns you can learn to read.",
           "emoji": "🌵",
           "terrain": "thorny-path",
-          "missions": ["43", "44", "45", "46", "47", "48"]
+          "missions": ["60", "61", "62", "63", "64", "65"]
         }
       ]
     },

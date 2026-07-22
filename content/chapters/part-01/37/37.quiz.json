@@ -1,0 +1,88 @@
+{
+  "chapterId": "37",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "During a team retrospective, a product manager publicly blames your engineering team for a missed deadline — even though the real cause was shifting requirements that PM approved. You feel the heat rise. The room is watching.",
+      "options": [
+        {
+          "text": "Correct the record immediately and firmly — 'Actually, the timeline slipped because requirements changed three times.' The anger is justified, so express it.",
+          "correct": false,
+          "feedback": "The anger is justified, but the timing is reactive. When anger is steering, even accurate words land as attacks. The room will remember the confrontation, not the correction. You've won the point and lost the relationship."
+        },
+        {
+          "text": "Say nothing in the meeting to avoid conflict, then raise it privately later — keeping the peace is more important than being right.",
+          "correct": false,
+          "feedback": "Suppressing anger doesn't eliminate it — it leaks out as resentment, passive aggression, or disengagement. Silence in the moment also lets a false narrative solidify. The goal isn't peace at any cost."
+        },
+        {
+          "text": "Pause one breath, then say calmly: 'I see it differently — let's walk through the timeline together after this meeting.' Address it, but after the 6-second gap.",
+          "correct": true,
+          "feedback": "This uses the 6-second gap. You've acknowledged the anger (something matters), avoided letting it steer (no explosive correction), and committed to addressing it (not suppressing). Anger stays in the engine. Your hands stay on the wheel."
+        }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "Serena Williams smashed her racket and called the umpire a thief during the 2018 US Open final, receiving a game penalty that contributed to her loss. She later said the call was unjust.",
+      "question": "What made this moment destructive wasn't the anger itself — it was:",
+      "options": [
+        {
+          "text": "That she was wrong about the call — the umpire was correct and her anger was unjustified.",
+          "correct": false,
+          "feedback": "Whether the call was right or wrong is actually irrelevant to the lesson. Justified anger can still destroy when it takes the wheel. The quality of the anger isn't the issue — it's who's driving."
+        },
+        {
+          "text": "That anger took the steering wheel — it became the decision-maker instead of remaining fuel in the engine.",
+          "correct": true,
+          "feedback": "The anger may have been completely justified. But justified anger that grabs the wheel is still destructive. The same fury, channeled into her 2019 training and play, produced extraordinary results. The difference was governance, not intensity."
+        },
+        {
+          "text": "That she showed emotion publicly — professional athletes need to maintain composure at all times.",
+          "correct": false,
+          "feedback": "The lesson isn't 'hide your emotions.' Serena's visible passion and intensity were always part of her greatness. The issue wasn't showing anger — it was anger making tactical decisions (escalating with the umpire) during a moment that required precision."
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "The best way to deal with anger is to express it fully — 'get it out of your system' so it doesn't build up inside.",
+      "back": "The catharsis myth has been debunked repeatedly. Research (Bushman, 2002) shows that venting anger actually increases aggression rather than releasing it. But suppression isn't the answer either — it correlates with health problems and passive aggression. The third path is cognitive reappraisal: acknowledge what the anger is telling you, then choose your response from a wider menu than explode-or-swallow."
+    },
+    {
+      "type": "before-after",
+      "context": "Two managers receive the same bad news: their project budget was cut by 40% without consultation.",
+      "scenarioA": {
+        "label": "Raw anger served immediately",
+        "text": "Storms into the VP's office: 'This is disrespectful — you're gutting my team without even a conversation.' The VP gets defensive, digs in. The budget cut stays, and now there's a damaged relationship on top of it. The anger was justified but served raw."
+      },
+      "scenarioB": {
+        "label": "Anger cooked for 24 hours",
+        "text": "Feels the same fury. Waits one day. Then sends a clear email: 'I want to understand the reasoning behind the 40% cut. Here's what it means for our deliverables — can we discuss alternatives?' Same anger underneath. But cooked into a specific request rather than a raw confrontation."
+      },
+      "correctScenario": "B",
+      "explanation": "Both managers were equally angry, equally justified. The difference is timing and form. Raw anger triggers defensiveness in others. Cooked anger — same energy, processed into clarity — creates space for the other person to respond rather than react. Anger is energy, not instruction."
+    },
+    {
+      "type": "drag-match",
+      "instruction": "Order these from most reactive to most governed use of anger:",
+      "items": [
+        "Explode in the moment",
+        "Suppress and pretend you're fine",
+        "Name the anger internally, then choose your response",
+        "Channel anger into sustained action over weeks"
+      ],
+      "correctOrder": [
+        "Explode in the moment",
+        "Suppress and pretend you're fine",
+        "Name the anger internally, then choose your response",
+        "Channel anger into sustained action over weeks"
+      ]
+    }
+  ],
+  "principle": {
+    "text": "Anger is energy, not instruction.",
+    "subtext": "The question isn't whether to feel angry — it's who's driving when you do."
+  },
+  "reflection": "Think of the last time anger drove your response. What did it cost you? Now think of a time you channeled anger into something constructive. What was different about how you held it?"
+}

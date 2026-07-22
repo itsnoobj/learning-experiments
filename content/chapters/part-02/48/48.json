@@ -1,0 +1,40 @@
+{
+  "id": "48",
+  "part": 2,
+  "section": "A",
+  "title": "Why Do People Resist Change Even When It Benefits Them?",
+  "forces": ["incentives", "identity", "fear"],
+  "connections": ["24", "73", "78", "25"],
+  "audio": "48.mp3",
+  "visual": "48.svg",
+  "sections": {
+    "situation": {
+      "title": "The Situation",
+      "content": "You're rolling out something objectively better — a new tool, a simpler process, a restructure that gives people more autonomy. You've done the work. The logic is airtight.\n\nAnd yet. People drag their feet. They find reasons it won't work. They nod in meetings and do nothing after. Some actively sabotage.\n\nYou're not fighting the change. You're fighting something deeper."
+    },
+    "story": {
+      "title": "The Story",
+      "content": "Five monkeys are placed in a cage. A banana hangs at the top of a ladder.\n\nEvery time one monkey climbs toward the banana, all five get sprayed with cold water. Soon the lesson lands: climb, and everyone suffers. The monkeys learn to pull down anyone who tries.\n\nThen the experimenters stop the water — but the monkeys don't know that. One monkey is replaced with a newcomer. The new monkey reaches for the banana, and the others immediately pull it down. Hard. It doesn't know why; it just learns not to climb.\n\nOne by one, every original monkey is swapped out. Eventually not a single monkey in the cage has ever been sprayed with water. None of them has any direct reason to fear the ladder.\n\nAnd yet none will climb. And if a newcomer tries, they'll all pull it down. Ask them why, and the answer — if monkeys could speak — would be the most human sentence there is: \"That's just how it's always been done here.\""
+    },
+    "contrast": {
+      "title": "The Contrast",
+      "content": "In the 1990s, Kodak engineers built one of the first digital cameras. They showed it to leadership. The response wasn't excitement — it was burial.\n\nKodak made its money from film. Everyone in the company — from executives to factory workers — had built their identity, expertise, and daily routines around film. Digital wasn't just a new product. It was a threat to who they were.\n\nThey didn't lack information. They lacked the willingness to let go of a self-image that was already dying. Kodak filed for bankruptcy in 2012 — killed not by ignorance, but by the inability to become someone new."
+    },
+    "principle": {
+      "title": "The Principle",
+      "content": "People don't resist change. They resist loss.\n\nEvery change asks someone to give something up — familiarity, competence, status, identity, comfort. The new thing might be better in the future, but the loss is felt right now. And the brain weighs losses roughly twice as heavily as gains."
+    },
+    "psychology": {
+      "title": "Why It Happens",
+      "content": "Three forces work together.\n\nIdentity threat: if I've spent 10 years mastering a process and you replace it, you're not just changing a tool — you're telling me my expertise is obsolete. My competence was my status. Now I'm a beginner again.\n\nLoss aversion: psychologically, losing $100 hurts more than gaining $200 feels good. Change is always framed as 'give up the known for the uncertain.' The math never feels fair.\n\nMere exposure effect: we prefer things simply because they're familiar. The current way — however broken — feels safe because it's known. The status quo has a built-in advantage just by existing.\n\nThis is why people say 'I'm open to change' and then resist every specific instance of it."
+    },
+    "trap": {
+      "title": "The Trap",
+      "content": "Pushing too hard confirms their fear. Forced change feels like proof that their concerns don't matter, which hardens resistance into identity ('I'm someone who doesn't go along with management's whims').\n\nGiving up means nothing changes. The slow decay continues. Kodak stays comfortable until it doesn't exist.\n\nThe deeper trap is thinking this is a logic problem. Better data, clearer arguments, more compelling charts get presented. But it's arguing with emotion using reason — like trying to extinguish a fire by explaining the chemistry of combustion."
+    },
+    "move": {
+      "title": "The Move",
+      "content": "1. Name the loss. Before selling the gain, acknowledge what people are giving up: 'I know this means re-learning something you're already good at. That's real.' Unacknowledged loss becomes underground resistance.\n\n2. Make the first step tiny. Not 'we're migrating everything,' but 'try it for one task this week.' Lower the stakes below the threshold that triggers identity threat.\n\n3. Let early adopters be proof. Don't argue theoretically. Let one team go first, succeed visibly, and become the evidence. People trust peers more than presentations.\n\n4. Protect status during transition. The expert in the old system? Make them the guide in the new one. Give their competence a new home instead of deleting it.\n\n5. Give it time, but not infinite time. Set a clear horizon: 'We run both in parallel for 6 weeks, then we switch.' Ambiguity feeds resistance; deadlines force adaptation."
+    }
+  }
+}

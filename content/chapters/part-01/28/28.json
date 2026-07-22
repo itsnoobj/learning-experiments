@@ -1,0 +1,30 @@
+{
+  "id": "28",
+  "part": 1,
+  "section": "B",
+  "title": "Why Do Smart People Stop Learning?",
+  "forces": ["identity", "ego"],
+  "connections": ["18", "26", "30", "77"],
+  "audio": "28.mp3",
+  "visual": "28.svg",
+  "sections": {
+    "situation": {
+      "content": "Someone on the team shares a new approach — maybe a different architecture, maybe a process change backed by data. And the most experienced person in the room dismisses it in under ten seconds. Not with curiosity. With authority.\n\nIt happens quietly. The senior engineer who won't consider the new framework. The manager who says 'we tried that in 2019.' The expert whose expertise has calcified into a wall. They're not stupid — they're smart. That's the problem."
+    },
+    "story": {
+      "content": "In 1847, the maternity ward at Vienna General Hospital had a problem that everyone knew about and nobody could solve. Women were dying of childbed fever at five times the rate of the ward next door. Same hospital. Same city. Different death rates.\n\nIgnaz Semmelweis was a twenty-nine-year-old assistant physician — junior, Hungarian in an Austrian institution, not yet established. But he noticed something the senior doctors hadn't: the high-mortality ward was staffed by physicians who came directly from performing autopsies. The low-mortality ward was staffed by midwives who never touched cadavers.\n\nHe made a simple request: wash your hands in chlorinated lime between the autopsy room and the delivery room.\n\nThe death rate dropped from 18% to 1.2%. In weeks.\n\nThen the backlash came. Not from administrators or patients — from the doctors themselves. The most educated men in European medicine rejected his findings. Not because the data was unclear — it was staggeringly clear. But because accepting it meant accepting something unbearable: that they, the healers, had been killing their own patients. For years. With their own hands.\n\nCharles Meigs, a leading American obstetrician, responded: 'Doctors are gentlemen, and gentlemen's hands are clean.' He wasn't arguing science. He was defending identity.\n\nSemmelweis couldn't understand why proof wasn't enough. He grew frustrated, then erratic, then aggressive in his letters — calling his colleagues murderers. They had him committed to an asylum in 1865. He died there within two weeks, likely beaten by guards. He was forty-seven.\n\nTwenty years later, Louis Pasteur proved germ theory, and suddenly Semmelweis was vindicated. But the question that lingers isn't about germs. It's this: why did brilliant, educated, well-intentioned doctors choose to let women die rather than wash their hands? The answer is identity. Their expertise wasn't just something they knew — it was who they were. And the new evidence didn't just challenge their knowledge. It threatened their self-concept as healers."
+    },
+    "contrast": {
+      "content": "Zen Buddhism has a practice called shoshin — beginner's mind. A famous teaching story: a professor visits a Zen master and talks endlessly about his own knowledge. The master pours tea into the professor's cup until it overflows. 'Like this cup,' says the master, 'you are full of your own opinions. How can I show you anything unless you first empty your cup?'\n\nSemmelweis's colleagues had overflowing cups. The tea was spilling everywhere — in the form of dead patients — and still they wouldn't pour any out."
+    },
+    "principle": {
+      "content": "When what you know becomes who you are, new evidence stops being information and starts being a threat.\n\nThe smarter you are, the better you become at defending the castle of what you already believe — which is exactly why intelligence alone doesn't protect against closed-mindedness. It amplifies it."
+    },
+    "psychology": {
+      "content": "Three forces conspire here. First is identity-protective cognition (Kahan, 2012): when a belief is woven into your professional identity, your brain processes challenges to that belief as personal attacks — the same neural threat response fires as if someone questioned your competence directly.\n\nSecond is the earned dogmatism effect (Ottati et al., 2015): people who feel they've earned expertise become measurably less open to new information. The PhD closes more doors than it opens — not because knowledge is bad, but because earning it creates a felt entitlement to stop listening.\n\nThird is the Semmelweis reflex itself — now a named phenomenon in psychology: the automatic rejection of evidence that contradicts established norms. It's not stupidity. It's the immune system of identity, attacking anything foreign. The smarter the person, the more sophisticated their immune response."
+    },
+    "move": {
+      "content": "1. Schedule the update. Once a quarter, identify one belief central to your expertise and actively search for evidence against it. Treat this like a system update — not a crisis, just maintenance.\n\n2. Notice the speed of dismissal. If you reject a new idea in under five seconds, that's not judgment — that's reflex. The rule: anything dismissed instantly deserves ten more minutes.\n\n3. Separate knowing from being. Practice saying 'I used to think X, now I think Y' out loud. Each time you do, you prove to yourself that updating doesn't kill you — it's the people who can't say this who get stuck.\n\n4. Seek the junior voice. The person most likely to see what you're missing is the one with the least invested in the current approach. Ask them. Actually listen.\n\n5. Ask the Semmelweis question. When resisting new evidence, ask: 'Am I rejecting this because it's wrong, or because accepting it would mean something uncomfortable about my past decisions?'"
+    }
+  }
+}

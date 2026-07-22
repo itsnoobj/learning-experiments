@@ -1,0 +1,95 @@
+{
+  "chapterId": "26",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "A senior engineer is asked to take on a mentoring session every Friday — on top of an already full schedule. She's exhausted, and her own work is slipping. But she's always been 'the person who shows up for others.' Saying no feels physically wrong.",
+      "options": [
+        {
+          "text": "Say yes — the team needs her, and a few more weeks won't hurt.",
+          "correct": false,
+          "feedback": "This is the loop. 'A few more weeks' is always the justification, and the cost compounds invisibly. If saying no feels like identity-death rather than a simple decision, the yes isn't generosity — it's compulsion."
+        },
+        {
+          "text": "Decline this one clearly: 'I can't this time.' Watch what happens inside — if it feels like self-betrayal, that's the information.",
+          "correct": true,
+          "feedback": "One deliberate 'no' tests whether the behavior is a choice or a cage. If declining a single request feels like identity collapse, that reveals the ego driving it — not generosity."
+        },
+        {
+          "text": "Say yes but set a boundary that she'll only do 30 minutes instead of an hour.",
+          "correct": false,
+          "feedback": "Half-measures preserve the identity while pretending to address the problem. The issue isn't duration — it's that she can't refuse at all. Negotiating terms instead of testing the 'no' avoids confronting the real pattern."
+        }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "Karna in the Mahabharata gives away his invincible armor to an enemy disguised as a beggar — knowing it will likely mean his death in battle the next day. He has been warned this would happen. He gives it away anyway.",
+      "question": "What force primarily drives Karna to choose death over refusal?",
+      "options": [
+        {
+          "text": "Genuine generosity — he truly cares more about others than himself.",
+          "correct": false,
+          "feedback": "Genuine generosity can say no when the cost is self-destruction. Karna's giving is compulsive — he literally cannot refuse even when it kills him. That's not generosity choosing. That's identity demanding."
+        },
+        {
+          "text": "Ego disguised as virtue — his identity as 'the one who never refuses' is more important than survival.",
+          "correct": true,
+          "feedback": "Karna would rather die as the generous one than live as someone who once said no. The identity — not kindness — is the master. When virtue can't bend even to save your life, it's ego wearing a noble mask."
+        },
+        {
+          "text": "Honor and duty — his warrior code requires him to give to anyone who asks.",
+          "correct": false,
+          "feedback": "The warrior code is the story the ego tells to justify the compulsion. Others in the same tradition say no when appropriate. Karna can't — because for him, the code isn't a guideline. It's the only self he has."
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "If someone always shows up for others, that's just who they are — it's genuine strength and selflessness.",
+      "back": "Genuine strength is flexible — it can say yes or no depending on the situation. If the behavior can't bend, if saying no feels like identity collapse rather than a simple choice, it's not virtue. It's a compulsion wearing a virtue's name. The tell is rigidity: ego-driven strength can only do one thing."
+    },
+    {
+      "type": "before-after",
+      "context": "A manager is known for 'never backing down' in negotiations — both with vendors and with her own team.",
+      "scenarioA": {
+        "label": "The 'never backs down' manager",
+        "text": "Refuses to concede any point in a vendor negotiation even when the vendor's counter-offer is actually better for the company. She can't yield because yielding 'isn't who she is.' The deal falls through."
+      },
+      "scenarioB": {
+        "label": "The clear-eyed negotiator",
+        "text": "Holds firm on the points that matter, concedes on the points where the vendor's proposal genuinely improves the outcome. She separates conviction from identity — she can change position without changing who she is."
+      },
+      "correctScenario": "B",
+      "explanation": "The first manager's 'strength' is brittle — it can only do one thing because doing the other would expose what's underneath. The second has genuine confidence: flexible enough to adapt, secure enough that yielding a point doesn't threaten her sense of self."
+    },
+    {
+      "type": "drag-match",
+      "instruction": "Put these diagnostic steps in the right order to test whether a behavior is genuine virtue or ego in disguise:",
+      "items": [
+        {
+          "id": "a",
+          "text": "Take a behavior you're proud of (generosity, toughness, loyalty)"
+        },
+        {
+          "id": "b",
+          "text": "Ask: could I do the opposite if the situation genuinely required it?"
+        },
+        {
+          "id": "c",
+          "text": "Notice who actually benefits — them, or your image of yourself?"
+        },
+        {
+          "id": "d",
+          "text": "Try one deliberate exception and watch what happens inside"
+        }
+      ],
+      "correctOrder": ["a", "b", "c", "d"]
+    }
+  ],
+  "principle": {
+    "text": "Ego's favourite disguise is virtue.",
+    "subtext": "The person who can never say no calls it generosity. The one who never backs down calls it conviction. But when the behaviour can't bend — when it's compulsive rather than chosen — it's not virtue. It's identity protecting itself at any cost."
+  },
+  "reflection": "What's a behavior you consider a strength that you literally cannot imagine not doing — even when it costs you? What would happen to your sense of self if you did the opposite, just once?"
+}

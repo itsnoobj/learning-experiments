@@ -1,0 +1,88 @@
+{
+  "chapterId": "32",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "You set a goal to write every morning. It's day 19 and you feel zero motivation. The bed is warm. The idea of writing feels like chewing sand. You have a choice in the next 30 seconds.",
+      "options": [
+        {
+          "text": "Skip today — you'll come back stronger tomorrow when you feel inspired.",
+          "correct": false,
+          "feedback": "Tomorrow you'll feel the same. And the day after. Waiting for motivation is waiting for weather to change — it might, but you've handed your output to something you can't control. Every skipped day weakens the habit groove."
+        },
+        {
+          "text": "Open the document and write one terrible sentence. Just one. Then decide if you want to stop.",
+          "correct": true,
+          "feedback": "Motivation follows action, not the reverse. One sentence is below the brain's resistance threshold. Most of the time, the second sentence follows without effort — because starting was the only hard part. The minimum viable version preserves the streak."
+        },
+        {
+          "text": "Watch a motivational video to get pumped up before starting.",
+          "correct": false,
+          "feedback": "External motivation lasts minutes. What you need isn't a feeling — it's a motion. The video gives a spike that fades before you've written a paragraph, and now you've trained yourself to need an emotional crutch before acting."
+        }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "A colleague exercises every day at 6 AM — rain or shine, energized or exhausted. When you ask 'how are you so motivated?' she looks confused and says 'I'm not motivated. I just go.'",
+      "question": "What's actually maintaining her behavior?",
+      "options": [
+        {
+          "text": "Identity-based habit — she's not deciding daily whether to exercise; she's someone who exercises. The decision was made once.",
+          "correct": true,
+          "feedback": "The most durable behaviors aren't maintained by motivation but by identity. 'I am someone who exercises at 6 AM' eliminates the daily negotiation. She isn't winning a willpower battle each morning — there's no battle. The behavior is automated."
+        },
+        {
+          "text": "Superior willpower — some people are naturally better at forcing themselves to do hard things.",
+          "correct": false,
+          "feedback": "Willpower is a depleting resource (Baumeister, 2012). Nobody sustains years of daily behavior through force alone. What looks like willpower from the outside is usually a habit so grooved that not doing it would take more effort than doing it."
+        },
+        {
+          "text": "She actually enjoys exercise more than other people — she's lucky.",
+          "correct": false,
+          "feedback": "She said she's not motivated. She goes regardless of enjoyment. Enjoyment is a bonus, not the engine. The engine is the routine itself — the accumulated identity of 'this is what I do at this time.'"
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "I'll start being consistent once I find the right motivation — something that really drives me.",
+      "back": "Murakami writes fifteen novels over thirty-five years. Most days he doesn't feel like it. The motivation never arrived permanently — he just stopped waiting for it. Consistency doesn't come from finding motivation. It comes from making motivation irrelevant to the output."
+    },
+    {
+      "type": "before-after",
+      "context": "Two people both want to build a reading habit.",
+      "scenarioA": {
+        "label": "Motivation-dependent",
+        "text": "Reads 50 pages on inspired days, zero on uninspired days. Has a total of 12 great reading sessions over three months before the habit dies."
+      },
+      "scenarioB": {
+        "label": "Murakami method",
+        "text": "Reads 5 pages every night before bed regardless of mood. Never misses. After three months: 450 pages — more than double the motivation-dependent approach, with no willpower battles."
+      },
+      "correctScenario": "B",
+      "explanation": "Small consistent beats large sporadic every time. The motivation-dependent reader produces less total output AND builds no habit. The system-dependent reader builds compounding identity ('I am a reader') that becomes self-sustaining. Boring consistency outperforms inspired inconsistency."
+    },
+    {
+      "type": "drag-match",
+      "instruction": "Order these habit-building strategies from most sustainable to least sustainable:",
+      "items": [
+        "Attach the new habit to an existing daily anchor (after coffee, I write)",
+        "Make the habit so small it's impossible to skip (one sentence)",
+        "Find an accountability partner to keep you honest",
+        "Set a big exciting goal to stay motivated"
+      ],
+      "correctOrder": [
+        "Attach the new habit to an existing daily anchor (after coffee, I write)",
+        "Make the habit so small it's impossible to skip (one sentence)",
+        "Find an accountability partner to keep you honest",
+        "Set a big exciting goal to stay motivated"
+      ]
+    }
+  ],
+  "principle": {
+    "text": "Motivation is a feeling. Discipline is a system.",
+    "subtext": "Feelings are weather — useful information, but terrible as a prerequisite for action. The people who produce the most have simply stopped requiring motivation as a condition for beginning."
+  },
+  "reflection": "What's one thing you only do when you 'feel like it'? What would it look like to make that behavior automatic — tied to a time and stripped of any decision about whether you're in the mood?"
+}

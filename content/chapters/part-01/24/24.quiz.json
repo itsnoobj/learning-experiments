@@ -3,86 +3,93 @@
   "challenges": [
     {
       "type": "scenario-choice",
-      "situation": "A manager turned down a talented engineer's transfer request two years ago because the timing wasn't right for the team. That engineer left the company entirely and is now thriving at a competitor. The manager replays the conversation weekly, thinking 'I should have let her go.'",
+      "situation": "A team lead notices she keeps micromanaging new hires — despite resolving each time to delegate more. The project wraps, the retrospective notes it, and she genuinely agrees. Three months later, a new hire joins and she's hovering over their pull requests within a week.",
       "options": [
         {
-          "text": "He should reach out to the engineer, apologize, and try to recruit her back — action is the antidote to regret.",
+          "text": "She needs to try harder to remember her resolution next time.",
           "correct": false,
-          "feedback": "While closing open loops is valid, this specific loop is closed — she's thriving elsewhere. The reaching out would be for his benefit, not hers. The real work is internal: accepting he made the best call he could with the information he had at the time."
+          "feedback": "More willpower doesn't break loops. She already knows the pattern. Knowing isn't the gap — she needs to change her position in the system, not just her intention."
         },
         {
-          "text": "He should recognize he's not carrying the decision — he's carrying the identity gap between 'who I was' and 'the manager I think I should have been.' Then convert it to future policy.",
+          "text": "She should assign herself a different role on the next onboarding — reviewer instead of lead — so the pull to hover has no channel.",
           "correct": true,
-          "feedback": "The event is over. What persists is the identity threat: 'A good manager would have let her go.' The productive path is self-compassion (he made a reasonable call) plus policy update (next time, prioritize individual growth even when timing is hard). Regret converted to policy has done its job."
+          "feedback": "Like Jobs at Pixar, changing position breaks the loop. Removing herself from the trigger situation is more effective than promising to behave differently inside it."
         },
         {
-          "text": "He should accept that some decisions have bad outcomes and simply stop thinking about it — dwelling changes nothing.",
+          "text": "She should explain to the new hire that she's working on this pattern so they can hold her accountable.",
           "correct": false,
-          "feedback": "'Just stop thinking about it' doesn't work — it's suppression, not processing. The brain's counterfactual engine can't be shut off by willpower. What works is compassion for the past self plus conversion of regret into updated behavior."
+          "feedback": "Transparency is fine, but outsourcing accountability doesn't address why she reaches for control. The pattern is identity-driven — she needs to change her structural role, not narrate her struggle."
         }
       ]
     },
     {
       "type": "spot-the-force",
-      "situation": "Ekido walked for hours in silence, churning over Tanzan carrying the woman across the river. When he finally exploded, Tanzan said: 'I set her down at the river. You are still carrying her.'",
-      "question": "What was Ekido actually carrying for those hours?",
+      "situation": "A founder has failed at three startups in a row — each time because he insisted on building the 'complete vision' before getting user feedback. Each time, in the post-mortem, he clearly articulated what went wrong. Each time, the next venture started the same way.",
+      "question": "What's primarily driving the repetition despite clear understanding?",
       "options": [
         {
-          "text": "Moral outrage — a genuine ethical concern about Tanzan breaking monastic vows.",
+          "text": "Fear of negative feedback from early users.",
           "correct": false,
-          "feedback": "If it were purely ethical concern, he would have spoken immediately. The hours of silent churning reveal something deeper — he was carrying a threat to his identity framework. What does it mean to be a good monk if the rules can be broken compassionately?"
+          "feedback": "Fear might play a role, but the tell is that he builds the complete vision first — that's an identity pattern. He needs to be the person who makes the perfect thing. The loop is about who he is, not what he's avoiding."
         },
         {
-          "text": "An identity crisis — Tanzan's action challenged Ekido's entire framework of what a monk should be, and the weight was that unresolved threat to self-concept.",
+          "text": "Identity — being 'the visionary' requires the complete build, regardless of outcomes.",
           "correct": true,
-          "feedback": "Regret and rumination always work this way. The event is the trigger, but the weight is the identity gap — the distance between what happened and who you think you should be. Ekido wasn't carrying the woman. He was carrying the question of what kind of monk he was."
+          "feedback": "His identity is fused with being the complete-vision creator. The loop persists because changing the approach would mean being a different kind of founder — and that feels like self-betrayal."
         },
         {
-          "text": "Jealousy — he wished he had the courage to act compassionately himself and resented Tanzan for showing him up.",
+          "text": "Lack of knowledge about lean startup methodology.",
           "correct": false,
-          "feedback": "Jealousy might be a thread, but the primary weight is simpler: his framework for 'good monk' just broke. The rumination is the mind trying to reconcile the contradiction, not resolve an envy."
+          "feedback": "He articulates the pattern clearly in post-mortems — he knows the better approach. The gap isn't information. It's that his identity pulls harder than his understanding."
         }
       ]
     },
     {
       "type": "card-flip",
-      "front": "I can't stop replaying this because the decision was so important and I need to understand what went wrong.",
-      "back": "You're not replaying the decision — you're replaying the identity gap. Your brain's counterfactual engine is simulating an alternative timeline where you were the better version of yourself. The 'understanding' you're seeking isn't about the event (which is over) — it's about resolving the threat to your self-concept. Self-compassion resolves it faster than analysis."
-    },
-    {
-      "type": "before-after",
-      "context": "Two people both declined a life-changing opportunity five years ago that they now wish they'd taken.",
-      "scenarioA": {
-        "label": "The Prosecutor",
-        "text": "Replays the moment weekly. 'I was so stupid. I was afraid. I should have known.' Five years of carrying it has produced no change in behavior — just accumulated self-punishment. The regret has become part of his identity: 'I'm the person who missed his chance.'"
-      },
-      "scenarioB": {
-        "label": "The Witness",
-        "text": "Acknowledges the loss. Speaks to her past self with compassion: 'You were 26, overwhelmed, and made the safe choice with what you knew.' Converts the regret to policy: 'Now, when I feel fear about an opportunity, that's my signal TO act, not to retreat.' The regret did its job and was released."
-      },
-      "correctScenario": "B",
-      "explanation": "Regret that converts to policy has done its job — it updated future behavior and can be set down. Regret that only prosecutes the past self is pain without purpose. The event is identical. The relationship to it determines whether it weighs five years or five months."
+      "front": "If I understand why I keep repeating a pattern, I should be able to stop doing it.",
+      "back": "Understanding and breaking are completely different muscles. The knowing lives in the intellect; the repeating lives in the identity. The loop continues not because insight is missing, but because identity chooses the familiar pain over the unfamiliar change. You have to change what you do at the trigger point, not what you know about it."
     },
     {
       "type": "drag-match",
-      "instruction": "Order these from least to most productive relationship with regret:",
+      "instruction": "Put these steps for breaking a repetitive pattern in the right order:",
       "items": [
-        "Suppress it — 'just don't think about it'",
-        "Prosecute yourself — replay the identity gap endlessly",
-        "Witness with compassion — 'I did my best with what I knew'",
-        "Convert to policy — update future behavior, then release"
+        {
+          "id": "a",
+          "text": "Map the specific sequence of the loop in writing"
+        },
+        {
+          "id": "b",
+          "text": "Identify what the moment before the mistake feels like in the body"
+        },
+        {
+          "id": "c",
+          "text": "Change your position or role in the system"
+        },
+        {
+          "id": "d",
+          "text": "Build a physical pause between the trigger and the old response"
+        }
       ],
-      "correctOrder": [
-        "Suppress it — 'just don't think about it'",
-        "Prosecute yourself — replay the identity gap endlessly",
-        "Witness with compassion — 'I did my best with what I knew'",
-        "Convert to policy — update future behavior, then release"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
+    },
+    {
+      "type": "before-after",
+      "context": "A creative director keeps burning out by taking over every project when quality dips.",
+      "scenarioA": {
+        "label": "The insight-only approach",
+        "text": "After burning out, she journals extensively about the pattern, understands it deeply, tells her therapist she sees it — then takes over the next struggling project two weeks later."
+      },
+      "scenarioB": {
+        "label": "The position-change approach",
+        "text": "She restructures her role so she reviews final deliverables only, with no access to in-progress work. When the pull arrives, there's no mechanism to act on it."
+      },
+      "correctScenario": "B",
+      "explanation": "Insight without structural change just produces more eloquent descriptions of the loop. Changing position — like Jobs moving to a business role at Pixar — removes the channel through which the compulsion operates."
     }
   ],
   "principle": {
-    "text": "The event ended. The carrying is optional.",
-    "subtext": "Regret isn't about the past — it's about an identity crisis in the present. Set it down by converting it to policy, not punishment."
+    "text": "Knowing the pattern and breaking the pattern are completely different things.",
+    "subtext": "Repetition isn't a failure of understanding. It's identity choosing the familiar pain over the unfamiliar change. Breaking it requires changing what you do at the trigger point — your position in the system — not what you know about it."
   },
-  "reflection": "What regret are you still carrying that the event itself has long since ended? What identity gap is it really about? And what policy could you extract from it that would let you set it down?"
+  "reflection": "What loop are you currently inside where you can perfectly describe the pattern but haven't yet changed your position in it? What would 'changing position' actually look like — not understanding better, but structurally removing yourself from the trigger?"
 }

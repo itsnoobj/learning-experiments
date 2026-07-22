@@ -1,0 +1,88 @@
+{
+  "chapterId": "49",
+  "challenges": [
+    {
+      "type": "scenario-choice",
+      "situation": "A production alert fires in a team Slack channel with 25 engineers. The alert is clearly urgent — a customer-facing service is degrading. Thirty seconds pass. No one responds. Then a minute. Then two. Finally someone asks 'Is anyone looking at this?'",
+      "options": [
+        {
+          "text": "The team lacks a sense of urgency — they need incident response training to build better reflexes around production issues.",
+          "correct": false,
+          "feedback": "Training won't fix a structural problem. The same engineers would respond instantly in a 3-person channel. The issue isn't that they don't care — it's that with 25 potential responders, each individual's felt obligation approaches zero. The diffusion is doing exactly what diffusion does."
+        },
+        {
+          "text": "The alert should auto-assign a specific named individual via on-call rotation — collapsing the diffusion by making one person unambiguously responsible.",
+          "correct": true,
+          "feedback": "Specificity defeats diffusion. When the alert says '@Maya — you own this' instead of '@channel — someone look', the cognitive escape route ('someone else will handle it') disappears. The Amish barn works because every person has a named role. On-call rotations create the same structure."
+        },
+        {
+          "text": "The channel is too big — splitting into smaller teams would naturally increase everyone's sense of responsibility.",
+          "correct": false,
+          "feedback": "Smaller groups help (Amazon's two-pizza principle), but the core fix is named ownership, not just reduced headcount. Even in a 5-person channel, 'Can someone look at this?' produces slower response than '@Tom — the API is returning 500s, you own payments.' Size matters, but specificity matters more."
+        }
+      ]
+    },
+    {
+      "type": "spot-the-force",
+      "situation": "In Darley and Latané's experiments, a person having a seizure was helped 85% of the time when one person heard it, but only 31% when five people heard it. Same emergency, same ability to help.",
+      "question": "What psychological mechanism explains why MORE helpers produces LESS help?",
+      "options": [
+        {
+          "text": "Social loafing — people put in less effort when they're part of a group because their individual contribution is less noticeable.",
+          "correct": false,
+          "feedback": "Social loafing is about effort reduction on shared tasks. This is different: people aren't doing less — they're not acting at all. The mechanism is diffusion of responsibility: each person's felt obligation shrinks in proportion to the number of other potential actors, eventually reaching zero."
+        },
+        {
+          "text": "Diffusion of responsibility — each person's felt obligation is inversely proportional to the number of other potential helpers, until inaction becomes rational for everyone simultaneously.",
+          "correct": true,
+          "feedback": "The cognitive chain is: 'Others know about this too → If it were serious, someone would be acting → Since no one is acting, my inaction is appropriate.' Each person's passivity validates everyone else's passivity. The result: maximum awareness, minimum action. Responsibility doesn't scale — it dissolves."
+        },
+        {
+          "text": "Fear of embarrassment — with more witnesses, the social cost of acting incorrectly (looking foolish) increases, so people hold back.",
+          "correct": false,
+          "feedback": "Evaluation apprehension is one factor but not the primary one. Even in anonymous experiments (where no one can see who acts), the effect persists. The dominant mechanism is diffusion: 'With five people here, my individual obligation approaches zero.' It's a math problem, not a courage problem."
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "The solution to diffused responsibility is to appeal to people's sense of teamwork and collective ownership — encourage everyone to 'own' the shared space.",
+      "back": "Appeals to collective ownership actually worsen diffusion. 'We all own this' = no one owns this, because every individual can assume another member of 'we' will act. The fix is the opposite: assign INDIVIDUAL ownership of EVERY piece of the shared space. Named responsibility defeats diffusion. The Amish barn works because each person has a specific, visible role — not because they feel general 'collective ownership.'"
+    },
+    {
+      "type": "before-after",
+      "context": "Two companies both have a code quality problem — shared codebases are degrading over time.",
+      "scenarioA": {
+        "label": "Shared ownership",
+        "text": "'The whole team owns code quality.' In practice, nobody refactors because everyone assumes someone else will. Tech debt accumulates. Each quarter a VP gives a speech about 'collective responsibility.' Nothing changes because ownership of everything is ownership of nothing."
+      },
+      "scenarioB": {
+        "label": "Named ownership",
+        "text": "Every module has exactly one named owner (rotated quarterly). That person's performance review includes module health metrics. When something degrades, there's a specific person whose reputation is on the line. Code quality improves — not because these engineers care more, but because their individual contribution is visible and attributed."
+      },
+      "correctScenario": "B",
+      "explanation": "Responsibility doesn't scale — it diffuses. 'The team owns quality' means no individual bears the cost of inaction. Named ownership makes contribution visible and absence noticeable — the same mechanism that makes the Amish barn-raising work. Structure beats appeals every time."
+    },
+    {
+      "type": "drag-match",
+      "instruction": "Order these from most to least vulnerable to diffusion of responsibility:",
+      "items": [
+        "'@channel — can someone look at this?'",
+        "'The team owns code quality together'",
+        "'@Maya is on-call; @Tom owns payments; @Sara owns auth'",
+        "'You — in the blue shirt — call 911'"
+      ],
+      "correctOrder": [
+        "'@channel — can someone look at this?'",
+        "'The team owns code quality together'",
+        "'@Maya is on-call; @Tom owns payments; @Sara owns auth'",
+        "'You — in the blue shirt — call 911'"
+      ]
+    }
+  ],
+  "principle": {
+    "text": "When ownership belongs to everyone, it belongs to no one.",
+    "subtext": "Responsibility doesn't scale — it diffuses. The fix is structural: named individuals, visible contribution, and specificity that collapses the 'someone else will handle it' escape route."
+  },
+  "reflection": "Where in your life is something degrading because 'everyone' owns it? What would change if exactly one person's name was attached — and what stops you from making that person yourself?"
+}
