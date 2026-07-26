@@ -67,17 +67,24 @@
       "type": "drag-match",
       "instruction": "Order these competition behaviors from most corrupting to most elevating:",
       "items": [
-        "Withholding help from the rival to gain advantage",
-        "Monitoring the rival's wins and feeling them as your losses",
-        "Using the rival's level as proof that more is possible for you",
-        "Maintaining respect for the rival while pushing yourself harder"
+        {
+          "id": "a",
+          "text": "Withholding help from the rival to gain advantage"
+        },
+        {
+          "id": "b",
+          "text": "Monitoring the rival's wins and feeling them as your losses"
+        },
+        {
+          "id": "c",
+          "text": "Using the rival's level as proof that more is possible for you"
+        },
+        {
+          "id": "d",
+          "text": "Maintaining respect for the rival while pushing yourself harder"
+        }
       ],
-      "correctOrder": [
-        "Withholding help from the rival to gain advantage",
-        "Monitoring the rival's wins and feeling them as your losses",
-        "Using the rival's level as proof that more is possible for you",
-        "Maintaining respect for the rival while pushing yourself harder"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     }
   ],
   "principle": {

@@ -67,17 +67,24 @@
       "type": "drag-match",
       "instruction": "Order these habit-building strategies from most sustainable to least sustainable:",
       "items": [
-        "Attach the new habit to an existing daily anchor (after coffee, I write)",
-        "Make the habit so small it's impossible to skip (one sentence)",
-        "Find an accountability partner to keep you honest",
-        "Set a big exciting goal to stay motivated"
+        {
+          "id": "a",
+          "text": "Attach the new habit to an existing daily anchor (after coffee, I write)"
+        },
+        {
+          "id": "b",
+          "text": "Make the habit so small it's impossible to skip (one sentence)"
+        },
+        {
+          "id": "c",
+          "text": "Find an accountability partner to keep you honest"
+        },
+        {
+          "id": "d",
+          "text": "Set a big exciting goal to stay motivated"
+        }
       ],
-      "correctOrder": [
-        "Attach the new habit to an existing daily anchor (after coffee, I write)",
-        "Make the habit so small it's impossible to skip (one sentence)",
-        "Find an accountability partner to keep you honest",
-        "Set a big exciting goal to stay motivated"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     }
   ],
   "principle": {

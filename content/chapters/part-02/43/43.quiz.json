@@ -67,17 +67,24 @@
       "type": "drag-match",
       "instruction": "Order these from least to most accurate explanation when someone doesn't follow through on a commitment:",
       "items": [
-        "They're a liar and can't be trusted",
-        "They forgot or got overwhelmed by competing priorities",
-        "Their structural incentives conflict with their stated commitment",
-        "They don't know their own real motives — identity or safety needs override stated goals unconsciously"
+        {
+          "id": "a",
+          "text": "They're a liar and can't be trusted"
+        },
+        {
+          "id": "b",
+          "text": "They forgot or got overwhelmed by competing priorities"
+        },
+        {
+          "id": "c",
+          "text": "Their structural incentives conflict with their stated commitment"
+        },
+        {
+          "id": "d",
+          "text": "They don't know their own real motives — identity or safety needs override stated goals unconsciously"
+        }
       ],
-      "correctOrder": [
-        "They're a liar and can't be trusted",
-        "They forgot or got overwhelmed by competing priorities",
-        "Their structural incentives conflict with their stated commitment",
-        "They don't know their own real motives — identity or safety needs override stated goals unconsciously"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     }
   ],
   "principle": {

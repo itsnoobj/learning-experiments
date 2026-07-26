@@ -67,17 +67,24 @@
       "type": "drag-match",
       "instruction": "Order these from most to least effective at making contributions visible:",
       "items": [
-        "Documentation + demos where builders present their own work",
-        "Update emails naming specific individual contributions",
-        "'The team did great work' (generic group attribution)",
-        "Doing excellent work quietly and hoping it's noticed"
+        {
+          "id": "a",
+          "text": "Documentation + demos where builders present their own work"
+        },
+        {
+          "id": "b",
+          "text": "Update emails naming specific individual contributions"
+        },
+        {
+          "id": "c",
+          "text": "'The team did great work' (generic group attribution)"
+        },
+        {
+          "id": "d",
+          "text": "Doing excellent work quietly and hoping it's noticed"
+        }
       ],
-      "correctOrder": [
-        "Documentation + demos where builders present their own work",
-        "Update emails naming specific individual contributions",
-        "'The team did great work' (generic group attribution)",
-        "Doing excellent work quietly and hoping it's noticed"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     }
   ],
   "principle": {

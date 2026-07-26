@@ -53,17 +53,24 @@
       "type": "drag-match",
       "instruction": "Put these stages of expertise calcification in order, from first warning sign to final trap:",
       "items": [
-        "You dismiss a new idea in under five seconds",
-        "You stop seeking information outside your current framework",
-        "You begin your sentences with 'In my experience...' as a conversation-ender",
-        "You cannot name a belief you've updated in the past year"
+        {
+          "id": "a",
+          "text": "You dismiss a new idea in under five seconds"
+        },
+        {
+          "id": "b",
+          "text": "You stop seeking information outside your current framework"
+        },
+        {
+          "id": "c",
+          "text": "You begin your sentences with 'In my experience...' as a conversation-ender"
+        },
+        {
+          "id": "d",
+          "text": "You cannot name a belief you've updated in the past year"
+        }
       ],
-      "correctOrder": [
-        "You stop seeking information outside your current framework",
-        "You begin your sentences with 'In my experience...' as a conversation-ender",
-        "You dismiss a new idea in under five seconds",
-        "You cannot name a belief you've updated in the past year"
-      ]
+      "correctOrder": ["b", "c", "a", "d"]
     },
     {
       "type": "before-after",

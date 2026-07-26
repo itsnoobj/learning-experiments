@@ -67,17 +67,24 @@
       "type": "drag-match",
       "instruction": "Order these from most effective to least effective when dealing with a narcissistic pattern:",
       "items": [
-        "Grey rock: minimal engagement, no emotional supply, boring responses",
-        "Document everything and build external support system",
-        "Try to make them understand how their behavior affects you",
-        "Accommodate their demands hoping they'll eventually reciprocate"
+        {
+          "id": "a",
+          "text": "Grey rock: minimal engagement, no emotional supply, boring responses"
+        },
+        {
+          "id": "b",
+          "text": "Document everything and build external support system"
+        },
+        {
+          "id": "c",
+          "text": "Try to make them understand how their behavior affects you"
+        },
+        {
+          "id": "d",
+          "text": "Accommodate their demands hoping they'll eventually reciprocate"
+        }
       ],
-      "correctOrder": [
-        "Grey rock: minimal engagement, no emotional supply, boring responses",
-        "Document everything and build external support system",
-        "Try to make them understand how their behavior affects you",
-        "Accommodate their demands hoping they'll eventually reciprocate"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     }
   ],
   "principle": {

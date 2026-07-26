@@ -53,17 +53,24 @@
       "type": "drag-match",
       "instruction": "Put these steps in the order that purpose actually assembles (according to research), not the order we assume it should:",
       "items": [
-        "Curiosity about something specific",
-        "Commitment deepens through engagement",
-        "Pattern recognition in retrospect",
-        "Sense of purpose crystallizes"
+        {
+          "id": "a",
+          "text": "Curiosity about something specific"
+        },
+        {
+          "id": "b",
+          "text": "Commitment deepens through engagement"
+        },
+        {
+          "id": "c",
+          "text": "Pattern recognition in retrospect"
+        },
+        {
+          "id": "d",
+          "text": "Sense of purpose crystallizes"
+        }
       ],
-      "correctOrder": [
-        "Curiosity about something specific",
-        "Commitment deepens through engagement",
-        "Pattern recognition in retrospect",
-        "Sense of purpose crystallizes"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     },
     {
       "type": "before-after",

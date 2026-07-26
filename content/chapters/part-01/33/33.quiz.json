@@ -67,17 +67,24 @@
       "type": "drag-match",
       "instruction": "Rank these reward approaches from most likely to preserve intrinsic motivation to most likely to kill it:",
       "items": [
-        "Surprise recognition after good work (no prior promise)",
-        "Protected time for self-directed exploration",
-        "Performance bonus tied to creative output metrics",
-        "Pay raise conditional on specific measurable targets"
+        {
+          "id": "a",
+          "text": "Surprise recognition after good work (no prior promise)"
+        },
+        {
+          "id": "b",
+          "text": "Protected time for self-directed exploration"
+        },
+        {
+          "id": "c",
+          "text": "Performance bonus tied to creative output metrics"
+        },
+        {
+          "id": "d",
+          "text": "Pay raise conditional on specific measurable targets"
+        }
       ],
-      "correctOrder": [
-        "Surprise recognition after good work (no prior promise)",
-        "Protected time for self-directed exploration",
-        "Performance bonus tied to creative output metrics",
-        "Pay raise conditional on specific measurable targets"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     }
   ],
   "principle": {

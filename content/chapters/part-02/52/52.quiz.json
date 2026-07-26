@@ -67,17 +67,24 @@
       "type": "drag-match",
       "instruction": "Order these from most to least damaging to trust:",
       "items": [
-        "Attacking people who voice accurate suspicions",
-        "Sustained concealment after the original transgression",
-        "The original transgression itself",
-        "Confessing voluntarily before being discovered"
+        {
+          "id": "a",
+          "text": "Attacking people who voice accurate suspicions"
+        },
+        {
+          "id": "b",
+          "text": "Sustained concealment after the original transgression"
+        },
+        {
+          "id": "c",
+          "text": "The original transgression itself"
+        },
+        {
+          "id": "d",
+          "text": "Confessing voluntarily before being discovered"
+        }
       ],
-      "correctOrder": [
-        "Attacking people who voice accurate suspicions",
-        "Sustained concealment after the original transgression",
-        "The original transgression itself",
-        "Confessing voluntarily before being discovered"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     }
   ],
   "principle": {

@@ -1,103 +1,108 @@
 {
-  "id": "6",
-  "title": "Why Do Some Promises Stick and Others Don't?",
+  "chapterId": "6",
   "challenges": [
     {
       "type": "scenario-choice",
-      "stem": "A startup founder tells investors 'I'm fully committed to this company.' Six months later they take a side consulting gig. The investors are upset. What would have made the original commitment credible?",
+      "situation": "A startup founder tells investors 'I'm fully committed to this company.' Six months later they take a side consulting gig. The investors are upset. What would have made the original commitment credible?",
       "options": [
         {
           "text": "A structural device: vesting schedule with cliff, personal financial investment, or a non-compete — something that makes side work costly",
-          "correct": true
+          "correct": true,
+          "feedback": "A written contract (option D) is the closest, but it's only credible if enforcement is likely and penalties are costly. The best commitment devices make breaking the commitment structurally expensive: vesting cliffs mean leaving costs equity, personal investment means failure costs personal wealth, non-competes mean leaving costs future options. Verbal promises and character judgments are cheap — they cost nothing to break."
         },
-        { "text": "A stronger verbal promise with more emotional conviction", "correct": false },
+        {
+          "text": "A stronger verbal promise with more emotional conviction",
+          "correct": false,
+          "feedback": "Not quite. A written contract (option D) is the closest, but it's only credible if enforcement is likely and penalties are costly. The best commitment devices make breaking the commitment structurally expensive: vesting cliffs mean leaving costs equity, personal investment means failure costs personal wealth, non-competes mean leaving costs future options."
+        },
         {
           "text": "Investors should have judged the founder's character better before investing",
-          "correct": false
+          "correct": false,
+          "feedback": "Not quite. A written contract (option D) is the closest, but it's only credible if enforcement is likely and penalties are costly. The best commitment devices make breaking the commitment structurally expensive: vesting cliffs mean leaving costs equity, personal investment means failure costs personal wealth, non-competes mean leaving costs future options."
         },
-        { "text": "A written contract stating the founder must work full-time", "correct": false }
-      ],
-      "explanation": "A written contract (option D) is the closest, but it's only credible if enforcement is likely and penalties are costly. The best commitment devices make breaking the commitment structurally expensive: vesting cliffs mean leaving costs equity, personal investment means failure costs personal wealth, non-competes mean leaving costs future options. Verbal promises and character judgments are cheap — they cost nothing to break."
+        {
+          "text": "A written contract stating the founder must work full-time",
+          "correct": false,
+          "feedback": "Not quite. A written contract (option D) is the closest, but it's only credible if enforcement is likely and penalties are costly. The best commitment devices make breaking the commitment structurally expensive: vesting cliffs mean leaving costs equity, personal investment means failure costs personal wealth, non-competes mean leaving costs future options."
+        }
+      ]
     },
     {
       "type": "spot-the-force",
-      "stem": "Odysseus tied himself to the mast before hearing the Sirens' song. He didn't trust his future self. What psychological force was he defending against?",
+      "situation": "Odysseus tied himself to the mast before hearing the Sirens' song. He didn't trust his future self.",
+      "question": "What psychological force was he defending against?",
       "options": [
         {
           "text": "Fear — specifically, the fear that temporal discounting would make his future self override his present self's rational decision",
-          "correct": false
+          "correct": false,
+          "feedback": "Not quite. The Sirens don't offer a rational incentive — they dissolve who you are. Odysseus's commitment device protects his identity as someone who completes the journey."
         },
         {
           "text": "Identity — he was protecting his identity as a wise leader from the Sirens' identity-dissolving song",
-          "correct": true
+          "correct": true,
+          "feedback": "The Sirens don't offer a rational incentive — they dissolve who you are. Odysseus's commitment device protects his identity as someone who completes the journey. In the moment of the song, he becomes someone else entirely — someone who wants to crash the ship. The device isn't about managing incentives or uncertainty; it's about binding your present identity so it persists through experiences that would transform it."
         },
         {
           "text": "Incentives — the Sirens offered something so rewarding that his incentive structure would flip in the moment",
-          "correct": false
+          "correct": false,
+          "feedback": "Not quite. The Sirens don't offer a rational incentive — they dissolve who you are. Odysseus's commitment device protects his identity as someone who completes the journey."
         },
         {
           "text": "Uncertainty — he couldn't predict how his future self would behave under the Sirens' influence",
-          "correct": false
+          "correct": false,
+          "feedback": "Not quite. The Sirens don't offer a rational incentive — they dissolve who you are. Odysseus's commitment device protects his identity as someone who completes the journey."
         }
-      ],
-      "explanation": "The Sirens don't offer a rational incentive — they dissolve who you are. Odysseus's commitment device protects his identity as someone who completes the journey. In the moment of the song, he becomes someone else entirely — someone who wants to crash the ship. The device isn't about managing incentives or uncertainty; it's about binding your present identity so it persists through experiences that would transform it."
+      ]
     },
     {
       "type": "card-flip",
-      "pairs": [
-        {
-          "front": "Commitment device",
-          "back": "A deliberate destruction of future options that makes a promise credible by making it structurally impossible (or prohibitively expensive) to break"
-        },
-        {
-          "front": "Cortés burning ships",
-          "back": "External commitment device — destroying retreat to make soldiers fight with total commitment AND signal to enemies that you can't be waited out"
-        },
-        {
-          "front": "Odysseus and the mast",
-          "back": "Internal commitment device — binding your future self against temptations your present self can foresee but your future self won't resist"
-        },
-        {
-          "front": "Temporal discounting",
-          "back": "The tendency to overvalue present rewards and undervalue future costs — the psychological flaw that commitment devices are designed to counteract"
-        }
-      ]
+      "front": "Commitment device",
+      "back": "A deliberate destruction of future options that makes a promise credible by making it structurally impossible (or prohibitively expensive) to break"
     },
     {
       "type": "drag-match",
-      "pairs": [
+      "instruction": "Match each concept to its description:",
+      "items": [
         {
-          "left": "Putting $1000 in a savings account with early withdrawal penalty",
-          "right": "Commitment device against spending: making access to the money costly"
+          "id": "a",
+          "text": "Putting $1000 in a savings account with early withdrawal penalty → Commitment device against spending: making access to the money costly"
         },
         {
-          "left": "Announcing your goal publicly on social media",
-          "right": "Social commitment device: making failure embarrassing (moderate strength)"
+          "id": "b",
+          "text": "Announcing your goal publicly on social media → Social commitment device: making failure embarrassing (moderate strength)"
         },
         {
-          "left": "Saying 'I really want to exercise more this year'",
-          "right": "Not a commitment device — a wish with zero structural constraint"
+          "id": "c",
+          "text": "Saying 'I really want to exercise more this year' → Not a commitment device — a wish with zero structural constraint"
         },
         {
-          "left": "Marriage (legal, financial, social binding)",
-          "right": "High-stakes commitment device: making departure catastrophically expensive"
+          "id": "d",
+          "text": "Marriage (legal, financial, social binding) → High-stakes commitment device: making departure catastrophically expensive"
         },
         {
-          "left": "Vendor requiring 50% deposit before starting work",
-          "right": "Commitment device ensuring client doesn't walk away mid-project"
+          "id": "e",
+          "text": "Vendor requiring 50% deposit before starting work → Commitment device ensuring client doesn't walk away mid-project"
         }
-      ]
+      ],
+      "correctOrder": ["a", "b", "c", "d", "e"]
     },
     {
       "type": "before-after",
-      "before": {
+      "context": "Which response shows better understanding of the underlying dynamics?",
+      "scenarioA": {
         "label": "Relying on willpower",
         "text": "I really mean it this time. I'll be disciplined. I'll follow through. I just need more motivation and a better mindset."
       },
-      "after": {
+      "scenarioB": {
         "label": "Designing structural commitment",
         "text": "Motivation fluctuates. Structure doesn't. I'll make breaking this commitment more expensive than keeping it — publicly, financially, or socially. My future self won't have the option to defect, regardless of how it feels in the moment."
-      }
+      },
+      "correctScenario": "B",
+      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
     }
-  ]
+  ],
+  "principle": {
+    "text": "A commitment device is any action that deliberately restricts your future options to make a promise credible. It works by changing the payoff structure: after the device is activated, breaking the commitment becomes more costly than keeping it."
+  },
+  "reflection": "What commitment would you make today if you could burn the ships behind you? What future option are you keeping open that's actually keeping you stuck?"
 }
