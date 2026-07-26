@@ -67,17 +67,24 @@
       "type": "drag-match",
       "instruction": "Order these responses to being passed over from most self-defeating to most effective:",
       "items": [
-        "Disengage in protest ('why bother if they don't see me?')",
-        "Demand an explanation and argue your case aggressively",
-        "Ask 'What would have made me the choice?' — then build that capacity",
-        "Maintain excellence + build portable skills that work anywhere"
+        {
+          "id": "a",
+          "text": "Disengage in protest ('why bother if they don't see me?')"
+        },
+        {
+          "id": "b",
+          "text": "Demand an explanation and argue your case aggressively"
+        },
+        {
+          "id": "c",
+          "text": "Ask 'What would have made me the choice?' — then build that capacity"
+        },
+        {
+          "id": "d",
+          "text": "Maintain excellence + build portable skills that work anywhere"
+        }
       ],
-      "correctOrder": [
-        "Disengage in protest ('why bother if they don't see me?')",
-        "Demand an explanation and argue your case aggressively",
-        "Ask 'What would have made me the choice?' — then build that capacity",
-        "Maintain excellence + build portable skills that work anywhere"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     }
   ],
   "principle": {

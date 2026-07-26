@@ -67,17 +67,24 @@
       "type": "drag-match",
       "instruction": "Order these from most likely to produce lasting knowledge-sharing behavior to least likely:",
       "items": [
-        "Promote someone for enabling others through shared knowledge",
-        "Credit knowledge sources publicly in outcomes they enable",
-        "Ask people nicely to document their work",
-        "Mandate documentation with deadlines"
+        {
+          "id": "a",
+          "text": "Promote someone for enabling others through shared knowledge"
+        },
+        {
+          "id": "b",
+          "text": "Credit knowledge sources publicly in outcomes they enable"
+        },
+        {
+          "id": "c",
+          "text": "Ask people nicely to document their work"
+        },
+        {
+          "id": "d",
+          "text": "Mandate documentation with deadlines"
+        }
       ],
-      "correctOrder": [
-        "Promote someone for enabling others through shared knowledge",
-        "Credit knowledge sources publicly in outcomes they enable",
-        "Ask people nicely to document their work",
-        "Mandate documentation with deadlines"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     }
   ],
   "principle": {

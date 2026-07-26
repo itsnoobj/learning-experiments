@@ -67,17 +67,24 @@
       "type": "drag-match",
       "instruction": "Order Seneca's premeditatio malorum practice from first step to last:",
       "items": [
-        "Imagine the realistic worst case",
-        "Ask: could I survive this?",
-        "Plan what you'd do if it happened",
-        "Notice that the feared future has lost its surprise power"
+        {
+          "id": "a",
+          "text": "Imagine the realistic worst case"
+        },
+        {
+          "id": "b",
+          "text": "Ask: could I survive this?"
+        },
+        {
+          "id": "c",
+          "text": "Plan what you'd do if it happened"
+        },
+        {
+          "id": "d",
+          "text": "Notice that the feared future has lost its surprise power"
+        }
       ],
-      "correctOrder": [
-        "Imagine the realistic worst case",
-        "Ask: could I survive this?",
-        "Plan what you'd do if it happened",
-        "Notice that the feared future has lost its surprise power"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     }
   ],
   "principle": {

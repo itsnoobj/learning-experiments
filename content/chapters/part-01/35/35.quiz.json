@@ -67,17 +67,24 @@
       "type": "drag-match",
       "instruction": "Order these from most conducive to flow to most likely to prevent it:",
       "items": [
-        "Task slightly exceeds current skill (appropriate challenge)",
-        "Clear immediate goal with instant feedback",
-        "Consistent entry ritual that eliminates decision-making",
-        "Consciously checking whether you're in flow yet"
+        {
+          "id": "a",
+          "text": "Task slightly exceeds current skill (appropriate challenge)"
+        },
+        {
+          "id": "b",
+          "text": "Clear immediate goal with instant feedback"
+        },
+        {
+          "id": "c",
+          "text": "Consistent entry ritual that eliminates decision-making"
+        },
+        {
+          "id": "d",
+          "text": "Consciously checking whether you're in flow yet"
+        }
       ],
-      "correctOrder": [
-        "Task slightly exceeds current skill (appropriate challenge)",
-        "Clear immediate goal with instant feedback",
-        "Consistent entry ritual that eliminates decision-making",
-        "Consciously checking whether you're in flow yet"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     }
   ],
   "principle": {

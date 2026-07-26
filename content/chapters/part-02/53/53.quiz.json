@@ -67,17 +67,24 @@
       "type": "drag-match",
       "instruction": "Order these leader behaviors from most safety-destroying to most safety-creating:",
       "items": [
-        "'How did you let this happen?' (public blame)",
-        "'Who hasn't spoken yet? What are you seeing?'",
-        "'I was wrong about my estimate last sprint'",
-        "'That's an interesting angle — here's why I see it differently'"
+        {
+          "id": "a",
+          "text": "'How did you let this happen?' (public blame)"
+        },
+        {
+          "id": "b",
+          "text": "'Who hasn't spoken yet? What are you seeing?'"
+        },
+        {
+          "id": "c",
+          "text": "'I was wrong about my estimate last sprint'"
+        },
+        {
+          "id": "d",
+          "text": "'That's an interesting angle — here's why I see it differently'"
+        }
       ],
-      "correctOrder": [
-        "'How did you let this happen?' (public blame)",
-        "'That's an interesting angle — here's why I see it differently'",
-        "'I was wrong about my estimate last sprint'",
-        "'Who hasn't spoken yet? What are you seeing?'"
-      ]
+      "correctOrder": ["a", "d", "c", "b"]
     }
   ],
   "principle": {

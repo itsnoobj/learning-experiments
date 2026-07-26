@@ -67,17 +67,24 @@
       "type": "drag-match",
       "instruction": "Order the mechanisms by which a new role changes behavior — from fastest-acting to slowest:",
       "items": [
-        "Social mimicry — copying how others at your level act",
-        "Incentive shift — rewarded for different things than before",
-        "Feedback degradation — subordinates filter honest input",
-        "Identity absorption — you forget who you were before the title"
+        {
+          "id": "a",
+          "text": "Social mimicry — copying how others at your level act"
+        },
+        {
+          "id": "b",
+          "text": "Incentive shift — rewarded for different things than before"
+        },
+        {
+          "id": "c",
+          "text": "Feedback degradation — subordinates filter honest input"
+        },
+        {
+          "id": "d",
+          "text": "Identity absorption — you forget who you were before the title"
+        }
       ],
-      "correctOrder": [
-        "Social mimicry — copying how others at your level act",
-        "Incentive shift — rewarded for different things than before",
-        "Feedback degradation — subordinates filter honest input",
-        "Identity absorption — you forget who you were before the title"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     }
   ],
   "principle": {

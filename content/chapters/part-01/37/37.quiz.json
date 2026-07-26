@@ -67,17 +67,24 @@
       "type": "drag-match",
       "instruction": "Order these from most reactive to most governed use of anger:",
       "items": [
-        "Explode in the moment",
-        "Suppress and pretend you're fine",
-        "Name the anger internally, then choose your response",
-        "Channel anger into sustained action over weeks"
+        {
+          "id": "a",
+          "text": "Explode in the moment"
+        },
+        {
+          "id": "b",
+          "text": "Suppress and pretend you're fine"
+        },
+        {
+          "id": "c",
+          "text": "Name the anger internally, then choose your response"
+        },
+        {
+          "id": "d",
+          "text": "Channel anger into sustained action over weeks"
+        }
       ],
-      "correctOrder": [
-        "Explode in the moment",
-        "Suppress and pretend you're fine",
-        "Name the anger internally, then choose your response",
-        "Channel anger into sustained action over weeks"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     }
   ],
   "principle": {

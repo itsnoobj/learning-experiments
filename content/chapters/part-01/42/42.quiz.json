@@ -53,17 +53,24 @@
       "type": "drag-match",
       "instruction": "Order these from 'guilt as compass' (useful) to 'guilt as cage' (self-punishment):",
       "items": [
-        "'I snapped at her — I need to apologize'",
-        "'I apologized, now I'll watch my tone in future meetings'",
-        "'I keep replaying it even though I've already changed my behavior'",
-        "'I'm the kind of person who hurts people I care about'"
+        {
+          "id": "a",
+          "text": "'I snapped at her — I need to apologize'"
+        },
+        {
+          "id": "b",
+          "text": "'I apologized, now I'll watch my tone in future meetings'"
+        },
+        {
+          "id": "c",
+          "text": "'I keep replaying it even though I've already changed my behavior'"
+        },
+        {
+          "id": "d",
+          "text": "'I'm the kind of person who hurts people I care about'"
+        }
       ],
-      "correctOrder": [
-        "'I snapped at her — I need to apologize'",
-        "'I apologized, now I'll watch my tone in future meetings'",
-        "'I keep replaying it even though I've already changed my behavior'",
-        "'I'm the kind of person who hurts people I care about'"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     },
     {
       "type": "before-after",

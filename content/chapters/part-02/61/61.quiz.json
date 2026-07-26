@@ -67,17 +67,24 @@
       "type": "drag-match",
       "instruction": "Order Shakuni's manipulation steps from first (setup) to last (trap closed):",
       "items": [
-        "Create context where saying no is socially costly",
-        "Make the target's own values the weapon of compliance",
-        "Escalate gradually so each step feels like natural continuation",
-        "Make reversal feel worse than continuing (sunk cost trap)"
+        {
+          "id": "a",
+          "text": "Create context where saying no is socially costly"
+        },
+        {
+          "id": "b",
+          "text": "Make the target's own values the weapon of compliance"
+        },
+        {
+          "id": "c",
+          "text": "Escalate gradually so each step feels like natural continuation"
+        },
+        {
+          "id": "d",
+          "text": "Make reversal feel worse than continuing (sunk cost trap)"
+        }
       ],
-      "correctOrder": [
-        "Create context where saying no is socially costly",
-        "Make the target's own values the weapon of compliance",
-        "Escalate gradually so each step feels like natural continuation",
-        "Make reversal feel worse than continuing (sunk cost trap)"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     }
   ],
   "principle": {

@@ -67,17 +67,24 @@
       "type": "drag-match",
       "instruction": "Order these from earliest warning sign of the expertise trap to point of no return:",
       "items": [
-        "You optimize within your current framework but never question the framework itself",
-        "You can't name an assumption in your domain that you've updated recently",
-        "You're the fastest person in the room at explaining why new approaches won't work",
-        "Your team stops bringing you disruptive ideas because they know what you'll say"
+        {
+          "id": "a",
+          "text": "You optimize within your current framework but never question the framework itself"
+        },
+        {
+          "id": "b",
+          "text": "You can't name an assumption in your domain that you've updated recently"
+        },
+        {
+          "id": "c",
+          "text": "You're the fastest person in the room at explaining why new approaches won't work"
+        },
+        {
+          "id": "d",
+          "text": "Your team stops bringing you disruptive ideas because they know what you'll say"
+        }
       ],
-      "correctOrder": [
-        "You optimize within your current framework but never question the framework itself",
-        "You're the fastest person in the room at explaining why new approaches won't work",
-        "You can't name an assumption in your domain that you've updated recently",
-        "Your team stops bringing you disruptive ideas because they know what you'll say"
-      ]
+      "correctOrder": ["a", "c", "b", "d"]
     }
   ],
   "principle": {

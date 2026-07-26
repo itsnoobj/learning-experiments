@@ -67,17 +67,24 @@
       "type": "drag-match",
       "instruction": "Order these from least to most productive relationship with envy:",
       "items": [
-        "Deny it and perform happiness for others' success",
-        "Acknowledge it but add self-shame ('I'm a bad person for feeling this')",
-        "Name it as information: 'this matters to me'",
-        "Convert it to specific action toward what you actually want"
+        {
+          "id": "a",
+          "text": "Deny it and perform happiness for others' success"
+        },
+        {
+          "id": "b",
+          "text": "Acknowledge it but add self-shame ('I'm a bad person for feeling this')"
+        },
+        {
+          "id": "c",
+          "text": "Name it as information: 'this matters to me'"
+        },
+        {
+          "id": "d",
+          "text": "Convert it to specific action toward what you actually want"
+        }
       ],
-      "correctOrder": [
-        "Deny it and perform happiness for others' success",
-        "Acknowledge it but add self-shame ('I'm a bad person for feeling this')",
-        "Name it as information: 'this matters to me'",
-        "Convert it to specific action toward what you actually want"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     }
   ],
   "principle": {
