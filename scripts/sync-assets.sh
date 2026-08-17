@@ -80,6 +80,10 @@ fi
 find "$CONTENT_DIR" -name '*.json' ! -name '*.quiz.json' -exec basename {} .json \; \
   | sort -u | jq -R . | jq -s 'sort_by(tonumber? // .)'> "$ROOT/content/available.json"
 
+# Map of chapter id → title, so the world map labels match the story pages
+# (single source of truth: each chapter's own {id}.json title).
+node "$ROOT/scripts/generate-mission-titles.mjs"
+
 echo "✓ Converted $count SVG(s) → PNGs in apps/web/public/content/"
 echo "✓ Generated $count OG image(s) (${OG_W}x${OG_H}) in apps/web/public/og/"
 echo "✓ Generated content/available.json"
