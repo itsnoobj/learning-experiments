@@ -60,45 +60,44 @@
       "back": "The solution that emerges when people must coordinate without communicating — not the best option, but the most obvious one given shared context"
     },
     {
-      "type": "drag-match",
+      "type": "matching",
       "instruction": "Match each concept to its description:",
-      "items": [
+      "pairs": [
         {
-          "id": "a",
-          "text": "Grand Central Terminal at noon → Culturally prominent meeting point that most New Yorkers would pick without discussion"
+          "left": "Grand Central Terminal at noon",
+          "right": "Culturally prominent meeting point that most New Yorkers would pick without discussion"
         },
         {
-          "id": "b",
-          "text": "Bitcoin's 21 million supply cap → A specific, memorable number that gives everyone the same shared expectation"
+          "left": "Bitcoin's 21 million supply cap",
+          "right": "A specific, memorable number that gives everyone the same shared expectation"
         },
         {
-          "id": "c",
-          "text": "QWERTY keyboard layout persisting for 150 years → An established focal point that persists because switching costs exceed individual benefit"
+          "left": "QWERTY keyboard layout persisting for 150 years",
+          "right": "An established focal point that persists because switching costs exceed individual benefit"
         },
         {
-          "id": "d",
-          "text": "English as the language of international business → A focal point created by historical prominence, now self-reinforcing through network effects"
+          "left": "English as the language of international business",
+          "right": "A focal point created by historical prominence, now self-reinforcing through network effects"
         },
         {
-          "id": "e",
-          "text": "A startup trying to displace Slack with a better chat tool → Attempting to displace an existing focal point — requires creating new prominence, not just better features"
+          "left": "A startup trying to displace Slack with a better chat tool",
+          "right": "Attempting to displace an existing focal point — requires creating new prominence, not just better features"
         }
-      ],
-      "correctOrder": ["a", "b", "c", "d", "e"]
+      ]
     },
     {
       "type": "before-after",
       "context": "Which response shows better understanding of the underlying dynamics?",
       "scenarioA": {
-        "label": "Optimizing for quality",
-        "text": "My proposal is objectively the best option. If I explain why it's superior, everyone will rationally converge on it. The best idea wins."
-      },
-      "scenarioB": {
         "label": "Optimizing for obviousness",
         "text": "The best idea doesn't win coordination games — the most obvious one does. I'll make my proposal maximally prominent, simple, and easy-to-expect. I need others to predict that others will predict my option."
       },
-      "correctScenario": "B",
-      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
+      "scenarioB": {
+        "label": "Optimizing for quality",
+        "text": "My proposal is objectively the best option. If I explain why it's superior, everyone will rationally converge on it. The best idea wins."
+      },
+      "correctScenario": "A",
+      "explanation": "The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame."
     }
   ],
   "principle": {

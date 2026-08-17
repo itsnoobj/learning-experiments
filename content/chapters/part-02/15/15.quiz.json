@@ -60,45 +60,44 @@
       "back": "Everyone benefits from cooperation, but nobody has individual incentive to cooperate first — because free-riding on others' cooperation is cheaper"
     },
     {
-      "type": "drag-match",
+      "type": "matching",
       "instruction": "Match each concept to its description:",
-      "items": [
+      "pairs": [
         {
-          "id": "a",
-          "text": "Climate change (195 countries, decades away, whole-economy costs) → Structurally unsolvable through voluntary cooperation alone — too many players, too diffuse, too long-term"
+          "left": "Climate change (195 countries, decades away, whole-economy costs)",
+          "right": "Structurally unsolvable through voluntary cooperation alone — too many players, too diffuse, too long-term"
         },
         {
-          "id": "b",
-          "text": "Montreal Protocol (few CFC producers, cheap alternative, visible hole) → Structurally solvable — concentrated costs, cheap cooperation, visible evidence, near-term stakes"
+          "left": "Montreal Protocol (few CFC producers, cheap alternative, visible hole)",
+          "right": "Structurally solvable — concentrated costs, cheap cooperation, visible evidence, near-term stakes"
         },
         {
-          "id": "c",
-          "text": "Making team contributions visible on a shared dashboard → Breaks free-riding by removing anonymity — conditional cooperators activate when they see others contributing"
+          "left": "Making team contributions visible on a shared dashboard",
+          "right": "Breaks free-riding by removing anonymity — conditional cooperators activate when they see others contributing"
         },
         {
-          "id": "d",
-          "text": "Breaking a 50-person shared-resource problem into five 10-person groups → Shrinking the group so social monitoring and reputation effects function"
+          "left": "Breaking a 50-person shared-resource problem into five 10-person groups",
+          "right": "Shrinking the group so social monitoring and reputation effects function"
         },
         {
-          "id": "e",
-          "text": "One person documenting code while everyone else benefits without contributing → Classic free-rider problem — the contributor bears costs while benefits are shared equally"
+          "left": "One person documenting code while everyone else benefits without contributing",
+          "right": "Classic free-rider problem — the contributor bears costs while benefits are shared equally"
         }
-      ],
-      "correctOrder": ["a", "b", "c", "d", "e"]
+      ]
     },
     {
       "type": "before-after",
       "context": "Which response shows better understanding of the underlying dynamics?",
       "scenarioA": {
-        "label": "Appealing to conscience",
-        "text": "If we all just did the right thing — contributed fairly, stopped free-riding, cooperated — the problem would be solved. People need to be more responsible."
-      },
-      "scenarioB": {
         "label": "Redesigning the game",
         "text": "Moral appeal alone fails in collective action problems. I make contributions visible, reduce cooperation costs, shrink the group to where monitoring works, and go first to break the 'waiting for others' deadlock. I fix the structure, not the people."
       },
-      "correctScenario": "B",
-      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
+      "scenarioB": {
+        "label": "Appealing to conscience",
+        "text": "If we all just did the right thing — contributed fairly, stopped free-riding, cooperated — the problem would be solved. People need to be more responsible."
+      },
+      "correctScenario": "A",
+      "explanation": "The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame."
     }
   ],
   "principle": {

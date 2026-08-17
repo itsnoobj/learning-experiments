@@ -60,31 +60,30 @@
       "back": "Never defects first — starts every new interaction with cooperation"
     },
     {
-      "type": "drag-match",
+      "type": "matching",
       "instruction": "Match each concept to its description:",
-      "items": [
+      "pairs": [
         {
-          "id": "a",
-          "text": "Antwerp diamond traders using handshakes → Infinite repeated game with total reputation visibility"
+          "left": "Antwerp diamond traders using handshakes",
+          "right": "Infinite repeated game with total reputation visibility"
         },
         {
-          "id": "b",
-          "text": "Online marketplace with anonymous one-time sellers → One-shot game where defection (fraud) is rational"
+          "left": "Online marketplace with anonymous one-time sellers",
+          "right": "One-shot game where defection (fraud) is rational"
         },
         {
-          "id": "c",
-          "text": "Colleague who is sometimes generous, sometimes cold → Unpredictable strategy that destroys trust conditions"
+          "left": "Colleague who is sometimes generous, sometimes cold",
+          "right": "Unpredictable strategy that destroys trust conditions"
         },
         {
-          "id": "d",
-          "text": "Rotating WWI soldiers to prevent truces → Converting a repeated game into one-shot interactions"
+          "left": "Rotating WWI soldiers to prevent truces",
+          "right": "Converting a repeated game into one-shot interactions"
         },
         {
-          "id": "e",
-          "text": "Community expelling a cheating trader permanently → Making defection cost exceed any possible single-round gain"
+          "left": "Community expelling a cheating trader permanently",
+          "right": "Making defection cost exceed any possible single-round gain"
         }
-      ],
-      "correctOrder": ["a", "b", "c", "d", "e"]
+      ]
     },
     {
       "type": "before-after",
@@ -98,7 +97,7 @@
         "text": "I cooperate first. I punish defection immediately. I forgive after one punishment. I make my pattern crystal clear. I'm not nice or tough — I'm readable. And readable wins in every repeated game."
       },
       "correctScenario": "B",
-      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
+      "explanation": "The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame."
     }
   ],
   "principle": {

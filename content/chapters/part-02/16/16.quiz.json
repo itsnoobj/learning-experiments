@@ -60,31 +60,30 @@
       "back": "Competition for relative position that consumes resources without improving anyone's absolute situation. Both sides spend more; neither gains advantage."
     },
     {
-      "type": "drag-match",
+      "type": "matching",
       "instruction": "Match each concept to its description:",
-      "items": [
+      "pairs": [
         {
-          "id": "a",
-          "text": "Two companies endlessly matching each other's feature releases → Business arms race — relative position unchanged, both teams exhausted, customers indifferent"
+          "left": "Two companies endlessly matching each other's feature releases",
+          "right": "Business arms race — relative position unchanged, both teams exhausted, customers indifferent"
         },
         {
-          "id": "b",
-          "text": "Southwest flying one aircraft type while competitors operate twelve → Refusing the complexity arms race — competing on cost/simplicity instead"
+          "left": "Southwest flying one aircraft type while competitors operate twelve",
+          "right": "Refusing the complexity arms race — competing on cost/simplicity instead"
         },
         {
-          "id": "c",
-          "text": "Tech salary war where all companies pay 50% more but hire the same number → Arms race in compensation — relative positions unchanged, everyone poorer"
+          "left": "Tech salary war where all companies pay 50% more but hire the same number",
+          "right": "Arms race in compensation — relative positions unchanged, everyone poorer"
         },
         {
-          "id": "d",
-          "text": "US and USSR agreeing to SALT treaties limiting warheads → Mutual de-escalation — both sides agree to stop simultaneously"
+          "left": "US and USSR agreeing to SALT treaties limiting warheads",
+          "right": "Mutual de-escalation — both sides agree to stop simultaneously"
         },
         {
-          "id": "e",
-          "text": "Startup ignoring the incumbent's feature set and solving the problem differently → Changing the game rather than escalating within it"
+          "left": "Startup ignoring the incumbent's feature set and solving the problem differently",
+          "right": "Changing the game rather than escalating within it"
         }
-      ],
-      "correctOrder": ["a", "b", "c", "d", "e"]
+      ]
     },
     {
       "type": "before-after",
@@ -98,7 +97,7 @@
         "text": "I ask: is this investment improving my absolute position (customer value) or just maintaining relative position? If it's only relative, I'm paying an escalation tax. I look for the Southwest move — a different axis where this race doesn't apply."
       },
       "correctScenario": "B",
-      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
+      "explanation": "The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame."
     }
   ],
   "principle": {

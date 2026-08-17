@@ -60,31 +60,30 @@
       "back": "In competitive bidding for uncertain-value items, the winner is the person who overestimated the most. Winning IS evidence of overpaying."
     },
     {
-      "type": "drag-match",
+      "type": "matching",
       "instruction": "Match each concept to its description:",
-      "items": [
+      "pairs": [
         {
-          "id": "a",
-          "text": "English (ascending) auction with visible bids → Maximizes competitive escalation and winner's curse — great for sellers, bad for buyers"
+          "left": "English (ascending) auction with visible bids",
+          "right": "Maximizes competitive escalation and winner's curse — great for sellers, bad for buyers"
         },
         {
-          "id": "b",
-          "text": "Sealed second-price (Vickrey) auction → Incentivizes honest bidding since you pay second price — reduces overpayment"
+          "left": "Sealed second-price (Vickrey) auction",
+          "right": "Incentivizes honest bidding since you pay second price — reduces overpayment"
         },
         {
-          "id": "c",
-          "text": "Ken Binmore's 3G spectrum design (5 licenses, 4 incumbents) → Guaranteed new-entrant competition — prevented collusion among existing players"
+          "left": "Ken Binmore's 3G spectrum design (5 licenses, 4 incumbents)",
+          "right": "Guaranteed new-entrant competition — prevented collusion among existing players"
         },
         {
-          "id": "d",
-          "text": "'Just $50 more' thinking across 10 rounds of bidding → Incremental framing that disguises total overpayment — anchor to total, not increment"
+          "left": "'Just $50 more' thinking across 10 rounds of bidding",
+          "right": "Incremental framing that disguises total overpayment — anchor to total, not increment"
         },
         {
-          "id": "e",
-          "text": "Setting your maximum before entering the auction room → Pre-commitment device against in-the-moment competitive arousal override"
+          "left": "Setting your maximum before entering the auction room",
+          "right": "Pre-commitment device against in-the-moment competitive arousal override"
         }
-      ],
-      "correctOrder": ["a", "b", "c", "d", "e"]
+      ]
     },
     {
       "type": "before-after",
@@ -98,7 +97,7 @@
         "text": "I set my maximum before entering. If winning requires exceeding it, I stop — because winning an auction is statistical evidence I'm the biggest overestimator in the room. I ask who designed these rules, and in whose interest."
       },
       "correctScenario": "B",
-      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
+      "explanation": "The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame."
     }
   ],
   "principle": {

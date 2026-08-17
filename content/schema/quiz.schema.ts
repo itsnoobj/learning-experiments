@@ -47,6 +47,21 @@ export const dragMatchSchema = z.object({
   correctOrder: z.array(z.string().min(1)).min(2),
 });
 
+/** A single concept/description pair in a matching challenge. */
+export const matchingPairSchema = z.object({
+  left: z.string().min(1),
+  right: z.string().min(1),
+});
+
+export type MatchingPair = z.infer<typeof matchingPairSchema>;
+
+/** Match each concept (left) to its description (right). */
+export const matchingSchema = z.object({
+  type: z.literal('matching'),
+  instruction: z.string().min(1).optional(),
+  pairs: z.array(matchingPairSchema).min(2),
+});
+
 /** One of the two scenarios in a before-after challenge. */
 export const beforeAfterScenarioSchema = z.object({
   label: z.string().min(1),
@@ -71,6 +86,7 @@ export const quizChallengeSchema = z.discriminatedUnion('type', [
   spotTheForceSchema,
   cardFlipSchema,
   dragMatchSchema,
+  matchingSchema,
   beforeAfterSchema,
 ]);
 

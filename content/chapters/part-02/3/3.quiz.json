@@ -60,45 +60,44 @@
       "back": "Fixed pie — every gain for you is a loss for me. True in sports, elections, and single auctions. Rare in business and relationships."
     },
     {
-      "type": "drag-match",
+      "type": "matching",
       "instruction": "Match each concept to its description:",
-      "items": [
+      "pairs": [
         {
-          "id": "a",
-          "text": "Open-source code (give away IP, attract contributors) → Positive-sum — creating more value than you capture builds an ecosystem"
+          "left": "Open-source code (give away IP, attract contributors)",
+          "right": "Positive-sum — creating more value than you capture builds an ecosystem"
         },
         {
-          "id": "b",
-          "text": "OPEC embargo (restrict supply, maximize price) → Zero-sum extraction that triggers substitution and competition"
+          "left": "OPEC embargo (restrict supply, maximize price)",
+          "right": "Zero-sum extraction that triggers substitution and competition"
         },
         {
-          "id": "c",
-          "text": "Salary negotiation with a fixed budget → Actually zero-sum — one party's gain is directly the other's loss"
+          "left": "Salary negotiation with a fixed budget",
+          "right": "Actually zero-sum — one party's gain is directly the other's loss"
         },
         {
-          "id": "d",
-          "text": "Two companies co-marketing to shared audiences → Positive-sum — growing the pie for both through expanded reach"
+          "left": "Two companies co-marketing to shared audiences",
+          "right": "Positive-sum — growing the pie for both through expanded reach"
         },
         {
-          "id": "e",
-          "text": "Vendor locking customers with switching costs → Extraction that eventually provokes escape (like OPEC)"
+          "left": "Vendor locking customers with switching costs",
+          "right": "Extraction that eventually provokes escape (like OPEC)"
         }
-      ],
-      "correctOrder": ["a", "b", "c", "d", "e"]
+      ]
     },
     {
       "type": "before-after",
       "context": "Which response shows better understanding of the underlying dynamics?",
       "scenarioA": {
-        "label": "Fixed-Pie Instinct",
-        "text": "My competitor is winning, which means I'm losing. My colleague got promoted, which means I was passed over. Every negotiation is about claiming my share before they take it."
-      },
-      "scenarioB": {
         "label": "Pie-Growing Strategy",
         "text": "I ask: is this actually fixed? Can I extend the time horizon, find creative restructuring, or invest in the other party's success when it's upstream of mine? I reserve zero-sum thinking for genuinely fixed contests and use positive-sum framing everywhere else."
       },
-      "correctScenario": "B",
-      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
+      "scenarioB": {
+        "label": "Fixed-Pie Instinct",
+        "text": "My competitor is winning, which means I'm losing. My colleague got promoted, which means I was passed over. Every negotiation is about claiming my share before they take it."
+      },
+      "correctScenario": "A",
+      "explanation": "The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame."
     }
   ],
   "principle": {

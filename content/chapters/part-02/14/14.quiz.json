@@ -60,31 +60,30 @@
       "back": "Punish defection immediately, but include a forgiveness probability — a chance to return to cooperation rather than locking into permanent mutual punishment"
     },
     {
-      "type": "drag-match",
+      "type": "matching",
       "instruction": "Match each concept to its description:",
-      "items": [
+      "pairs": [
         {
-          "id": "a",
-          "text": "Mandela's TRC: confess publicly → receive amnesty → Structural forgiveness mechanism — conditional path from defection to cooperation"
+          "left": "Mandela's TRC: confess publicly → receive amnesty",
+          "right": "Structural forgiveness mechanism — conditional path from defection to cooperation"
         },
         {
-          "id": "b",
-          "text": "Israel-Palestine: each attack 'retaliates' for the previous one → Tit-for-tat without forgiveness — no mechanism to break the cycle"
+          "left": "Israel-Palestine: each attack 'retaliates' for the previous one",
+          "right": "Tit-for-tat without forgiveness — no mechanism to break the cycle"
         },
         {
-          "id": "c",
-          "text": "Manager who never lets team members recover from mistakes → Permanent punishment that makes people hide errors rather than acknowledge them"
+          "left": "Manager who never lets team members recover from mistakes",
+          "right": "Permanent punishment that makes people hide errors rather than acknowledge them"
         },
         {
-          "id": "d",
-          "text": "Forgiving a repeat offender without requiring change → Unconditional forgiveness that invites re-exploitation (no consequences for defection)"
+          "left": "Forgiving a repeat offender without requiring change",
+          "right": "Unconditional forgiveness that invites re-exploitation (no consequences for defection)"
         },
         {
-          "id": "e",
-          "text": "'Disagree and commit' after a team conflict resolves → Organizational forgiveness mechanism — yielding is framed as strength, enabling return to cooperation"
+          "left": "'Disagree and commit' after a team conflict resolves",
+          "right": "Organizational forgiveness mechanism — yielding is framed as strength, enabling return to cooperation"
         }
-      ],
-      "correctOrder": ["a", "b", "c", "d", "e"]
+      ]
     },
     {
       "type": "before-after",
@@ -98,7 +97,7 @@
         "text": "I punish immediately (establish consequences), then offer a conditional path to restored cooperation (require demonstrated change). I don't lock anyone — including myself — into permanent mutual punishment when the game must continue."
       },
       "correctScenario": "B",
-      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
+      "explanation": "The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame."
     }
   ],
   "principle": {

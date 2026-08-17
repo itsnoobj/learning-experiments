@@ -60,31 +60,30 @@
       "back": "An action that's credible because only someone telling the truth could afford to take it — fakers would be ruined"
     },
     {
-      "type": "drag-match",
+      "type": "matching",
       "instruction": "Match each concept to its description:",
-      "items": [
+      "pairs": [
         {
-          "id": "a",
-          "text": "Company offering a 365-day money-back guarantee → Costly signal of product quality (would bankrupt a bad product)"
+          "left": "Company offering a 365-day money-back guarantee",
+          "right": "Costly signal of product quality (would bankrupt a bad product)"
         },
         {
-          "id": "b",
-          "text": "CEO posting 'Our team is like family!' on LinkedIn → Cheap signal (costs nothing, widely discounted)"
+          "left": "CEO posting 'Our team is like family!' on LinkedIn",
+          "right": "Cheap signal (costs nothing, widely discounted)"
         },
         {
-          "id": "c",
-          "text": "Startup founder taking $1 salary until profitability → Costly signal of conviction (only makes sense if they believe it'll succeed)"
+          "left": "Startup founder taking $1 salary until profitability",
+          "right": "Costly signal of conviction (only makes sense if they believe it'll succeed)"
         },
         {
-          "id": "d",
-          "text": "University degree taking 4 years to complete → Costly signal of discipline and commitment (Spence's signaling theory)"
+          "left": "University degree taking 4 years to complete",
+          "right": "Costly signal of discipline and commitment (Spence's signaling theory)"
         },
         {
-          "id": "e",
-          "text": "Turning down a higher-paying job to stay at current company → Costly signal of loyalty (verifiable opportunity cost)"
+          "left": "Turning down a higher-paying job to stay at current company",
+          "right": "Costly signal of loyalty (verifiable opportunity cost)"
         }
-      ],
-      "correctOrder": ["a", "b", "c", "d", "e"]
+      ]
     },
     {
       "type": "before-after",
@@ -98,7 +97,7 @@
         "text": "People don't believe cheap claims. I need to find the action that only a truly committed person would take — something costly enough that faking it would be irrational. The credibility IS the cost."
       },
       "correctScenario": "B",
-      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
+      "explanation": "The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame."
     }
   ],
   "principle": {

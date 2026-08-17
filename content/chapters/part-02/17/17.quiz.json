@@ -60,45 +60,44 @@
       "back": "Instead of 'given rules, what will players do?' ask 'given desired outcome, what rules produce it from self-interested players?'"
     },
     {
-      "type": "drag-match",
+      "type": "matching",
       "instruction": "Match each concept to its description:",
-      "items": [
+      "pairs": [
         {
-          "id": "a",
-          "text": "Wikipedia's edit history and barnstars → Visibility + reputation = contributing feels rewarding, vandalism feels futile"
+          "left": "Wikipedia's edit history and barnstars",
+          "right": "Visibility + reputation = contributing feels rewarding, vandalism feels futile"
         },
         {
-          "id": "b",
-          "text": "Paying doctors per procedure instead of per outcome → Misaligned incentive: more procedures (not better health) is rewarded"
+          "left": "Paying doctors per procedure instead of per outcome",
+          "right": "Misaligned incentive: more procedures (not better health) is rewarded"
         },
         {
-          "id": "c",
-          "text": "Making team contributions visible on a dashboard → Adding VISIBILITY where it was missing — free-riding becomes observable"
+          "left": "Making team contributions visible on a dashboard",
+          "right": "Adding VISIBILITY where it was missing — free-riding becomes observable"
         },
         {
-          "id": "d",
-          "text": "Opt-out (vs. opt-in) for retirement savings → Nudge: changing the default to align path-of-least-resistance with desired behavior"
+          "left": "Opt-out (vs. opt-in) for retirement savings",
+          "right": "Nudge: changing the default to align path-of-least-resistance with desired behavior"
         },
         {
-          "id": "e",
-          "text": "Anonymous feedback with no consequences → Missing CONSEQUENCES — behavior has no effect on future outcomes, so it degrades"
+          "left": "Anonymous feedback with no consequences",
+          "right": "Missing CONSEQUENCES — behavior has no effect on future outcomes, so it degrades"
         }
-      ],
-      "correctOrder": ["a", "b", "c", "d", "e"]
+      ]
     },
     {
       "type": "before-after",
       "context": "Which response shows better understanding of the underlying dynamics?",
       "scenarioA": {
-        "label": "Changing people",
-        "text": "The system would work if people were more honest, more collaborative, more long-term oriented. We need better training, better culture, better values."
-      },
-      "scenarioB": {
         "label": "Changing the game",
         "text": "I design systems where honest, collaborative, long-term behavior IS the self-interested behavior. I don't need better people — I need better rules. If the desired outcome requires heroism, I haven't finished the design."
       },
-      "correctScenario": "B",
-      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
+      "scenarioB": {
+        "label": "Changing people",
+        "text": "The system would work if people were more honest, more collaborative, more long-term oriented. We need better training, better culture, better values."
+      },
+      "correctScenario": "A",
+      "explanation": "The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame."
     }
   ],
   "principle": {

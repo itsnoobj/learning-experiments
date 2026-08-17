@@ -60,45 +60,44 @@
       "back": "A signal is honest BECAUSE it's costly — only genuinely fit organisms can survive despite the handicap. The peacock's tail proves fitness precisely because it's a burden."
     },
     {
-      "type": "drag-match",
+      "type": "matching",
       "instruction": "Match each concept to its description:",
-      "items": [
+      "pairs": [
         {
-          "id": "a",
-          "text": "MBA from a top school ($200k + 2 years) → Costly signal of discipline, class, and network — works because it's expensive to fake"
+          "left": "MBA from a top school ($200k + 2 years)",
+          "right": "Costly signal of discipline, class, and network — works because it's expensive to fake"
         },
         {
-          "id": "b",
-          "text": "CEO wearing sneakers to a formal board meeting → Countersignal — status so established that informality reads as confidence, not ignorance"
+          "left": "CEO wearing sneakers to a formal board meeting",
+          "right": "Countersignal — status so established that informality reads as confidence, not ignorance"
         },
         {
-          "id": "c",
-          "text": "Gazelle bouncing high in front of a predator → Honest signal: 'I'm so fit I can waste energy — don't bother chasing me'"
+          "left": "Gazelle bouncing high in front of a predator",
+          "right": "Honest signal: 'I'm so fit I can waste energy — don't bother chasing me'"
         },
         {
-          "id": "d",
-          "text": "Posting a photo from a first-class lounge once → Cheap/questionable signal — low cost reduces informational value (could be upgrade or one-time)"
+          "left": "Posting a photo from a first-class lounge once",
+          "right": "Cheap/questionable signal — low cost reduces informational value (could be upgrade or one-time)"
         },
         {
-          "id": "e",
-          "text": "Billionaire moving to 'dark social' (no public presence) → Privacy as the new countersignal — absence from public platforms signals 'beyond needing attention'"
+          "left": "Billionaire moving to 'dark social' (no public presence)",
+          "right": "Privacy as the new countersignal — absence from public platforms signals 'beyond needing attention'"
         }
-      ],
-      "correctOrder": ["a", "b", "c", "d", "e"]
+      ]
     },
     {
       "type": "before-after",
       "context": "Which response shows better understanding of the underlying dynamics?",
       "scenarioA": {
-        "label": "Reading signals at face value",
-        "text": "Impressive credentials and expensive displays mean someone is impressive. Casual appearance means someone isn't serious. I judge people by what they show me."
-      },
-      "scenarioB": {
         "label": "Reading the signal economics",
         "text": "I ask: what's the cost of this signal? Who can afford it? What audience is it designed for? Aggressive signaling means status is uncertain. Countersignaling means status is unquestionable. Both are data — but about confidence level, not actual quality."
       },
-      "correctScenario": "B",
-      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
+      "scenarioB": {
+        "label": "Reading signals at face value",
+        "text": "Impressive credentials and expensive displays mean someone is impressive. Casual appearance means someone isn't serious. I judge people by what they show me."
+      },
+      "correctScenario": "A",
+      "explanation": "The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame."
     }
   ],
   "principle": {

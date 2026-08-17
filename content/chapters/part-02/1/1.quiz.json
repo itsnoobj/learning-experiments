@@ -60,45 +60,44 @@
       "back": "Best mutual outcome — Cuban Missile Crisis resolved, both sides save face"
     },
     {
-      "type": "drag-match",
+      "type": "matching",
       "instruction": "Match each concept to its description:",
-      "items": [
+      "pairs": [
         {
-          "id": "a",
-          "text": "Kennedy-Dobrynin back-channel → Communication in a non-cooperative game"
+          "left": "Kennedy-Dobrynin back-channel",
+          "right": "Communication in a non-cooperative game"
         },
         {
-          "id": "b",
-          "text": "WWI trench soldiers seeing each other's faces → Making identities visible to enable cooperation"
+          "left": "WWI trench soldiers seeing each other's faces",
+          "right": "Making identities visible to enable cooperation"
         },
         {
-          "id": "c",
-          "text": "Military rotating units to prevent truces → Preventing repeated-game conditions from forming"
+          "left": "Military rotating units to prevent truces",
+          "right": "Preventing repeated-game conditions from forming"
         },
         {
-          "id": "d",
-          "text": "Both sides secretly wanting the same outcome but not acting → The structure of the prisoner's dilemma"
+          "left": "Both sides secretly wanting the same outcome but not acting",
+          "right": "The structure of the prisoner's dilemma"
         },
         {
-          "id": "e",
-          "text": "Public removal of Cuban missiles, quiet removal of Turkish ones → Removing audience cost so cooperation doesn't look like weakness"
+          "left": "Public removal of Cuban missiles, quiet removal of Turkish ones",
+          "right": "Removing audience cost so cooperation doesn't look like weakness"
         }
-      ],
-      "correctOrder": ["a", "b", "c", "d", "e"]
+      ]
     },
     {
       "type": "before-after",
       "context": "Which response shows better understanding of the underlying dynamics?",
       "scenarioA": {
-        "label": "Trapped in the dilemma",
-        "text": "I can see we'd both benefit from cooperation, but I can't risk going first because if they don't reciprocate, I'm the sucker. So I'll keep defecting and hope they blink first."
-      },
-      "scenarioB": {
         "label": "Breaking the structure",
         "text": "I'll name the game we're in, create a private channel to discuss without audience pressure, signal that this interaction will repeat, and make a small cooperative move first to test their response — while being ready to punish defection immediately."
       },
-      "correctScenario": "B",
-      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
+      "scenarioB": {
+        "label": "Trapped in the dilemma",
+        "text": "I can see we'd both benefit from cooperation, but I can't risk going first because if they don't reciprocate, I'm the sucker. So I'll keep defecting and hope they blink first."
+      },
+      "correctScenario": "A",
+      "explanation": "The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame."
     }
   ],
   "principle": {

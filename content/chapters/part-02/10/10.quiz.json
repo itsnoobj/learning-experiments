@@ -60,31 +60,30 @@
       "back": "When one party in a transaction knows more than the other — the seller knows the car's history, the employee knows their real performance, the company knows its real culture"
     },
     {
-      "type": "drag-match",
+      "type": "matching",
       "instruction": "Match each concept to its description:",
-      "items": [
+      "pairs": [
         {
-          "id": "a",
-          "text": "Money-back guarantee → Seller transfers risk to themselves — only possible with good products (costly signal of quality)"
+          "left": "Money-back guarantee",
+          "right": "Seller transfers risk to themselves — only possible with good products (costly signal of quality)"
         },
         {
-          "id": "b",
-          "text": "Glassdoor reviews → Makes employer quality visible to candidates — fixes the 'why so many open positions?' suspicion"
+          "left": "Glassdoor reviews",
+          "right": "Makes employer quality visible to candidates — fixes the 'why so many open positions?' suspicion"
         },
         {
-          "id": "c",
-          "text": "Health insurance premiums rising until healthy people drop out → Adverse selection: sickest people buy most, driving costs up, driving healthy out"
+          "left": "Health insurance premiums rising until healthy people drop out",
+          "right": "Adverse selection: sickest people buy most, driving costs up, driving healthy out"
         },
         {
-          "id": "d",
-          "text": "Certified Pre-Owned car program → Third-party inspection creates information parity between buyer and seller"
+          "left": "Certified Pre-Owned car program",
+          "right": "Third-party inspection creates information parity between buyer and seller"
         },
         {
-          "id": "e",
-          "text": "Dating app where most persistent users are least successful → Adverse selection in relationship markets — heavy usage becomes a negative signal"
+          "left": "Dating app where most persistent users are least successful",
+          "right": "Adverse selection in relationship markets — heavy usage becomes a negative signal"
         }
-      ],
-      "correctOrder": ["a", "b", "c", "d", "e"]
+      ]
     },
     {
       "type": "before-after",
@@ -98,7 +97,7 @@
         "text": "I don't guess — I build or use mechanisms that make hidden information visible. Warranties, trial periods, reputation systems, verifiable history. The question isn't 'do I trust them?' but 'what structure makes their private information observable?'"
       },
       "correctScenario": "B",
-      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
+      "explanation": "The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame."
     }
   ],
   "principle": {

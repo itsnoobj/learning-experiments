@@ -13,6 +13,9 @@ export type { CardFlipProps } from './components/CardFlip';
 export { DragMatch } from './components/DragMatch';
 export type { DragMatchProps, DragMatchItem } from './components/DragMatch';
 
+export { Matching } from './components/Matching';
+export type { MatchingProps } from './components/Matching';
+
 export { BeforeAfter } from './components/BeforeAfter';
 export type { BeforeAfterProps, BeforeAfterScenario } from './components/BeforeAfter';
 

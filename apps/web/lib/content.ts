@@ -95,6 +95,11 @@ const quizChallengeSchema = z.discriminatedUnion('type', [
     correctOrder: z.array(z.string().min(1)).min(2),
   }),
   z.object({
+    type: z.literal('matching'),
+    instruction: z.string().min(1).optional(),
+    pairs: z.array(z.object({ left: z.string().min(1), right: z.string().min(1) })).min(2),
+  }),
+  z.object({
     type: z.literal('before-after'),
     context: z.string().min(1),
     scenarioA: z.object({ label: z.string().min(1), text: z.string().min(1) }),

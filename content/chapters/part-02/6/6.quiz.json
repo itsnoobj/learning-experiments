@@ -60,31 +60,30 @@
       "back": "A deliberate destruction of future options that makes a promise credible by making it structurally impossible (or prohibitively expensive) to break"
     },
     {
-      "type": "drag-match",
+      "type": "matching",
       "instruction": "Match each concept to its description:",
-      "items": [
+      "pairs": [
         {
-          "id": "a",
-          "text": "Putting $1000 in a savings account with early withdrawal penalty → Commitment device against spending: making access to the money costly"
+          "left": "Putting $1000 in a savings account with early withdrawal penalty",
+          "right": "Commitment device against spending: making access to the money costly"
         },
         {
-          "id": "b",
-          "text": "Announcing your goal publicly on social media → Social commitment device: making failure embarrassing (moderate strength)"
+          "left": "Announcing your goal publicly on social media",
+          "right": "Social commitment device: making failure embarrassing (moderate strength)"
         },
         {
-          "id": "c",
-          "text": "Saying 'I really want to exercise more this year' → Not a commitment device — a wish with zero structural constraint"
+          "left": "Saying 'I really want to exercise more this year'",
+          "right": "Not a commitment device — a wish with zero structural constraint"
         },
         {
-          "id": "d",
-          "text": "Marriage (legal, financial, social binding) → High-stakes commitment device: making departure catastrophically expensive"
+          "left": "Marriage (legal, financial, social binding)",
+          "right": "High-stakes commitment device: making departure catastrophically expensive"
         },
         {
-          "id": "e",
-          "text": "Vendor requiring 50% deposit before starting work → Commitment device ensuring client doesn't walk away mid-project"
+          "left": "Vendor requiring 50% deposit before starting work",
+          "right": "Commitment device ensuring client doesn't walk away mid-project"
         }
-      ],
-      "correctOrder": ["a", "b", "c", "d", "e"]
+      ]
     },
     {
       "type": "before-after",
@@ -98,7 +97,7 @@
         "text": "Motivation fluctuates. Structure doesn't. I'll make breaking this commitment more expensive than keeping it — publicly, financially, or socially. My future self won't have the option to defect, regardless of how it feels in the moment."
       },
       "correctScenario": "B",
-      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
+      "explanation": "The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame."
     }
   ],
   "principle": {

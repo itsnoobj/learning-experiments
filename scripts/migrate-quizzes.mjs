@@ -8,9 +8,12 @@
  * Challenge transformations:
  * - scenario-choice: stem → situation, add per-option feedback from explanation
  * - spot-the-force: stem → situation, add 'question' field, add per-option feedback
- * - card-flip: { pairs: [{front, back}...] } → { front, back } (first pair only, or split)
- * - drag-match: { pairs: [{left, right}...] } → { instruction, items[{id, text}], correctOrder[] }
- * - before-after: { before{label,text}, after{label,text} } → { context, scenarioA, scenarioB, correctScenario, explanation }
+ * - card-flip: { pairs: [{front, back}...] } → { front, back } (first pair only)
+ * - drag-match: { pairs: [{left, right}...] } → { type: 'matching', instruction, pairs }
+ * - before-after: { before, after } → { context, scenarioA, scenarioB, correctScenario, explanation }
+ *
+ * The drag-match → matching change replaces the confusing "join concept→description
+ * into one row and reorder" interaction with a real tap-to-pair matching challenge.
  */
 
 import { readFileSync, writeFileSync, existsSync } from 'fs';
@@ -28,7 +31,7 @@ function migrateScenarioChoice(challenge) {
   return {
     type,
     situation: stem,
-    options: options.map(opt => ({
+    options: options.map((opt) => ({
       text: opt.text,
       correct: opt.correct,
       feedback: opt.correct
@@ -40,12 +43,9 @@ function migrateScenarioChoice(challenge) {
 
 function migrateSpotTheForce(challenge) {
   const { type, stem, options, explanation } = challenge;
-  // Extract a question from the stem — the stem in old format often IS the question
-  // Split at the last question mark to separate situation from question
   const qMarkIdx = stem.lastIndexOf('?');
   let situation, question;
   if (qMarkIdx > 0) {
-    // Find the sentence boundary before the last question
     const beforeQ = stem.substring(0, qMarkIdx + 1);
     const sentences = beforeQ.split(/(?<=[.!?])\s+/);
     if (sentences.length > 1) {
@@ -64,7 +64,7 @@ function migrateSpotTheForce(challenge) {
     type,
     situation,
     question,
-    options: options.map(opt => ({
+    options: options.map((opt) => ({
       text: opt.text,
       correct: opt.correct,
       feedback: opt.correct
@@ -76,10 +76,6 @@ function migrateSpotTheForce(challenge) {
 
 function migrateCardFlip(challenge) {
   const { pairs } = challenge;
-  // New format is a single card-flip, not an array
-  // If multiple pairs, take the most interesting one (usually the first or most instructive)
-  // Actually, looking at the schema it's just {front, back} - one card
-  // Pick the most meaningful pair (usually the first conceptual one)
   const pair = pairs[0];
   return {
     type: 'card-flip',
@@ -90,52 +86,39 @@ function migrateCardFlip(challenge) {
 
 function migrateDragMatch(challenge) {
   const { pairs } = challenge;
-  // Old: pairs[{left, right}]
-  // New: { instruction, items[{id, text}], correctOrder[] }
-  // The 'left' items need to be matched to 'right' descriptions
-  // Strategy: items = the "left" values, correctOrder = ordered ids matching the right values
-  // But since it's a match (not a sequence), we shuffle items and keep correctOrder as the "right" order
-
-  const instruction = 'Match each concept to its description:';
-  const items = pairs.map((p, i) => ({
-    id: String.fromCharCode(97 + i), // a, b, c, d, e...
-    text: `${p.left} → ${p.right}`,
-  }));
-
-  // For drag-match, the correctOrder represents the correct sequence
-  // Since these are matches (not sequences), we present them shuffled and the correct order is alphabetical
-  const correctOrder = items.map(item => item.id);
-
+  // New matching format: keep the concept/description pairs verbatim. The
+  // Matching component shuffles the right column and checks tap-to-pair matches,
+  // so no order/ids are needed.
   return {
-    type: 'drag-match',
-    instruction,
-    items,
-    correctOrder,
+    type: 'matching',
+    instruction: 'Match each concept to its description:',
+    pairs: pairs.map((p) => ({ left: p.left, right: p.right })),
   };
 }
 
-function migrateBeforeAfter(challenge) {
+function migrateBeforeAfter(challenge, id) {
   const { before, after } = challenge;
   // Old: { before: {label, text}, after: {label, text} }
-  // New: { context, scenarioA: {label, text}, scenarioB: {label, text}, correctScenario: 'A'|'B', explanation }
+  // New: { context, scenarioA, scenarioB, correctScenario, explanation }
+  // 'after' is always the improved response. Placing it in slot B every time
+  // makes the correct answer trivially guessable ("always B"), so we vary the
+  // slot by mission-id parity and keep the explanation position-neutral.
+  const correctInA = id % 2 === 1;
+  const improved = { label: after.label, text: after.text };
+  const trapped = { label: before.label, text: before.text };
 
   return {
     type: 'before-after',
     context: 'Which response shows better understanding of the underlying dynamics?',
-    scenarioA: {
-      label: before.label,
-      text: before.text,
-    },
-    scenarioB: {
-      label: after.label,
-      text: after.text,
-    },
-    correctScenario: 'B', // 'after' is always the improved version
-    explanation: `The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame.`,
+    scenarioA: correctInA ? improved : trapped,
+    scenarioB: correctInA ? trapped : improved,
+    correctScenario: correctInA ? 'A' : 'B',
+    explanation:
+      'The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame.',
   };
 }
 
-function migrateChallenge(challenge) {
+function migrateChallenge(challenge, id) {
   switch (challenge.type) {
     case 'scenario-choice':
       return migrateScenarioChoice(challenge);
@@ -146,7 +129,7 @@ function migrateChallenge(challenge) {
     case 'drag-match':
       return migrateDragMatch(challenge);
     case 'before-after':
-      return migrateBeforeAfter(challenge);
+      return migrateBeforeAfter(challenge, id);
     default:
       console.warn(`  ⚠️  Unknown challenge type: ${challenge.type}`);
       return challenge;
@@ -154,17 +137,19 @@ function migrateChallenge(challenge) {
 }
 
 function extractPrinciple(chapterPath) {
-  if (!existsSync(chapterPath)) return { text: 'Understand the structure, not just the symptoms.' };
+  if (!existsSync(chapterPath))
+    return { text: 'Understand the structure, not just the symptoms.' };
   const chapter = JSON.parse(readFileSync(chapterPath, 'utf-8'));
   const principleContent = chapter.sections?.principle?.content;
-  if (!principleContent) return { text: chapter.title || 'Understand the structure, not just the symptoms.' };
+  if (!principleContent)
+    return { text: chapter.title || 'Understand the structure, not just the symptoms.' };
 
-  // Take first paragraph as principle text, second as subtext
-  const paragraphs = principleContent.split('\n\n').filter(p => p.trim());
+  const paragraphs = principleContent.split('\n\n').filter((p) => p.trim());
   const text = paragraphs[0].replace(/\n/g, ' ').trim();
-  const subtext = paragraphs.length > 1
-    ? paragraphs[1].replace(/\n/g, ' ').replace(/- \*\*/g, '').replace(/\*\*/g, '').trim()
-    : undefined;
+  const subtext =
+    paragraphs.length > 1
+      ? paragraphs[1].replace(/\n/g, ' ').replace(/- \*\*/g, '').replace(/\*\*/g, '').trim()
+      : undefined;
 
   const result = { text };
   if (subtext && subtext.length < 300) result.subtext = subtext;
@@ -172,11 +157,10 @@ function extractPrinciple(chapterPath) {
 }
 
 function generateReflection(chapterPath) {
-  if (!existsSync(chapterPath)) return 'What game are you currently playing? Could you change its structure?';
+  if (!existsSync(chapterPath))
+    return 'What game are you currently playing? Could you change its structure?';
   const chapter = JSON.parse(readFileSync(chapterPath, 'utf-8'));
-  const title = chapter.title || '';
 
-  // Generate a contextual reflection based on the chapter's theme
   const reflections = {
     1: "Think of a situation where you and someone else are stuck in mutual defection. What structural change — not moral appeal — could make cooperation the rational choice for both of you?",
     2: "In your most important repeated relationship (work or personal), are you being 'nice, retaliating, and forgiving' — or are you holding grudges that block return to cooperation?",
@@ -197,7 +181,7 @@ function generateReflection(chapterPath) {
     17: "In a system that's producing bad outcomes around you, which of the four building blocks (visibility, memory, consequences, symmetry) is broken — and could you fix it?",
   };
 
-  return reflections[chapter.id] || "What game are you currently playing? Could you change its structure?";
+  return reflections[chapter.id] || 'What game are you currently playing? Could you change its structure?';
 }
 
 // --- Main migration ---
@@ -215,7 +199,6 @@ for (const id of OLD_MISSIONS) {
 
   const oldQuiz = JSON.parse(readFileSync(quizPath, 'utf-8'));
 
-  // Skip if already migrated
   if (oldQuiz.chapterId) {
     console.log(`✅ Mission ${id}: already in new format, skipping`);
     continue;
@@ -224,7 +207,7 @@ for (const id of OLD_MISSIONS) {
   console.log(`🔄 Mission ${id}: migrating...`);
 
   try {
-    const newChallenges = oldQuiz.challenges.map(c => migrateChallenge(c));
+    const newChallenges = oldQuiz.challenges.map((c) => migrateChallenge(c, id));
     const principle = extractPrinciple(chapterPath);
     const reflection = generateReflection(chapterPath);
 

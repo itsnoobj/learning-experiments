@@ -60,45 +60,44 @@
       "back": "Bluff just often enough that opponents can't profitably always-call or always-fold. Makes you unexploitable by creating permanent uncertainty."
     },
     {
-      "type": "drag-match",
+      "type": "matching",
       "instruction": "Match each concept to its description:",
-      "items": [
+      "pairs": [
         {
-          "id": "a",
-          "text": "Competitor publicly announcing '$1B investment in your market' → Possibly cheap talk — track whether previous announcements led to actual follow-through"
+          "left": "Competitor publicly announcing '$1B investment in your market'",
+          "right": "Possibly cheap talk — track whether previous announcements led to actual follow-through"
         },
         {
-          "id": "b",
-          "text": "Employee threatening to resign unless promoted (first time ever) → Likely credible — no history of bluffing suggests genuine breaking point"
+          "left": "Employee threatening to resign unless promoted (first time ever)",
+          "right": "Likely credible — no history of bluffing suggests genuine breaking point"
         },
         {
-          "id": "c",
-          "text": "Negotiator who has made 'final offers' three times today that weren't final → High bluff rate — current 'final offer' is probably also moveable"
+          "left": "Negotiator who has made 'final offers' three times today that weren't final",
+          "right": "High bluff rate — current 'final offer' is probably also moveable"
         },
         {
-          "id": "d",
-          "text": "Israel's neither-confirm-nor-deny nuclear policy → Strategic ambiguity — undefined threat forces maximum defensive posture from enemies"
+          "left": "Israel's neither-confirm-nor-deny nuclear policy",
+          "right": "Strategic ambiguity — undefined threat forces maximum defensive posture from enemies"
         },
         {
-          "id": "e",
-          "text": "A poker player who bets big only with strong hands (never bluffs) → Perfectly predictable — opponents always fold to their big bets, limiting their winnings"
+          "left": "A poker player who bets big only with strong hands (never bluffs)",
+          "right": "Perfectly predictable — opponents always fold to their big bets, limiting their winnings"
         }
-      ],
-      "correctOrder": ["a", "b", "c", "d", "e"]
+      ]
     },
     {
       "type": "before-after",
       "context": "Which response shows better understanding of the underlying dynamics?",
       "scenarioA": {
-        "label": "Reading body language for lies",
-        "text": "I'll watch for nervous ticks, eye movement, or voice changes to detect if someone's bluffing. Liars always reveal themselves if you watch closely enough."
-      },
-      "scenarioB": {
         "label": "Tracking patterns and base rates",
         "text": "Body language detection is barely better than chance. I track historical patterns: has this person followed through before? What's their bluff rate in this type of situation? I use small probes to test credibility. And I calculate the cost of being wrong in each direction before deciding."
       },
-      "correctScenario": "B",
-      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
+      "scenarioB": {
+        "label": "Reading body language for lies",
+        "text": "I'll watch for nervous ticks, eye movement, or voice changes to detect if someone's bluffing. Liars always reveal themselves if you watch closely enough."
+      },
+      "correctScenario": "A",
+      "explanation": "The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame."
     }
   ],
   "principle": {

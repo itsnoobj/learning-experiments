@@ -60,45 +60,44 @@
       "back": "Each honest action earns a return that reinvests — future honesty becomes more credible, attracting more opportunity, creating more occasions for honest action"
     },
     {
-      "type": "drag-match",
+      "type": "matching",
       "instruction": "Match each concept to its description:",
-      "items": [
+      "pairs": [
         {
-          "id": "a",
-          "text": "Medici never defaulting even when they could → Protecting reputation's compound returns over any single-transaction profit"
+          "left": "Medici never defaulting even when they could",
+          "right": "Protecting reputation's compound returns over any single-transaction profit"
         },
         {
-          "id": "b",
-          "text": "Enron winning 'Most Innovative' for 6 years then collapsing → Reputation built on false signals — exponential destruction when truth emerged"
+          "left": "Enron winning 'Most Innovative' for 6 years then collapsing",
+          "right": "Reputation built on false signals — exponential destruction when truth emerged"
         },
         {
-          "id": "c",
-          "text": "Arthur Andersen dissolving after Enron association → Reputation contagion — proximity to one bad actor destroyed a century-old firm"
+          "left": "Arthur Andersen dissolving after Enron association",
+          "right": "Reputation contagion — proximity to one bad actor destroyed a century-old firm"
         },
         {
-          "id": "d",
-          "text": "J&J immediately recalling Tylenol in 1982 → Rapid transparent repair that preserved (and enhanced) long-term reputation"
+          "left": "J&J immediately recalling Tylenol in 1982",
+          "right": "Rapid transparent repair that preserved (and enhanced) long-term reputation"
         },
         {
-          "id": "e",
-          "text": "A freelancer always delivering one day early → Small consistent data points compounding into 'reliable' faster than any grand gesture"
+          "left": "A freelancer always delivering one day early",
+          "right": "Small consistent data points compounding into 'reliable' faster than any grand gesture"
         }
-      ],
-      "correctOrder": ["a", "b", "c", "d", "e"]
+      ]
     },
     {
       "type": "before-after",
       "context": "Which response shows better understanding of the underlying dynamics?",
       "scenarioA": {
-        "label": "Transaction-by-transaction thinking",
-        "text": "Each deal is separate. I'll optimize each interaction for maximum return. If I can get away with something, the rational move is to take the gain while the cost is low."
-      },
-      "scenarioB": {
         "label": "Reputation-as-portfolio thinking",
         "text": "Every interaction is a data point in my permanent record. I protect my reputation's compound returns above any single transaction's gain — because the math always favors long-term trust over short-term extraction in repeated games."
       },
-      "correctScenario": "B",
-      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
+      "scenarioB": {
+        "label": "Transaction-by-transaction thinking",
+        "text": "Each deal is separate. I'll optimize each interaction for maximum return. If I can get away with something, the rational move is to take the gain while the cost is low."
+      },
+      "correctScenario": "A",
+      "explanation": "The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame."
     }
   ],
   "principle": {
