@@ -67,17 +67,24 @@
       "type": "drag-match",
       "instruction": "Order these from fastest reputation recovery to slowest:",
       "items": [
-        "Competence failure (honest mistake, no deception)",
-        "Negligence (should have known, didn't check)",
-        "Deliberate deception (active lying about one thing)",
-        "Sustained systematic fraud (years of hidden double life)"
+        {
+          "id": "a",
+          "text": "Competence failure (honest mistake, no deception)"
+        },
+        {
+          "id": "b",
+          "text": "Negligence (should have known, didn't check)"
+        },
+        {
+          "id": "c",
+          "text": "Deliberate deception (active lying about one thing)"
+        },
+        {
+          "id": "d",
+          "text": "Sustained systematic fraud (years of hidden double life)"
+        }
       ],
-      "correctOrder": [
-        "Competence failure (honest mistake, no deception)",
-        "Negligence (should have known, didn't check)",
-        "Deliberate deception (active lying about one thing)",
-        "Sustained systematic fraud (years of hidden double life)"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     }
   ],
   "principle": {

@@ -67,17 +67,24 @@
       "type": "drag-match",
       "instruction": "Order the trust-rebuilding steps from first to last (the correct sequence):",
       "items": [
-        "Acknowledge the violation honestly (once)",
-        "Make small, verifiable commitments and keep them",
-        "Gradually escalate to larger commitments as smaller ones are verified",
-        "Survive a crisis together with integrity under pressure"
+        {
+          "id": "a",
+          "text": "Acknowledge the violation honestly (once)"
+        },
+        {
+          "id": "b",
+          "text": "Make small, verifiable commitments and keep them"
+        },
+        {
+          "id": "c",
+          "text": "Gradually escalate to larger commitments as smaller ones are verified"
+        },
+        {
+          "id": "d",
+          "text": "Survive a crisis together with integrity under pressure"
+        }
       ],
-      "correctOrder": [
-        "Acknowledge the violation honestly (once)",
-        "Make small, verifiable commitments and keep them",
-        "Gradually escalate to larger commitments as smaller ones are verified",
-        "Survive a crisis together with integrity under pressure"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     }
   ],
   "principle": {

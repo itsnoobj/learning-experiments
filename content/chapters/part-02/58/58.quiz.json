@@ -67,17 +67,24 @@
       "type": "drag-match",
       "instruction": "Order these from most to least effective at counteracting the authority distortion field:",
       "items": [
-        "Structural: speak last, assign devil's advocates, anonymous feedback",
-        "Behavioral: visibly reward people who challenge your ideas publicly",
-        "Verbal: tell the team 'I want honest feedback, don't hold back'",
-        "Passive: assume the team is being honest because you're approachable"
+        {
+          "id": "a",
+          "text": "Structural: speak last, assign devil's advocates, anonymous feedback"
+        },
+        {
+          "id": "b",
+          "text": "Behavioral: visibly reward people who challenge your ideas publicly"
+        },
+        {
+          "id": "c",
+          "text": "Verbal: tell the team 'I want honest feedback, don't hold back'"
+        },
+        {
+          "id": "d",
+          "text": "Passive: assume the team is being honest because you're approachable"
+        }
       ],
-      "correctOrder": [
-        "Structural: speak last, assign devil's advocates, anonymous feedback",
-        "Behavioral: visibly reward people who challenge your ideas publicly",
-        "Verbal: tell the team 'I want honest feedback, don't hold back'",
-        "Passive: assume the team is being honest because you're approachable"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     }
   ],
   "principle": {

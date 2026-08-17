@@ -67,17 +67,24 @@
       "type": "drag-match",
       "instruction": "Order these from most to least vulnerable to diffusion of responsibility:",
       "items": [
-        "'@channel — can someone look at this?'",
-        "'The team owns code quality together'",
-        "'@Maya is on-call; @Tom owns payments; @Sara owns auth'",
-        "'You — in the blue shirt — call 911'"
+        {
+          "id": "a",
+          "text": "'@channel — can someone look at this?'"
+        },
+        {
+          "id": "b",
+          "text": "'The team owns code quality together'"
+        },
+        {
+          "id": "c",
+          "text": "'@Maya is on-call; @Tom owns payments; @Sara owns auth'"
+        },
+        {
+          "id": "d",
+          "text": "'You — in the blue shirt — call 911'"
+        }
       ],
-      "correctOrder": [
-        "'@channel — can someone look at this?'",
-        "'The team owns code quality together'",
-        "'@Maya is on-call; @Tom owns payments; @Sara owns auth'",
-        "'You — in the blue shirt — call 911'"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     }
   ],
   "principle": {

@@ -67,17 +67,24 @@
       "type": "drag-match",
       "instruction": "Order these from 'least politically literate' to 'most politically effective while ethical':",
       "items": [
-        "Refuse to engage with politics — 'just do good work'",
-        "Observe who has power but don't act on it",
-        "Map stakeholder interests and align your work to them",
-        "Build coalitions around shared outcomes before decisions happen"
+        {
+          "id": "a",
+          "text": "Refuse to engage with politics — 'just do good work'"
+        },
+        {
+          "id": "b",
+          "text": "Observe who has power but don't act on it"
+        },
+        {
+          "id": "c",
+          "text": "Map stakeholder interests and align your work to them"
+        },
+        {
+          "id": "d",
+          "text": "Build coalitions around shared outcomes before decisions happen"
+        }
       ],
-      "correctOrder": [
-        "Refuse to engage with politics — 'just do good work'",
-        "Observe who has power but don't act on it",
-        "Map stakeholder interests and align your work to them",
-        "Build coalitions around shared outcomes before decisions happen"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     }
   ],
   "principle": {

@@ -53,17 +53,24 @@
       "type": "drag-match",
       "instruction": "Rank these disagreement approaches from most relationship-preserving to most relationship-damaging:",
       "items": [
-        "Ask what they're optimizing for before stating your view",
-        "Share your concern as a risk, not a verdict",
-        "Present your logic and let the evidence speak for itself",
-        "Point out specifically where their reasoning breaks down"
+        {
+          "id": "a",
+          "text": "Ask what they're optimizing for before stating your view"
+        },
+        {
+          "id": "b",
+          "text": "Share your concern as a risk, not a verdict"
+        },
+        {
+          "id": "c",
+          "text": "Present your logic and let the evidence speak for itself"
+        },
+        {
+          "id": "d",
+          "text": "Point out specifically where their reasoning breaks down"
+        }
       ],
-      "correctOrder": [
-        "Ask what they're optimizing for before stating your view",
-        "Share your concern as a risk, not a verdict",
-        "Present your logic and let the evidence speak for itself",
-        "Point out specifically where their reasoning breaks down"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     },
     {
       "type": "before-after",

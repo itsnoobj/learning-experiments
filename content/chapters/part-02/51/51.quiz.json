@@ -67,17 +67,24 @@
       "type": "drag-match",
       "instruction": "Order these trust-building behaviors from largest individual deposit to smallest (but remember: the small ones compound more because they happen daily):",
       "items": [
-        "Being honest when it costs you something",
-        "Keeping a small promise no one would notice if you broke",
-        "Being reliable when no one is watching",
-        "Admitting a mistake before being caught"
+        {
+          "id": "a",
+          "text": "Being honest when it costs you something"
+        },
+        {
+          "id": "b",
+          "text": "Keeping a small promise no one would notice if you broke"
+        },
+        {
+          "id": "c",
+          "text": "Being reliable when no one is watching"
+        },
+        {
+          "id": "d",
+          "text": "Admitting a mistake before being caught"
+        }
       ],
-      "correctOrder": [
-        "Being honest when it costs you something",
-        "Admitting a mistake before being caught",
-        "Being reliable when no one is watching",
-        "Keeping a small promise no one would notice if you broke"
-      ]
+      "correctOrder": ["a", "d", "c", "b"]
     }
   ],
   "principle": {

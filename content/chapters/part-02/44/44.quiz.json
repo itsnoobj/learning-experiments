@@ -67,17 +67,24 @@
       "type": "drag-match",
       "instruction": "Order these strategies from most vulnerable to least vulnerable to metric gaming:",
       "items": [
-        "Single metric tied to individual bonuses",
-        "Multiple metrics reported but only one rewarded",
-        "Paired metrics in tension with each other",
-        "Direct observation of outcomes + rotating metric focus"
+        {
+          "id": "a",
+          "text": "Single metric tied to individual bonuses"
+        },
+        {
+          "id": "b",
+          "text": "Multiple metrics reported but only one rewarded"
+        },
+        {
+          "id": "c",
+          "text": "Paired metrics in tension with each other"
+        },
+        {
+          "id": "d",
+          "text": "Direct observation of outcomes + rotating metric focus"
+        }
       ],
-      "correctOrder": [
-        "Single metric tied to individual bonuses",
-        "Multiple metrics reported but only one rewarded",
-        "Paired metrics in tension with each other",
-        "Direct observation of outcomes + rotating metric focus"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     }
   ],
   "principle": {

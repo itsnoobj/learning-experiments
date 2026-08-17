@@ -67,17 +67,24 @@
       "type": "drag-match",
       "instruction": "Order these meeting practices from most theatre-producing to most thinking-producing:",
       "items": [
-        "Senior person speaks first and asks 'any concerns?'",
-        "Open discussion with no structure — whoever is loudest speaks",
-        "Written positions collected before meeting; junior speaks first",
-        "Assigned devil's advocate + 'What would make this fail?' prompt"
+        {
+          "id": "a",
+          "text": "Senior person speaks first and asks 'any concerns?'"
+        },
+        {
+          "id": "b",
+          "text": "Open discussion with no structure — whoever is loudest speaks"
+        },
+        {
+          "id": "c",
+          "text": "Written positions collected before meeting; junior speaks first"
+        },
+        {
+          "id": "d",
+          "text": "Assigned devil's advocate + 'What would make this fail?' prompt"
+        }
       ],
-      "correctOrder": [
-        "Senior person speaks first and asks 'any concerns?'",
-        "Open discussion with no structure — whoever is loudest speaks",
-        "Written positions collected before meeting; junior speaks first",
-        "Assigned devil's advocate + 'What would make this fail?' prompt"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     }
   ],
   "principle": {

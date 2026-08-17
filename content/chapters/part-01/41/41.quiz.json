@@ -67,17 +67,24 @@
       "type": "drag-match",
       "instruction": "Order these from least to most productive relationship with regret:",
       "items": [
-        "Suppress it — 'just don't think about it'",
-        "Prosecute yourself — replay the identity gap endlessly",
-        "Witness with compassion — 'I did my best with what I knew'",
-        "Convert to policy — update future behavior, then release"
+        {
+          "id": "a",
+          "text": "Suppress it — 'just don't think about it'"
+        },
+        {
+          "id": "b",
+          "text": "Prosecute yourself — replay the identity gap endlessly"
+        },
+        {
+          "id": "c",
+          "text": "Witness with compassion — 'I did my best with what I knew'"
+        },
+        {
+          "id": "d",
+          "text": "Convert to policy — update future behavior, then release"
+        }
       ],
-      "correctOrder": [
-        "Suppress it — 'just don't think about it'",
-        "Prosecute yourself — replay the identity gap endlessly",
-        "Witness with compassion — 'I did my best with what I knew'",
-        "Convert to policy — update future behavior, then release"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     }
   ],
   "principle": {

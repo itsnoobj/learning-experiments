@@ -53,17 +53,24 @@
       "type": "drag-match",
       "instruction": "Order these from most likely to break task paralysis to least likely:",
       "items": [
-        "Define a first step that takes under 2 minutes",
-        "Name out loud: 'I'm frozen because this feels too big'",
-        "Set a timer for just 7 minutes of work",
-        "Tell yourself 'just push through — you've done harder things'"
+        {
+          "id": "a",
+          "text": "Define a first step that takes under 2 minutes"
+        },
+        {
+          "id": "b",
+          "text": "Name out loud: 'I'm frozen because this feels too big'"
+        },
+        {
+          "id": "c",
+          "text": "Set a timer for just 7 minutes of work"
+        },
+        {
+          "id": "d",
+          "text": "Tell yourself 'just push through — you've done harder things'"
+        }
       ],
-      "correctOrder": [
-        "Define a first step that takes under 2 minutes",
-        "Name out loud: 'I'm frozen because this feels too big'",
-        "Set a timer for just 7 minutes of work",
-        "Tell yourself 'just push through — you've done harder things'"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     },
     {
       "type": "before-after",

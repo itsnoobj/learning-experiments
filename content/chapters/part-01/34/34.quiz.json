@@ -67,15 +67,20 @@
       "type": "drag-match",
       "instruction": "Order the three dimensions of burnout from earliest warning sign to final stage:",
       "items": [
-        "Reduced efficacy — 'Does anything I do even matter?'",
-        "Emotional exhaustion — 'I'm tired in a way sleep doesn't fix'",
-        "Cynicism — 'Why should I care? Nothing changes anyway'"
+        {
+          "id": "a",
+          "text": "Reduced efficacy — 'Does anything I do even matter?'"
+        },
+        {
+          "id": "b",
+          "text": "Emotional exhaustion — 'I'm tired in a way sleep doesn't fix'"
+        },
+        {
+          "id": "c",
+          "text": "Cynicism — 'Why should I care? Nothing changes anyway'"
+        }
       ],
-      "correctOrder": [
-        "Emotional exhaustion — 'I'm tired in a way sleep doesn't fix'",
-        "Cynicism — 'Why should I care? Nothing changes anyway'",
-        "Reduced efficacy — 'Does anything I do even matter?'"
-      ]
+      "correctOrder": ["b", "c", "a"]
     }
   ],
   "principle": {

@@ -53,17 +53,24 @@
       "type": "drag-match",
       "instruction": "Order shame's self-reinforcing loop from trigger to entrenchment:",
       "items": [
-        "Something triggers the 'I don't belong' feeling",
-        "Shame predicts that speaking will confirm unworthiness",
-        "You stay silent to avoid exposure",
-        "Silence is interpreted by shame as proof: 'See? You know you don't belong'"
+        {
+          "id": "a",
+          "text": "Something triggers the 'I don't belong' feeling"
+        },
+        {
+          "id": "b",
+          "text": "Shame predicts that speaking will confirm unworthiness"
+        },
+        {
+          "id": "c",
+          "text": "You stay silent to avoid exposure"
+        },
+        {
+          "id": "d",
+          "text": "Silence is interpreted by shame as proof: 'See? You know you don't belong'"
+        }
       ],
-      "correctOrder": [
-        "Something triggers the 'I don't belong' feeling",
-        "Shame predicts that speaking will confirm unworthiness",
-        "You stay silent to avoid exposure",
-        "Silence is interpreted by shame as proof: 'See? You know you don't belong'"
-      ]
+      "correctOrder": ["a", "b", "c", "d"]
     },
     {
       "type": "before-after",
