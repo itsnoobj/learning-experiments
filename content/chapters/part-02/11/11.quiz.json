@@ -89,15 +89,15 @@
       "type": "before-after",
       "context": "Which response shows better understanding of the underlying dynamics?",
       "scenarioA": {
-        "label": "Reading body language for lies",
-        "text": "I'll watch for nervous ticks, eye movement, or voice changes to detect if someone's bluffing. Liars always reveal themselves if you watch closely enough."
-      },
-      "scenarioB": {
         "label": "Tracking patterns and base rates",
         "text": "Body language detection is barely better than chance. I track historical patterns: has this person followed through before? What's their bluff rate in this type of situation? I use small probes to test credibility. And I calculate the cost of being wrong in each direction before deciding."
       },
-      "correctScenario": "B",
-      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
+      "scenarioB": {
+        "label": "Reading body language for lies",
+        "text": "I'll watch for nervous ticks, eye movement, or voice changes to detect if someone's bluffing. Liars always reveal themselves if you watch closely enough."
+      },
+      "correctScenario": "A",
+      "explanation": "The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame."
     }
   ],
   "principle": {

@@ -89,15 +89,15 @@
       "type": "before-after",
       "context": "Which response shows better understanding of the underlying dynamics?",
       "scenarioA": {
-        "label": "Transaction-by-transaction thinking",
-        "text": "Each deal is separate. I'll optimize each interaction for maximum return. If I can get away with something, the rational move is to take the gain while the cost is low."
-      },
-      "scenarioB": {
         "label": "Reputation-as-portfolio thinking",
         "text": "Every interaction is a data point in my permanent record. I protect my reputation's compound returns above any single transaction's gain — because the math always favors long-term trust over short-term extraction in repeated games."
       },
-      "correctScenario": "B",
-      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
+      "scenarioB": {
+        "label": "Transaction-by-transaction thinking",
+        "text": "Each deal is separate. I'll optimize each interaction for maximum return. If I can get away with something, the rational move is to take the gain while the cost is low."
+      },
+      "correctScenario": "A",
+      "explanation": "The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame."
     }
   ],
   "principle": {

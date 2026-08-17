@@ -96,26 +96,29 @@ function migrateDragMatch(challenge) {
   };
 }
 
-function migrateBeforeAfter(challenge) {
+function migrateBeforeAfter(challenge, id) {
   const { before, after } = challenge;
+  // Old: { before: {label, text}, after: {label, text} }
+  // New: { context, scenarioA, scenarioB, correctScenario, explanation }
+  // 'after' is always the improved response. Placing it in slot B every time
+  // makes the correct answer trivially guessable ("always B"), so we vary the
+  // slot by mission-id parity and keep the explanation position-neutral.
+  const correctInA = id % 2 === 1;
+  const improved = { label: after.label, text: after.text };
+  const trapped = { label: before.label, text: before.text };
+
   return {
     type: 'before-after',
     context: 'Which response shows better understanding of the underlying dynamics?',
-    scenarioA: {
-      label: before.label,
-      text: before.text,
-    },
-    scenarioB: {
-      label: after.label,
-      text: after.text,
-    },
-    correctScenario: 'B', // 'after' is always the improved version
+    scenarioA: correctInA ? improved : trapped,
+    scenarioB: correctInA ? trapped : improved,
+    correctScenario: correctInA ? 'A' : 'B',
     explanation:
-      'The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame.',
+      'The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame.',
   };
 }
 
-function migrateChallenge(challenge) {
+function migrateChallenge(challenge, id) {
   switch (challenge.type) {
     case 'scenario-choice':
       return migrateScenarioChoice(challenge);
@@ -126,7 +129,7 @@ function migrateChallenge(challenge) {
     case 'drag-match':
       return migrateDragMatch(challenge);
     case 'before-after':
-      return migrateBeforeAfter(challenge);
+      return migrateBeforeAfter(challenge, id);
     default:
       console.warn(`  ⚠️  Unknown challenge type: ${challenge.type}`);
       return challenge;
@@ -204,7 +207,7 @@ for (const id of OLD_MISSIONS) {
   console.log(`🔄 Mission ${id}: migrating...`);
 
   try {
-    const newChallenges = oldQuiz.challenges.map((c) => migrateChallenge(c));
+    const newChallenges = oldQuiz.challenges.map((c) => migrateChallenge(c, id));
     const principle = extractPrinciple(chapterPath);
     const reflection = generateReflection(chapterPath);
 

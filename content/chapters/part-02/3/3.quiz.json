@@ -89,15 +89,15 @@
       "type": "before-after",
       "context": "Which response shows better understanding of the underlying dynamics?",
       "scenarioA": {
-        "label": "Fixed-Pie Instinct",
-        "text": "My competitor is winning, which means I'm losing. My colleague got promoted, which means I was passed over. Every negotiation is about claiming my share before they take it."
-      },
-      "scenarioB": {
         "label": "Pie-Growing Strategy",
         "text": "I ask: is this actually fixed? Can I extend the time horizon, find creative restructuring, or invest in the other party's success when it's upstream of mine? I reserve zero-sum thinking for genuinely fixed contests and use positive-sum framing everywhere else."
       },
-      "correctScenario": "B",
-      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
+      "scenarioB": {
+        "label": "Fixed-Pie Instinct",
+        "text": "My competitor is winning, which means I'm losing. My colleague got promoted, which means I was passed over. Every negotiation is about claiming my share before they take it."
+      },
+      "correctScenario": "A",
+      "explanation": "The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame."
     }
   ],
   "principle": {

@@ -89,15 +89,15 @@
       "type": "before-after",
       "context": "Which response shows better understanding of the underlying dynamics?",
       "scenarioA": {
-        "label": "Optimizing for quality",
-        "text": "My proposal is objectively the best option. If I explain why it's superior, everyone will rationally converge on it. The best idea wins."
-      },
-      "scenarioB": {
         "label": "Optimizing for obviousness",
         "text": "The best idea doesn't win coordination games — the most obvious one does. I'll make my proposal maximally prominent, simple, and easy-to-expect. I need others to predict that others will predict my option."
       },
-      "correctScenario": "B",
-      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
+      "scenarioB": {
+        "label": "Optimizing for quality",
+        "text": "My proposal is objectively the best option. If I explain why it's superior, everyone will rationally converge on it. The best idea wins."
+      },
+      "correctScenario": "A",
+      "explanation": "The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame."
     }
   ],
   "principle": {

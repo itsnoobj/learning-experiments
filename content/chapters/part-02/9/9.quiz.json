@@ -89,15 +89,15 @@
       "type": "before-after",
       "context": "Which response shows better understanding of the underlying dynamics?",
       "scenarioA": {
-        "label": "Reading signals at face value",
-        "text": "Impressive credentials and expensive displays mean someone is impressive. Casual appearance means someone isn't serious. I judge people by what they show me."
-      },
-      "scenarioB": {
         "label": "Reading the signal economics",
         "text": "I ask: what's the cost of this signal? Who can afford it? What audience is it designed for? Aggressive signaling means status is uncertain. Countersignaling means status is unquestionable. Both are data — but about confidence level, not actual quality."
       },
-      "correctScenario": "B",
-      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
+      "scenarioB": {
+        "label": "Reading signals at face value",
+        "text": "Impressive credentials and expensive displays mean someone is impressive. Casual appearance means someone isn't serious. I judge people by what they show me."
+      },
+      "correctScenario": "A",
+      "explanation": "The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame."
     }
   ],
   "principle": {

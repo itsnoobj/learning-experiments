@@ -89,15 +89,15 @@
       "type": "before-after",
       "context": "Which response shows better understanding of the underlying dynamics?",
       "scenarioA": {
-        "label": "Changing people",
-        "text": "The system would work if people were more honest, more collaborative, more long-term oriented. We need better training, better culture, better values."
-      },
-      "scenarioB": {
         "label": "Changing the game",
         "text": "I design systems where honest, collaborative, long-term behavior IS the self-interested behavior. I don't need better people — I need better rules. If the desired outcome requires heroism, I haven't finished the design."
       },
-      "correctScenario": "B",
-      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
+      "scenarioB": {
+        "label": "Changing people",
+        "text": "The system would work if people were more honest, more collaborative, more long-term oriented. We need better training, better culture, better values."
+      },
+      "correctScenario": "A",
+      "explanation": "The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame."
     }
   ],
   "principle": {

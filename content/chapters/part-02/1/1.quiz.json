@@ -89,15 +89,15 @@
       "type": "before-after",
       "context": "Which response shows better understanding of the underlying dynamics?",
       "scenarioA": {
-        "label": "Trapped in the dilemma",
-        "text": "I can see we'd both benefit from cooperation, but I can't risk going first because if they don't reciprocate, I'm the sucker. So I'll keep defecting and hope they blink first."
-      },
-      "scenarioB": {
         "label": "Breaking the structure",
         "text": "I'll name the game we're in, create a private channel to discuss without audience pressure, signal that this interaction will repeat, and make a small cooperative move first to test their response — while being ready to punish defection immediately."
       },
-      "correctScenario": "B",
-      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
+      "scenarioB": {
+        "label": "Trapped in the dilemma",
+        "text": "I can see we'd both benefit from cooperation, but I can't risk going first because if they don't reciprocate, I'm the sucker. So I'll keep defecting and hope they blink first."
+      },
+      "correctScenario": "A",
+      "explanation": "The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame."
     }
   ],
   "principle": {

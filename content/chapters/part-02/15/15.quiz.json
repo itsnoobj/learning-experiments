@@ -89,15 +89,15 @@
       "type": "before-after",
       "context": "Which response shows better understanding of the underlying dynamics?",
       "scenarioA": {
-        "label": "Appealing to conscience",
-        "text": "If we all just did the right thing — contributed fairly, stopped free-riding, cooperated — the problem would be solved. People need to be more responsible."
-      },
-      "scenarioB": {
         "label": "Redesigning the game",
         "text": "Moral appeal alone fails in collective action problems. I make contributions visible, reduce cooperation costs, shrink the group to where monitoring works, and go first to break the 'waiting for others' deadlock. I fix the structure, not the people."
       },
-      "correctScenario": "B",
-      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
+      "scenarioB": {
+        "label": "Appealing to conscience",
+        "text": "If we all just did the right thing — contributed fairly, stopped free-riding, cooperated — the problem would be solved. People need to be more responsible."
+      },
+      "correctScenario": "A",
+      "explanation": "The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame."
     }
   ],
   "principle": {

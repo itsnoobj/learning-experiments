@@ -89,15 +89,15 @@
       "type": "before-after",
       "context": "Which response shows better understanding of the underlying dynamics?",
       "scenarioA": {
-        "label": "Speed is always power",
-        "text": "I need to move first — set the agenda, stake my position, force others to respond. Hesitation is weakness. The first-mover captures the market/conversation/frame."
-      },
-      "scenarioB": {
         "label": "Timing is strategic",
         "text": "I diagnose the game first. Does it reward commitment (go first) or information (go last)? In chicken dynamics, I look for the third option. I never let 'appearing strong' override the question of what actually produces the best outcome."
       },
-      "correctScenario": "B",
-      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
+      "scenarioB": {
+        "label": "Speed is always power",
+        "text": "I need to move first — set the agenda, stake my position, force others to respond. Hesitation is weakness. The first-mover captures the market/conversation/frame."
+      },
+      "correctScenario": "A",
+      "explanation": "The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame."
     }
   ],
   "principle": {
