@@ -57,10 +57,8 @@ function shuffle<T>(input: T[]): T[] {
  * matched, a Next button appears and calls {@link MatchingProps.onCorrect}.
  */
 export function Matching({ instruction, pairs, onCorrect }: MatchingProps) {
-  // Right column shown shuffled; each entry carries its original pair index.
-  // Right column shown shuffled; each entry carries its original pair index.
-  // Shuffled once on mount (the parent remounts via `key` per challenge), so it
-  // never re-shuffles mid-interaction.
+  // Shuffled once on mount (parent remounts per challenge via `key`), so the
+  // right column never re-shuffles mid-interaction.
   const [rightOrder] = useState<number[]>(() => shuffle(pairs.map((_, index) => index)));
 
   const [selectedLeft, setSelectedLeft] = useState<number | null>(null);
@@ -144,7 +142,6 @@ export function Matching({ instruction, pairs, onCorrect }: MatchingProps) {
         className="flex gap-3"
         style={{ animation: wrong ? 'match-wrong-shake 0.35s ease-out' : 'none' }}
       >
-        {/* Concepts */}
         <div className="flex flex-col gap-3" style={{ flex: 1 }} role="group" aria-label="Concepts">
           {pairs.map((pair, index) => {
             const isSolved = solved.has(index);
@@ -173,7 +170,6 @@ export function Matching({ instruction, pairs, onCorrect }: MatchingProps) {
           })}
         </div>
 
-        {/* Descriptions (shuffled) */}
         <div
           className="flex flex-col gap-3"
           style={{ flex: 1 }}
