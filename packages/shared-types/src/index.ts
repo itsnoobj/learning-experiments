@@ -109,6 +109,22 @@ export interface DragMatchChallenge {
   correctOrder: string[];
 }
 
+/** A single concept/description pair in a matching challenge. */
+export interface MatchingPair {
+  /** The concept shown in the left column. */
+  left: string;
+  /** The description shown (shuffled) in the right column. */
+  right: string;
+}
+
+/** Match each concept to its description. */
+export interface MatchingChallenge {
+  type: 'matching';
+  /** Optional prompt; the component supplies a default when omitted. */
+  instruction?: string;
+  pairs: MatchingPair[];
+}
+
 /** One of the two scenarios in a before-after challenge. */
 export interface BeforeAfterScenario {
   /** Short label shown above the text (e.g. "Manager A"). */
@@ -133,6 +149,7 @@ export type QuizChallenge =
   | SpotTheForceChallenge
   | CardFlipChallenge
   | DragMatchChallenge
+  | MatchingChallenge
   | BeforeAfterChallenge;
 
 /** The principle a chapter's quiz reinforces. */

@@ -7,6 +7,7 @@ import { ScenarioChoice } from './ScenarioChoice';
 import { SpotTheForce } from './SpotTheForce';
 import { CardFlip } from './CardFlip';
 import { DragMatch } from './DragMatch';
+import { Matching } from './Matching';
 import { BeforeAfter } from './BeforeAfter';
 
 /** Props for {@link QuizShell}. */
@@ -22,6 +23,7 @@ const CHALLENGE_LABELS: Record<string, { icon: string; label: string }> = {
   'spot-the-force': { icon: '⚡', label: 'Spot the Force' },
   'card-flip': { icon: '🃏', label: 'Flip to Learn' },
   'drag-match': { icon: '🔀', label: 'Put in Order' },
+  matching: { icon: '🔗', label: 'Match the Pairs' },
   'before-after': { icon: '⚖️', label: 'Who Got It Right?' },
 };
 
@@ -107,6 +109,14 @@ export function QuizShell({ challenges, onComplete }: QuizShellProps) {
             instruction={challenge.instruction}
             items={challenge.items}
             correctOrder={challenge.correctOrder}
+            onCorrect={handleCorrect}
+          />
+        );
+      case 'matching':
+        return (
+          <Matching
+            instruction={challenge.instruction}
+            pairs={challenge.pairs}
             onCorrect={handleCorrect}
           />
         );

@@ -1,61 +1,67 @@
 {
-  "id": "1",
-  "title": "Why Does Cooperation Collapse Even When Everyone Benefits?",
+  "chapterId": "1",
   "challenges": [
     {
       "type": "scenario-choice",
-      "stem": "Two competing SaaS companies are locked in a pricing war. Both have cut margins to near-zero. Both CEOs privately admit they'd profit more if prices went back up. Neither raises prices first. What structure is preventing cooperation?",
+      "situation": "Two competing SaaS companies are locked in a pricing war. Both have cut margins to near-zero. Both CEOs privately admit they'd profit more if prices went back up. Neither raises prices first. What structure is preventing cooperation?",
       "options": [
         {
           "text": "It's a prisoner's dilemma — whoever raises prices first loses customers to the one who doesn't",
-          "correct": true
+          "correct": true,
+          "feedback": "This is a classic prisoner's dilemma. Mutual cooperation (both raise prices) is optimal, but unilateral cooperation (you raise, they don't) is the worst outcome for the one who moves first. Communication alone doesn't fix it — they need structural changes like long-term signaling or simultaneous action."
         },
-        { "text": "Both CEOs are irrational and driven by ego", "correct": false },
-        { "text": "The market is truly zero-sum so cooperation is impossible", "correct": false },
+        {
+          "text": "Both CEOs are irrational and driven by ego",
+          "correct": false,
+          "feedback": "Not quite. This is a classic prisoner's dilemma. Mutual cooperation (both raise prices) is optimal, but unilateral cooperation (you raise, they don't) is the worst outcome for the one who moves first."
+        },
+        {
+          "text": "The market is truly zero-sum so cooperation is impossible",
+          "correct": false,
+          "feedback": "Not quite. This is a classic prisoner's dilemma. Mutual cooperation (both raise prices) is optimal, but unilateral cooperation (you raise, they don't) is the worst outcome for the one who moves first."
+        },
         {
           "text": "They haven't tried communicating their intentions clearly enough",
-          "correct": false
-        }
-      ],
-      "explanation": "This is a classic prisoner's dilemma. Mutual cooperation (both raise prices) is optimal, but unilateral cooperation (you raise, they don't) is the worst outcome for the one who moves first. Communication alone doesn't fix it — they need structural changes like long-term signaling or simultaneous action."
-    },
-    {
-      "type": "spot-the-force",
-      "stem": "During the Cuban Missile Crisis, Kennedy's military advisors pushed for immediate air strikes despite knowing it could trigger nuclear war. What force made 'defection' (striking first) feel rational to them?",
-      "options": [
-        {
-          "text": "Fear — being the one who cooperates while the other defects means maximum loss",
-          "correct": true
-        },
-        { "text": "Ego — they wanted to prove American military superiority", "correct": false },
-        { "text": "Status — they wanted recognition for decisive action", "correct": false },
-        { "text": "Identity — they saw themselves as warriors, not diplomats", "correct": false }
-      ],
-      "explanation": "The core force in any prisoner's dilemma is fear of the 'sucker's payoff' — cooperating while the other side defects. The military's logic wasn't about ego or glory; it was genuinely about preventing the scenario where the Soviets strike first while America hesitates. Fear of asymmetric vulnerability drives defection."
-    },
-    {
-      "type": "card-flip",
-      "pairs": [
-        {
-          "front": "Both cooperate",
-          "back": "Best mutual outcome — Cuban Missile Crisis resolved, both sides save face"
-        },
-        {
-          "front": "You defect, they cooperate",
-          "back": "You 'win' locally — but only if they don't retaliate (rarely true in repeated games)"
-        },
-        {
-          "front": "Both defect",
-          "back": "Worst mutual outcome — nuclear war, price destruction, relationship breakdown"
-        },
-        {
-          "front": "Sucker's payoff",
-          "back": "You cooperate, they defect — maximum individual loss, drives fear of going first"
+          "correct": false,
+          "feedback": "Not quite. This is a classic prisoner's dilemma. Mutual cooperation (both raise prices) is optimal, but unilateral cooperation (you raise, they don't) is the worst outcome for the one who moves first."
         }
       ]
     },
     {
-      "type": "drag-match",
+      "type": "spot-the-force",
+      "situation": "During the Cuban Missile Crisis, Kennedy's military advisors pushed for immediate air strikes despite knowing it could trigger nuclear war.",
+      "question": "What force made 'defection' (striking first) feel rational to them?",
+      "options": [
+        {
+          "text": "Fear — being the one who cooperates while the other defects means maximum loss",
+          "correct": true,
+          "feedback": "The core force in any prisoner's dilemma is fear of the 'sucker's payoff' — cooperating while the other side defects. The military's logic wasn't about ego or glory; it was genuinely about preventing the scenario where the Soviets strike first while America hesitates. Fear of asymmetric vulnerability drives defection."
+        },
+        {
+          "text": "Ego — they wanted to prove American military superiority",
+          "correct": false,
+          "feedback": "Not quite. The core force in any prisoner's dilemma is fear of the 'sucker's payoff' — cooperating while the other side defects. The military's logic wasn't about ego or glory; it was genuinely about preventing the scenario where the Soviets strike first while America hesitates."
+        },
+        {
+          "text": "Status — they wanted recognition for decisive action",
+          "correct": false,
+          "feedback": "Not quite. The core force in any prisoner's dilemma is fear of the 'sucker's payoff' — cooperating while the other side defects. The military's logic wasn't about ego or glory; it was genuinely about preventing the scenario where the Soviets strike first while America hesitates."
+        },
+        {
+          "text": "Identity — they saw themselves as warriors, not diplomats",
+          "correct": false,
+          "feedback": "Not quite. The core force in any prisoner's dilemma is fear of the 'sucker's payoff' — cooperating while the other side defects. The military's logic wasn't about ego or glory; it was genuinely about preventing the scenario where the Soviets strike first while America hesitates."
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "Both cooperate",
+      "back": "Best mutual outcome — Cuban Missile Crisis resolved, both sides save face"
+    },
+    {
+      "type": "matching",
+      "instruction": "Match each concept to its description:",
       "pairs": [
         {
           "left": "Kennedy-Dobrynin back-channel",
@@ -81,14 +87,21 @@
     },
     {
       "type": "before-after",
-      "before": {
+      "context": "Which response shows better understanding of the underlying dynamics?",
+      "scenarioA": {
         "label": "Trapped in the dilemma",
         "text": "I can see we'd both benefit from cooperation, but I can't risk going first because if they don't reciprocate, I'm the sucker. So I'll keep defecting and hope they blink first."
       },
-      "after": {
+      "scenarioB": {
         "label": "Breaking the structure",
         "text": "I'll name the game we're in, create a private channel to discuss without audience pressure, signal that this interaction will repeat, and make a small cooperative move first to test their response — while being ready to punish defection immediately."
-      }
+      },
+      "correctScenario": "B",
+      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
     }
-  ]
+  ],
+  "principle": {
+    "text": "The prisoner's dilemma isn't a puzzle to solve — it's a structure to recognize. When you see two parties stuck in mutual defection despite both preferring cooperation, the problem is almost never stupidity or malice. It's that the game's structure makes defection individually rational even when it's collectively insane."
+  },
+  "reflection": "Think of a situation where you and someone else are stuck in mutual defection. What structural change — not moral appeal — could make cooperation the rational choice for both of you?"
 }

@@ -1,76 +1,67 @@
 {
-  "id": "14",
-  "title": "When Is Forgiveness the Optimal Strategy?",
+  "chapterId": "14",
   "challenges": [
     {
       "type": "scenario-choice",
-      "stem": "A team member missed a critical deadline, causing your project to slip. It's their first significant failure in two years. They apologize sincerely and explain the circumstances. How does generous tit-for-tat apply?",
+      "situation": "A team member missed a critical deadline, causing your project to slip. It's their first significant failure in two years. They apologize sincerely and explain the circumstances. How does generous tit-for-tat apply?",
       "options": [
         {
           "text": "Address the failure directly (punish — establish consequences), then offer a clear path back: 'Here's what I need to see going forward.' Don't hold the grudge past one correction cycle.",
-          "correct": true
+          "correct": true,
+          "feedback": "Generous tit-for-tat: punish immediately (direct feedback, clear about the impact), then return to cooperation quickly (offer the path back). Skipping punishment (option B) signals no consequences. Over-punishment (option C) locks in mutual wariness. Delayed punishment (option D) is confusing — the correction should be immediate and then complete, not lingering."
         },
         {
           "text": "Forgive immediately — one failure in two years is a great track record and punishment would damage the relationship",
-          "correct": false
+          "correct": false,
+          "feedback": "Not quite. Generous tit-for-tat: punish immediately (direct feedback, clear about the impact), then return to cooperation quickly (offer the path back). Skipping punishment (option B) signals no consequences."
         },
         {
           "text": "Document the failure formally and adjust their responsibilities — trust is broken and needs to be rebuilt over months",
-          "correct": false
+          "correct": false,
+          "feedback": "Not quite. Generous tit-for-tat: punish immediately (direct feedback, clear about the impact), then return to cooperation quickly (offer the path back). Skipping punishment (option B) signals no consequences."
         },
         {
           "text": "Forgive privately but mention it in their next performance review to ensure accountability",
-          "correct": false
-        }
-      ],
-      "explanation": "Generous tit-for-tat: punish immediately (direct feedback, clear about the impact), then return to cooperation quickly (offer the path back). Skipping punishment (option B) signals no consequences. Over-punishment (option C) locks in mutual wariness. Delayed punishment (option D) is confusing — the correction should be immediate and then complete, not lingering."
-    },
-    {
-      "type": "spot-the-force",
-      "stem": "Mandela's Truth and Reconciliation Commission required public confession in exchange for amnesty. Many supporters wanted Nuremberg-style trials instead. What force made conditional forgiveness strategically superior to punishment?",
-      "options": [
-        {
-          "text": "Trust — permanent punishment would lock South Africa into infinite retaliation between communities that must coexist forever. The TRC broke the cycle by creating a credible path back to cooperation.",
-          "correct": true
-        },
-        {
-          "text": "Power — Mandela needed white cooperation to govern effectively, so punishment would have weakened his political position",
-          "correct": false
-        },
-        {
-          "text": "Identity — Mandela's identity as a peacemaker required him to choose forgiveness over vengeance",
-          "correct": false
-        },
-        {
-          "text": "Fear — if the new government punished too harshly, the white minority might have staged a counter-coup",
-          "correct": false
-        }
-      ],
-      "explanation": "The core force is trust in a repeated game: South Africa's communities must coexist indefinitely. Without a path from defection back to cooperation, the game becomes permanent mutual punishment (as in Israel-Palestine). The TRC wasn't about Mandela's character (C) or political calculation (B) or security fears (D) — it was about building the structural mechanism for trust restoration in an infinite game."
-    },
-    {
-      "type": "card-flip",
-      "pairs": [
-        {
-          "front": "Generous tit-for-tat",
-          "back": "Punish defection immediately, but include a forgiveness probability — a chance to return to cooperation rather than locking into permanent mutual punishment"
-        },
-        {
-          "front": "Conditional forgiveness",
-          "back": "Requires visible, costly evidence of change (confession, reparation, behavioral modification) — not unconditional which invites re-exploitation"
-        },
-        {
-          "front": "The TRC mechanism",
-          "back": "Public confession → amnesty. Made forgiveness conditional on truth-telling, breaking the retaliation cycle while maintaining accountability"
-        },
-        {
-          "front": "Tit-for-tat without forgiveness",
-          "back": "Produces worst outcomes in every simulation. Each retaliation triggers counter-retaliation indefinitely. No path back = permanent conflict."
+          "correct": false,
+          "feedback": "Not quite. Generous tit-for-tat: punish immediately (direct feedback, clear about the impact), then return to cooperation quickly (offer the path back). Skipping punishment (option B) signals no consequences."
         }
       ]
     },
     {
-      "type": "drag-match",
+      "type": "spot-the-force",
+      "situation": "Mandela's Truth and Reconciliation Commission required public confession in exchange for amnesty. Many supporters wanted Nuremberg-style trials instead.",
+      "question": "What force made conditional forgiveness strategically superior to punishment?",
+      "options": [
+        {
+          "text": "Trust — permanent punishment would lock South Africa into infinite retaliation between communities that must coexist forever. The TRC broke the cycle by creating a credible path back to cooperation.",
+          "correct": true,
+          "feedback": "The core force is trust in a repeated game: South Africa's communities must coexist indefinitely. Without a path from defection back to cooperation, the game becomes permanent mutual punishment (as in Israel-Palestine). The TRC wasn't about Mandela's character (C) or political calculation (B) or security fears (D) — it was about building the structural mechanism for trust restoration in an infinite game."
+        },
+        {
+          "text": "Power — Mandela needed white cooperation to govern effectively, so punishment would have weakened his political position",
+          "correct": false,
+          "feedback": "Not quite. The core force is trust in a repeated game: South Africa's communities must coexist indefinitely. Without a path from defection back to cooperation, the game becomes permanent mutual punishment (as in Israel-Palestine)."
+        },
+        {
+          "text": "Identity — Mandela's identity as a peacemaker required him to choose forgiveness over vengeance",
+          "correct": false,
+          "feedback": "Not quite. The core force is trust in a repeated game: South Africa's communities must coexist indefinitely. Without a path from defection back to cooperation, the game becomes permanent mutual punishment (as in Israel-Palestine)."
+        },
+        {
+          "text": "Fear — if the new government punished too harshly, the white minority might have staged a counter-coup",
+          "correct": false,
+          "feedback": "Not quite. The core force is trust in a repeated game: South Africa's communities must coexist indefinitely. Without a path from defection back to cooperation, the game becomes permanent mutual punishment (as in Israel-Palestine)."
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "Generous tit-for-tat",
+      "back": "Punish defection immediately, but include a forgiveness probability — a chance to return to cooperation rather than locking into permanent mutual punishment"
+    },
+    {
+      "type": "matching",
+      "instruction": "Match each concept to its description:",
       "pairs": [
         {
           "left": "Mandela's TRC: confess publicly → receive amnesty",
@@ -96,14 +87,22 @@
     },
     {
       "type": "before-after",
-      "before": {
+      "context": "Which response shows better understanding of the underlying dynamics?",
+      "scenarioA": {
         "label": "Binary: punish or forgive",
         "text": "Either I hold the grudge forever (protect myself from being exploited again) or I forgive unconditionally (risk being exploited again). There's no middle ground."
       },
-      "after": {
+      "scenarioB": {
         "label": "Punish, then offer a path back",
         "text": "I punish immediately (establish consequences), then offer a conditional path to restored cooperation (require demonstrated change). I don't lock anyone — including myself — into permanent mutual punishment when the game must continue."
-      }
+      },
+      "correctScenario": "B",
+      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
     }
-  ]
+  ],
+  "principle": {
+    "text": "In iterated games between parties who must continue to interact, permanent punishment produces the worst outcomes. Forgiveness — a credible path from defection back to cooperation — is a structural necessity, not a moral luxury.",
+    "subtext": "Optimal forgiveness is conditional, not unconditional: - Punish defection immediately (establish consequences) - Offer a clear path back to cooperation (don't lock in permanent mutual destruction) - Make the path costly enough to be credible (confession, reparation, demonstrated change)"
+  },
+  "reflection": "Is there someone you're permanently punishing — refusing to let back into cooperation — where the cost of the grudge now exceeds the original offense?"
 }

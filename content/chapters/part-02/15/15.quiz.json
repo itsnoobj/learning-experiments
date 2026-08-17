@@ -1,73 +1,67 @@
 {
-  "id": "15",
-  "title": "Why Do Entire Industries Do the Wrong Thing Together?",
+  "chapterId": "15",
   "challenges": [
     {
       "type": "scenario-choice",
-      "stem": "Your engineering team shares an on-call rotation. One engineer consistently does the minimum during their shifts — responding slowly, leaving partial notes, pushing issues to the next person. Everyone notices. Nobody confronts it. Why?",
+      "situation": "Your engineering team shares an on-call rotation. One engineer consistently does the minimum during their shifts — responding slowly, leaving partial notes, pushing issues to the next person. Everyone notices. Nobody confronts it. Why?",
       "options": [
         {
           "text": "Diffusion of responsibility — in a shared rotation, no single person feels accountable for confronting the free-rider, and each person hopes someone else will handle it",
-          "correct": true
+          "correct": true,
+          "feedback": "This is the bystander effect in a professional context — diffusion of responsibility. In a group, each person feels 1/N responsible for confronting the issue. Fear (B), politics (C), and standards (D) might contribute, but the primary mechanism is that nobody feels it's specifically THEIR job to act. The fix: assign clear ownership of on-call quality (shrink the responsible group to one person) or make performance visible (dashboards)."
         },
         {
           "text": "Fear of conflict — engineers are non-confrontational and avoid difficult conversations",
-          "correct": false
+          "correct": false,
+          "feedback": "Not quite. This is the bystander effect in a professional context — diffusion of responsibility. In a group, each person feels 1/N responsible for confronting the issue."
         },
         {
           "text": "The free-rider is politically protected — people sense that confronting them would backfire",
-          "correct": false
-        },
-        { "text": "The team lacks clear standards for on-call quality", "correct": false }
-      ],
-      "explanation": "This is the bystander effect in a professional context — diffusion of responsibility. In a group, each person feels 1/N responsible for confronting the issue. Fear (B), politics (C), and standards (D) might contribute, but the primary mechanism is that nobody feels it's specifically THEIR job to act. The fix: assign clear ownership of on-call quality (shrink the responsible group to one person) or make performance visible (dashboards)."
-    },
-    {
-      "type": "spot-the-force",
-      "stem": "The Montreal Protocol (ozone) succeeded while climate agreements fail — despite both being environmental collective action problems. What structural difference made ozone solvable?",
-      "options": [
-        {
-          "text": "Incentives — CFC alternatives were cheap and concentrated in one industry, making cooperation's cost low enough that free-riding incentives were weak",
-          "correct": true
+          "correct": false,
+          "feedback": "Not quite. This is the bystander effect in a professional context — diffusion of responsibility. In a group, each person feels 1/N responsible for confronting the issue."
         },
         {
-          "text": "Fear — the 'hole in the ozone' imagery scared people more than gradual warming",
-          "correct": false
-        },
-        {
-          "text": "Trust — 1987 had more international cooperation and less geopolitical tension",
-          "correct": false
-        },
-        {
-          "text": "Power — the US and Europe had more political will for environmental action in the 1980s",
-          "correct": false
-        }
-      ],
-      "explanation": "The Montreal Protocol succeeded because structural incentives aligned: alternatives existed (cheap to cooperate), costs were concentrated in one industry (few players with disproportionate impact), and consequences were near-term. Climate fails because cooperation is expensive (entire economy must change), costs are diffuse (every industry), and consequences are distant. It's not about fear, trust, or will — it's about game structure."
-    },
-    {
-      "type": "card-flip",
-      "pairs": [
-        {
-          "front": "Collective action problem",
-          "back": "Everyone benefits from cooperation, but nobody has individual incentive to cooperate first — because free-riding on others' cooperation is cheaper"
-        },
-        {
-          "front": "Free-riding",
-          "back": "Enjoying the benefits of others' cooperation without contributing yourself. Rational for individuals, catastrophic for groups."
-        },
-        {
-          "front": "Diffusion of responsibility",
-          "back": "In large groups, each person feels 1/N responsible. At large N, nobody feels responsible enough to act. Cooperation never starts."
-        },
-        {
-          "front": "Conditional cooperation",
-          "back": "Most people will cooperate IF they see others cooperating. The deadlock is everyone waiting for everyone else to go first."
+          "text": "The team lacks clear standards for on-call quality",
+          "correct": false,
+          "feedback": "Not quite. This is the bystander effect in a professional context — diffusion of responsibility. In a group, each person feels 1/N responsible for confronting the issue."
         }
       ]
     },
     {
-      "type": "drag-match",
+      "type": "spot-the-force",
+      "situation": "The Montreal Protocol (ozone) succeeded while climate agreements fail — despite both being environmental collective action problems.",
+      "question": "What structural difference made ozone solvable?",
+      "options": [
+        {
+          "text": "Incentives — CFC alternatives were cheap and concentrated in one industry, making cooperation's cost low enough that free-riding incentives were weak",
+          "correct": true,
+          "feedback": "The Montreal Protocol succeeded because structural incentives aligned: alternatives existed (cheap to cooperate), costs were concentrated in one industry (few players with disproportionate impact), and consequences were near-term. Climate fails because cooperation is expensive (entire economy must change), costs are diffuse (every industry), and consequences are distant. It's not about fear, trust, or will — it's about game structure."
+        },
+        {
+          "text": "Fear — the 'hole in the ozone' imagery scared people more than gradual warming",
+          "correct": false,
+          "feedback": "Not quite. The Montreal Protocol succeeded because structural incentives aligned: alternatives existed (cheap to cooperate), costs were concentrated in one industry (few players with disproportionate impact), and consequences were near-term. Climate fails because cooperation is expensive (entire economy must change), costs are diffuse (every industry), and consequences are distant."
+        },
+        {
+          "text": "Trust — 1987 had more international cooperation and less geopolitical tension",
+          "correct": false,
+          "feedback": "Not quite. The Montreal Protocol succeeded because structural incentives aligned: alternatives existed (cheap to cooperate), costs were concentrated in one industry (few players with disproportionate impact), and consequences were near-term. Climate fails because cooperation is expensive (entire economy must change), costs are diffuse (every industry), and consequences are distant."
+        },
+        {
+          "text": "Power — the US and Europe had more political will for environmental action in the 1980s",
+          "correct": false,
+          "feedback": "Not quite. The Montreal Protocol succeeded because structural incentives aligned: alternatives existed (cheap to cooperate), costs were concentrated in one industry (few players with disproportionate impact), and consequences were near-term. Climate fails because cooperation is expensive (entire economy must change), costs are diffuse (every industry), and consequences are distant."
+        }
+      ]
+    },
+    {
+      "type": "card-flip",
+      "front": "Collective action problem",
+      "back": "Everyone benefits from cooperation, but nobody has individual incentive to cooperate first — because free-riding on others' cooperation is cheaper"
+    },
+    {
+      "type": "matching",
+      "instruction": "Match each concept to its description:",
       "pairs": [
         {
           "left": "Climate change (195 countries, decades away, whole-economy costs)",
@@ -93,14 +87,22 @@
     },
     {
       "type": "before-after",
-      "before": {
+      "context": "Which response shows better understanding of the underlying dynamics?",
+      "scenarioA": {
         "label": "Appealing to conscience",
         "text": "If we all just did the right thing — contributed fairly, stopped free-riding, cooperated — the problem would be solved. People need to be more responsible."
       },
-      "after": {
+      "scenarioB": {
         "label": "Redesigning the game",
         "text": "Moral appeal alone fails in collective action problems. I make contributions visible, reduce cooperation costs, shrink the group to where monitoring works, and go first to break the 'waiting for others' deadlock. I fix the structure, not the people."
-      }
+      },
+      "correctScenario": "B",
+      "explanation": "The second response shows structural awareness — recognizing the game and changing it, rather than just playing harder within the existing frame."
     }
-  ]
+  ],
+  "principle": {
+    "text": "Collective action problems arise when the individually rational choice (free-ride) produces a collectively irrational outcome (everyone defects, everyone suffers). The larger the group, the worse the problem — because individual contributions are invisible and enforcement is impossible.",
+    "subtext": "The structural conditions that make collective action solvable: few players, cheap alternatives, visible contributions, symmetric costs/benefits, near-term consequences, and enforceable agreements. When these exist, cooperation emerges naturally. When they don't, moral appeal alone will fail."
+  },
+  "reflection": "What collective action problem is your team or organization stuck in? Which of the structural conditions for cooperation is missing?"
 }
