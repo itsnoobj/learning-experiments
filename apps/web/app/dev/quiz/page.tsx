@@ -1,6 +1,13 @@
 'use client';
 
-import { ScenarioChoice, SpotTheForce, CardFlip, DragMatch, BeforeAfter } from '@/modules/quiz';
+import {
+  ScenarioChoice,
+  SpotTheForce,
+  CardFlip,
+  DragMatch,
+  Matching,
+  BeforeAfter,
+} from '@/modules/quiz';
 
 const noop = () => {};
 
@@ -37,6 +44,15 @@ const DRAG_MATCH = {
     { id: 'd', text: 'Protect status' },
   ],
   correctOrder: ['a', 'b', 'c', 'd'],
+};
+
+const MATCHING = {
+  instruction: 'Match each concept to its description:',
+  pairs: [
+    { left: "Prisoner's dilemma", right: 'Both prefer cooperation but rationally defect' },
+    { left: 'Back-channel', right: 'Communication in a non-cooperative game' },
+    { left: 'Repeated game', right: 'Future consequences make cooperation rational' },
+  ],
 };
 
 const BEFORE_AFTER = {
@@ -122,6 +138,10 @@ export default function DevQuizPage() {
           correctOrder={DRAG_MATCH.correctOrder}
           onCorrect={noop}
         />
+      </Section>
+
+      <Section label="Matching">
+        <Matching instruction={MATCHING.instruction} pairs={MATCHING.pairs} onCorrect={noop} />
       </Section>
 
       <Section label="BeforeAfter">

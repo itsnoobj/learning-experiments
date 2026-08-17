@@ -16,8 +16,8 @@ function setup(onCorrect = vi.fn()) {
 
 describe('Matching', () => {
   beforeEach(() => {
-    // Math.random -> 0 makes the shuffle a no-op, so the right column stays in
-    // input order and pairings are deterministic for the test.
+    // Math.random -> 0 makes the shuffle deterministic; pairs are selected by
+    // visible text below, so the exact shuffled order doesn't affect the test.
     vi.spyOn(Math, 'random').mockReturnValue(0);
   });
 

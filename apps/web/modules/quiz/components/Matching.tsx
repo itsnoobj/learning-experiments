@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import type { MatchingPair } from '@field-guide/shared-types';
 
 /** Props for {@link Matching}. */
@@ -58,7 +58,10 @@ function shuffle<T>(input: T[]): T[] {
  */
 export function Matching({ instruction, pairs, onCorrect }: MatchingProps) {
   // Right column shown shuffled; each entry carries its original pair index.
-  const rightOrder = useMemo(() => shuffle(pairs.map((_, index) => index)), [pairs]);
+  // Right column shown shuffled; each entry carries its original pair index.
+  // Shuffled once on mount (the parent remounts via `key` per challenge), so it
+  // never re-shuffles mid-interaction.
+  const [rightOrder] = useState<number[]>(() => shuffle(pairs.map((_, index) => index)));
 
   const [selectedLeft, setSelectedLeft] = useState<number | null>(null);
   const [solved, setSolved] = useState<Set<number>>(() => new Set());
@@ -142,7 +145,7 @@ export function Matching({ instruction, pairs, onCorrect }: MatchingProps) {
         style={{ animation: wrong ? 'match-wrong-shake 0.35s ease-out' : 'none' }}
       >
         {/* Concepts */}
-        <div className="flex flex-col gap-3" style={{ flex: 1 }}>
+        <div className="flex flex-col gap-3" style={{ flex: 1 }} role="group" aria-label="Concepts">
           {pairs.map((pair, index) => {
             const isSolved = solved.has(index);
             return (
@@ -160,14 +163,23 @@ export function Matching({ instruction, pairs, onCorrect }: MatchingProps) {
                 }}
               >
                 <span style={{ flex: 1 }}>{pair.left}</span>
-                {isSolved && <span style={{ color: 'var(--color-gold)', fontWeight: 700 }}>✓</span>}
+                {isSolved && (
+                  <span aria-hidden="true" style={{ color: 'var(--color-gold)', fontWeight: 700 }}>
+                    ✓
+                  </span>
+                )}
               </button>
             );
           })}
         </div>
 
         {/* Descriptions (shuffled) */}
-        <div className="flex flex-col gap-3" style={{ flex: 1 }}>
+        <div
+          className="flex flex-col gap-3"
+          style={{ flex: 1 }}
+          role="group"
+          aria-label="Descriptions"
+        >
           {rightOrder.map((pairIndex, position) => {
             const isSolved = solved.has(pairIndex);
             return (
@@ -184,12 +196,39 @@ export function Matching({ instruction, pairs, onCorrect }: MatchingProps) {
                 }}
               >
                 <span style={{ flex: 1 }}>{pairs[pairIndex].right}</span>
-                {isSolved && <span style={{ color: 'var(--color-gold)', fontWeight: 700 }}>✓</span>}
+                {isSolved && (
+                  <span aria-hidden="true" style={{ color: 'var(--color-gold)', fontWeight: 700 }}>
+                    ✓
+                  </span>
+                )}
               </button>
             );
           })}
         </div>
       </div>
+
+      {/* Screen-reader progress: correct matches otherwise have no audible cue. */}
+      <p
+        role="status"
+        aria-live="polite"
+        style={{
+          position: 'absolute',
+          width: 1,
+          height: 1,
+          padding: 0,
+          margin: -1,
+          overflow: 'hidden',
+          clip: 'rect(0 0 0 0)',
+          whiteSpace: 'nowrap',
+          border: 0,
+        }}
+      >
+        {allSolved
+          ? 'All pairs matched.'
+          : solved.size > 0
+            ? `${solved.size} of ${pairs.length} matched.`
+            : ''}
+      </p>
 
       {wrong && (
         <p
