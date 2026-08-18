@@ -84,3 +84,19 @@ details summary {
 details[open] .details-arrow {
   transform: rotate(90deg);
 }
+
+/*
+ * Respect the OS "reduce motion" accessibility setting app-wide.
+ * Uses `!important` so it also overrides the inline `animation`/`transition`
+ * styles used by the quiz and game components (inline styles otherwise win).
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
