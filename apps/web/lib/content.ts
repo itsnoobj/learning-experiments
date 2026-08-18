@@ -5,7 +5,7 @@ import path from 'path';
 
 import { z } from 'zod';
 
-import type { QuizChallenge } from '@field-guide/shared-types';
+import { quizSchema, type QuizChallenge } from '@field-guide/shared-types';
 
 import { logger } from '@/shared/lib/logger';
 
@@ -31,11 +31,11 @@ import { logger } from '@/shared/lib/logger';
 // ---------------------------------------------------------------------------
 // Runtime validation schemas
 //
-// These mirror the canonical Zod definitions in `content/schema/*.schema.ts`.
-// They are duplicated inline rather than imported because `content/schema` is
-// a standalone, non-workspace ESM package outside `apps/web` and is not
-// reachable through the app's module resolution / path aliases. Keep the two
-// in sync when either changes.
+// The quiz schema is imported from `@field-guide/shared-types` (the single
+// source of truth for both quiz types and their Zod validators). The chapter
+// schema below is still defined inline because the app's Chapter shape differs
+// from the standalone `content/schema` authoring package and isn't worth
+// unifying across that package boundary.
 // ---------------------------------------------------------------------------
 
 const chapterSectionSchema = z.object({
@@ -63,60 +63,6 @@ const chapterSchema = z.object({
   audio: z.string().min(1),
   visual: z.string().min(1),
   sections: chapterSectionsSchema,
-});
-
-const challengeOptionSchema = z.object({
-  text: z.string().min(1),
-  correct: z.boolean(),
-  feedback: z.string().min(1),
-});
-
-const quizChallengeSchema = z.discriminatedUnion('type', [
-  z.object({
-    type: z.literal('scenario-choice'),
-    situation: z.string().min(1),
-    options: z.array(challengeOptionSchema).min(2),
-  }),
-  z.object({
-    type: z.literal('spot-the-force'),
-    situation: z.string().min(1),
-    question: z.string().min(1),
-    options: z.array(challengeOptionSchema).min(2),
-  }),
-  z.object({
-    type: z.literal('card-flip'),
-    front: z.string().min(1),
-    back: z.string().min(1),
-  }),
-  z.object({
-    type: z.literal('drag-match'),
-    instruction: z.string().min(1),
-    items: z.array(z.object({ id: z.string().min(1), text: z.string().min(1) })).min(2),
-    correctOrder: z.array(z.string().min(1)).min(2),
-  }),
-  z.object({
-    type: z.literal('matching'),
-    instruction: z.string().min(1).optional(),
-    pairs: z.array(z.object({ left: z.string().min(1), right: z.string().min(1) })).min(2),
-  }),
-  z.object({
-    type: z.literal('before-after'),
-    context: z.string().min(1),
-    scenarioA: z.object({ label: z.string().min(1), text: z.string().min(1) }),
-    scenarioB: z.object({ label: z.string().min(1), text: z.string().min(1) }),
-    correctScenario: z.enum(['A', 'B']),
-    explanation: z.string().min(1),
-  }),
-]);
-
-const quizSchema = z.object({
-  chapterId: z.string().min(1),
-  challenges: z.array(quizChallengeSchema).nonempty('a quiz must have at least one challenge'),
-  principle: z.object({
-    text: z.string().min(1),
-    subtext: z.string().min(1).optional(),
-  }),
-  reflection: z.string().min(1),
 });
 
 /** A narrative section of a chapter. */

@@ -3,6 +3,8 @@
  * Consumed by both the Next.js web app and the Fastify API.
  */
 
+import type { QuizChallenge, Principle } from './quiz';
+
 /** A recurring human force that drives behavior (see README philosophy table). */
 export type Force =
   | 'incentives'
@@ -62,101 +64,12 @@ export interface Chapter {
   sections: StorySection[];
 }
 
-/** One selectable option in a scenario or spot-the-force challenge. */
-export interface ChallengeOption {
-  text: string;
-  correct: boolean;
-  /** Explanation shown after the option is chosen. */
-  feedback: string;
-}
-
-/** Pick the best response to a workplace situation. */
-export interface ScenarioChoiceChallenge {
-  type: 'scenario-choice';
-  situation: string;
-  options: ChallengeOption[];
-}
-
-/** Identify which human force is driving the described behavior. */
-export interface SpotTheForceChallenge {
-  type: 'spot-the-force';
-  situation: string;
-  question: string;
-  options: ChallengeOption[];
-}
-
-/** Flip a card to reveal the principle/answer on the back. */
-export interface CardFlipChallenge {
-  type: 'card-flip';
-  front: string;
-  back: string;
-}
-
-/** A single orderable item in a drag-match challenge. */
-export interface DragMatchItem {
-  /** Stable id used to check against the correct order. */
-  id: string;
-  /** Display text. */
-  text: string;
-}
-
-/** Put items in the correct sequence/order. */
-export interface DragMatchChallenge {
-  type: 'drag-match';
-  instruction: string;
-  items: DragMatchItem[];
-  /** Ids in their correct sequence. */
-  correctOrder: string[];
-}
-
-/** A single concept/description pair in a matching challenge. */
-export interface MatchingPair {
-  /** The concept shown in the left column. */
-  left: string;
-  /** The description shown (shuffled) in the right column. */
-  right: string;
-}
-
-/** Match each concept to its description. */
-export interface MatchingChallenge {
-  type: 'matching';
-  /** Optional prompt; the component supplies a default when omitted. */
-  instruction?: string;
-  pairs: MatchingPair[];
-}
-
-/** One of the two scenarios in a before-after challenge. */
-export interface BeforeAfterScenario {
-  /** Short label shown above the text (e.g. "Manager A"). */
-  label: string;
-  /** The scenario description. */
-  text: string;
-}
-
-/** Choose which of two scenarios applied the principle correctly. */
-export interface BeforeAfterChallenge {
-  type: 'before-after';
-  context: string;
-  scenarioA: BeforeAfterScenario;
-  scenarioB: BeforeAfterScenario;
-  correctScenario: 'A' | 'B';
-  explanation: string;
-}
-
-/** Discriminated union of all supported quiz challenge templates. */
-export type QuizChallenge =
-  | ScenarioChoiceChallenge
-  | SpotTheForceChallenge
-  | CardFlipChallenge
-  | DragMatchChallenge
-  | MatchingChallenge
-  | BeforeAfterChallenge;
-
-/** The principle a chapter's quiz reinforces. */
-export interface Principle {
-  text: string;
-  subtext?: string;
-}
+/**
+ * Quiz challenge types, the QuizChallenge union, ChallengeOption, Principle,
+ * and their Zod validators — defined once in ./quiz and re-exported here so
+ * types and runtime validation share a single source of truth.
+ */
+export * from './quiz';
 
 /** Quiz payload for a chapter. */
 export interface QuizData {
