@@ -89,14 +89,11 @@ export interface MapLayout {
 // are generated rather than hand-placed so any region/mission shape works.
 const MARGIN_Y = 60;
 const SPACING_Y = 150;
-const BAND_WIDTH = 500;
 const TOP_PADDING = 50;
 /** Horizontal offset of a mission node — alternates left/right for serpentine. */
 const NODE_OFFSET_LEFT = 150;
 const NODE_OFFSET_RIGHT = 350;
 const MIN_WIDTH = 500;
-/** Max missions per column in the single-region serpentine layout. */
-const SERPENTINE_COLS = 1; // vertical: 1 per row
 
 /**
  * Lays out a single region's missions in a serpentine (boustrophedon) pattern:

@@ -129,12 +129,6 @@ export function ObstacleCleared({ chapterTitle, onDone }: ObstacleClearedProps) 
           0% { opacity: 0; transform: translateY(6px); }
           100% { opacity: 1; transform: translateY(0); }
         }
-        @media (prefers-reduced-motion: reduce) {
-          .fg-cleared-check,
-          .fg-cleared-text {
-            animation: none;
-          }
-        }
       `}</style>
     </div>
   );

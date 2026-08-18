@@ -7,12 +7,10 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 
 let listeners: Record<string, Function>;
 let cacheStore: Record<string, Record<string, Response>>;
-let currentCacheName: string;
 
 beforeEach(() => {
   listeners = {};
   cacheStore = {};
-  currentCacheName = 'hd-v2';
 
   // Mock caches API
   const mockCaches = {
