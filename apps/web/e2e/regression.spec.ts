@@ -15,8 +15,8 @@ import { test, expect, type Page } from '@playwright/test';
  *   - World 0 has 4 regions (A-D), all unlocked. Region A "The Rules of the
  *     Game" holds missions 1-4.
  *   - Mission/chapter 1 is "Why Does Cooperation Collapse Even When Everyone
- *     Benefits?" and its quiz has 5 challenges: scenario-choice, spot-the-force,
- *     card-flip, matching, before-after.
+ *     Benefits?" and its quiz runs scenario-choice, spot-the-force, several
+ *     card-flips (one per payoff-matrix outcome), matching, then before-after.
  *   - Chapters 62+ are in the hierarchy but not yet authored, so they render a
  *     locked "coming soon" page.
  */
@@ -57,9 +57,11 @@ async function completeChapter1Quiz(page: Page): Promise<void> {
   await page.getByRole('button', { name: /Fear — being the one who cooperates/ }).click();
   await page.getByRole('button', { name: 'Next →' }).click();
 
-  // 3) card-flip — flip the card, then acknowledge.
-  await page.getByRole('button', { name: 'Flip card' }).click();
-  await page.getByRole('button', { name: /Got it/ }).click();
+  // 3) card-flip(s) — flip through every consecutive card, then acknowledge each.
+  while ((await page.getByRole('button', { name: 'Flip card' }).count()) > 0) {
+    await page.getByRole('button', { name: 'Flip card' }).click();
+    await page.getByRole('button', { name: /Got it/ }).click();
+  }
 
   // 4) matching — tap each concept, then its description.
   for (const [concept, description] of CH1_MATCH_PAIRS) {

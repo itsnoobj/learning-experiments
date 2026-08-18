@@ -60,6 +60,21 @@
       "back": "The solution that emerges when people must coordinate without communicating — not the best option, but the most obvious one given shared context"
     },
     {
+      "type": "card-flip",
+      "front": "Common knowledge",
+      "back": "Not just 'I know X' but 'I know you know X, and you know I know you know X' — the recursive expectation that makes focal points work"
+    },
+    {
+      "type": "card-flip",
+      "front": "Salience",
+      "back": "What stands out in a field of options — bigger, older, more familiar, more culturally referenced. The brain's shortcut for focal point selection"
+    },
+    {
+      "type": "card-flip",
+      "front": "Self-reinforcing coordination",
+      "back": "Once enough people coordinate around a focal point, it becomes even more prominent, attracting more coordination — a positive feedback loop"
+    },
+    {
       "type": "matching",
       "instruction": "Match each concept to its description:",
       "pairs": [

@@ -60,6 +60,21 @@
       "back": "Instead of 'given rules, what will players do?' ask 'given desired outcome, what rules produce it from self-interested players?'"
     },
     {
+      "type": "card-flip",
+      "front": "The four building blocks",
+      "back": "Visibility (behavior observed), Memory (past accessible), Consequences (behavior affects future), Symmetry (all parties accountable)"
+    },
+    {
+      "type": "card-flip",
+      "front": "eBay's reputation system",
+      "back": "Makes honesty more profitable than cheating: visible ratings + permanent history + direct impact on future sales = self-enforcing honesty"
+    },
+    {
+      "type": "card-flip",
+      "front": "US healthcare as mechanism failure",
+      "back": "Invisible prices + per-procedure payment + secret rates + diffused consequences = rational self-interest produces waste and opacity"
+    },
+    {
       "type": "matching",
       "instruction": "Match each concept to its description:",
       "pairs": [

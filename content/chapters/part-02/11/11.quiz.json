@@ -30,7 +30,7 @@
     {
       "type": "spot-the-force",
       "situation": "Israel's nuclear ambiguity policy has deterred enemies for 50+ years without ever confirming weapons exist.",
-      "question": "What force makes the UNDEFINED threat more powerful than a confirmed one?",
+      "question": "What force makes an undefined threat more powerful than a confirmed one?",
       "options": [
         {
           "text": "Uncertainty — enemies must defend against the worst case (nuclear retaliation) without knowing the exact trigger, making all aggressive options feel risky",
@@ -58,6 +58,21 @@
       "type": "card-flip",
       "front": "Optimal bluff frequency (game theory)",
       "back": "Bluff just often enough that opponents can't profitably always-call or always-fold. Makes you unexploitable by creating permanent uncertainty."
+    },
+    {
+      "type": "card-flip",
+      "front": "Credible threat",
+      "back": "Requires three elements: capability (you could do it), communication (they know you could), and commitment or ambiguity (they can't be sure you won't)."
+    },
+    {
+      "type": "card-flip",
+      "front": "Range advantage (poker)",
+      "back": "When opponents can't narrow down your hand/position, they must defend against everything — which is exhausting and expensive. Ambiguity IS leverage."
+    },
+    {
+      "type": "card-flip",
+      "front": "Base rate detection",
+      "back": "Don't ask 'is THIS a bluff?' Ask 'what percentage of the time does this person bluff in this situation?' Past patterns predict current behavior better than any single-instance read."
     },
     {
       "type": "matching",

@@ -60,6 +60,21 @@
       "back": "A deliberate destruction of future options that makes a promise credible by making it structurally impossible (or prohibitively expensive) to break"
     },
     {
+      "type": "card-flip",
+      "front": "Cortés burning ships",
+      "back": "External commitment device — destroying retreat to make soldiers fight with total commitment AND signal to enemies that you can't be waited out"
+    },
+    {
+      "type": "card-flip",
+      "front": "Odysseus and the mast",
+      "back": "Internal commitment device — binding your future self against temptations your present self can foresee but your future self won't resist"
+    },
+    {
+      "type": "card-flip",
+      "front": "Temporal discounting",
+      "back": "The tendency to overvalue present rewards and undervalue future costs — the psychological flaw that commitment devices are designed to counteract"
+    },
+    {
       "type": "matching",
       "instruction": "Match each concept to its description:",
       "pairs": [

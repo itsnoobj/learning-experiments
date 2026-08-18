@@ -60,6 +60,21 @@
       "back": "In competitive bidding for uncertain-value items, the winner is the person who overestimated the most. Winning IS evidence of overpaying."
     },
     {
+      "type": "card-flip",
+      "front": "Vickrey (second-price) auction",
+      "back": "Highest bidder wins but pays second-highest bid. Optimal strategy: always bid your true value. Produces honest revelation through mechanism design."
+    },
+    {
+      "type": "card-flip",
+      "front": "Competitive arousal",
+      "back": "Being outbid activates the same brain circuits as personal insult. The bid becomes about WINNING, not value. This is why auction houses serve champagne."
+    },
+    {
+      "type": "card-flip",
+      "front": "Mechanism design in auctions",
+      "back": "The same rational bidders produce wildly different outcomes under different rules. If you didn't design the auction, you're probably being played by it."
+    },
+    {
       "type": "matching",
       "instruction": "Match each concept to its description:",
       "pairs": [

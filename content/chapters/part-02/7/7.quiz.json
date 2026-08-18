@@ -60,6 +60,21 @@
       "back": "Exists when the game rewards commitment, framing, and lock-in. Setting standards, defining markets, establishing norms. You win by making others respond to YOUR frame."
     },
     {
+      "type": "card-flip",
+      "front": "Last-mover advantage",
+      "back": "Exists when the game rewards information and adaptation. Complex negotiations, uncertain markets, multi-stakeholder decisions. You win by knowing everyone's position before acting."
+    },
+    {
+      "type": "card-flip",
+      "front": "The game of chicken",
+      "back": "Two players driving at each other — whoever swerves is 'weak' but if neither swerves, both crash. Commitment becomes both weapon and trap."
+    },
+    {
+      "type": "card-flip",
+      "front": "Kennedy's blockade (the third option)",
+      "back": "Refusing the binary (invade or accept), introducing a graduated response that shifts the next move to the opponent and creates time for face-saving resolution."
+    },
+    {
       "type": "matching",
       "instruction": "Match each concept to its description:",
       "pairs": [

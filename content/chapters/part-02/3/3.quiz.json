@@ -60,6 +60,21 @@
       "back": "Fixed pie — every gain for you is a loss for me. True in sports, elections, and single auctions. Rare in business and relationships."
     },
     {
+      "type": "card-flip",
+      "front": "Positive-sum frame",
+      "back": "Expandable pie — cooperation, trade, or restructuring can make both parties better off than either alone."
+    },
+    {
+      "type": "card-flip",
+      "front": "The Marshall Plan logic",
+      "back": "Invest in others' prosperity when it's downstream of your own. Their success becomes your market."
+    },
+    {
+      "type": "card-flip",
+      "front": "The OPEC trap",
+      "back": "Maximum extraction from a fixed position provokes substitution, efficiency, and escape — shrinking your future share."
+    },
+    {
       "type": "matching",
       "instruction": "Match each concept to its description:",
       "pairs": [

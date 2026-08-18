@@ -76,12 +76,14 @@ function migrateSpotTheForce(challenge) {
 
 function migrateCardFlip(challenge) {
   const { pairs } = challenge;
-  const pair = pairs[0];
-  return {
+  // Preserve every pair as its own card-flip challenge instead of dropping all
+  // but the first (the old migration kept only pairs[0], losing 3+ cards per
+  // mission). Returns an array; the caller flattens it into the challenge list.
+  return pairs.map((pair) => ({
     type: 'card-flip',
     front: pair.front,
     back: pair.back,
-  };
+  }));
 }
 
 function migrateDragMatch(challenge) {
@@ -231,7 +233,7 @@ for (const id of OLD_MISSIONS) {
   console.log(`🔄 Mission ${id}: migrating...`);
 
   try {
-    const newChallenges = oldQuiz.challenges.map((c) => migrateChallenge(c, id));
+    const newChallenges = oldQuiz.challenges.flatMap((c) => migrateChallenge(c, id));
     const principle = extractPrinciple(chapterPath);
     const reflection = generateReflection(chapterPath);
 
