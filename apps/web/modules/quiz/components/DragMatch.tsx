@@ -55,7 +55,7 @@ const KEYFRAMES = `
 /** Deterministic-free shuffle (Fisher–Yates) that never returns the input order. */
 function shuffle<T>(input: T[]): T[] {
   if (input.length < 2) return [...input];
-  let result = [...input];
+  const result = [...input];
   for (let attempt = 0; attempt < 8; attempt += 1) {
     for (let i = result.length - 1; i > 0; i -= 1) {
       const j = Math.floor(Math.random() * (i + 1));
