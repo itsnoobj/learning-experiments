@@ -1,6 +1,7 @@
 'use client';
 
 import { Suspense } from 'react';
+import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 
 import { QuizShell } from '@/modules/quiz';
@@ -46,9 +47,9 @@ function QuizClientInner({
     >
       {/* Nav bar */}
       <nav className="sticky top-0 z-10 flex items-center gap-3 py-3 border-b border-[var(--color-border)] bg-[var(--color-bg)]">
-        <a href="/" className="text-sm no-underline" style={{ color: 'var(--color-text)' }}>
+        <Link href="/" className="text-sm no-underline" style={{ color: 'var(--color-text)' }}>
           🏠
-        </a>
+        </Link>
         <button
           onClick={() => router.back()}
           className="text-sm"
