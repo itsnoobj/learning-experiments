@@ -24,6 +24,21 @@ export default defineConfig({
         'app/ServiceWorkerRegister.tsx',
         'modules/*/index.ts',
       ],
+      // Regression ratchet: fail CI if coverage drops below these floors,
+      // set just under current (statements/lines ~92%, branches ~82%,
+      // functions ~69%). Gate meaning primarily on statements/lines/branches.
+      //
+      // `functions` is deliberately NOT 85: in this React codebase every inline
+      // handler (onClick/onMouseEnter/…) counts as a "function", so raw function
+      // coverage understates real coverage. Pushing it to 85 would mean either
+      // excluding well-tested components or writing low-value hover tests. Raise
+      // this only alongside genuine interaction tests.
+      thresholds: {
+        statements: 90,
+        branches: 80,
+        functions: 67,
+        lines: 90,
+      },
     },
   },
   resolve: {
