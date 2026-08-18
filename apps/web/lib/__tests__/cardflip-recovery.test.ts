@@ -17,13 +17,12 @@ describe('card-flip recovery', () => {
 
   it('each recovered card-flip has non-empty front and back', async () => {
     const quiz = await loadQuiz('1');
-    const cardFlips = quiz!.challenges.filter(
-      (c): c is Extract<(typeof quiz.challenges)[number], { type: 'card-flip' }> =>
-        c.type === 'card-flip',
-    );
-    for (const card of cardFlips) {
-      expect(card.front.length).toBeGreaterThan(0);
-      expect(card.back.length).toBeGreaterThan(0);
+    expect(quiz).not.toBeNull();
+    for (const c of quiz!.challenges) {
+      if (c.type === 'card-flip') {
+        expect(c.front.length).toBeGreaterThan(0);
+        expect(c.back.length).toBeGreaterThan(0);
+      }
     }
   });
 });
