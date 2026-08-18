@@ -96,6 +96,31 @@ function migrateDragMatch(challenge) {
   };
 }
 
+// Per-mission before-after explanations, grounded in each chapter's principle.
+// Falls back to a generic line for any mission not listed.
+const BEFORE_AFTER_EXPLANATIONS = {
+  1: 'The stronger response changes the game’s structure — naming it, opening a back-channel, signaling repetition, and making a small testable first move — instead of staying trapped in mutual defection.',
+  2: 'The stronger response reads the game as repeated and plays the winning pattern: cooperate first, retaliate against defection immediately, then forgive — rather than being unconditionally nice or tough.',
+  3: 'The stronger response first asks whether the pie is truly fixed, then works to grow it — extending the horizon, restructuring, investing in the other side — instead of fighting over a slice.',
+  4: 'The stronger response sends a signal expensive enough to be impossible to fake, because people don’t believe cheap claims — commitment is proven by cost, not words.',
+  5: 'The stronger response optimizes for obviousness — making the option prominent, simple, and easy to converge on — because coordination is won by the most obvious choice, not the best one.',
+  6: 'The stronger response builds a structural commitment that makes breaking the promise costlier than keeping it, because structure outlasts fluctuating motivation.',
+  7: 'The stronger response diagnoses the game before acting — moving first when it rewards commitment, last when it rewards information — instead of assuming going first always wins.',
+  8: 'The stronger response asks whether the convention is genuinely good or merely locked in, and looks for a moment of coordinated switching, instead of following it unquestioned.',
+  9: 'The stronger response reads the signal’s economics — its cost, who can afford it, and its audience — recognizing that aggressive signaling betrays uncertain status.',
+  10: 'The stronger response builds mechanisms that make hidden information visible — warranties, trials, reputation, verifiable history — instead of guessing across an information gap.',
+  11: 'The stronger response tracks patterns and base rates rather than body language, judging credibility by whether the person has actually followed through before.',
+  12: 'The stronger response sets a maximum in advance and walks away above it, recognizing that winning a contested auction is itself evidence of overpaying.',
+  13: 'The stronger response treats every interaction as a permanent data point and protects reputation’s compound returns over any single transaction’s gain.',
+  14: 'The stronger response punishes defection immediately, then offers a conditional path back to cooperation — because permanent punishment is the worst outcome in games that must continue.',
+  15: 'The stronger response redesigns the game — making contributions visible, lowering cooperation costs, shrinking the group — because moral appeal alone cannot fix a collective-action problem.',
+  16: 'The stronger response asks whether the spending improves its absolute position or only its relative one, and moves to escape or redefine the competition rather than feed the race.',
+  17: 'The stronger response changes the game so that honest, long-term behavior is also the self-interested move — designing better rules instead of demanding better people.',
+};
+
+const GENERIC_BEFORE_AFTER_EXPLANATION =
+  'The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame.';
+
 function migrateBeforeAfter(challenge, id) {
   const { before, after } = challenge;
   // Old: { before: {label, text}, after: {label, text} }
@@ -113,8 +138,7 @@ function migrateBeforeAfter(challenge, id) {
     scenarioA: correctInA ? improved : trapped,
     scenarioB: correctInA ? trapped : improved,
     correctScenario: correctInA ? 'A' : 'B',
-    explanation:
-      'The stronger response shows structural awareness — it recognizes the game and changes it, rather than just playing harder within the existing frame.',
+    explanation: BEFORE_AFTER_EXPLANATIONS[id] ?? GENERIC_BEFORE_AFTER_EXPLANATION,
   };
 }
 
