@@ -79,4 +79,24 @@ describe('ResultCTA', () => {
     render(<ResultCTA {...defaultProps} fromGame={true} />);
     expect(screen.getByText(/Obstacle cleared/)).toBeInTheDocument();
   });
+
+  it('calls onGoToMap when secondary clicked (from game)', () => {
+    const onGoToMap = vi.fn();
+    render(<ResultCTA {...defaultProps} fromGame={true} onGoToMap={onGoToMap} />);
+    fireEvent.click(screen.getByText('Or explore the Map'));
+    expect(onGoToMap).toHaveBeenCalledOnce();
+  });
+
+  it('toggles hover state on the primary and secondary buttons without error', () => {
+    render(<ResultCTA {...defaultProps} />);
+    const primary = screen.getByText('Back to Map →');
+    const secondary = screen.getByText('Or play the Game →');
+    const share = screen.getByText('Share this principle');
+    for (const el of [primary, secondary, share]) {
+      fireEvent.mouseEnter(el);
+      fireEvent.mouseLeave(el);
+    }
+    // Still interactive after hover in/out.
+    expect(primary).toBeInTheDocument();
+  });
 });
