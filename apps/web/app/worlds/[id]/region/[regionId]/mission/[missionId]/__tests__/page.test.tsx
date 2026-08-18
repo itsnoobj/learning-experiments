@@ -59,7 +59,7 @@ vi.mock('@/lib/hierarchy', () => ({
       ],
     },
   ],
-  getWorld: (id: string) => ({
+  getWorld: () => ({
     id: 1,
     title: 'Understanding Yourself',
     regions: [

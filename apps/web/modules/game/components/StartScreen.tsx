@@ -82,9 +82,6 @@ export function StartScreen({ onStart }: StartScreenProps) {
             display: block;
           }
         }
-        @media (prefers-reduced-motion: reduce) {
-          .fg-game-pulse { animation: none; }
-        }
       `}</style>
     </div>
   );
