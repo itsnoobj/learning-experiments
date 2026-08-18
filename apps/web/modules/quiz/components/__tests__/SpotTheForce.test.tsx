@@ -84,3 +84,19 @@ describe('SpotTheForce', () => {
     expect(feedback.getAttribute('style')).toContain('var(--color-wrong)');
   });
 });
+
+describe('SpotTheForce snapshot', () => {
+  it('matches the rendered markup', () => {
+    vi.spyOn(Math, 'random').mockReturnValue(0);
+    const { container } = render(
+      <SpotTheForce
+        situation={situation}
+        question={question}
+        options={options}
+        onCorrect={vi.fn()}
+      />,
+    );
+    expect(container).toMatchSnapshot();
+    vi.restoreAllMocks();
+  });
+});

@@ -50,3 +50,12 @@ describe('Matching', () => {
     expect(onCorrect).toHaveBeenCalledTimes(1);
   });
 });
+
+describe('Matching snapshot', () => {
+  it('matches the rendered markup (shuffle pinned via Math.random)', () => {
+    vi.spyOn(Math, 'random').mockReturnValue(0);
+    const { container } = render(<Matching pairs={PAIRS} onCorrect={vi.fn()} />);
+    expect(container).toMatchSnapshot();
+    vi.restoreAllMocks();
+  });
+});

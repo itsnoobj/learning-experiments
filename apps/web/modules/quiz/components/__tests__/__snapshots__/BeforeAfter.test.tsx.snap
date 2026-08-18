@@ -1,0 +1,83 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BeforeAfter snapshot > matches the rendered markup 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-4"
+    style="color: var(--color-text);"
+  >
+    <style>
+      
+@keyframes card-enter {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes correct-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(224, 185, 74, 0.5); }
+  70%  { box-shadow: 0 0 0 10px rgba(224, 185, 74, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(224, 185, 74, 0); }
+}
+@keyframes badge-pop {
+  0%   { transform: scale(0); opacity: 0; }
+  60%  { transform: scale(1.2); }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes explanation-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+    </style>
+    <p
+      style="font-size: 1.125rem; line-height: 1.7;"
+    >
+      Your team resists a new tool.
+    </p>
+    <div
+      class="flex gap-3"
+      style="flex-wrap: wrap;"
+    >
+      <button
+        style="flex: 1 1 0%; min-width: 14rem; text-align: left; display: flex; flex-direction: column; gap: var(--spacing-sm); padding: var(--spacing-md) calc(var(--spacing-md) + 0.25rem); border-radius: var(--radius); border: 2px solid var(--color-border); background: var(--color-surface); color: var(--color-text); cursor: pointer; transition: border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease; transform: translateY(0); box-shadow: none; animation: card-enter 0.35s ease-out 0s both;"
+        type="button"
+      >
+        <span
+          class="flex items-center gap-2"
+          style="flex-wrap: wrap;"
+        >
+          <span
+            style="font-weight: 700; color: var(--color-gold); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8rem;"
+          >
+            Manager A
+          </span>
+        </span>
+        <span
+          style="line-height: 1.7;"
+        >
+          Presents 50 slides of data proving the tool is better.
+        </span>
+      </button>
+      <button
+        style="flex: 1 1 0%; min-width: 14rem; text-align: left; display: flex; flex-direction: column; gap: var(--spacing-sm); padding: var(--spacing-md) calc(var(--spacing-md) + 0.25rem); border-radius: var(--radius); border: 2px solid var(--color-border); background: var(--color-surface); color: var(--color-text); cursor: pointer; transition: border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease; transform: translateY(0); box-shadow: none; animation: card-enter 0.35s ease-out 0.08s both;"
+        type="button"
+      >
+        <span
+          class="flex items-center gap-2"
+          style="flex-wrap: wrap;"
+        >
+          <span
+            style="font-weight: 700; color: var(--color-gold); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8rem;"
+          >
+            Manager B
+          </span>
+        </span>
+        <span
+          style="line-height: 1.7;"
+        >
+          Says 'I know this means relearning. Let's try it for one task.'
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;

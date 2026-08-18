@@ -34,3 +34,11 @@ describe('CardFlip', () => {
     expect(onCorrect).toHaveBeenCalledTimes(1);
   });
 });
+
+describe('CardFlip snapshot', () => {
+  it('matches the flipped markup with the shared Got-it button', () => {
+    const { container } = render(<CardFlip front={FRONT} back={BACK} onCorrect={vi.fn()} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Flip card' }));
+    expect(container).toMatchSnapshot();
+  });
+});

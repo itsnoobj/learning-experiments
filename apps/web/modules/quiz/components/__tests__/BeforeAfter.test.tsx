@@ -77,3 +77,19 @@ describe('BeforeAfter', () => {
     expect(onCorrect).toHaveBeenCalledTimes(1);
   });
 });
+
+describe('BeforeAfter snapshot', () => {
+  it('matches the rendered markup', () => {
+    const { container } = render(
+      <BeforeAfter
+        context={CONTEXT}
+        scenarioA={SCENARIO_A}
+        scenarioB={SCENARIO_B}
+        correctScenario="B"
+        explanation={EXPLANATION}
+        onCorrect={vi.fn()}
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
+});

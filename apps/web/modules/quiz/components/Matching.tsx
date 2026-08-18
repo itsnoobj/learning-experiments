@@ -2,6 +2,7 @@
 
 import { useRef, useState, useEffect } from 'react';
 import type { MatchingPair } from '@field-guide/shared-types';
+import { QuizNextButton } from './QuizNextButton';
 
 /** Props for {@link Matching}. */
 export interface MatchingProps {
@@ -29,10 +30,6 @@ const KEYFRAMES = `
   0%, 100% { transform: translateX(0); }
   25%      { transform: translateX(-4px); }
   75%      { transform: translateX(4px); }
-}
-@keyframes match-next-in {
-  from { opacity: 0; transform: translateY(6px); }
-  to   { opacity: 1; transform: translateY(0); }
 }
 `;
 
@@ -241,38 +238,7 @@ export function Matching({ instruction, pairs, onCorrect }: MatchingProps) {
         </p>
       )}
 
-      {allSolved && (
-        <button
-          type="button"
-          onClick={onCorrect}
-          className="quiz-next-btn"
-          style={{
-            alignSelf: 'flex-end',
-            padding: '0.7rem 1.5rem',
-            borderRadius: 'var(--radius)',
-            border: '2px solid var(--color-gold)',
-            background: 'var(--color-gold)',
-            color: '#1A1A1A',
-            fontWeight: 700,
-            fontSize: '0.85rem',
-            textTransform: 'uppercase',
-            letterSpacing: '0.08em',
-            cursor: 'pointer',
-            transition: 'transform 0.15s ease, box-shadow 0.2s ease',
-            animation: 'match-next-in 0.3s ease-out',
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform = 'translateY(-2px)';
-            e.currentTarget.style.boxShadow = '0 4px 16px rgba(224, 185, 74, 0.3)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = 'translateY(0)';
-            e.currentTarget.style.boxShadow = 'none';
-          }}
-        >
-          Next →
-        </button>
-      )}
+      {allSolved && <QuizNextButton onClick={onCorrect} />}
     </div>
   );
 }

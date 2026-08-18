@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 
+import { QuizNextButton } from './QuizNextButton';
+
 /** Props for {@link CardFlip}. */
 export interface CardFlipProps {
   /** Text shown on the front of the card (the prompt). */
@@ -28,10 +30,6 @@ const KEYFRAMES = `
 @keyframes reveal-in {
   from { opacity: 0; transform: scale(0.9); }
   to   { opacity: 1; transform: scale(1); }
-}
-@keyframes next-btn-in {
-  from { opacity: 0; transform: translateY(6px); }
-  to   { opacity: 1; transform: translateY(0); }
 }
 `;
 
@@ -159,37 +157,13 @@ export function CardFlip({ front, back, onCorrect }: CardFlipProps) {
             </p>
           </div>
           {flipped && (
-            <button
-              type="button"
-              onClick={(e) => {
-                e.stopPropagation();
-                onCorrect();
-              }}
-              style={{
-                padding: '0.7rem 1.5rem',
-                borderRadius: 'var(--radius)',
-                border: '2px solid var(--color-gold)',
-                background: 'var(--color-gold)',
-                color: '#1A1A1A',
-                fontWeight: 700,
-                fontSize: '0.85rem',
-                textTransform: 'uppercase',
-                letterSpacing: '0.08em',
-                cursor: 'pointer',
-                transition: 'transform 0.15s ease, box-shadow 0.2s ease',
-                animation: 'next-btn-in 0.3s ease-out 0.5s both',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.boxShadow = '0 4px 16px rgba(224, 185, 74, 0.3)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = 'none';
-              }}
-            >
-              Got it →
-            </button>
+            <QuizNextButton
+              onClick={onCorrect}
+              label="Got it →"
+              alignSelf="auto"
+              delayMs={500}
+              stopPropagation
+            />
           )}
         </div>
       </div>

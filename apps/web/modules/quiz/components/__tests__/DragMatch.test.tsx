@@ -119,3 +119,19 @@ describe('DragMatch', () => {
     expect(screen.queryByRole('button', { name: 'Next →' })).not.toBeInTheDocument();
   });
 });
+
+describe('DragMatch snapshot', () => {
+  it('matches the rendered markup (order pinned via Math.random)', () => {
+    vi.spyOn(Math, 'random').mockReturnValue(0);
+    const { container } = render(
+      <DragMatch
+        instruction={INSTRUCTION}
+        items={ITEMS}
+        correctOrder={CORRECT_ORDER}
+        onCorrect={vi.fn()}
+      />,
+    );
+    expect(container).toMatchSnapshot();
+    vi.restoreAllMocks();
+  });
+});
