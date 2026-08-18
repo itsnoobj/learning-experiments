@@ -60,6 +60,21 @@
       "back": "Everyone benefits from cooperation, but nobody has individual incentive to cooperate first — because free-riding on others' cooperation is cheaper"
     },
     {
+      "type": "card-flip",
+      "front": "Free-riding",
+      "back": "Enjoying the benefits of others' cooperation without contributing yourself. Rational for individuals, catastrophic for groups."
+    },
+    {
+      "type": "card-flip",
+      "front": "Diffusion of responsibility",
+      "back": "In large groups, each person feels 1/N responsible. At large N, nobody feels responsible enough to act. Cooperation never starts."
+    },
+    {
+      "type": "card-flip",
+      "front": "Conditional cooperation",
+      "back": "Most people will cooperate IF they see others cooperating. The deadlock is everyone waiting for everyone else to go first."
+    },
+    {
       "type": "matching",
       "instruction": "Match each concept to its description:",
       "pairs": [

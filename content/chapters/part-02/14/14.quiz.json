@@ -60,6 +60,21 @@
       "back": "Punish defection immediately, but include a forgiveness probability — a chance to return to cooperation rather than locking into permanent mutual punishment"
     },
     {
+      "type": "card-flip",
+      "front": "Conditional forgiveness",
+      "back": "Requires visible, costly evidence of change (confession, reparation, behavioral modification) — not unconditional which invites re-exploitation"
+    },
+    {
+      "type": "card-flip",
+      "front": "The TRC mechanism",
+      "back": "Public confession → amnesty. Made forgiveness conditional on truth-telling, breaking the retaliation cycle while maintaining accountability"
+    },
+    {
+      "type": "card-flip",
+      "front": "Tit-for-tat without forgiveness",
+      "back": "Produces worst outcomes in every simulation. Each retaliation triggers counter-retaliation indefinitely. No path back = permanent conflict."
+    },
+    {
       "type": "matching",
       "instruction": "Match each concept to its description:",
       "pairs": [

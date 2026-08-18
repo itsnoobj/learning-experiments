@@ -60,6 +60,21 @@
       "back": "An action that's credible because only someone telling the truth could afford to take it — fakers would be ruined"
     },
     {
+      "type": "card-flip",
+      "front": "Cheap signal",
+      "back": "A claim that costs nothing to make — 'I'm passionate,' 'we value quality,' 'I'm committed' — discounted by receivers because anyone can say it"
+    },
+    {
+      "type": "card-flip",
+      "front": "Handicap principle",
+      "back": "Zahavi's insight: the peacock's expensive tail PROVES fitness because only a genuinely fit bird survives the handicap"
+    },
+    {
+      "type": "card-flip",
+      "front": "Potlatch logic",
+      "back": "Destroy wealth publicly to prove you have more — the destruction IS the evidence. Power through demonstrated surplus."
+    },
+    {
       "type": "matching",
       "instruction": "Match each concept to its description:",
       "pairs": [

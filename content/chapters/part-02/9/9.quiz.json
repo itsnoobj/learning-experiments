@@ -60,6 +60,21 @@
       "back": "A signal is honest BECAUSE it's costly — only genuinely fit organisms can survive despite the handicap. The peacock's tail proves fitness precisely because it's a burden."
     },
     {
+      "type": "card-flip",
+      "front": "Job market signaling (Spence)",
+      "back": "Education works as a signal not because of knowledge gained, but because completing it demonstrates underlying qualities (intelligence, persistence) that employers can't observe directly."
+    },
+    {
+      "type": "card-flip",
+      "front": "Countersignaling",
+      "back": "NOT signaling when signaling is expected — communicates status so secure it doesn't require proof. Only works when the audience already knows your position."
+    },
+    {
+      "type": "card-flip",
+      "front": "The signaling hierarchy",
+      "back": "Low status: can't afford to signal. Middle status: signals aggressively (proving position). High status: countersignals (so established that trying looks weak)."
+    },
+    {
       "type": "matching",
       "instruction": "Match each concept to its description:",
       "pairs": [

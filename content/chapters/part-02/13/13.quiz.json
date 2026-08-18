@@ -60,6 +60,21 @@
       "back": "Each honest action earns a return that reinvests — future honesty becomes more credible, attracting more opportunity, creating more occasions for honest action"
     },
     {
+      "type": "card-flip",
+      "front": "The asymmetry of reputation",
+      "back": "Builds linearly (years of consistency add small increments) but destroys exponentially (one revelation eliminates all accumulated trust instantly)"
+    },
+    {
+      "type": "card-flip",
+      "front": "The Medici principle",
+      "back": "No single profitable deception exceeds the value of continued trust across all relationships over your remaining lifespan. Honesty is the greedy strategy on a long enough timeline."
+    },
+    {
+      "type": "card-flip",
+      "front": "Reputation transfer",
+      "back": "Trust in one domain transfers to others — being seen as honest in business makes people assume honesty in personal life. Investment pays broader returns than expected."
+    },
+    {
       "type": "matching",
       "instruction": "Match each concept to its description:",
       "pairs": [

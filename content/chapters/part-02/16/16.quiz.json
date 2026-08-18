@@ -60,6 +60,21 @@
       "back": "Competition for relative position that consumes resources without improving anyone's absolute situation. Both sides spend more; neither gains advantage."
     },
     {
+      "type": "card-flip",
+      "front": "Mutually Assured Destruction (MAD)",
+      "back": "The ugly stable equilibrium: peace through certainty of mutual annihilation. Nobody chose it; it emerged from escalation logic."
+    },
+    {
+      "type": "card-flip",
+      "front": "The Southwest strategy",
+      "back": "Escape the arms race by competing on a different axis entirely. Don't win the race — change what race you're running."
+    },
+    {
+      "type": "card-flip",
+      "front": "Escalation tax",
+      "back": "Resources spent purely to maintain relative position vs. competitors — producing no customer value and no sustainable advantage."
+    },
+    {
       "type": "matching",
       "instruction": "Match each concept to its description:",
       "pairs": [

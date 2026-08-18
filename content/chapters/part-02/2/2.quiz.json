@@ -60,6 +60,21 @@
       "back": "Never defects first — starts every new interaction with cooperation"
     },
     {
+      "type": "card-flip",
+      "front": "Retaliatory",
+      "back": "Punishes defection immediately — you cheat once, I mirror it next round"
+    },
+    {
+      "type": "card-flip",
+      "front": "Forgiving",
+      "back": "After one punishment, returns to cooperation — always offers a path back"
+    },
+    {
+      "type": "card-flip",
+      "front": "Clear",
+      "back": "Pattern is instantly recognizable — opponents quickly learn what to expect"
+    },
+    {
       "type": "matching",
       "instruction": "Match each concept to its description:",
       "pairs": [

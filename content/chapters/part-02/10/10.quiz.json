@@ -60,6 +60,21 @@
       "back": "When one party in a transaction knows more than the other — the seller knows the car's history, the employee knows their real performance, the company knows its real culture"
     },
     {
+      "type": "card-flip",
+      "front": "Adverse selection",
+      "back": "The spiral where information gaps cause good options to withdraw and bad options to dominate — 'the willing seller is probably a lemon'"
+    },
+    {
+      "type": "card-flip",
+      "front": "The lemons problem",
+      "back": "Akerlof's insight: when buyers can't distinguish quality, they offer average prices, driving good sellers out until only 'lemons' remain"
+    },
+    {
+      "type": "card-flip",
+      "front": "Reputation systems (eBay)",
+      "back": "Solve the lemons problem by making private information (seller quality) public through accumulated, verifiable transaction history"
+    },
+    {
       "type": "matching",
       "instruction": "Match each concept to its description:",
       "pairs": [

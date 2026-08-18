@@ -60,6 +60,21 @@
       "back": "A stable state where every player's strategy is the best response to everyone else's. Nobody can benefit by changing alone — even if a better equilibrium exists."
     },
     {
+      "type": "card-flip",
+      "front": "Path dependence",
+      "back": "Historical accident determines which equilibrium you land in. QWERTY wasn't chosen for quality — it was chosen for 1873 typewriter mechanics and then locked in."
+    },
+    {
+      "type": "card-flip",
+      "front": "Switching cost",
+      "back": "The price of moving from one equilibrium to another. High switching costs protect bad equilibria from challengers."
+    },
+    {
+      "type": "card-flip",
+      "front": "Dagen H (coordination event)",
+      "back": "Sweden's simultaneous national switch from left to right driving — an example of how escaping a locked equilibrium requires coordinated simultaneous action."
+    },
+    {
       "type": "matching",
       "instruction": "Match each concept to its description:",
       "pairs": [

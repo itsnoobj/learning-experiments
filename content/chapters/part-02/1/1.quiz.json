@@ -60,6 +60,21 @@
       "back": "Best mutual outcome — Cuban Missile Crisis resolved, both sides save face"
     },
     {
+      "type": "card-flip",
+      "front": "You defect, they cooperate",
+      "back": "You 'win' locally — but only if they don't retaliate (rarely true in repeated games)"
+    },
+    {
+      "type": "card-flip",
+      "front": "Both defect",
+      "back": "Worst mutual outcome — nuclear war, price destruction, relationship breakdown"
+    },
+    {
+      "type": "card-flip",
+      "front": "Sucker's payoff",
+      "back": "You cooperate, they defect — maximum individual loss, drives fear of going first"
+    },
+    {
       "type": "matching",
       "instruction": "Match each concept to its description:",
       "pairs": [
