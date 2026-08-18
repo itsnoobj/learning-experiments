@@ -1,0 +1,41 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`QuizNextButton snapshots > matches default markup 1`] = `
+<div>
+  <style>
+    
+@keyframes quiz-next-btn-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+  </style>
+  <button
+    class="quiz-next-btn"
+    style="align-self: flex-end; padding: 0.7rem 1.5rem; border-radius: var(--radius); border: 2px solid var(--color-gold); background: var(--color-gold); color: rgb(26, 26, 26); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; cursor: pointer; transition: transform 0.15s ease, box-shadow 0.2s ease; animation: quiz-next-btn-in 0.3s ease-out;"
+    type="button"
+  >
+    Next →
+  </button>
+</div>
+`;
+
+exports[`QuizNextButton snapshots > matches the "Got it" variant (delayed, stopPropagation, auto align) 1`] = `
+<div>
+  <style>
+    
+@keyframes quiz-next-btn-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+  </style>
+  <button
+    class="quiz-next-btn"
+    style="align-self: auto; padding: 0.7rem 1.5rem; border-radius: var(--radius); border: 2px solid var(--color-gold); background: var(--color-gold); color: rgb(26, 26, 26); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; cursor: pointer; transition: transform 0.15s ease, box-shadow 0.2s ease; animation: quiz-next-btn-in 0.3s ease-out 0.5s both;"
+    type="button"
+  >
+    Got it →
+  </button>
+</div>
+`;

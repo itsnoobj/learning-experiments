@@ -1,0 +1,78 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SpotTheForce snapshot > matches the rendered markup 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-4"
+    style="color: var(--color-text);"
+  >
+    <style>
+      
+@keyframes option-enter {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes correct-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(224, 185, 74, 0.6); }
+  70%  { box-shadow: 0 0 0 10px rgba(224, 185, 74, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(224, 185, 74, 0); }
+}
+@keyframes check-pop {
+  0%   { transform: scale(0); opacity: 0; }
+  60%  { transform: scale(1.3); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+    </style>
+    <p
+      style="font-size: 1.125rem; line-height: 1.7;"
+    >
+      A manager hoards information from the team.
+    </p>
+    <p
+      style="font-weight: 700; color: var(--color-gold); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8rem; display: flex; align-items: center; gap: 0.4rem;"
+    >
+      <span
+        style="font-size: 1rem;"
+      >
+        ⚡
+      </span>
+      Which force is at play?
+    </p>
+    <div
+      class="flex flex-col gap-3"
+    >
+      <button
+        style="text-align: left; padding: var(--spacing-md) calc(var(--spacing-md) + 0.25rem); border-radius: var(--radius); border: 2px solid var(--color-border); background: var(--color-surface); color: var(--color-text); cursor: pointer; transition: border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease; transform: translateY(0); box-shadow: none; animation: option-enter 0.3s ease-out 0s both; display: flex; align-items: center; gap: 0.75rem;"
+        type="button"
+      >
+        <span
+          style="flex: 1 1 0%;"
+        >
+          Trust
+        </span>
+      </button>
+      <button
+        style="text-align: left; padding: var(--spacing-md) calc(var(--spacing-md) + 0.25rem); border-radius: var(--radius); border: 2px solid var(--color-border); background: var(--color-surface); color: var(--color-text); cursor: pointer; transition: border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease; transform: translateY(0); box-shadow: none; animation: option-enter 0.3s ease-out 0.06s both; display: flex; align-items: center; gap: 0.75rem;"
+        type="button"
+      >
+        <span
+          style="flex: 1 1 0%;"
+        >
+          Reciprocity
+        </span>
+      </button>
+      <button
+        style="text-align: left; padding: var(--spacing-md) calc(var(--spacing-md) + 0.25rem); border-radius: var(--radius); border: 2px solid var(--color-border); background: var(--color-surface); color: var(--color-text); cursor: pointer; transition: border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease; transform: translateY(0); box-shadow: none; animation: option-enter 0.3s ease-out 0.12s both; display: flex; align-items: center; gap: 0.75rem;"
+        type="button"
+      >
+        <span
+          style="flex: 1 1 0%;"
+        >
+          Power
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;

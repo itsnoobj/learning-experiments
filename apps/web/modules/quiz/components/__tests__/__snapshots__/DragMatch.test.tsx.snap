@@ -1,0 +1,190 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DragMatch snapshot > matches the rendered markup (order pinned via Math.random) 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-4"
+    style="color: var(--color-text);"
+  >
+    <style>
+      
+@keyframes item-enter {
+  from { opacity: 0; transform: translateX(-8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes correct-burst {
+  0%   { box-shadow: 0 0 0 0 rgba(224, 185, 74, 0.5); }
+  70%  { box-shadow: 0 0 0 8px rgba(224, 185, 74, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(224, 185, 74, 0); }
+}
+@keyframes wrong-shake {
+  0%, 100% { transform: translateX(0); }
+  20%      { transform: translateX(-4px); }
+  40%      { transform: translateX(4px); }
+  60%      { transform: translateX(-3px); }
+  80%      { transform: translateX(3px); }
+}
+@keyframes check-pop {
+  0%   { transform: scale(0); opacity: 0; }
+  60%  { transform: scale(1.3); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+    </style>
+    <p
+      style="font-size: 1.125rem; line-height: 1.7;"
+    >
+      Put these steps in the right order
+    </p>
+    <ol
+      class="flex flex-col gap-3"
+      style="list-style: none; margin: 0px; padding: 0px; animation: none;"
+    >
+      <li
+        class="flex items-center gap-3"
+        style="padding: var(--spacing-md); border-radius: var(--radius); border: 2px solid var(--color-border); background: var(--color-surface); transition: border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease; transform: translateY(0); box-shadow: none; animation: item-enter 0.3s ease-out 0s both;"
+      >
+        <span
+          aria-hidden="true"
+          style="min-width: 1.75rem; height: 1.75rem; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem; color: var(--color-gold); background: transparent; border: 1.5px solid var(--color-gold); border-radius: 9999px; transition: all 0.3s ease;"
+        >
+          1
+        </span>
+        <span
+          style="flex: 1 1 0%;"
+        >
+          Make first step tiny
+        </span>
+        <span
+          class="flex flex-col gap-1"
+        >
+          <button
+            aria-label="Move "Make first step tiny" up"
+            disabled=""
+            style="background: transparent; color: var(--color-text); cursor: default; opacity: 0.3; font-size: 1rem; line-height: 1; transition: transform 0.1s ease;"
+            type="button"
+          >
+            ▲
+          </button>
+          <button
+            aria-label="Move "Make first step tiny" down"
+            style="background: transparent; color: var(--color-text); cursor: pointer; opacity: 1; font-size: 1rem; line-height: 1; transition: transform 0.1s ease;"
+            type="button"
+          >
+            ▼
+          </button>
+        </span>
+      </li>
+      <li
+        class="flex items-center gap-3"
+        style="padding: var(--spacing-md); border-radius: var(--radius); border: 2px solid var(--color-border); background: var(--color-surface); transition: border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease; transform: translateY(0); box-shadow: none; animation: item-enter 0.3s ease-out 0.05s both;"
+      >
+        <span
+          aria-hidden="true"
+          style="min-width: 1.75rem; height: 1.75rem; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem; color: var(--color-gold); background: transparent; border: 1.5px solid var(--color-gold); border-radius: 9999px; transition: all 0.3s ease;"
+        >
+          2
+        </span>
+        <span
+          style="flex: 1 1 0%;"
+        >
+          Let early adopters prove it
+        </span>
+        <span
+          class="flex flex-col gap-1"
+        >
+          <button
+            aria-label="Move "Let early adopters prove it" up"
+            style="background: transparent; color: var(--color-text); cursor: pointer; opacity: 1; font-size: 1rem; line-height: 1; transition: transform 0.1s ease;"
+            type="button"
+          >
+            ▲
+          </button>
+          <button
+            aria-label="Move "Let early adopters prove it" down"
+            style="background: transparent; color: var(--color-text); cursor: pointer; opacity: 1; font-size: 1rem; line-height: 1; transition: transform 0.1s ease;"
+            type="button"
+          >
+            ▼
+          </button>
+        </span>
+      </li>
+      <li
+        class="flex items-center gap-3"
+        style="padding: var(--spacing-md); border-radius: var(--radius); border: 2px solid var(--color-border); background: var(--color-surface); transition: border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease; transform: translateY(0); box-shadow: none; animation: item-enter 0.3s ease-out 0.1s both;"
+      >
+        <span
+          aria-hidden="true"
+          style="min-width: 1.75rem; height: 1.75rem; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem; color: var(--color-gold); background: transparent; border: 1.5px solid var(--color-gold); border-radius: 9999px; transition: all 0.3s ease;"
+        >
+          3
+        </span>
+        <span
+          style="flex: 1 1 0%;"
+        >
+          Protect status
+        </span>
+        <span
+          class="flex flex-col gap-1"
+        >
+          <button
+            aria-label="Move "Protect status" up"
+            style="background: transparent; color: var(--color-text); cursor: pointer; opacity: 1; font-size: 1rem; line-height: 1; transition: transform 0.1s ease;"
+            type="button"
+          >
+            ▲
+          </button>
+          <button
+            aria-label="Move "Protect status" down"
+            style="background: transparent; color: var(--color-text); cursor: pointer; opacity: 1; font-size: 1rem; line-height: 1; transition: transform 0.1s ease;"
+            type="button"
+          >
+            ▼
+          </button>
+        </span>
+      </li>
+      <li
+        class="flex items-center gap-3"
+        style="padding: var(--spacing-md); border-radius: var(--radius); border: 2px solid var(--color-border); background: var(--color-surface); transition: border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease; transform: translateY(0); box-shadow: none; animation: item-enter 0.3s ease-out 0.15000000000000002s both;"
+      >
+        <span
+          aria-hidden="true"
+          style="min-width: 1.75rem; height: 1.75rem; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem; color: var(--color-gold); background: transparent; border: 1.5px solid var(--color-gold); border-radius: 9999px; transition: all 0.3s ease;"
+        >
+          4
+        </span>
+        <span
+          style="flex: 1 1 0%;"
+        >
+          Name the loss
+        </span>
+        <span
+          class="flex flex-col gap-1"
+        >
+          <button
+            aria-label="Move "Name the loss" up"
+            style="background: transparent; color: var(--color-text); cursor: pointer; opacity: 1; font-size: 1rem; line-height: 1; transition: transform 0.1s ease;"
+            type="button"
+          >
+            ▲
+          </button>
+          <button
+            aria-label="Move "Name the loss" down"
+            disabled=""
+            style="background: transparent; color: var(--color-text); cursor: default; opacity: 0.3; font-size: 1rem; line-height: 1; transition: transform 0.1s ease;"
+            type="button"
+          >
+            ▼
+          </button>
+        </span>
+      </li>
+    </ol>
+    <button
+      style="align-self: flex-end; padding: 0.7rem 1.5rem; border-radius: var(--radius); border: 2px solid var(--color-gold); background: transparent; color: var(--color-gold); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; cursor: pointer; transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.15s ease, color 0.15s ease;"
+      type="button"
+    >
+      Check Order
+    </button>
+  </div>
+</div>
+`;

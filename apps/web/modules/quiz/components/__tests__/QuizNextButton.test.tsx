@@ -44,3 +44,23 @@ describe('QuizNextButton', () => {
     expect(parentClick).not.toHaveBeenCalled();
   });
 });
+
+describe('QuizNextButton snapshots', () => {
+  it('matches default markup', () => {
+    const { container } = render(<QuizNextButton onClick={() => {}} />);
+    expect(container).toMatchSnapshot();
+  });
+
+  it('matches the "Got it" variant (delayed, stopPropagation, auto align)', () => {
+    const { container } = render(
+      <QuizNextButton
+        onClick={() => {}}
+        label="Got it →"
+        alignSelf="auto"
+        delayMs={500}
+        stopPropagation
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
+});

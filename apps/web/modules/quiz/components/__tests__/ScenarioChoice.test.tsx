@@ -53,3 +53,14 @@ describe('ScenarioChoice', () => {
     expect(screen.queryByRole('button', { name: 'Next →' })).not.toBeInTheDocument();
   });
 });
+
+describe('ScenarioChoice snapshot', () => {
+  it('matches the rendered markup (incl. the shared Next button region)', () => {
+    vi.spyOn(Math, 'random').mockReturnValue(0);
+    const { container } = render(
+      <ScenarioChoice situation={SITUATION} options={OPTIONS} onCorrect={vi.fn()} />,
+    );
+    expect(container).toMatchSnapshot();
+    vi.restoreAllMocks();
+  });
+});

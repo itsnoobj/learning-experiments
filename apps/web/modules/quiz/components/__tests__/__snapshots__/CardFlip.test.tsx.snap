@@ -1,0 +1,104 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CardFlip snapshot > matches the flipped markup with the shared Got-it button 1`] = `
+<div>
+  <div
+    style="perspective: 1200px; animation: card-enter 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);"
+  >
+    <style>
+      
+@keyframes card-enter {
+  from { opacity: 0; transform: scale(0.95) translateY(10px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes tap-bounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-4px); }
+}
+@keyframes card-glow {
+  0%, 100% { box-shadow: 0 8px 32px rgba(224, 185, 74, 0.08); }
+  50%      { box-shadow: 0 8px 32px rgba(224, 185, 74, 0.2); }
+}
+@keyframes reveal-in {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+    </style>
+    <div
+      aria-label="Card back"
+      role="button"
+      style="position: relative; width: 100%; display: grid; transform-style: preserve-3d; transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); transform: rotateY(180deg); cursor: default;"
+      tabindex="0"
+    >
+      <div
+        style="backface-visibility: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--spacing-lg); padding: var(--spacing-lg); border-radius: var(--radius); border: 2px solid var(--color-border); background: var(--color-surface); color: var(--color-text); text-align: center; min-height: 18rem; grid-area: 1 / 1; box-shadow: 0 4px 16px rgba(0,0,0,0.06); transition: box-shadow 0.3s ease;"
+      >
+        <p
+          style="font-size: 1.25rem; line-height: 1.6;"
+        >
+          What drives someone to defend a bad decision?
+        </p>
+        <div
+          style="display: flex; align-items: center; gap: 0.4rem; color: var(--color-text-dim); font-size: 0.8rem; animation: tap-bounce 1.5s ease-in-out infinite;"
+        >
+          <svg
+            fill="none"
+            height="18"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="18"
+          >
+            <path
+              d="M7 15V8.5a1.5 1.5 0 0 1 3 0V13"
+            />
+            <path
+              d="M10 10a1.5 1.5 0 0 1 3 0v1"
+            />
+            <path
+              d="M13 9.5a1.5 1.5 0 0 1 3 0V13"
+            />
+            <path
+              d="M16 10.5a1.5 1.5 0 0 1 3 0V16a5 5 0 0 1-5 5h-3a5 5 0 0 1-5-5v-2"
+            />
+          </svg>
+          <span>
+            Tap to flip
+          </span>
+        </div>
+      </div>
+      <div
+        style="backface-visibility: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--spacing-lg); padding: var(--spacing-lg); border-radius: var(--radius); background: var(--color-surface); color: var(--color-text); text-align: center; min-height: 18rem; grid-area: 1 / 1; transform: rotateY(180deg); border-color: var(--color-gold); animation: card-glow 3s ease-in-out infinite;"
+      >
+        <div
+          style="animation: reveal-in 0.4s ease-out 0.3s both;"
+        >
+          <p
+            style="font-size: 1.25rem; line-height: 1.6; color: var(--color-gold); font-weight: 600;"
+          >
+            Identity: admitting fault feels like losing the self.
+          </p>
+        </div>
+        <style>
+          
+@keyframes quiz-next-btn-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+        </style>
+        <button
+          class="quiz-next-btn"
+          style="align-self: auto; padding: 0.7rem 1.5rem; border-radius: var(--radius); border: 2px solid var(--color-gold); background: var(--color-gold); color: rgb(26, 26, 26); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; cursor: pointer; transition: transform 0.15s ease, box-shadow 0.2s ease; animation: quiz-next-btn-in 0.3s ease-out 0.5s both;"
+          type="button"
+        >
+          Got it →
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
